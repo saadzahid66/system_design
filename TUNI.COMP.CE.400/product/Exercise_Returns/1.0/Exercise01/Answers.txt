@@ -4,34 +4,42 @@ INCLUDE ANSWERS IN HERE
 Hint: Read the exercise project summary from Moodle
 Hint 2: Implementing a video encoder is NOT the focus of the exercises.
 
+ANS: 1-To make a person intergrate in future work environment of some company with existing projects and to work on them through exixting repositories.
+     2- Analyze and understand an existing system and being able to apply the modification we need.
+     3- To understand and setup the coding enviornment. To carry up ongoing projects and deliver the further deliverables till completion. 
+
 *** PART ONE ***
 
 Some of the questions may involve examining the txt-files generated while encoding.
 
 2. How much time did the encoding take? Look at the "Total CPU time".
 
-	QP 50:
-	GROUP QP: 
+	QP 50: 47.823 s
+	GROUP QP(32): 93.834 s
 
 3. How many frames were encoded per second (FPS)?
 
-	QP 50:
-	GROUP QP:
+	QP 50: 2,55 FPS
+	GROUP QP(32): 1,31 FPS
 
 4. How did decreasing the quantization value affect perceived quality of the video output?
 
+ANS: The Higher QP Value made the Video Blurry and Pixilated compared to the one with the lowered QP(32) value assigned to us
+
 5. How did decreasing the quantization value affect size of the video output file?
+  
+ANS: The Higher QP(50) Value had smaller affect size (439 KiB) than that of the Lowered QP(32) Value which had the size (3361 KiB)
 
 7. What was average PSNR?
 
-	QP 50:
-	GROUP QP:
+	QP 50: (30.9363 36.1453 36.8616)
+	GROUP QP(32): (40.1490 41.8909 42.3022)
 
 8. What was the data compression ratio of encoding using your assigned quantization value?
 Data compression ratio is defined as (size of the video input file)/(size of the video output file).
 
-	QP 50:
-	GROUP QP:
+	QP 50: 830,3
+	GROUP QP: 108,5
 
 *** PART TWO ***
 
