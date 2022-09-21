@@ -44,25 +44,34 @@ Data compression ratio is defined as (size of the video input file)/(size of the
 *** PART TWO ***
 
 9. What was average PSNR of the profiling run?
+ANS: AVG PSNR: 40.1490 41.8909 42.3022
 
 10. What does parameter -pg do in GCC? How it affects the resulting executable and its execution?
+ANS: As understood by us through online research we concluded that by using the [-pg] parameter in 'gcc' the profiler will figure out what function called it, and count how many times it was called. So if we link our program with [-pg] it automatically uses the profiling version of the used library.
 
 11. Which three (3) functions use most time in Kvazaar? Answer based on the time used by functions
 alone, not by the functions they call.
+ANS: 1- kvz_angular_pred_generic 45,12%
+     2- partial_butterfly_32_generic 13,45%
+     3- kvz_quant_generic 6,68%
 
-12. Why it is better to look at percentages rather than absolute time like seconds or milliseconds while
-using a profiling tool (like gprof)?
+12. Why it is better to look at percentages rather than absolute time like seconds or milliseconds while using a profiling tool (like gprof)?
+ANS: It is easy to Compare percentages which can map between 0 to 100% rather than time, which might be in long decimal values of milliseconds.
 
 13. Which function would you choose for hardware acceleration? If there are multiple good candidates, choose one.
+ANS: kvz_angular_pred_generic
 
 14. What does that function do? Why do you think it's a good candidate for hardware acceleration?
 Mention at least two reasons.
 Hint: Look at the source code at Kactus2 location TUNI.fi->ip.sw->Kvazaar->0.7.2->src
+ANS: It generates angular prediction as mentioned in the file intra-generic.c, And it is a good canidate because it has a lot of functianality built into it and if ve accelerate this fucntion we can make our system fast. Also many other functions up the line are depending on this function to complete.
 
 15. How are you feeling? What was hard? What was easy?
+ANS: It was a well compiled exercise for start of System Design Labs to get familiar with Kavazar. The hard thing for some of us was work in linux environment after a long time and some new tools to fimiliarize with. The Instruction details were Easy to follow.
 
 16. Fill the used hours below, including answering questions and any downtime:
 ANSWER THE HOURS AS IF YOU WERE PAID FOR IT (we will not pay you, though)
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	GROUP MEMBER 1(Hamza Ghani Shahid): 6 Hours
+	GROUP MEMBER 2(Hamzah Farooq): 6 Hours
+	GROUP MEMBER 3(Hippolyte Foulongne): 6 Hours
