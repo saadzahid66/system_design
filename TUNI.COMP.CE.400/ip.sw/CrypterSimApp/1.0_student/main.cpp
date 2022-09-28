@@ -23,6 +23,8 @@ SC_MODULE ( system_module )
 	value1* sm;
 	process1* p1;
 	process2* p2;
+	process3* p3;
+	process4* p4;
 	sc_trace_file *wf;
 
 	SC_CTOR( system_module )
@@ -33,7 +35,7 @@ SC_MODULE ( system_module )
 		p1 = new process1("process1");
 			p1->clock(the_clock);
 			p1->reset(reset);
-			p1->fifo( fifo1_2 );
+			p1->fifo(fifo1_2);
 			p1->in_value(in_value);
 
 		p2 = new process2("process2");
@@ -41,6 +43,19 @@ SC_MODULE ( system_module )
 			p2->reset(reset);
 			p2->fifo( fifo1_2 );
 			p2->memory = sm;
+
+		p3 = new process3("process3");
+			p3->clock(the_clock);
+			p3->reset(reset);
+			p3->fifo(fifo3_4);
+			p3->memory = sm;
+
+		p4 = new process4("process4");
+			p4->clock(the_clock);
+			p4->reset(reset);
+			p4->fifo(fifo3_4);
+			p4->out_value(out_value);
+
 
 		// Open VCD file
 		wf = sc_create_vcd_trace_file("wave");

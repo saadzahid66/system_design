@@ -5,6 +5,9 @@
 #include "test_bench.hh"
 #include "header.hh"
 
+//The key used to encrypt the value
+#define KEY 0xDEADBEEF
+
 sc_event input_ready;
 sc_event output_valid;
 
@@ -26,6 +29,18 @@ SC_MODULE ( system_module )
 		sc_uint<32> encrypted_value;
 		//Decrypted value
 		sc_uint<32> decrypted_value;
+
+
+		/*
+		//A single value read from the input.
+		uint32_t feed;
+		//Enrypted value
+		uint32_t encrypted_value;
+		//Decrypted value
+		uint32_t decrypted_value;
+		*/
+
+
 			
 		//As many loops as there are values.
 		while( true )
@@ -36,7 +51,24 @@ SC_MODULE ( system_module )
 			wait();
 			
 			//TODO: Add the processing here
+			encrypted_value = in_value;
+			//encrypted_value = feed;
 			
+			//Permutate by switching last two and first two bytes.
+			encrypted_value = ( encrypted_value << 16 ) + (uint16_t)( encrypted_value >> 16 );
+
+			//"Crypt" with the key.
+			encrypted_value = encrypted_value ^ KEY;
+			
+			//Decrypt with the key.
+			
+			//Undo the permutation.
+			decrypted_value = ( decrypted_value << 16 ) + (uint16_t)( decrypted_value >> 16 );
+
+			//Print the result.
+			//std::cout << std::setfill( '0' ) << std::hex << std::setw( 9 ) << decrypted_value << std::endl;
+			out_value = decrypted_value;			
+
 			//Signal to the user of the system so that it knows about new output.
 			//NOTICE: blocking operation, so it may take more than one cycle!
 			output_valid.notify();

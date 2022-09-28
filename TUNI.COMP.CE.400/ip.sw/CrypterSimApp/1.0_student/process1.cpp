@@ -1,5 +1,6 @@
 #include "process.hh"
 
+
 void process1::encrypt ()
 {
 	sc_uint<32> encrypted_value; //The crypted value, is to be fed to fifo.
@@ -13,15 +14,20 @@ void process1::encrypt ()
 		
 		//Read input value...
 		encrypted_value = in_value;
-		
+
+		//std::cout << "TEST - " << encrypted_value << "KEY - " << KEY << std::endl;		
+
 		//Switch places between first and last 16 bits.
 		encrypted_value = ( (encrypted_value.range( 15, 0 ) << 16 ) +
 		encrypted_value.range( 31, 16 ) );
 		//Encrypt the value with the key.
 		encrypted_value = encrypted_value ^ KEY;
+
+		
 		
 		//How long the processing takes
 		wait( P1_LATENCY, SC_NS );
+//std::cout << "TEST - " << encrypted_value << "KEY - " << KEY << std::endl;
 		
 		//...and put it into fifo. NOTICE: blocking operation,
 		//so it may take more than one cycle!
