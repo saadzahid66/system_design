@@ -18,8 +18,7 @@ void process1::encrypt ()
 		//std::cout << "TEST - " << encrypted_value << "KEY - " << KEY << std::endl;		
 
 		//Switch places between first and last 16 bits.
-		encrypted_value = ( (encrypted_value.range( 15, 0 ) << 16 ) +
-		encrypted_value.range( 31, 16 ) );
+		encrypted_value = ( (encrypted_value.range( 15, 0 ) << 16 ) + encrypted_value.range( 31, 16 ) );
 		//Encrypt the value with the key.
 		encrypted_value = encrypted_value ^ KEY;
 

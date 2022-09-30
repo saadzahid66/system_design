@@ -23,6 +23,8 @@ sc_signal<sc_uint<32> >  out_value; //The output of the system
 
 SC_MODULE ( system_module )
 {
+	
+
 	void app()
 	{
 		//Enrypted value
@@ -55,20 +57,25 @@ SC_MODULE ( system_module )
 			//encrypted_value = feed;
 			
 			//Permutate by switching last two and first two bytes.
+			
+	//encrypted_value = ( encrypted_value << 16 ) + (uint16_t)( encrypted_value >> 16 );
 			encrypted_value = ( encrypted_value << 16 ) + (uint16_t)( encrypted_value >> 16 );
 
-			//"Crypt" with the key.
+			//"Encrypt" with the key.
 			encrypted_value = encrypted_value ^ KEY;
 			
 			//Decrypt with the key.
+			decrypted_value = encrypted_value ^ KEY;
 			
 			//Undo the permutation.
 			decrypted_value = ( decrypted_value << 16 ) + (uint16_t)( decrypted_value >> 16 );
 
 			//Print the result.
 			//std::cout << std::setfill( '0' ) << std::hex << std::setw( 9 ) << decrypted_value << std::endl;
-			out_value = decrypted_value;			
-
+			out_value = decrypted_value;	
+	std::cout << std::setfill( '0' ) << std::hex << std::setw( 9 ) << out_value << std::endl;	
+			//std::cout << out_value << endl;
+ 
 			//Signal to the user of the system so that it knows about new output.
 			//NOTICE: blocking operation, so it may take more than one cycle!
 			output_valid.notify();

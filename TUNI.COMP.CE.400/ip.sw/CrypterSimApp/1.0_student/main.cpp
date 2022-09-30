@@ -65,7 +65,7 @@ SC_MODULE ( system_module )
 		sc_trace(wf, in_value, "in_value");
 		sc_trace(wf, out_value, "out_value");
 	}
-}; 
+};
 
 int sc_main (int argc, char* argv[])
 {
@@ -75,10 +75,10 @@ int sc_main (int argc, char* argv[])
 		cerr << "ERROR: Must provide input file as the program argument!" << endl;
 		return 1;
 	}
-	
+
 	//Read the file name
 	input_file_name = std::string( argv[1] );
-	
+
 	//Disable false positives
 	sc_core::sc_report_handler::set_actions( "/IEEE_Std_1666/deprecated",
                                             sc_core::SC_DO_NOTHING );
@@ -95,7 +95,7 @@ int sc_main (int argc, char* argv[])
 	//Initialization of the DUT
 	system_module* s  = new system_module( "sydemi" );
 		tb->memory = s->sm;
-		
+
 	//Start the simulation
 	sc_start();
 
