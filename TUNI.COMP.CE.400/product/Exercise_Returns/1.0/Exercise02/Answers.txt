@@ -1,19 +1,36 @@
 INCLUDE ANSWERS IN HERE
 
 1. What is the purpose of SystemC?
+Ans: SystemC is not a language but a library of C++ that is used to model hardware by the use of classes, interrupts and software logic for verification. Verilog implement hardware logic and c is a software logic. SystemC is diverse in a sense that it provide complete integration between software, hardware and then their verification.
 
 2. What does macro SC_MODULE do from user perspective?
+It is similar to a class but in terms of hardware it can also be said as a container of functionality with state, behaviour and structure for hierarial connectivity. It can have defined IN/OUT that can be in physical curcuit.
 
 3. What does macro SC_CTOR do from user perspective?
+It is a constructor inside the module and has the same concept/functionality as that of C++. It is called automatically and only once when the object of the class/module is created. Usually it is used for initialization in the start or set the starting values or the defaults.
 
 4. What is the difference between SC_THREAD, SC_METHOD, and SC_CTHREAD?
+SystemC has three threads SC_THREAD, SC_METHOD, SC_CTHREAD
+SC_METHOD - 
+	1. Resembles to an always block in verilog. 
+	2. Wait() can not be called because it does not have its own thread of execution.
+	3. Synthesizable foor simple logic operations.
+	4. 
+SC_THREAD -
+	1. Resembles to an initial block in verilog. 
+	2. Execute only and only once for only one clock cycle. 
+	3. Not Synthesizable
+	4. example: counter increment
+	
 
 5. Original model does not specify implementation for c1, c2, and v1.
 What was implementation of channels and the variable in this exercise?
 
 6. What does the file test_bench.cpp do?
 
+
 7. What is the purpose of the application GTKWave?
+GTK wave is the simulation software. Simulations are important to verify the logic and the result before its implementation on FPGA. 
 	
 8. In this exercise, memory was merely used as an external storage. However, in practical computing
 the memory is likely used directly by CPU as in caches and DDR. Why speed of these is important?
@@ -22,13 +39,17 @@ the memory is likely used directly by CPU as in caches and DDR. Why speed of the
 Why this may be difficult on real platforms?
 
 10. What the was the final performance of your system? Answer this BEFORE the bonus section!
+	By reducing the delay to 1/10 the current consumed time 650 ns was dropped to 430ns which is 1/3 drop from the previous 650ns value.
 
 11. What was hard? What was easy?
+	1. Debugging run time error was hard. 
+	2. Creating make file was an issue which still last. We were unable to generate make file using kactus yet we creatd it by duplicating the 			previous make file and editing its code according to my project files.
 
 12. Fill the used hours below, including answering questions and any downtime:
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	GROUP MEMBER 1:Hamzah Farooq
+	GROUP MEMBER 2:Hamza Ghani 
+	GROUP MEMBER 3: Hippolyte 
 	
 ***BONUS SECTION ANSWERS***
 
