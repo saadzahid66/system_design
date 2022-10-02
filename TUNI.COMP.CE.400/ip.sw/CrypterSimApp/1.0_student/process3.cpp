@@ -15,12 +15,12 @@ void process3::read_value ()
 		{
 			wait();
 			read_enable = memory->read( ENABLE_INDEX );
-			out_value = memory->read(VALUE_INDEX );
+			//out_value = memory->read(VALUE_INDEX );
 		}
 		while ( read_enable ==  0);
 
 		//Read value, set read enable
-		//out_value = memory->read(VALUE_INDEX );
+		out_value = memory->read(VALUE_INDEX );
 		memory->write( 0, ENABLE_INDEX );
 
 		// WRITE VALUE IN FIFO
