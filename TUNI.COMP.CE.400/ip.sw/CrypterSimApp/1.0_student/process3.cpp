@@ -15,6 +15,10 @@ void process3::read_value ()
 		{
 			wait();
 			read_enable = memory->read( ENABLE_INDEX );
+<<<<<<< HEAD
+=======
+			//out_value = memory->read(VALUE_INDEX );
+>>>>>>> e71dea40abfcb8defa77b79f12f39ecbb7d277ca
 		}
 		while ( read_enable ==  0);
 
