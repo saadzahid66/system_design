@@ -44,6 +44,14 @@
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
 		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>SimSystem_CrypterSimApp_w_TLM_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../CrypterSim.SimSystem/1.0_student/sw_SimSystem/CrypterSimApp_w_TLM_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
 		<kactus2:systemViews>
