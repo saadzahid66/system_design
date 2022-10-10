@@ -6,9 +6,6 @@ void process1::encrypt ()
 	sc_uint<32> encrypted_value; // The crypted value, is to be fed to socket.
   tlm::tlm_generic_payload* trans = new tlm::tlm_generic_payload; // The payload of socket
 	sc_time delay = sc_time(10, SC_NS);
-	//sc_uint<32> *convert;
-	uint convert;
-	int adr = 0;
 
 	while( true )
 	{
@@ -22,26 +19,28 @@ void process1::encrypt ()
 
 		//Switch places between first and last 16 bits.
 		encrypted_value = ( (encrypted_value.range( 15, 0 ) << 16 ) + encrypted_value.range( 31, 16 ) );
+
 		//Encrypt the value with the key.
 		encrypted_value = encrypted_value ^ KEY;
-
-
 
 		//How long the processing takes
 		wait( P1_LATENCY, SC_NS );
 
-		//tlm::tlm_command cmd =tlm::TLM_WRITE_COMMAND
-		//if (cmd == tlm::TLM_WRITE_COMMAND) data = 0xFF000000 | i;
+		// Convert the encrypted value to a unsigned int
 		convert = encrypted_value.to_uint();
-		trans->set_command(tlm::TLM_WRITE_COMMAND);
-		trans->set_address(&(encrypted_value.to_uint()));
-		trans->set_data_ptr( reinterpret_cast<unsigned char*>values.to_uint());
-		trans->set_data_length( VALUE_ARRAY_SIZE ); // 4 bytes (32 bits)
-		trans->set_streaming_width( 4 );
+
+		// Set attribute for transmission
+		trans->set_command(tlm::TLM_WRITE_COMMAND); // Writing mode
+		trans->set_address(index++); // Index of the encrypted value
+		trans->set_data_ptr(reinterpret_cast<unsigned char*> (&convert));
+		trans->set_data_length(sizeof(uint *));
+		trans->set_streaming_width(sizeof(uint *));
 		trans->set_byte_enable_ptr( 0 );
 		trans->set_dmi_allowed( false );
 		trans->set_response_status( tlm::TLM_INCOMPLETE_RESPONSE );
 
 		socket->b_transport( *trans, delay );
+
+		wait(delay);
 	}
 }

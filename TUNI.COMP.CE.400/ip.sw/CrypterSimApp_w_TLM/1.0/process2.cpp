@@ -4,20 +4,25 @@ void process2::b_transport( tlm::tlm_generic_payload& trans, sc_time& delay )
 {
 	// Get the response
 	tlm::tlm_command cmd = trans.get_command();
-  sc_dt::uint64    adr = trans.get_address() / 4;
+  sc_dt::uint64    adr = trans.get_address();
   unsigned char*   ptr = trans.get_data_ptr();
   unsigned int     len = trans.get_data_length();
   unsigned char*   byt = trans.get_byte_enable_ptr();
   unsigned int     wid = trans.get_streaming_width();
+	//cout << "p2: adr = " << adr << endl;
 
 	// Check some parameters
-	if (/*adr >= sc_dt::uint64(SIZE) || */byt != 0 || len > 4 || wid < len)
+	if (/*adr >= sc_dt::uint64(SIZE) || */byt != 0 || len > VALUE_ARRAY_SIZE || wid < len)
 	{
     SC_REPORT_ERROR("TLM-2", "Target does not support given generic payload transaction");
 	}
 
-	// Save value to a buffer
-	memcpy(&values[adr],ptr,len);
+	uint encrypted_value;
+
+	memcpy(&encrypted_value,ptr,len);
+
+	// Save value to the array
+	values[adr] = encrypted_value;
 	values_available++;
 
 	// Successful completion of the transaction
@@ -27,24 +32,23 @@ void process2::b_transport( tlm::tlm_generic_payload& trans, sc_time& delay )
 
 void process2::write_value ()
 {
-	sc_uint<32> in_value; //Value from the fifo
+	sc_uint<32> read_value; //Value from the fifo
 	sc_uint<32> write_enable; //Becomes zero, when we may write.
 
 	while( true )
 	{
-		// Wait for a new value to decrypt
+
 		while(values_available == 0)
 		{
 			wait();
 		}
 
-		// Read the value in the buffer
-		sc_uint<32> read_value = values[index++];
+		// Read the available value in the buffer
+		read_value = values[index++];
 		values_available--;
 
-
-		//Wait until we get write enable
-		//NOTICE: accessing shared memory WILL take clock cycles!
+		// Wait until we get write enable
+		// NOTICE: accessing shared memory WILL take clock cycles!
 		do
 		{
 			wait();
@@ -52,8 +56,9 @@ void process2::write_value ()
 		}
 		while ( write_enable == 1 );
 
-		//Write value, set read enable
-		memory->write( in_value, VALUE_INDEX );
+		// Write value, set read enable
+		memory->write( read_value, VALUE_INDEX );
 		memory->write( 1, ENABLE_INDEX );
+
 	}
 }

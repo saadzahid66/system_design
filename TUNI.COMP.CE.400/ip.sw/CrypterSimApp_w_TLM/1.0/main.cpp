@@ -42,9 +42,6 @@ SC_MODULE ( system_module )
 			p2->reset(reset);
 			p2->memory = sm;
 
-		// Bind socket between master p1 and p2
-		p1->socket.bind(p2->socket);
-
 		p3 = new process3("process3");
 			p3->clock(the_clock);
 			p3->reset(reset);
@@ -57,6 +54,8 @@ SC_MODULE ( system_module )
 			p4->fifo(fifo3_4);
 			p4->out_value(out_value);
 
+			// Bind socket between master p1 and p2
+			p1->socket.bind(p2->socket);
 
 		// Open VCD file
 		wf = sc_create_vcd_trace_file("wave");
@@ -96,6 +95,7 @@ int sc_main (int argc, char* argv[])
 	//Initialization of the DUT
 	system_module* s  = new system_module( "sydemi" );
 		tb->memory = s->sm;
+
 
 	//Start the simulation
 	sc_start();
