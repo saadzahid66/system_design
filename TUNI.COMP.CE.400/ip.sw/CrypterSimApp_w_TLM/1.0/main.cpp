@@ -12,7 +12,7 @@ sc_clock the_clock("my_the_clock",1,SC_NS);
 
 //Variables and signals shared with the process
 sc_signal<bool>  reset; //Reset, active high
-sc_fifo<sc_uint<32> > fifo1_2(5); //Fifo between p1->p2
+//sc_fifo<sc_uint<32> > fifo1_2(5); //Fifo between p1->p2
 sc_fifo<sc_uint<32> > fifo3_4(5); //Fifo between p3->p4
 sc_signal<sc_uint<32> >  in_value; //The input of the system
 sc_signal<sc_uint<32> >  out_value; //The output of the system
@@ -35,14 +35,15 @@ SC_MODULE ( system_module )
 		p1 = new process1("process1");
 			p1->clock(the_clock);
 			p1->reset(reset);
-			p1->fifo(fifo1_2);
 			p1->in_value(in_value);
 
 		p2 = new process2("process2");
 			p2->clock(the_clock);
 			p2->reset(reset);
-			p2->fifo( fifo1_2 );
 			p2->memory = sm;
+
+		// Bind socket between master p1 and p2
+		p1->socket.bind(p2->socket);
 
 		p3 = new process3("process3");
 			p3->clock(the_clock);
