@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>LED-Blinker.Veek-System.sysdesign</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>arm_cortex_a9_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.cpu" name="arm.cortex_a9" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}</kactus2:uuid>
+				<kactus2:imported/>
+				<kactus2:position x="190" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>SYS</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:version>3,8,0,0</kactus2:version>
+		<kactus2:columnLayout>
+			<kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" x="380"/>
+			<kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" x="0"/>
+		</kactus2:columnLayout>
+	</ipxact:vendorExtensions>
+</ipxact:design>

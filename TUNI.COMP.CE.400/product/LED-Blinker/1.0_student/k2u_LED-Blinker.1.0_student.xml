@@ -162,18 +162,23 @@
 		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
+		<kactus2:version>3,8,0,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
 		<kactus2:systemViews>
 			<kactus2:systemView>
 				<ipxact:name>PC-System</ipxact:name>
 				<kactus2:hierarchyRef vendor="TUNI.COMP.CE.400" library="product" name="LED-Blinker.PC-System.sysdesigncfg" version="1.0_student"/>
 				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
 			</kactus2:systemView>
+			<kactus2:systemView>
+				<ipxact:name>Veek-System</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.COMP.CE.400" library="product" name="LED-Blinker.Veek-System.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>Veek-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
 		</kactus2:systemViews>
-		<kactus2:version>3,0,29,0</kactus2:version>
-		<kactus2:kts_attributes>
-			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
-			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
-			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
-		</kactus2:kts_attributes>
 	</ipxact:vendorExtensions>
 </ipxact:component>
