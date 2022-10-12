@@ -2,10 +2,13 @@ INCLUDE ANSWERS IN HERE
 
 1. What was hard? What was easy?
 
+This exercice requires to read carefully the tutorial on SystemC TLM, something we did not do properly on the first time. Once we read this tutorial, both tasks were relatively easy to implement, since the exercice page has all the advice necessary.
+
 2. Fill the used hours below, including answering questions and any downtime:
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	GROUP MEMBER 1: 2 hours
+	GROUP MEMBER 2: 2 hours
+	GROUP MEMBER 3: 4 hours
 
 3. Did you finish the bonus task? Fill the hours used for the bonus task below:
 
