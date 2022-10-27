@@ -3,23 +3,43 @@ INCLUDE ANSWERS IN HERE
 1. Obviously, the blinker application of the exercise is implementable with hardware.
 What are the pros and cons of implementing it with hardware? Mention at least two pros and one con.
 
+	PRO: It is easier to implement since there is only design for HW and no design for both HW and SW.
+	PRO: There is no need of a SW layer for the application like an OS.
+	CON: It is specific to this hardware and the app cannaot be reused on another platform.
+
 2. Are the LEDs active low or high? When you press a button, does it produce one or zero?
 
+	ANSWER: The LEDs are active low. When the button is pressed, it produces a zero.
+
 3. You had to generate addresses for components in Qsys. Why?
+
+	ANSWER: We need to generate addresses for components in order to access them inside the IP block and to be visible to HW.
 
 4. As you saw in the sources codes and the system designs in Kactus2,
 the application is separated from hardware with a HAL component. Why?
 
+	ANSWER: The goal of a HAL is to create a logical division of code that serves as an abstraction layer between HW and SW. This facilitates the design of both HW and SW that can bo done seperately and then integrated together. 
+
 5. The HAL layer maps a physical memory region to virtual memory before using it.
 Why it cannot use physical memory directly?
 
+	ANSWER: This is because the OS uses virtual memory and so we need in order to access the memory.
+
 6. When you tried to execute the second build of the application on PC, it failed. Why? Mention at least two reasons.
+
+	REASON1: The binary object was generated for a different target architecture (arm instead of x64)
+	REASON2: The PC does not have the HAL component installed.
 
 7. Memory and connections were used for communication between hardware and software. How?
 
+	ANSWER: It is the role of the kernel to allow communication between HW and SW.
+
 8. What was hard? What was easy?
+
+	ANSWER: The instructions were very clear and easy to follow. We lost a little time with the address offset in the code.
 
 9. Fill the used hours below, including answering questions and any downtime:
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	GROUP MEMBER 1: 4 hours
+	GROUP MEMBER 2: 2 hours
+	GROUP MEMBER 3: 2 hours
