@@ -14,8 +14,9 @@
 #include "blinker_hal.h"
 
 //Base addresses for physical addresses of accessed FPGA components
-#define BUTTON_BASE 0x00000020
-#define LED_BASE 0x00000000
+#define BUTTON_BASE (LWH2F_BASE+0x00000020)
+#define LED_BASE (LWH2F_BASE+0x00000000)
+
 
 //Virtual addresses for mapped memories.
 uint8_t* btn_virt = NULL;
