@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>product</ipxact:library>
 	<ipxact:name>Kvazaar</ipxact:name>
@@ -16,11 +16,20 @@
 				<ipxact:envIdentifier>::</ipxact:envIdentifier>
 				<ipxact:designConfigurationInstantiationRef>PC-Hardware</ipxact:designConfigurationInstantiationRef>
 			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>Veek-Hardware</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:designConfigurationInstantiationRef>Veek-Hardware</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
 		</ipxact:views>
 		<ipxact:instantiations>
 			<ipxact:componentInstantiation>
 				<ipxact:name>flat</ipxact:name>
 			</ipxact:componentInstantiation>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>Veek-Hardware</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-Hardware.designcfg" version="1.0_student"/>
+			</ipxact:designConfigurationInstantiation>
 			<ipxact:designConfigurationInstantiation>
 				<ipxact:name>PC-Hardware</ipxact:name>
 				<ipxact:designConfigurationRef vendor="TUNI.fi" library="product" name="Kvazaar.PC-Hardware.designcfg" version="1.0"/>
@@ -31,49 +40,49 @@
 		<ipxact:fileSet>
 			<ipxact:name>Simulation-System_general_files</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
-			<ipxact:file>
-				<ipxact:name>../../Kvazaar.Simulation-System/1.0/sw_Simulation-System/Makefile</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
-			<ipxact:file>
-				<ipxact:name>../../../ip.swp.stack/Kvazaar_sim_support/1.0_student/untimed_src/Makefile</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>Simulation-System_Kvazaar_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
-			<ipxact:file>
-				<ipxact:name>../../Kvazaar.Simulation-System/1.0/sw_Simulation-System/Kvazaar_0</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
-			<ipxact:file>
-				<ipxact:name>../../../ip.swp.stack/Kvazaar_sim_support/1.0_student/untimed_src/Kvazaar_0</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>Simulation-System_Kvazaar_sim_support_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
 		</ipxact:fileSet>
-		<ipxact:fileSet>
-			<ipxact:name>PC-System_general_files</ipxact:name>
-			<ipxact:group>sourceFiles</ipxact:group>
-			<ipxact:file>
-				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Makefile</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
-		</ipxact:fileSet>
-		<ipxact:fileSet>
-			<ipxact:name>PC-System_Kvazaar_0_headers</ipxact:name>
-			<ipxact:group>sourceFiles</ipxact:group>
-			<ipxact:file>
-				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
-		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
+		<kactus2:systemViews>
+			<kactus2:systemView>
+				<ipxact:name>Veek-System</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-System.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>Veek-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+			<kactus2:systemView>
+				<ipxact:name>Accelerated</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-System.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>Veek-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+			<kactus2:systemView>
+				<ipxact:name>Simulation-System</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.Simulation-System.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+			<kactus2:systemView>
+				<ipxact:name>PC-System</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.PC-System.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+			<kactus2:systemView>
+				<ipxact:name>HW-Timed-Simulation</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.HW-Timed-Simulation.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+			<kactus2:systemView>
+				<ipxact:name>SW-Timed-Simulation</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.SW-Timed-Simulation.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+		</kactus2:systemViews>
 		<kactus2:fileDependencies>
 			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
 				<kactus2:fileRef1>../../Kvazaar.Simulation-Distributed/1.0/sw_Simulation-Distributed/Kvazaar_sim_distributed_0/IPTLMheader.h</kactus2:fileRef1>
@@ -96,18 +105,6 @@
 				<ipxact:description></ipxact:description>
 			</kactus2:fileDependency>
 		</kactus2:fileDependencies>
-		<kactus2:systemViews>
-			<kactus2:systemView>
-				<ipxact:name>Simulation-System</ipxact:name>
-				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.Simulation-System.sysdesigncfg" version="1.0_student"/>
-				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
-			</kactus2:systemView>
-			<kactus2:systemView>
-				<ipxact:name>PC-System</ipxact:name>
-				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Kvazaar.PC-System.sysdesigncfg" version="1.0_student"/>
-				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
-			</kactus2:systemView>
-		</kactus2:systemViews>
 		<kactus2:version>3,0,27,0</kactus2:version>
 		<kactus2:kts_attributes>
 			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
@@ -116,3 +113,4 @@
 		</kactus2:kts_attributes>
 	</ipxact:vendorExtensions>
 </ipxact:component>
+
