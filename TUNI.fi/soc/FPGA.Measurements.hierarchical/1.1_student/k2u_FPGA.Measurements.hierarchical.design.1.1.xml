@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>soc</ipxact:library>
 	<ipxact:name>FPGA.Measurements.hierarchical.design</ipxact:name>
@@ -430,15 +430,15 @@
 			</kactus2:route>
 			<kactus2:route kactus2:connRef="H2F1" kactus2:offPage="true">
 				<kactus2:position x="620" y="790"/>
-				<kactus2:position x="990" y="130"/>
+				<kactus2:position x="990" y="150"/>
 			</kactus2:route>
 			<kactus2:route kactus2:connRef="H2F2" kactus2:offPage="true">
 				<kactus2:position x="620" y="880"/>
-				<kactus2:position x="990" y="130"/>
+				<kactus2:position x="990" y="150"/>
 			</kactus2:route>
 			<kactus2:route kactus2:connRef="H2F3" kactus2:offPage="true">
 				<kactus2:position x="620" y="990"/>
-				<kactus2:position x="990" y="130"/>
+				<kactus2:position x="990" y="150"/>
 			</kactus2:route>
 			<kactus2:route kactus2:connRef="FPGA2SDRAM0" kactus2:offPage="true">
 				<kactus2:position x="620" y="900"/>
@@ -567,18 +567,20 @@
 				<kactus2:position x="590" y="520"/>
 			</kactus2:route>
 			<kactus2:route kactus2:connRef="Bus_connection_H2F_to_H2F" kactus2:offPage="false">
-				<kactus2:position x="940" y="110"/>
-				<kactus2:position x="990" y="130"/>
+				<kactus2:position x="910" y="110"/>
+				<kactus2:position x="1000" y="110"/>
+				<kactus2:position x="1000" y="150"/>
+				<kactus2:position x="1020" y="150"/>
 			</kactus2:route>
 		</kactus2:routes>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>H2F</kactus2:name>
-			<kactus2:position x="1020" y="130"/>
+			<kactus2:position x="1020" y="150"/>
 			<kactus2:direction x="-1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>LWH2F</kactus2:name>
-			<kactus2:position x="1020" y="100"/>
+			<kactus2:position x="1020" y="110"/>
 			<kactus2:direction x="-1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
@@ -587,24 +589,30 @@
 			<kactus2:direction x="-1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:note>
-			<kactus2:position x="330" y="280"/>
+			<kactus2:position x="310" y="280"/>
 			<kactus2:content>U&amp;K 4 end
 U&amp;K 14 start</kactus2:content>
-			<kactus2:associations/>
+			<kactus2:associations>
+				<kactus2:position x="480" y="280"/>
+			</kactus2:associations>
 			<kactus2:timestamp>3.5.2016 13:45:31</kactus2:timestamp>
 		</kactus2:note>
 		<kactus2:note>
 			<kactus2:position x="330" y="390"/>
 			<kactus2:content>U&amp;K 5 end
 U&amp;K 15 start</kactus2:content>
-			<kactus2:associations/>
+			<kactus2:associations>
+				<kactus2:position x="480" y="390"/>
+			</kactus2:associations>
 			<kactus2:timestamp>3.5.2016 13:46:42</kactus2:timestamp>
 		</kactus2:note>
 		<kactus2:note>
 			<kactus2:position x="330" y="500"/>
 			<kactus2:content>U&amp;K 6 end
 U&amp;K 16 start</kactus2:content>
-			<kactus2:associations/>
+			<kactus2:associations>
+				<kactus2:position x="480" y="500"/>
+			</kactus2:associations>
 			<kactus2:timestamp>3.5.2016 13:46:46</kactus2:timestamp>
 		</kactus2:note>
 		<kactus2:note>
@@ -612,6 +620,7 @@ U&amp;K 16 start</kactus2:content>
 			<kactus2:content>K.20 end</kactus2:content>
 			<kactus2:associations>
 				<kactus2:position x="600" y="885"/>
+				<kactus2:position x="480" y="880"/>
 			</kactus2:associations>
 			<kactus2:timestamp>3.5.2016 13:47:47</kactus2:timestamp>
 		</kactus2:note>
@@ -620,8 +629,10 @@ U&amp;K 16 start</kactus2:content>
 			<kactus2:content>K.10 start</kactus2:content>
 			<kactus2:associations>
 				<kactus2:position x="320" y="1030"/>
+				<kactus2:position x="480" y="990"/>
 			</kactus2:associations>
 			<kactus2:timestamp>3.5.2016 13:47:50</kactus2:timestamp>
 		</kactus2:note>
+		<kactus2:adHocVisibilities/>
 	</ipxact:vendorExtensions>
 </ipxact:design>

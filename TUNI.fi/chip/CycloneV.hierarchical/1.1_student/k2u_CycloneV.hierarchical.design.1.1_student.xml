@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>chip</ipxact:library>
 	<ipxact:name>CycloneV.hierarchical.design</ipxact:name>
@@ -87,5 +87,34 @@
 			<kactus2:position x="60" y="70"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+		<kactus2:note>
+			<kactus2:position x="570" y="220"/>
+			<kactus2:content>WRITE:
+U.4 end
+U.5 end
+U.6 end
+
+K.4 end
+K.5 end
+K.6 end
+
+READ:
+U.14 start
+U.15 start
+U.16 start
+
+K.14 start
+K.15 start
+K.16 start</kactus2:content>
+			<kactus2:associations/>
+			<kactus2:timestamp>01/11/2022 18:34</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="1200" y="320"/>
+			<kactus2:content></kactus2:content>
+			<kactus2:associations/>
+			<kactus2:timestamp>01/11/2022 18:20</kactus2:timestamp>
+		</kactus2:note>
 	</ipxact:vendorExtensions>
 </ipxact:design>
