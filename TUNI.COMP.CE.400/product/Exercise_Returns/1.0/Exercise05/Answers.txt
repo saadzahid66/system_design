@@ -8,15 +8,48 @@ BUT THE PRECISE IMPLEMENTATION IS OBSCURE.
 
 1. Insert all benchmarking results here.
 
+	# Meas. #### WRITING ######### (U) USER SPACE (MB/s) ### (K) KERNEL SPACE (MB/s) 
+	#  1    #  8 BIT LOCAL ARRAY:           196.69                        -  
+	#  2    # 16 BIT LOCAL ARRAY:           633.10                        -  
+	#  3    # 32 BIT LOCAL ARRAY:          1103.46                        -  
+	#  4    #  8 BIT ONCHIP ON FPGA:          6.66                      47.42
+	#  5    # 16 BIT ONCHIP ON FPGA:         13.43                     143.61
+	#  6    # 32 BIT ONCHIP ON FPGA:         26.47                     192.90
+	#  7    #  8 BIT MAPPED ARRAY:            8.84                     179.35
+	#  8    # 16 BIT MAPPED ARRAY:           17.78                     222.58
+	#  9    # 32 BIT MAPPED ARRAY:           61.70                     177.64
+	#  10   # 64 BIT DMA WRITER:               -                       408.60
+	# Meas. #### READING ######### (U) USER SPACE (MB/s) ### (K) KERNEL SPACE (MB/s)
+	#  11   #  8 BIT LOCAL ARRAY:           209.45                        -  
+	#  12   # 16 BIT LOCAL ARRAY:           322.83                        -  
+	#  13   # 32 BIT LOCAL ARRAY:           410.75                        -  
+	#  14   #  8 BIT ONCHIP ON FPGA:          7.32                      55.68
+	#  15   # 16 BIT ONCHIP ON FPGA:         14.37                      93.36
+	#  16   # 32 BIT ONCHIP ON FPGA:         28.82                     125.68
+	#  17   #  8 BIT MAPPED ARRAY:            7.42                      95.62
+	#  18   # 16 BIT MAPPED ARRAY:           14.83                     122.07
+	#  19   # 32 BIT MAPPED ARRAY:           29.56                     131.57
+	#  20   # 64 BIT DMA READER:               -                       366.44
+
+
 2. How fast were the DMA write and read measured by the application and how fast were they actually (show calculations and differences)? Give a reason for this?
 
-	WRITE ON SIGNAL TAP:
-	DIFFERENCE TO APPLICATION MEASUREMENT:
+	CLOCK: 100 MHz --> PERIOD: 1e-8 s
+	TOTAL TO WRITE/READ: 64*64 = 4096 bytes
 
-	READ ON SIGNAL TAP:
-	DIFFERENCE TO APPLICATION MEASUREMENT:
+	WRITE ON SIGNAL TAP: 32
+	TIME TO WRITE: 32 * 1e-8 = 3.2 * 10e-7 s
+	MEASUREMENT: 4096 / (3.2 * 10e-7) = 1280 MB/s
+	APPLICATION MEASUREMENT: 410 MB/s
+	DIFFERENCE TO APPLICATION MEASUREMENT: 1280 - 410 = 870 MB/s 
+
+	READ ON SIGNAL TAP: 32
+	TIME TO READ: 32 * 1e-8 = 3.2 * 10e-7 s
+	MEASUREMENT: 4096 / (3.2 * 10e-7) = 1280 MB/s
+	APPLICATION MEASUREMENT: 370 MB/s
+	DIFFERENCE TO APPLICATION MEASUREMENT: 1280 - 370 = 910 MB/s 
 	
-	REASON:
+	REASON: The difference is very important for both measurements. This is due to the lack of precision for the time measurement in the application. Indeed the time is measured using a polling operation that could not arrived at the exact clock time of the event. 
 
 3. Did you mark the measurement points to the hardware designs as instructed?
 
