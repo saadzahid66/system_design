@@ -52,13 +52,14 @@ BUT THE PRECISE IMPLEMENTATION IS OBSCURE.
 	REASON: The difference is very important for both measurements. This is due to the lack of precision for the time measurement in the application. Indeed the time is measured using a polling operation that could not arrived at the exact clock time of the event. 
 
 3. Did you mark the measurement points to the hardware designs as instructed?
+Yes
 
 *** MEMORY ***
 
 4. How much memory the operating system on ARM sees available? How much the ARM processor really has?
 
-	MEMORY FOR ARM:
-	MEMORY FOR OPERATING SYSTEM:
+	MEMORY FOR ARM: 1 GiB
+	MEMORY FOR OPERATING SYSTEM: 756 MB
 
 *** MIPS ***
 
