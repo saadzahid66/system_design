@@ -66,38 +66,60 @@ Yes
 5. What was the calculated MIPS of the FPGA and the virtual machine CPU?
 INSERT THE COMPLETE CALCULATIONS! TELL THE USED FREQUENCY OF THE CPU!
 
-	FPGA MIPS:
-	VIRTUAL MACHINE CPU MIPS:
+	FPGA MIPS: FPGA MIPS = Number of DSPs * Clock frequency of the DSPs
+						 = 112 * 287 MHz (Independent 18 x 18 Multiplication)
+						 = 32144 MIPS
+
+	VIRTUAL MACHINE CPU MIPS: CPU MIPS = Used cores * ( Clock frequency of a CPU / Cycles per mul )
+									   = 1  * (3407.997 MHz / 3)
+									   = 1136 MIPS
 
 6. What was the measured MIPS of the ARM CPU and the virtual machine CPU?
 
-	MEASURED ARM MIPS:
-	MEASURED VIRTUAL MACHINE CPU MIPS:
+	MEASURED ARM MIPS: 519.345649 MIPS
+	MEASURED VIRTUAL MACHINE CPU MIPS: 1164.406060
 
 7. For CPUs, MIPS was measured in this exercise. Why this gives us a value differing from calculated MIPS?
 
+	The difference can be explained 
+
 8. What is probably the most important thing that the used MIPS measurements did not take into account?
 HINT: We told you the answer in the instructions, but we are just making sure you understand.
+
+	As explained in the instructions, the MIPS measurements did not take into account the fact that the operation are made on register not memory. 
 
 *** SPECULATIVE FRAME RATE ***
 
 9. How much were the speculative frame rates?
 INSERT THE COMPLETE CALCULATIONS! TELL THE USED FRAME RATE!
 
-	HARDWARE ACCELERATED FPS:
-	PURE SOFTWARE FPS:
+	FRAME RATE = 
+
+	RELATION = ( ARM MIPS * 0.4 + FPGA MIPS * 0.6 ) / Virtual machine MIPS
+			 = ( 519.345649 * 0.4 + 32144 * 0.6 ) / 1164.406060
+			 = 16.74
+	HARDWARE ACCELERATED FPS: 
+
+	RELATION = ARM MIPS / Virtual machine MIPS
+			 = 519.345649 / 1164.406060
+			 = 0.45
+	PURE SOFTWARE FPS: 
 
 10. Why did we assume that roughly 60% of the execution was on the FPGA rather than the ARM CPU?
 HINT: Look at the profiling results of exercise 1, or instructions of exercise 3.
+
+	This assumption is made because as seen in Exercise 1, 60% of the whole encoding process was used by intra prediction which is run by the FPGA.
 	
 *** BOGOMIPS ***
 
-11. What was the BogoMIPS of the ARM CPU andthe virtual machine CPU?
+11. What was the BogoMIPS of the ARM CPU and the virtual machine CPU?
 
-	ARM BOGO MIPS:
-	VIRTUAL MACHINE BOGO MIPS:
+	ARM BOGO MIPS: 1594.16
+	VIRTUAL MACHINE BOGO MIPS: 6815.99
 	
 12. Why BogoMIPS is not so good measurement for performance? Find out if you do not know.
+
+	BogoMIPS is not so good measurement for performance because ...
 	
 *** KVAZAAR ON ARM ***
 	
