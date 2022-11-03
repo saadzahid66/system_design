@@ -20,6 +20,7 @@
 			<ipxact:vendorExtensions>
 				<kactus2:uuid>{9c953aba-4ad2-4363-b795-7b693c3a7e12}</kactus2:uuid>
 				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
+				<kactus2:fileSetRef>Veek-System_Kvazaar_acc_support_0_headers</kactus2:fileSetRef>
 				<kactus2:position x="190" y="180"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
@@ -29,8 +30,8 @@
 			<ipxact:vendorExtensions>
 				<kactus2:uuid>{39addd7b-5742-4825-8ddc-282f8696b586}</kactus2:uuid>
 				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
-				<kactus2:position x="190" y="100"/>
 				<kactus2:fileSetRef>Veek-System_Kvazaar_0_headers</kactus2:fileSetRef>
+				<kactus2:position x="190" y="100"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 	</ipxact:componentInstances>
