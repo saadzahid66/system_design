@@ -12,9 +12,9 @@ extern int data_transfers[6]; // number of transfers
 const int arm_overclock_mhz_c = 925;
 
 // Encoder simulation values
-const int delay_c = 1;
-const double search_intra_rough_percentage_c = 0;
-const double rest_percentage_c = 0;
+const int delay_c = 2000;
+const double search_intra_rough_percentage_c = 0.60; // 60 %
+const double rest_percentage_c = 0.38; // 98 % - 60 % = 38 %
 
 // HPS->FPGA->HPS simulation values
 const double onchip_fpga_to_hps_ns_per_byte_c = 0;
