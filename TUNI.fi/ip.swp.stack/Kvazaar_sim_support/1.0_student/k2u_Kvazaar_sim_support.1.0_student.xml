@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>ip.swp.stack</ipxact:library>
 	<ipxact:name>Kvazaar_sim_support</ipxact:name>
@@ -95,26 +95,41 @@
 				<ipxact:name>untimed_src/supplement/camera_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>53d1afaffb27775acda43839f44c4db5f9b8fd48</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/encmain_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1a7fbfe9d2a22d9bf3092cd2ddf9c7255a384214</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/encoderstate_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>735a0106cadc075545c01528be1492a7ba5114ec</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/systemc/sc_kvazaar_ip_sub.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>29be3196a6010af605721b335bcc4fb14f5c51dd</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/systemc/sc_kvazaar.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>20ac515c17b4b736f2fab8647472138efe2a022d</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/systemc/sc_main.c</ipxact:name>
@@ -125,11 +140,17 @@
 				<ipxact:name>untimed_src/supplement/search_intra_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>780954b1bbeb61435d85746e2e279700445eb060</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/search_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>66e677e51dc2de560f9c10681932e01df5f3d87f</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:defaultFileBuilder>
 				<ipxact:fileType>cppSource</ipxact:fileType>
@@ -145,48 +166,72 @@
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>936887b08c6b03bdaf4d952bdb84bd917129eb16</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/encmain_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>a4fd7a325180359857c2b7890cc4eba15f18da8a</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/encoderstate_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5042343f9e1febdd0d33a19554ec7a2baeb8de93</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/global_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>a5b5d37d15315541fa701883915e9d1917221a51</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/systemc/sc_kvazaar_ip_sub.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>3533f2f7548839cdc32cd385683e51e29c2db882</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/systemc/sc_kvazaar.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>4ecc9ee284e49e240657c50141007342d28d2c83</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/search_intra_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>347de6b110c5b7c7dbdadb1cbe9c07cb78ee0fa8</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>untimed_src/supplement/search_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>066fefc61f458355860204e92dd73fb26fe70749</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
@@ -195,81 +240,129 @@
 				<ipxact:name>timed_src/supplement/camera_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>53d1afaffb27775acda43839f44c4db5f9b8fd48</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/encmain_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>de681e2b13f5aafdf556fa556c13a2e396160867</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/encoderstate_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>735a0106cadc075545c01528be1492a7ba5114ec</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_config.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>ffecc1d6943bd467b5640708329e333c3a1f363e</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_ctrl.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>4bad6fb2f4cacf06cf398819a8362d3362759685</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_neg.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>762de91ea73847c6433cbe57cffd91cac2855f6a</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_pos.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>6cc87b70741bb9ccdb650c13509c3ac6f63e8404</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_zero.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>69824b1c6844198ff59fb8f9adad5d38f3fc77d9</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_dc.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>220ac08604fd79394e32a602c724a4db9d5d3d30</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_planar.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>2988265f6b6ebb6ad1db98ec83e317633230caa0</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_sad.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5fb3b8947877f2a2e0e5dc475664a0e17bf8fff2</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/systemc/sc_kvazaar_ip_sub.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>86cddf6ba879ead45379b480515162a38ef34f77</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/systemc/sc_kvazaar.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1a72d6f94d9fa4081e128416f8cb72f19baf08e8</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/systemc/sc_main.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>87b6b5f1a7891dbf7f79e7c4deba62e248e067a3</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/search_intra_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1dfed916ef774eee241105b5fbf659e75d37c1ff</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/search_supplement.c</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>795c1e82da0c7767b0a1fefaa5fce63c6137baea</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
@@ -279,108 +372,162 @@
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>936887b08c6b03bdaf4d952bdb84bd917129eb16</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/encmain_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>834aaf53216e03e82694cbc9c0572c240e870f1d</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/encoderstate_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5042343f9e1febdd0d33a19554ec7a2baeb8de93</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/systemc/exploration.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>a194cb49929bf4d1d1605a0fcc1c0263d0672820</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/global_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>26ce4dbe119c1ac012d1bbb039260116b613960b</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_config.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>7de9ff473841fabe0dfd29b769f4a446c9e7d7b3</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_ctrl.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>0eea04bc44fb80505dce6097921ba9c19515c334</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_neg.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>eb0af7f452f3e37892c840ece8e5863afb892a08</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_pos.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>6ec7112f44b93ec8f4b909a19b8d063dba56dd58</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_zero.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>2165dda3333429ea34c0c7cc79084a1bf86f6231</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_dc.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>9e9ce58643d0c46cf9b022892015760e4168666c</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_get_planar.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>aaf2a787cfa7a33593ec2837b27eeb5fa62003e9</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_global.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>ab3d303e982367d8a958ec2ba4cb4e9932f2f754</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/ip_accelerator/ip_sad.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>b119498a0ad8925456c425108005a2393dfffe76</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/systemc/sc_kvazaar_ip_sub.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>910234bc18191f52d49ceb280a460b794dd262f9</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/systemc/sc_kvazaar.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>ca095a7334155098304e371bbcbc9543bd6eda55</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/search_intra_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>d1b81693e5728c08e08870e2dbb229453955389a</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>timed_src/supplement/search_supplement.h</ipxact:name>
 				<ipxact:fileType>cSource</ipxact:fileType>
 				<ipxact:fileType>cppSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>066fefc61f458355860204e92dd73fb26fe70749</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 		</ipxact:fileSet>
 	</ipxact:fileSets>
@@ -403,6 +550,617 @@ Assumes that enviroment variable SYSTEMC_HOME points to the SystemC installation
 			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
 			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
 		</kactus2:kts_attributes>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_config.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_config.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_config.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_config.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_ctrl.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_ctrl.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_ctrl.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_ctrl.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_neg.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_ang_neg.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_neg.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_neg.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_pos.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_ang_pos.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_pos.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_pos.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_zero.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_ang_zero.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_zero.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_ang_zero.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_dc.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_dc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_dc.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_dc.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_planar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_planar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_planar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_get_planar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_global.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_sad.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_sad.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_sad.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/ip_accelerator/ip_sad.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/camera_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/camera_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/camera_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/camera_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/encmain_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encmain_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/encmain_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/encmain_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/encoderstate_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/encoderstate_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encoderstate_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/encoderstate_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/search_intra_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/intra.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encoderstate.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/cabac.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/search_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/cu.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/supplement/search_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/videoframe.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/string.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/exploration.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_initiator_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_target_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar_ip_sub.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/exploration.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_initiator_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_target_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/strategies-picture.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/intra.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar_ip_sub.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_config.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_ctrl.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_ang_pos.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_ang_neg.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_ang_zero.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_planar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_get_dc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_sad.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/string</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sstream</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>timed_src/systemc/sc_main.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/exploration.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/camera_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/camera_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/camera_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/camera_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/encmain_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encmain_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/encmain_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/encmain_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/encoderstate_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/encoderstate_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encoderstate_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/encoderstate_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/search_intra_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/intra.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encoderstate.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_intra_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/cabac.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/ip_global.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/search_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_supplement.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/cu.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/supplement/search_supplement.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/videoframe.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/string.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_initiator_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_target_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar_ip_sub.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sc_kvazaar.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/encoderstate.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/cabac.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/rdo.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/global_supplement.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_initiator_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tlm_utils/simple_target_socket.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/strategies-picture.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>untimed_src/systemc/sc_kvazaar_ip_sub.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/intra.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
 	</ipxact:vendorExtensions>
 </ipxact:component>
-

@@ -212,7 +212,6 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
     {
 		case CONFIG_BASE:
 		{
-			//TODO: Save data amount + increment transfer num
 			CHECK_OVERFLOW(CONFIG_BASE,CONFIG_SIZE);
 			if ( cmd == tlm::TLM_READ_COMMAND )
 			{
@@ -222,12 +221,14 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 			{
 				memcpy((char*)(&config[adr]), ptr, len);
 				config_valid = 1;
+				
+				data_amount[CONFIG] += len;
+				data_transfers[CONFIG]++;
 			}
 			break;
 		}
 		case UNFILT1_BASE:
 		{
-			//TODO: Save data amount + increment transfer num
 			CHECK_OVERFLOW(UNFILT1_BASE,UNFILT_SIZE);
 			if ( cmd == tlm::TLM_READ_COMMAND )
 			{
@@ -238,12 +239,15 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				memcpy(&refs.ref.top[adr], ptr, len);
 				refs.filtered_initialized = 0;
 				unfilt1_valid = 1;
+				
+				data_amount[UNFILT1] += len;
+				data_transfers[UNFILT1]++;
+				
 			}
 			break;
 		}
 		case UNFILT2_BASE:
 		{
-			//TODO: Save data amount + increment transfer num
 			CHECK_OVERFLOW(UNFILT2_BASE,UNFILT_SIZE);
 			if ( cmd == tlm::TLM_READ_COMMAND )
 			{
@@ -254,12 +258,14 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				memcpy(&refs.ref.left[adr], ptr, len);
 				refs.filtered_initialized = 0;
 				unfilt2_valid = 1;
+
+				data_amount[UNFILT2] += len;
+				data_transfers[UNFILT2]++;
 			}
 			break;
 		}
 		case ORIG_BLOCK_BASE:
 		{
-			//TODO: Save data amount + increment transfer num
 			CHECK_OVERFLOW(ORIG_BLOCK_BASE,ORIG_BLOCK_SIZE);
 			if ( cmd == tlm::TLM_READ_COMMAND )
 			{
@@ -269,17 +275,22 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 			{
 				memcpy(&orig[adr], ptr, len);
 				orig_valid = 1;
+
+				data_amount[ORIG] += len;
+				data_transfers[ORIG]++;
 			}
 			break;
 		}
 		case LAMBDA_BASE:
 		{
-			//TODO: Save data amount + increment transfer num
 			CHECK_OVERFLOW(LAMBDA_BASE,LAMBDA_SIZE);
 
 			if ( cmd == tlm::TLM_READ_COMMAND )
 			{
 				memcpy(ptr, (char*)&lambda_cost, len);
+
+				data_amount[LAMBDA] += len;
+				data_transfers[LAMBDA]++;
 			}
 			else if ( cmd == tlm::TLM_WRITE_COMMAND )
 			{
@@ -290,12 +301,14 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 		}
 		case RESULT_BASE:
 		{
-			//TODO: Save data amount + increment transfer num
 			CHECK_OVERFLOW(RESULT_BASE,RESULT_SIZE);
 
 			if ( cmd == tlm::TLM_READ_COMMAND )
 			{
 				memcpy(ptr, (char*)&result, len);
+
+				data_amount[RESULT] += len;
+				data_transfers[RESULT]++;
 			}
 			else if ( cmd == tlm::TLM_WRITE_COMMAND )
 			{
