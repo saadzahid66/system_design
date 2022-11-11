@@ -2,7 +2,13 @@ INCLUDE ANSWERS IN HERE
 
 1. Did you get similar results simulating Kvazaar on ARM? What was the simulated FPS for Kvazaar on ARM?
 
+	No, the simulated FPS is much higher than it really was on ARM. The simulated FPS for Kvazaar on ARM was 1911.42.
+
 2. What were your values for delay_c, search_intra_rough_percentage_c, rest_percentage_c?
+
+	delay_c = 2800
+	search_intra_rough_percentage_c = 60 %
+	rest_percentage_c = 98 % - 60 % = 38 %
 
 3. What was the simulated FPS of the HW-accelerated version?
 
