@@ -8,8 +8,8 @@ extern int data_transfers[6]; // number of transfers
 
 // ARM exploration
 #define ARM_STOCK_MHZ 925
-#define ARM_USED_CORES 1
-const int arm_overclock_mhz_c = 925;
+#define ARM_USED_CORES 10
+const int arm_overclock_mhz_c = 925*4;
 
 // Encoder simulation values
 const int delay_c = 2800;
@@ -26,8 +26,8 @@ const double hps_to_onchip_fpga_ns_per_byte_c = ( 1 / ( ( K_6 ) * 1024 * 1024 ) 
 const double hps_ddr_to_fpga_ns_per_byte_c = ( 1 / ( ( K_9 ) * 1024 * 1024 ) ) * 1000000000;
 
 // Accelerator exploration
-#define NUMBER_OF_ACCS 1
-#define FPGA_FREQ_MHZ 90
+#define NUMBER_OF_ACCS 10
+#define FPGA_FREQ_MHZ 90 * 20
 const int period_ns_c = 1000/FPGA_FREQ_MHZ;
 
 #endif
