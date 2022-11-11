@@ -53,17 +53,26 @@ INCLUDE ANSWERS IN HERE
 
 9. What does using wait() in delay_ns() cause?
 
-	Using wait() in delay_ns() cause a very long simulatiom time, because the program is waiting during the delay instead of just adding the delay to the variable that hold the time spend.
+	Using wait() in delay_ns() cause a very long simulatiom time (1050 seconds against 17 seconds), because the program is waiting during the delay instead of just adding the delay to the variable that hold the time spend.
 
 10. By looking at the two different waveforms, what kind of problems not using wait() causes?
 
+
+
 11. What were your values for ARM_USED_CORES, arm_overclock_mhz_c, NUMBER_OF_ACCS and FPGA_FREQ_MHZ that achieved full HD real time encoding?
 
+	Our values were:
+		ARM_USED_CORES = 10
+		arm_overclock_mhz_c = 3700 MHz
+		NUMBER_OF_ACCS = 10
+		FPGA_FREQ_MHZ = 1800 MHz
+
+		--> 23.82 FPS
 
 
 12. What was hard? What was easy?
 
-	This exercise wase easy and the instructions were very clear.
+	This exercise was easy and the instructions were very clear. However the the simulation using wait() were very long
 
 13. Fill the used hours below, including answering questions and any downtime:
 
