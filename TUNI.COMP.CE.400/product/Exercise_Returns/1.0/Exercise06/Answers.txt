@@ -12,13 +12,25 @@ INCLUDE ANSWERS IN HERE
 
 3. What was the simulated FPS of the HW-accelerated version?
 
+	The simulated FPS of the HW-accelerated version was 1.33.
+
 4. How was the computation time/delay added to the simulation on both ARM simulation and HW-accelerated simulation? What function/s, variable/s, and calculations are used?
 
+	The computation delay was added to the simulation with a function delay that is called during the encoding.
+
+	There are 2 of them. The first one is search_intra_rough_delay. It is used with the variable search_intra_rough_percentage_c. The other one is search_delay and it is used with the rest_percentage_c variable. Both of these functions used the variable delay_c and called the generic function delay_ns. This function just do a some of the actual time and the delay.
+
 5. Do you think the computation time/delay is calculated accurately enough?
+
+	Yes
 		
 6. How do we know the improvement we got with the HW accelerator is correct?
 
+	
+
 7. How many data transfers happened and how much data was sent and read while simulating the HW-accelerated version?
+
+	
 
 8. What percentages did you get for search_intra_rough/(HW-accelerator and transfers) and for the rest of the encoder, simulating Kvazaar on ARM and simulating the HW-accelerated version?
 
