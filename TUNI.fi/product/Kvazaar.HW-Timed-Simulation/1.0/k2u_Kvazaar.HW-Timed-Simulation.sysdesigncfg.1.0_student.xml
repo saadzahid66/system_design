@@ -7,11 +7,11 @@
 	<ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar.HW-Timed-Simulation.sysdesign" version="1.0_student"/>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
-		<ipxact:view viewRef="sw_timed_simulation"/>
+		<ipxact:view viewRef="hw_timed_simulation"/>
 	</ipxact:viewConfiguration>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>Kvazaar_sim_support_0</ipxact:instanceName>
-		<ipxact:view viewRef="sw_timed_simulation"/>
+		<ipxact:view viewRef="hw_timed_simulation_wave_output"/>
 	</ipxact:viewConfiguration>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>x86_64_0</ipxact:instanceName>
