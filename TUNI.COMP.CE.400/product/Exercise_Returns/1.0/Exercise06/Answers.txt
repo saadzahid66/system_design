@@ -57,7 +57,7 @@ INCLUDE ANSWERS IN HERE
 
 10. By looking at the two different waveforms, what kind of problems not using wait() causes?
 
-
+	We could not generate waveform with the function wait() enable because the simulation toook some much time.
 
 11. What were your values for ARM_USED_CORES, arm_overclock_mhz_c, NUMBER_OF_ACCS and FPGA_FREQ_MHZ that achieved full HD real time encoding?
 
@@ -69,10 +69,9 @@ INCLUDE ANSWERS IN HERE
 
 		--> 23.82 FPS
 
-
 12. What was hard? What was easy?
 
-	This exercise was easy and the instructions were very clear. However the the simulation using wait() were very long
+	This exercise was easy and the instructions were very clear. However the the simulation using wait() were very long. It would have been nice to have approximate time to have an idea of time to wait. 
 
 13. Fill the used hours below, including answering questions and any downtime:
 
