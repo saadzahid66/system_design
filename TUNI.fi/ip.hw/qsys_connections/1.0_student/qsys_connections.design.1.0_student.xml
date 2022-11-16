@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>ip.hw</ipxact:library>
 	<ipxact:name>qsys_connections.design</ipxact:name>
@@ -449,82 +449,102 @@
 		</kactus2:routes>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>orig_channel</kactus2:name>
-			<kactus2:position x="120" y="370"/>
+			<kactus2:position x="120" y="520"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>top_ref_channel</kactus2:name>
-			<kactus2:position x="120" y="350"/>
+			<kactus2:position x="120" y="370"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>left_ref_channel</kactus2:name>
-			<kactus2:position x="120" y="330"/>
+			<kactus2:position x="120" y="350"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>config_channel</kactus2:name>
-			<kactus2:position x="120" y="310"/>
+			<kactus2:position x="120" y="330"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>y_channel</kactus2:name>
-			<kactus2:position x="120" y="290"/>
+			<kactus2:position x="120" y="310"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>u_channel</kactus2:name>
-			<kactus2:position x="120" y="270"/>
+			<kactus2:position x="120" y="290"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>v_channel</kactus2:name>
-			<kactus2:position x="120" y="250"/>
+			<kactus2:position x="120" y="270"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>camera_config</kactus2:name>
-			<kactus2:position x="120" y="230"/>
+			<kactus2:position x="120" y="250"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>clock_75MHz</kactus2:name>
-			<kactus2:position x="120" y="210"/>
+			<kactus2:position x="120" y="230"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>HPS_connection</kactus2:name>
-			<kactus2:position x="120" y="190"/>
-			<kactus2:direction x="1" y="0"/>
-		</kactus2:interfaceGraphics>
-		<kactus2:interfaceGraphics>
-			<kactus2:name>clock_camera</kactus2:name>
-			<kactus2:position x="120" y="170"/>
-			<kactus2:direction x="1" y="0"/>
-		</kactus2:interfaceGraphics>
-		<kactus2:interfaceGraphics>
-			<kactus2:name>sad_result</kactus2:name>
-			<kactus2:position x="120" y="150"/>
-			<kactus2:direction x="1" y="0"/>
-		</kactus2:interfaceGraphics>
-		<kactus2:interfaceGraphics>
-			<kactus2:name>yuv_ctrl</kactus2:name>
 			<kactus2:position x="120" y="130"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
-			<kactus2:name>camera_start_config</kactus2:name>
+			<kactus2:name>clock_camera</kactus2:name>
 			<kactus2:position x="120" y="110"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
-			<kactus2:name>dip_switch</kactus2:name>
+			<kactus2:name>sad_result</kactus2:name>
 			<kactus2:position x="120" y="90"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
-			<kactus2:name>push_buttons</kactus2:name>
+			<kactus2:name>yuv_ctrl</kactus2:name>
+			<kactus2:position x="120" y="640"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>camera_start_config</kactus2:name>
+			<kactus2:position x="120" y="1130"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>dip_switch</kactus2:name>
 			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>push_buttons</kactus2:name>
+			<kactus2:position x="120" y="180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bus</kactus2:name>
+			<kactus2:position x="120" y="1310"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bus_1</kactus2:name>
+			<kactus2:position x="120" y="1310"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bus_2</kactus2:name>
+			<kactus2:position x="120" y="1330"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bus_3</kactus2:name>
+			<kactus2:position x="120" y="1250"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:adHocVisibilities/>
