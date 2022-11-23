@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Kvazaar_QSYS" kind="system" version="16.0" fabric="QSYS">
  <!-- Format version 16.0 211 (Future versions may contain additional information.) -->
- <!-- 2022.11.16.09:50:33 -->
+ <!-- 2022.11.23.12:16:57 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1668584944</value>
+  <value>1669198548</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -1515,14 +1515,6 @@ parameters are a RESULT of the module parameters. -->
     <width>3</width>
     <role>awsize</role>
    </port>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_1</moduleName>
-    <slaveName>axi_dma_orig_block_altera_axi_master</slaveName>
-    <name>mm_interconnect_1.axi_dma_orig_block_altera_axi_master</name>
-    <baseAddress>0</baseAddress>
-    <span>4294967296</span>
-   </memoryBlock>
   </interface>
   <interface name="channel_lz" kind="conduit_end" version="16.0">
    <!-- The connection points exposed by a module instance for the
@@ -2535,14 +2527,6 @@ parameters are a RESULT of the module parameters. -->
     <width>3</width>
     <role>awsize</role>
    </port>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_2</moduleName>
-    <slaveName>axi_dma_unfiltered1_altera_axi_master</slaveName>
-    <name>mm_interconnect_2.axi_dma_unfiltered1_altera_axi_master</name>
-    <baseAddress>0</baseAddress>
-    <span>4294967296</span>
-   </memoryBlock>
   </interface>
   <interface name="channel_lz" kind="conduit_end" version="16.0">
    <!-- The connection points exposed by a module instance for the
@@ -3555,14 +3539,6 @@ parameters are a RESULT of the module parameters. -->
     <width>3</width>
     <role>awsize</role>
    </port>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_1</moduleName>
-    <slaveName>axi_dma_unfiltered2_altera_axi_master</slaveName>
-    <name>mm_interconnect_1.axi_dma_unfiltered2_altera_axi_master</name>
-    <baseAddress>0</baseAddress>
-    <span>4294967296</span>
-   </memoryBlock>
   </interface>
   <interface name="channel_lz" kind="conduit_end" version="16.0">
    <!-- The connection points exposed by a module instance for the
@@ -5413,21 +5389,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_1</moduleName>
+    <moduleName>mm_interconnect_0</moduleName>
     <slaveName>clk_0_clk</slaveName>
-    <name>mm_interconnect_1.clk_0_clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_2</moduleName>
-    <slaveName>clk_0_clk</slaveName>
-    <name>mm_interconnect_2.clk_0_clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_3</moduleName>
-    <slaveName>clk_0_clk</slaveName>
-    <name>mm_interconnect_3.clk_0_clk</name>
+    <name>mm_interconnect_0.clk_0_clk</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -7124,14 +7088,6 @@ parameters are a RESULT of the module parameters. -->
     <width>3</width>
     <role>awsize</role>
    </port>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>hps_0_fpga_interfaces</moduleName>
-    <slaveName>f2h_sdram0_data</slaveName>
-    <name>hps_0_fpga_interfaces.f2h_sdram0_data</name>
-    <baseAddress>0</baseAddress>
-    <span>4294967296</span>
-   </memoryBlock>
   </interface>
   <interface name="fifo_clk" kind="clock_sink" version="16.0">
    <!-- The connection points exposed by a module instance for the
@@ -23360,9 +23316,9 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_3</moduleName>
+    <moduleName>mm_interconnect_0</moduleName>
     <slaveName>hps_0_h2f_axi_master</slaveName>
-    <name>mm_interconnect_3.hps_0_h2f_axi_master</name>
+    <name>mm_interconnect_0.hps_0_h2f_axi_master</name>
     <baseAddress>0</baseAddress>
     <span>1073741824</span>
    </memoryBlock>
@@ -38307,9 +38263,9 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>mm_interconnect_3</moduleName>
+    <moduleName>mm_interconnect_0</moduleName>
     <slaveName>hps_0_h2f_axi_master</slaveName>
-    <name>mm_interconnect_3.hps_0_h2f_axi_master</name>
+    <name>mm_interconnect_0.hps_0_h2f_axi_master</name>
     <baseAddress>0</baseAddress>
     <span>1073741824</span>
    </memoryBlock>
@@ -57673,2136 +57629,10 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <module
-   name="mm_interconnect_1"
+   name="mm_interconnect_0"
    kind="altera_mm_interconnect"
    version="16.0"
-   path="mm_interconnect_1">
-  <!-- Describes a single module. Module parameters are
-the requested settings for a module instance. -->
-  <assignment>
-   <name>interconnect_id.axi_dma_orig_block.altera_axi_master</name>
-   <value>0</value>
-  </assignment>
-  <assignment>
-   <name>interconnect_id.axi_dma_unfiltered2.altera_axi_master</name>
-   <value>1</value>
-  </assignment>
-  <assignment>
-   <name>interconnect_id.hps_0.f2h_sdram1_data</name>
-   <value>0</value>
-  </assignment>
-  <parameter name="COMPOSE_CONTENTS">
-   <type>java.lang.String</type>
-   <value><![CDATA[add_instance {axi_dma_unfiltered2_altera_axi_master_agent} {altera_merlin_axi_master_ni};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ID_WIDTH} {7};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ADDR_WIDTH} {32};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {RDATA_WIDTH} {64};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {WDATA_WIDTH} {64};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ADDR_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {USE_ADDR_USER} {0};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {AXI_VERSION} {AXI3};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {WRITE_ISSUING_CAPABILITY} {1};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {READ_ISSUING_CAPABILITY} {1};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BEGIN_BURST} {133};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_CACHE_H} {150};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_CACHE_L} {147};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_ADDR_SIDEBAND_H} {131};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_ADDR_SIDEBAND_L} {131};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_PROTECTION_H} {146};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_PROTECTION_L} {144};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BURST_SIZE_H} {128};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BURST_SIZE_L} {126};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BURST_TYPE_H} {130};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BURST_TYPE_L} {129};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_RESPONSE_STATUS_L} {151};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_RESPONSE_STATUS_H} {152};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BURSTWRAP_H} {125};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BURSTWRAP_L} {118};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BYTE_CNT_H} {117};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BYTE_CNT_L} {110};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_ADDR_H} {103};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_ADDR_L} {72};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_TRANS_EXCLUSIVE} {109};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_TRANS_COMPRESSED_READ} {104};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_TRANS_POSTED} {105};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_TRANS_READ} {107};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_DATA_H} {63};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_DATA_L} {0};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BYTEEN_H} {71};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_BYTEEN_L} {64};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_SRC_ID_H} {135};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_SRC_ID_L} {135};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_DEST_ID_H} {136};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_DEST_ID_L} {136};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_THREAD_ID_H} {143};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_THREAD_ID_L} {137};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_QOS_L} {134};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_QOS_H} {134};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_ORI_BURST_SIZE_L} {153};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_ORI_BURST_SIZE_H} {155};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_DATA_SIDEBAND_H} {132};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {PKT_DATA_SIDEBAND_L} {132};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ST_DATA_W} {156};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ST_CHANNEL_W} {4};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ID} {1};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {ADDR_MAP} {<?xml version="1.0" encoding="UTF-8"?>
-<address_map>
- <slave
-   id="0"
-   name="hps_0.f2h_sdram1_data"
-   start="0x0000000000000000"
-   end="0x00000000100000000"
-   responds="1"
-   user_default="0" />
-</address_map>
-};set_instance_parameter_value {axi_dma_unfiltered2_altera_axi_master_agent} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {axi_dma_orig_block_altera_axi_master_agent} {altera_merlin_axi_master_ni};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ID_WIDTH} {7};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ADDR_WIDTH} {32};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {RDATA_WIDTH} {64};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {WDATA_WIDTH} {64};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ADDR_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {USE_ADDR_USER} {0};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {AXI_VERSION} {AXI3};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {WRITE_ISSUING_CAPABILITY} {1};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {READ_ISSUING_CAPABILITY} {1};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BEGIN_BURST} {133};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_CACHE_H} {150};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_CACHE_L} {147};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_ADDR_SIDEBAND_H} {131};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_ADDR_SIDEBAND_L} {131};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_PROTECTION_H} {146};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_PROTECTION_L} {144};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BURST_SIZE_H} {128};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BURST_SIZE_L} {126};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BURST_TYPE_H} {130};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BURST_TYPE_L} {129};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_RESPONSE_STATUS_L} {151};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_RESPONSE_STATUS_H} {152};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BURSTWRAP_H} {125};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BURSTWRAP_L} {118};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BYTE_CNT_H} {117};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BYTE_CNT_L} {110};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_ADDR_H} {103};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_ADDR_L} {72};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_TRANS_EXCLUSIVE} {109};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_TRANS_COMPRESSED_READ} {104};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_TRANS_POSTED} {105};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_TRANS_READ} {107};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_DATA_H} {63};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_DATA_L} {0};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BYTEEN_H} {71};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_BYTEEN_L} {64};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_SRC_ID_H} {135};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_SRC_ID_L} {135};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_DEST_ID_H} {136};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_DEST_ID_L} {136};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_THREAD_ID_H} {143};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_THREAD_ID_L} {137};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_QOS_L} {134};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_QOS_H} {134};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_ORI_BURST_SIZE_L} {153};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_ORI_BURST_SIZE_H} {155};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_DATA_SIDEBAND_H} {132};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {PKT_DATA_SIDEBAND_L} {132};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ST_DATA_W} {156};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ST_CHANNEL_W} {4};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ID} {0};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {ADDR_MAP} {<?xml version="1.0" encoding="UTF-8"?>
-<address_map>
- <slave
-   id="0"
-   name="hps_0.f2h_sdram1_data"
-   start="0x0000000000000000"
-   end="0x00000000100000000"
-   responds="1"
-   user_default="0" />
-</address_map>
-};set_instance_parameter_value {axi_dma_orig_block_altera_axi_master_agent} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {hps_0_f2h_sdram1_data_agent} {altera_merlin_axi_slave_ni};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_QOS_H} {134};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_QOS_L} {134};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_THREAD_ID_H} {143};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_THREAD_ID_L} {137};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_RESPONSE_STATUS_H} {152};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_RESPONSE_STATUS_L} {151};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BEGIN_BURST} {133};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_CACHE_H} {150};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_CACHE_L} {147};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_DATA_SIDEBAND_H} {132};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_DATA_SIDEBAND_L} {132};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_ADDR_SIDEBAND_H} {131};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_ADDR_SIDEBAND_L} {131};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BURST_TYPE_H} {130};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BURST_TYPE_L} {129};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_PROTECTION_H} {146};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_PROTECTION_L} {144};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BURST_SIZE_H} {128};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BURST_SIZE_L} {126};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BURSTWRAP_H} {125};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BURSTWRAP_L} {118};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BYTE_CNT_H} {117};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BYTE_CNT_L} {110};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_ADDR_H} {103};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_ADDR_L} {72};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_TRANS_EXCLUSIVE} {109};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_TRANS_COMPRESSED_READ} {104};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_TRANS_POSTED} {105};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_TRANS_READ} {107};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_DATA_H} {63};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_DATA_L} {0};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BYTEEN_H} {71};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_BYTEEN_L} {64};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_SRC_ID_H} {135};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_SRC_ID_L} {135};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_DEST_ID_H} {136};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_DEST_ID_L} {136};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_ORI_BURST_SIZE_L} {153};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PKT_ORI_BURST_SIZE_H} {155};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {ADDR_USER_WIDTH} {1};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {DATA_USER_WIDTH} {1};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {ST_DATA_W} {156};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {ADDR_WIDTH} {32};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {RDATA_WIDTH} {64};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {WDATA_WIDTH} {64};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {ST_CHANNEL_W} {4};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {AXI_SLAVE_ID_W} {8};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {PASS_ID_TO_SLAVE} {1};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {AXI_VERSION} {AXI3};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {WRITE_ACCEPTANCE_CAPABILITY} {14};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {READ_ACCEPTANCE_CAPABILITY} {14};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {ID} {0};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent} {USE_ADDR_USER} {0};add_instance {router} {altera_merlin_router};set_instance_parameter_value {router} {DESTINATION_ID} {0 };set_instance_parameter_value {router} {CHANNEL_ID} {1 };set_instance_parameter_value {router} {TYPE_OF_TRANSACTION} {write };set_instance_parameter_value {router} {START_ADDRESS} {0x0 };set_instance_parameter_value {router} {END_ADDRESS} {0x100000000 };set_instance_parameter_value {router} {NON_SECURED_TAG} {1 };set_instance_parameter_value {router} {SECURED_RANGE_PAIRS} {0 };set_instance_parameter_value {router} {SECURED_RANGE_LIST} {0 };set_instance_parameter_value {router} {SPAN_OFFSET} {};set_instance_parameter_value {router} {PKT_ADDR_H} {103};set_instance_parameter_value {router} {PKT_ADDR_L} {72};set_instance_parameter_value {router} {PKT_PROTECTION_H} {146};set_instance_parameter_value {router} {PKT_PROTECTION_L} {144};set_instance_parameter_value {router} {PKT_DEST_ID_H} {136};set_instance_parameter_value {router} {PKT_DEST_ID_L} {136};set_instance_parameter_value {router} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {router} {PKT_TRANS_READ} {107};set_instance_parameter_value {router} {ST_DATA_W} {156};set_instance_parameter_value {router} {ST_CHANNEL_W} {4};set_instance_parameter_value {router} {DECODER_TYPE} {0};set_instance_parameter_value {router} {DEFAULT_CHANNEL} {0};set_instance_parameter_value {router} {DEFAULT_WR_CHANNEL} {-1};set_instance_parameter_value {router} {DEFAULT_RD_CHANNEL} {-1};set_instance_parameter_value {router} {DEFAULT_DESTID} {0};set_instance_parameter_value {router} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {router} {MEMORY_ALIASING_DECODE} {0};add_instance {router_001} {altera_merlin_router};set_instance_parameter_value {router_001} {DESTINATION_ID} {0 };set_instance_parameter_value {router_001} {CHANNEL_ID} {1 };set_instance_parameter_value {router_001} {TYPE_OF_TRANSACTION} {read };set_instance_parameter_value {router_001} {START_ADDRESS} {0x0 };set_instance_parameter_value {router_001} {END_ADDRESS} {0x100000000 };set_instance_parameter_value {router_001} {NON_SECURED_TAG} {1 };set_instance_parameter_value {router_001} {SECURED_RANGE_PAIRS} {0 };set_instance_parameter_value {router_001} {SECURED_RANGE_LIST} {0 };set_instance_parameter_value {router_001} {SPAN_OFFSET} {};set_instance_parameter_value {router_001} {PKT_ADDR_H} {103};set_instance_parameter_value {router_001} {PKT_ADDR_L} {72};set_instance_parameter_value {router_001} {PKT_PROTECTION_H} {146};set_instance_parameter_value {router_001} {PKT_PROTECTION_L} {144};set_instance_parameter_value {router_001} {PKT_DEST_ID_H} {136};set_instance_parameter_value {router_001} {PKT_DEST_ID_L} {136};set_instance_parameter_value {router_001} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {router_001} {PKT_TRANS_READ} {107};set_instance_parameter_value {router_001} {ST_DATA_W} {156};set_instance_parameter_value {router_001} {ST_CHANNEL_W} {4};set_instance_parameter_value {router_001} {DECODER_TYPE} {0};set_instance_parameter_value {router_001} {DEFAULT_CHANNEL} {0};set_instance_parameter_value {router_001} {DEFAULT_WR_CHANNEL} {-1};set_instance_parameter_value {router_001} {DEFAULT_RD_CHANNEL} {-1};set_instance_parameter_value {router_001} {DEFAULT_DESTID} {0};set_instance_parameter_value {router_001} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {router_001} {MEMORY_ALIASING_DECODE} {0};add_instance {router_002} {altera_merlin_router};set_instance_parameter_value {router_002} {DESTINATION_ID} {0 };set_instance_parameter_value {router_002} {CHANNEL_ID} {1 };set_instance_parameter_value {router_002} {TYPE_OF_TRANSACTION} {write };set_instance_parameter_value {router_002} {START_ADDRESS} {0x0 };set_instance_parameter_value {router_002} {END_ADDRESS} {0x100000000 };set_instance_parameter_value {router_002} {NON_SECURED_TAG} {1 };set_instance_parameter_value {router_002} {SECURED_RANGE_PAIRS} {0 };set_instance_parameter_value {router_002} {SECURED_RANGE_LIST} {0 };set_instance_parameter_value {router_002} {SPAN_OFFSET} {};set_instance_parameter_value {router_002} {PKT_ADDR_H} {103};set_instance_parameter_value {router_002} {PKT_ADDR_L} {72};set_instance_parameter_value {router_002} {PKT_PROTECTION_H} {146};set_instance_parameter_value {router_002} {PKT_PROTECTION_L} {144};set_instance_parameter_value {router_002} {PKT_DEST_ID_H} {136};set_instance_parameter_value {router_002} {PKT_DEST_ID_L} {136};set_instance_parameter_value {router_002} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {router_002} {PKT_TRANS_READ} {107};set_instance_parameter_value {router_002} {ST_DATA_W} {156};set_instance_parameter_value {router_002} {ST_CHANNEL_W} {4};set_instance_parameter_value {router_002} {DECODER_TYPE} {0};set_instance_parameter_value {router_002} {DEFAULT_CHANNEL} {0};set_instance_parameter_value {router_002} {DEFAULT_WR_CHANNEL} {-1};set_instance_parameter_value {router_002} {DEFAULT_RD_CHANNEL} {-1};set_instance_parameter_value {router_002} {DEFAULT_DESTID} {0};set_instance_parameter_value {router_002} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {router_002} {MEMORY_ALIASING_DECODE} {0};add_instance {router_003} {altera_merlin_router};set_instance_parameter_value {router_003} {DESTINATION_ID} {0 };set_instance_parameter_value {router_003} {CHANNEL_ID} {1 };set_instance_parameter_value {router_003} {TYPE_OF_TRANSACTION} {read };set_instance_parameter_value {router_003} {START_ADDRESS} {0x0 };set_instance_parameter_value {router_003} {END_ADDRESS} {0x100000000 };set_instance_parameter_value {router_003} {NON_SECURED_TAG} {1 };set_instance_parameter_value {router_003} {SECURED_RANGE_PAIRS} {0 };set_instance_parameter_value {router_003} {SECURED_RANGE_LIST} {0 };set_instance_parameter_value {router_003} {SPAN_OFFSET} {};set_instance_parameter_value {router_003} {PKT_ADDR_H} {103};set_instance_parameter_value {router_003} {PKT_ADDR_L} {72};set_instance_parameter_value {router_003} {PKT_PROTECTION_H} {146};set_instance_parameter_value {router_003} {PKT_PROTECTION_L} {144};set_instance_parameter_value {router_003} {PKT_DEST_ID_H} {136};set_instance_parameter_value {router_003} {PKT_DEST_ID_L} {136};set_instance_parameter_value {router_003} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {router_003} {PKT_TRANS_READ} {107};set_instance_parameter_value {router_003} {ST_DATA_W} {156};set_instance_parameter_value {router_003} {ST_CHANNEL_W} {4};set_instance_parameter_value {router_003} {DECODER_TYPE} {0};set_instance_parameter_value {router_003} {DEFAULT_CHANNEL} {0};set_instance_parameter_value {router_003} {DEFAULT_WR_CHANNEL} {-1};set_instance_parameter_value {router_003} {DEFAULT_RD_CHANNEL} {-1};set_instance_parameter_value {router_003} {DEFAULT_DESTID} {0};set_instance_parameter_value {router_003} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {router_003} {MEMORY_ALIASING_DECODE} {0};add_instance {router_004} {altera_merlin_router};set_instance_parameter_value {router_004} {DESTINATION_ID} {1 0 };set_instance_parameter_value {router_004} {CHANNEL_ID} {01 10 };set_instance_parameter_value {router_004} {TYPE_OF_TRANSACTION} {write write };set_instance_parameter_value {router_004} {START_ADDRESS} {0x0 0x0 };set_instance_parameter_value {router_004} {END_ADDRESS} {0x0 0x0 };set_instance_parameter_value {router_004} {NON_SECURED_TAG} {1 1 };set_instance_parameter_value {router_004} {SECURED_RANGE_PAIRS} {0 0 };set_instance_parameter_value {router_004} {SECURED_RANGE_LIST} {0 0 };set_instance_parameter_value {router_004} {SPAN_OFFSET} {};set_instance_parameter_value {router_004} {PKT_ADDR_H} {103};set_instance_parameter_value {router_004} {PKT_ADDR_L} {72};set_instance_parameter_value {router_004} {PKT_PROTECTION_H} {146};set_instance_parameter_value {router_004} {PKT_PROTECTION_L} {144};set_instance_parameter_value {router_004} {PKT_DEST_ID_H} {136};set_instance_parameter_value {router_004} {PKT_DEST_ID_L} {136};set_instance_parameter_value {router_004} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {router_004} {PKT_TRANS_READ} {107};set_instance_parameter_value {router_004} {ST_DATA_W} {156};set_instance_parameter_value {router_004} {ST_CHANNEL_W} {4};set_instance_parameter_value {router_004} {DECODER_TYPE} {1};set_instance_parameter_value {router_004} {DEFAULT_CHANNEL} {0};set_instance_parameter_value {router_004} {DEFAULT_WR_CHANNEL} {-1};set_instance_parameter_value {router_004} {DEFAULT_RD_CHANNEL} {-1};set_instance_parameter_value {router_004} {DEFAULT_DESTID} {1};set_instance_parameter_value {router_004} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {router_004} {MEMORY_ALIASING_DECODE} {0};add_instance {router_005} {altera_merlin_router};set_instance_parameter_value {router_005} {DESTINATION_ID} {1 0 };set_instance_parameter_value {router_005} {CHANNEL_ID} {01 10 };set_instance_parameter_value {router_005} {TYPE_OF_TRANSACTION} {read read };set_instance_parameter_value {router_005} {START_ADDRESS} {0x0 0x0 };set_instance_parameter_value {router_005} {END_ADDRESS} {0x0 0x0 };set_instance_parameter_value {router_005} {NON_SECURED_TAG} {1 1 };set_instance_parameter_value {router_005} {SECURED_RANGE_PAIRS} {0 0 };set_instance_parameter_value {router_005} {SECURED_RANGE_LIST} {0 0 };set_instance_parameter_value {router_005} {SPAN_OFFSET} {};set_instance_parameter_value {router_005} {PKT_ADDR_H} {103};set_instance_parameter_value {router_005} {PKT_ADDR_L} {72};set_instance_parameter_value {router_005} {PKT_PROTECTION_H} {146};set_instance_parameter_value {router_005} {PKT_PROTECTION_L} {144};set_instance_parameter_value {router_005} {PKT_DEST_ID_H} {136};set_instance_parameter_value {router_005} {PKT_DEST_ID_L} {136};set_instance_parameter_value {router_005} {PKT_TRANS_WRITE} {106};set_instance_parameter_value {router_005} {PKT_TRANS_READ} {107};set_instance_parameter_value {router_005} {ST_DATA_W} {156};set_instance_parameter_value {router_005} {ST_CHANNEL_W} {4};set_instance_parameter_value {router_005} {DECODER_TYPE} {1};set_instance_parameter_value {router_005} {DEFAULT_CHANNEL} {0};set_instance_parameter_value {router_005} {DEFAULT_WR_CHANNEL} {-1};set_instance_parameter_value {router_005} {DEFAULT_RD_CHANNEL} {-1};set_instance_parameter_value {router_005} {DEFAULT_DESTID} {1};set_instance_parameter_value {router_005} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};set_instance_parameter_value {router_005} {MEMORY_ALIASING_DECODE} {0};add_instance {cmd_demux} {altera_merlin_demultiplexer};set_instance_parameter_value {cmd_demux} {ST_DATA_W} {156};set_instance_parameter_value {cmd_demux} {ST_CHANNEL_W} {4};set_instance_parameter_value {cmd_demux} {NUM_OUTPUTS} {1};set_instance_parameter_value {cmd_demux} {VALID_WIDTH} {1};set_instance_parameter_value {cmd_demux} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {cmd_demux_001} {altera_merlin_demultiplexer};set_instance_parameter_value {cmd_demux_001} {ST_DATA_W} {156};set_instance_parameter_value {cmd_demux_001} {ST_CHANNEL_W} {4};set_instance_parameter_value {cmd_demux_001} {NUM_OUTPUTS} {1};set_instance_parameter_value {cmd_demux_001} {VALID_WIDTH} {1};set_instance_parameter_value {cmd_demux_001} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {cmd_demux_002} {altera_merlin_demultiplexer};set_instance_parameter_value {cmd_demux_002} {ST_DATA_W} {156};set_instance_parameter_value {cmd_demux_002} {ST_CHANNEL_W} {4};set_instance_parameter_value {cmd_demux_002} {NUM_OUTPUTS} {1};set_instance_parameter_value {cmd_demux_002} {VALID_WIDTH} {1};set_instance_parameter_value {cmd_demux_002} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {cmd_demux_003} {altera_merlin_demultiplexer};set_instance_parameter_value {cmd_demux_003} {ST_DATA_W} {156};set_instance_parameter_value {cmd_demux_003} {ST_CHANNEL_W} {4};set_instance_parameter_value {cmd_demux_003} {NUM_OUTPUTS} {1};set_instance_parameter_value {cmd_demux_003} {VALID_WIDTH} {1};set_instance_parameter_value {cmd_demux_003} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {cmd_mux} {altera_merlin_multiplexer};set_instance_parameter_value {cmd_mux} {ST_DATA_W} {156};set_instance_parameter_value {cmd_mux} {ST_CHANNEL_W} {4};set_instance_parameter_value {cmd_mux} {NUM_INPUTS} {2};set_instance_parameter_value {cmd_mux} {PIPELINE_ARB} {0};set_instance_parameter_value {cmd_mux} {USE_EXTERNAL_ARB} {0};set_instance_parameter_value {cmd_mux} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {cmd_mux} {ARBITRATION_SCHEME} {round-robin};set_instance_parameter_value {cmd_mux} {ARBITRATION_SHARES} {1 1 };set_instance_parameter_value {cmd_mux} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {cmd_mux_001} {altera_merlin_multiplexer};set_instance_parameter_value {cmd_mux_001} {ST_DATA_W} {156};set_instance_parameter_value {cmd_mux_001} {ST_CHANNEL_W} {4};set_instance_parameter_value {cmd_mux_001} {NUM_INPUTS} {2};set_instance_parameter_value {cmd_mux_001} {PIPELINE_ARB} {0};set_instance_parameter_value {cmd_mux_001} {USE_EXTERNAL_ARB} {0};set_instance_parameter_value {cmd_mux_001} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {cmd_mux_001} {ARBITRATION_SCHEME} {round-robin};set_instance_parameter_value {cmd_mux_001} {ARBITRATION_SHARES} {1 1 };set_instance_parameter_value {cmd_mux_001} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {rsp_demux} {altera_merlin_demultiplexer};set_instance_parameter_value {rsp_demux} {ST_DATA_W} {156};set_instance_parameter_value {rsp_demux} {ST_CHANNEL_W} {4};set_instance_parameter_value {rsp_demux} {NUM_OUTPUTS} {2};set_instance_parameter_value {rsp_demux} {VALID_WIDTH} {1};set_instance_parameter_value {rsp_demux} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {rsp_demux_001} {altera_merlin_demultiplexer};set_instance_parameter_value {rsp_demux_001} {ST_DATA_W} {156};set_instance_parameter_value {rsp_demux_001} {ST_CHANNEL_W} {4};set_instance_parameter_value {rsp_demux_001} {NUM_OUTPUTS} {2};set_instance_parameter_value {rsp_demux_001} {VALID_WIDTH} {1};set_instance_parameter_value {rsp_demux_001} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {rsp_mux} {altera_merlin_multiplexer};set_instance_parameter_value {rsp_mux} {ST_DATA_W} {156};set_instance_parameter_value {rsp_mux} {ST_CHANNEL_W} {4};set_instance_parameter_value {rsp_mux} {NUM_INPUTS} {1};set_instance_parameter_value {rsp_mux} {PIPELINE_ARB} {0};set_instance_parameter_value {rsp_mux} {USE_EXTERNAL_ARB} {0};set_instance_parameter_value {rsp_mux} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {rsp_mux} {ARBITRATION_SCHEME} {no-arb};set_instance_parameter_value {rsp_mux} {ARBITRATION_SHARES} {1 };set_instance_parameter_value {rsp_mux} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {rsp_mux_001} {altera_merlin_multiplexer};set_instance_parameter_value {rsp_mux_001} {ST_DATA_W} {156};set_instance_parameter_value {rsp_mux_001} {ST_CHANNEL_W} {4};set_instance_parameter_value {rsp_mux_001} {NUM_INPUTS} {1};set_instance_parameter_value {rsp_mux_001} {PIPELINE_ARB} {0};set_instance_parameter_value {rsp_mux_001} {USE_EXTERNAL_ARB} {0};set_instance_parameter_value {rsp_mux_001} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {rsp_mux_001} {ARBITRATION_SCHEME} {no-arb};set_instance_parameter_value {rsp_mux_001} {ARBITRATION_SHARES} {1 };set_instance_parameter_value {rsp_mux_001} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {rsp_mux_002} {altera_merlin_multiplexer};set_instance_parameter_value {rsp_mux_002} {ST_DATA_W} {156};set_instance_parameter_value {rsp_mux_002} {ST_CHANNEL_W} {4};set_instance_parameter_value {rsp_mux_002} {NUM_INPUTS} {1};set_instance_parameter_value {rsp_mux_002} {PIPELINE_ARB} {0};set_instance_parameter_value {rsp_mux_002} {USE_EXTERNAL_ARB} {0};set_instance_parameter_value {rsp_mux_002} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {rsp_mux_002} {ARBITRATION_SCHEME} {no-arb};set_instance_parameter_value {rsp_mux_002} {ARBITRATION_SHARES} {1 };set_instance_parameter_value {rsp_mux_002} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {rsp_mux_003} {altera_merlin_multiplexer};set_instance_parameter_value {rsp_mux_003} {ST_DATA_W} {156};set_instance_parameter_value {rsp_mux_003} {ST_CHANNEL_W} {4};set_instance_parameter_value {rsp_mux_003} {NUM_INPUTS} {1};set_instance_parameter_value {rsp_mux_003} {PIPELINE_ARB} {0};set_instance_parameter_value {rsp_mux_003} {USE_EXTERNAL_ARB} {0};set_instance_parameter_value {rsp_mux_003} {PKT_TRANS_LOCK} {108};set_instance_parameter_value {rsp_mux_003} {ARBITRATION_SCHEME} {no-arb};set_instance_parameter_value {rsp_mux_003} {ARBITRATION_SHARES} {1 };set_instance_parameter_value {rsp_mux_003} {MERLIN_PACKET_FORMAT} {ori_burst_size(155:153) response_status(152:151) cache(150:147) protection(146:144) thread_id(143:137) dest_id(136) src_id(135) qos(134) begin_burst(133) data_sideband(132) addr_sideband(131) burst_type(130:129) burst_size(128:126) burstwrap(125:118) byte_cnt(117:110) trans_exclusive(109) trans_lock(108) trans_read(107) trans_write(106) trans_posted(105) trans_compressed_read(104) addr(103:72) byteen(71:64) data(63:0)};add_instance {axi_dma_unfiltered2_reset_sink_reset_bridge} {altera_reset_bridge};set_instance_parameter_value {axi_dma_unfiltered2_reset_sink_reset_bridge} {ACTIVE_LOW_RESET} {0};set_instance_parameter_value {axi_dma_unfiltered2_reset_sink_reset_bridge} {SYNCHRONOUS_EDGES} {deassert};set_instance_parameter_value {axi_dma_unfiltered2_reset_sink_reset_bridge} {NUM_RESET_OUTPUTS} {1};set_instance_parameter_value {axi_dma_unfiltered2_reset_sink_reset_bridge} {USE_RESET_REQUEST} {0};add_instance {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge} {altera_reset_bridge};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge} {ACTIVE_LOW_RESET} {0};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge} {SYNCHRONOUS_EDGES} {deassert};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge} {NUM_RESET_OUTPUTS} {1};set_instance_parameter_value {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge} {USE_RESET_REQUEST} {0};add_instance {clk_0_clk_clock_bridge} {altera_clock_bridge};set_instance_parameter_value {clk_0_clk_clock_bridge} {EXPLICIT_CLOCK_RATE} {75000000};set_instance_parameter_value {clk_0_clk_clock_bridge} {NUM_CLOCK_OUTPUTS} {1};add_connection {rsp_mux.src} {axi_dma_unfiltered2_altera_axi_master_agent.write_rp} {avalon_streaming};preview_set_connection_tag {rsp_mux.src/axi_dma_unfiltered2_altera_axi_master_agent.write_rp} {qsys_mm.response};add_connection {rsp_mux_001.src} {axi_dma_unfiltered2_altera_axi_master_agent.read_rp} {avalon_streaming};preview_set_connection_tag {rsp_mux_001.src/axi_dma_unfiltered2_altera_axi_master_agent.read_rp} {qsys_mm.response};add_connection {rsp_mux_002.src} {axi_dma_orig_block_altera_axi_master_agent.write_rp} {avalon_streaming};preview_set_connection_tag {rsp_mux_002.src/axi_dma_orig_block_altera_axi_master_agent.write_rp} {qsys_mm.response};add_connection {rsp_mux_003.src} {axi_dma_orig_block_altera_axi_master_agent.read_rp} {avalon_streaming};preview_set_connection_tag {rsp_mux_003.src/axi_dma_orig_block_altera_axi_master_agent.read_rp} {qsys_mm.response};add_connection {cmd_mux.src} {hps_0_f2h_sdram1_data_agent.write_cp} {avalon_streaming};preview_set_connection_tag {cmd_mux.src/hps_0_f2h_sdram1_data_agent.write_cp} {qsys_mm.command};add_connection {cmd_mux_001.src} {hps_0_f2h_sdram1_data_agent.read_cp} {avalon_streaming};preview_set_connection_tag {cmd_mux_001.src/hps_0_f2h_sdram1_data_agent.read_cp} {qsys_mm.command};add_connection {axi_dma_unfiltered2_altera_axi_master_agent.write_cp} {router.sink} {avalon_streaming};preview_set_connection_tag {axi_dma_unfiltered2_altera_axi_master_agent.write_cp/router.sink} {qsys_mm.command};add_connection {router.src} {cmd_demux.sink} {avalon_streaming};preview_set_connection_tag {router.src/cmd_demux.sink} {qsys_mm.command};add_connection {axi_dma_unfiltered2_altera_axi_master_agent.read_cp} {router_001.sink} {avalon_streaming};preview_set_connection_tag {axi_dma_unfiltered2_altera_axi_master_agent.read_cp/router_001.sink} {qsys_mm.command};add_connection {router_001.src} {cmd_demux_001.sink} {avalon_streaming};preview_set_connection_tag {router_001.src/cmd_demux_001.sink} {qsys_mm.command};add_connection {axi_dma_orig_block_altera_axi_master_agent.write_cp} {router_002.sink} {avalon_streaming};preview_set_connection_tag {axi_dma_orig_block_altera_axi_master_agent.write_cp/router_002.sink} {qsys_mm.command};add_connection {router_002.src} {cmd_demux_002.sink} {avalon_streaming};preview_set_connection_tag {router_002.src/cmd_demux_002.sink} {qsys_mm.command};add_connection {axi_dma_orig_block_altera_axi_master_agent.read_cp} {router_003.sink} {avalon_streaming};preview_set_connection_tag {axi_dma_orig_block_altera_axi_master_agent.read_cp/router_003.sink} {qsys_mm.command};add_connection {router_003.src} {cmd_demux_003.sink} {avalon_streaming};preview_set_connection_tag {router_003.src/cmd_demux_003.sink} {qsys_mm.command};add_connection {hps_0_f2h_sdram1_data_agent.write_rp} {router_004.sink} {avalon_streaming};preview_set_connection_tag {hps_0_f2h_sdram1_data_agent.write_rp/router_004.sink} {qsys_mm.response};add_connection {router_004.src} {rsp_demux.sink} {avalon_streaming};preview_set_connection_tag {router_004.src/rsp_demux.sink} {qsys_mm.response};add_connection {hps_0_f2h_sdram1_data_agent.read_rp} {router_005.sink} {avalon_streaming};preview_set_connection_tag {hps_0_f2h_sdram1_data_agent.read_rp/router_005.sink} {qsys_mm.response};add_connection {router_005.src} {rsp_demux_001.sink} {avalon_streaming};preview_set_connection_tag {router_005.src/rsp_demux_001.sink} {qsys_mm.response};add_connection {cmd_demux.src0} {cmd_mux.sink0} {avalon_streaming};preview_set_connection_tag {cmd_demux.src0/cmd_mux.sink0} {qsys_mm.command};add_connection {cmd_demux_001.src0} {cmd_mux_001.sink0} {avalon_streaming};preview_set_connection_tag {cmd_demux_001.src0/cmd_mux_001.sink0} {qsys_mm.command};add_connection {cmd_demux_002.src0} {cmd_mux.sink1} {avalon_streaming};preview_set_connection_tag {cmd_demux_002.src0/cmd_mux.sink1} {qsys_mm.command};add_connection {cmd_demux_003.src0} {cmd_mux_001.sink1} {avalon_streaming};preview_set_connection_tag {cmd_demux_003.src0/cmd_mux_001.sink1} {qsys_mm.command};add_connection {rsp_demux.src0} {rsp_mux.sink0} {avalon_streaming};preview_set_connection_tag {rsp_demux.src0/rsp_mux.sink0} {qsys_mm.response};add_connection {rsp_demux.src1} {rsp_mux_002.sink0} {avalon_streaming};preview_set_connection_tag {rsp_demux.src1/rsp_mux_002.sink0} {qsys_mm.response};add_connection {rsp_demux_001.src0} {rsp_mux_001.sink0} {avalon_streaming};preview_set_connection_tag {rsp_demux_001.src0/rsp_mux_001.sink0} {qsys_mm.response};add_connection {rsp_demux_001.src1} {rsp_mux_003.sink0} {avalon_streaming};preview_set_connection_tag {rsp_demux_001.src1/rsp_mux_003.sink0} {qsys_mm.response};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {axi_dma_unfiltered2_altera_axi_master_agent.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {axi_dma_orig_block_altera_axi_master_agent.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {router.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {router_001.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {router_002.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {router_003.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {cmd_demux.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {cmd_demux_001.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {cmd_demux_002.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {cmd_demux_003.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {rsp_mux.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {rsp_mux_001.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {rsp_mux_002.clk_reset} {reset};add_connection {axi_dma_unfiltered2_reset_sink_reset_bridge.out_reset} {rsp_mux_003.clk_reset} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {hps_0_f2h_sdram1_data_agent.reset_sink} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {router_004.clk_reset} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {router_005.clk_reset} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {cmd_mux.clk_reset} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {cmd_mux_001.clk_reset} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {rsp_demux.clk_reset} {reset};add_connection {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.out_reset} {rsp_demux_001.clk_reset} {reset};add_connection {clk_0_clk_clock_bridge.out_clk} {axi_dma_unfiltered2_altera_axi_master_agent.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {axi_dma_orig_block_altera_axi_master_agent.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {hps_0_f2h_sdram1_data_agent.clock_sink} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {router.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {router_001.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {router_002.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {router_003.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {router_004.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {router_005.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {cmd_demux.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {rsp_mux.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {cmd_demux_001.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {rsp_mux_001.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {cmd_demux_002.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {rsp_mux_002.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {cmd_demux_003.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {rsp_mux_003.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {cmd_mux.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {rsp_demux.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {cmd_mux_001.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {rsp_demux_001.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {axi_dma_unfiltered2_reset_sink_reset_bridge.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.clk} {clock};add_interface {axi_dma_orig_block_altera_axi_master} {axi} {slave};set_interface_property {axi_dma_orig_block_altera_axi_master} {EXPORT_OF} {axi_dma_orig_block_altera_axi_master_agent.altera_axi_slave};add_interface {axi_dma_unfiltered2_altera_axi_master} {axi} {slave};set_interface_property {axi_dma_unfiltered2_altera_axi_master} {EXPORT_OF} {axi_dma_unfiltered2_altera_axi_master_agent.altera_axi_slave};add_interface {hps_0_f2h_sdram1_data} {axi} {master};set_interface_property {hps_0_f2h_sdram1_data} {EXPORT_OF} {hps_0_f2h_sdram1_data_agent.altera_axi_master};add_interface {clk_0_clk} {clock} {slave};set_interface_property {clk_0_clk} {EXPORT_OF} {clk_0_clk_clock_bridge.in_clk};add_interface {axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset} {reset} {slave};set_interface_property {axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset} {EXPORT_OF} {axi_dma_unfiltered2_reset_sink_reset_bridge.in_reset};add_interface {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset} {reset} {slave};set_interface_property {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset} {EXPORT_OF} {hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge.in_reset};set_module_assignment {interconnect_id.axi_dma_orig_block.altera_axi_master} {0};set_module_assignment {interconnect_id.axi_dma_unfiltered2.altera_axi_master} {1};set_module_assignment {interconnect_id.hps_0.f2h_sdram1_data} {0};]]></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="AUTO_DEVICE_FAMILY">
-   <type>java.lang.String</type>
-   <value>CYCLONEV</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
-  </parameter>
-  <parameter name="AUTO_DEVICE">
-   <type>java.lang.String</type>
-   <value>5CSXFC6D6F31C6</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE</sysinfo_type>
-  </parameter>
-  <parameter name="AUTO_DEVICE_SPEEDGRADE">
-   <type>java.lang.String</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE_SPEEDGRADE</sysinfo_type>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>Cyclone V</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <interface
-     name="axi_dma_orig_block_altera_axi_master"
-     kind="altera_axi_slave"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>merlin.flow.read_cp</name>
-    <value>read_cp</value>
-   </assignment>
-   <assignment>
-    <name>merlin.flow.write_cp</name>
-    <value>write_cp</value>
-   </assignment>
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="trustzoneAware">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingReads">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingWrites">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingTransactions">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="writeAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="combinedAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readDataReorderingDepth">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="bridgesToMaster">
-    <type>com.altera.entityinterfaces.IConnectionPoint</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="addressSpan">
-    <type>java.math.BigInteger</type>
-    <value>4294967296</value>
-    <derived>true</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>axi</type>
-   <isStart>false</isStart>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>awid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awaddr</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>awaddr</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awlen</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>awlen</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awsize</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>awsize</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awburst</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>awburst</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awlock</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>awlock</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awcache</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>awcache</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awprot</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>awprot</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>awvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_awready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>awready</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_wid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>wid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_wdata</name>
-    <direction>Input</direction>
-    <width>64</width>
-    <role>wdata</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_wstrb</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>wstrb</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_wlast</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wlast</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_wvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_wready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wready</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_bid</name>
-    <direction>Output</direction>
-    <width>7</width>
-    <role>bid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_bresp</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>bresp</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_bvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>bvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_bready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>bready</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>arid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_araddr</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>araddr</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arlen</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>arlen</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arsize</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>arsize</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arburst</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>arburst</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arlock</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>arlock</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arcache</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>arcache</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arprot</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>arprot</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>arvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_arready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>arready</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_rid</name>
-    <direction>Output</direction>
-    <width>7</width>
-    <role>rid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_rdata</name>
-    <direction>Output</direction>
-    <width>64</width>
-    <role>rdata</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_rresp</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>rresp</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_rlast</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rlast</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_rvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_orig_block_altera_axi_master_rready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rready</role>
-   </port>
-  </interface>
-  <interface
-     name="axi_dma_unfiltered2_altera_axi_master"
-     kind="altera_axi_slave"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>merlin.flow.read_cp</name>
-    <value>read_cp</value>
-   </assignment>
-   <assignment>
-    <name>merlin.flow.write_cp</name>
-    <value>write_cp</value>
-   </assignment>
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="trustzoneAware">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingReads">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingWrites">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingTransactions">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="writeAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="combinedAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readDataReorderingDepth">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="bridgesToMaster">
-    <type>com.altera.entityinterfaces.IConnectionPoint</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="addressSpan">
-    <type>java.math.BigInteger</type>
-    <value>4294967296</value>
-    <derived>true</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>axi</type>
-   <isStart>false</isStart>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>awid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awaddr</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>awaddr</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awlen</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>awlen</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awsize</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>awsize</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awburst</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>awburst</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awlock</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>awlock</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awcache</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>awcache</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awprot</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>awprot</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>awvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_awready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>awready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_wid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>wid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_wdata</name>
-    <direction>Input</direction>
-    <width>64</width>
-    <role>wdata</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_wstrb</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>wstrb</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_wlast</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wlast</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_wvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_wready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_bid</name>
-    <direction>Output</direction>
-    <width>7</width>
-    <role>bid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_bresp</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>bresp</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_bvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>bvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_bready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>bready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>arid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_araddr</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>araddr</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arlen</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>arlen</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arsize</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>arsize</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arburst</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>arburst</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arlock</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>arlock</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arcache</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>arcache</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arprot</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>arprot</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>arvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_arready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>arready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_rid</name>
-    <direction>Output</direction>
-    <width>7</width>
-    <role>rid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_rdata</name>
-    <direction>Output</direction>
-    <width>64</width>
-    <role>rdata</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_rresp</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>rresp</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_rlast</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rlast</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_rvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered2_altera_axi_master_rready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rready</role>
-   </port>
-  </interface>
-  <interface name="hps_0_f2h_sdram1_data" kind="altera_axi_master" version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>merlin.flow.read_rp</name>
-    <value>read_rp</value>
-   </assignment>
-   <assignment>
-    <name>merlin.flow.write_rp</name>
-    <value>write_rp</value>
-   </assignment>
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="trustzoneAware">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingReads">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingWrites">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingTransactions">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readIssuingCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="writeIssuingCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="combinedIssuingCapability">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>axi</type>
-   <isStart>true</isStart>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awid</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>awid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awaddr</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>awaddr</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awlen</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>awlen</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awsize</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>awsize</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awburst</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>awburst</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awlock</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>awlock</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awcache</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>awcache</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awprot</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>awprot</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>awvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_awready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>awready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_wid</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>wid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_wdata</name>
-    <direction>Output</direction>
-    <width>64</width>
-    <role>wdata</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_wstrb</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>wstrb</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_wlast</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wlast</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_wvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_wready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_bid</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>bid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_bresp</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>bresp</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_bvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>bvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_bready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>bready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arid</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>arid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_araddr</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>araddr</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arlen</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>arlen</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arsize</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>arsize</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arburst</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>arburst</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arlock</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>arlock</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arcache</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>arcache</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arprot</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>arprot</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>arvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_arready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>arready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_rid</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>rid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_rdata</name>
-    <direction>Input</direction>
-    <width>64</width>
-    <role>rdata</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_rresp</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>rresp</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_rlast</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rlast</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_rvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram1_data_rready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rready</role>
-   </port>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>hps_0_fpga_interfaces</moduleName>
-    <slaveName>f2h_sdram1_data</slaveName>
-    <name>hps_0_fpga_interfaces.f2h_sdram1_data</name>
-    <baseAddress>0</baseAddress>
-    <span>4294967296</span>
-   </memoryBlock>
-  </interface>
-  <interface name="clk_0_clk" kind="clock_sink" version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="externallyDriven">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="ptfSchematicName">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>clock</type>
-   <isStart>false</isStart>
-   <port>
-    <name>clk_0_clk_clk</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>clk</role>
-   </port>
-  </interface>
-  <interface
-     name="axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset"
-     kind="reset_sink"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset_reset</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
-  <interface
-     name="hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset"
-     kind="reset_sink"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset_reset</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
- </module>
- <module
-   name="mm_interconnect_2"
-   kind="altera_mm_interconnect"
-   version="16.0"
-   path="mm_interconnect_2">
-  <!-- Describes a single module. Module parameters are
-the requested settings for a module instance. -->
-  <assignment>
-   <name>interconnect_id.axi_dma_unfiltered1.altera_axi_master</name>
-   <value>0</value>
-  </assignment>
-  <assignment>
-   <name>interconnect_id.hps_0.f2h_sdram2_data</name>
-   <value>0</value>
-  </assignment>
-  <parameter name="COMPOSE_CONTENTS">
-   <type>java.lang.String</type>
-   <value>add_instance {axi_dma_unfiltered1_altera_axi_master_id_pad} {altera_merlin_axi_translator};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWID} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWREGION} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_AWREGION} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWLEN} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWSIZE} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWBURST} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWLOCK} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_AWLOCK} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWCACHE} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_AWCACHE} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_AWPROT} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWQOS} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_AWQOS} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_WSTRB} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_WLAST} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_BID} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_BRESP} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_BRESP} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARID} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARREGION} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_ARREGION} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARLEN} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARSIZE} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARBURST} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARLOCK} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_ARLOCK} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_ARCACHE} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_ARQOS} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_ARPROT} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARCACHE} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARQOS} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_RID} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_RRESP} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_RRESP} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_RLAST} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_ID_WIDTH} {8};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {DATA_WIDTH} {64};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_ID_WIDTH} {7};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_ADDR_WIDTH} {32};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_WRITE_ADDR_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_READ_ADDR_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_WRITE_ADDR_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_READ_ADDR_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_WRITE_DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_WRITE_RESPONSE_DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_READ_DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_WRITE_DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_WRITE_RESPONSE_DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_READ_DATA_USER_WIDTH} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_ADDR_WIDTH} {32};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_AWUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_ARUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_WUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_RUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_S0_BUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_AWUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_ARUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_WUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_RUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {USE_M0_BUSER} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {M0_AXI_VERSION} {AXI3};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {S0_AXI_VERSION} {AXI3};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {WRITE_ISSUING_CAPABILITY} {16};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {READ_ISSUING_CAPABILITY} {16};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {COMBINED_ISSUING_CAPABILITY} {16};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {WRITE_ACCEPTANCE_CAPABILITY} {16};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {READ_ACCEPTANCE_CAPABILITY} {16};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {COMBINED_ACCEPTANCE_CAPABILITY} {16};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad} {READ_DATA_REORDERING_DEPTH} {1};add_instance {axi_dma_unfiltered1_reset_sink_reset_bridge} {altera_reset_bridge};set_instance_parameter_value {axi_dma_unfiltered1_reset_sink_reset_bridge} {ACTIVE_LOW_RESET} {0};set_instance_parameter_value {axi_dma_unfiltered1_reset_sink_reset_bridge} {SYNCHRONOUS_EDGES} {deassert};set_instance_parameter_value {axi_dma_unfiltered1_reset_sink_reset_bridge} {NUM_RESET_OUTPUTS} {1};set_instance_parameter_value {axi_dma_unfiltered1_reset_sink_reset_bridge} {USE_RESET_REQUEST} {0};add_instance {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge} {altera_reset_bridge};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge} {ACTIVE_LOW_RESET} {0};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge} {SYNCHRONOUS_EDGES} {deassert};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge} {NUM_RESET_OUTPUTS} {1};set_instance_parameter_value {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge} {USE_RESET_REQUEST} {0};add_instance {clk_0_clk_clock_bridge} {altera_clock_bridge};set_instance_parameter_value {clk_0_clk_clock_bridge} {EXPLICIT_CLOCK_RATE} {75000000};set_instance_parameter_value {clk_0_clk_clock_bridge} {NUM_CLOCK_OUTPUTS} {1};add_connection {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge.out_reset} {axi_dma_unfiltered1_altera_axi_master_id_pad.clk_reset} {reset};add_connection {clk_0_clk_clock_bridge.out_clk} {axi_dma_unfiltered1_altera_axi_master_id_pad.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {axi_dma_unfiltered1_reset_sink_reset_bridge.clk} {clock};add_connection {clk_0_clk_clock_bridge.out_clk} {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge.clk} {clock};add_interface {axi_dma_unfiltered1_altera_axi_master} {axi} {slave};set_interface_property {axi_dma_unfiltered1_altera_axi_master} {EXPORT_OF} {axi_dma_unfiltered1_altera_axi_master_id_pad.s0};add_interface {hps_0_f2h_sdram2_data} {axi} {master};set_interface_property {hps_0_f2h_sdram2_data} {EXPORT_OF} {axi_dma_unfiltered1_altera_axi_master_id_pad.m0};add_interface {clk_0_clk} {clock} {slave};set_interface_property {clk_0_clk} {EXPORT_OF} {clk_0_clk_clock_bridge.in_clk};add_interface {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset} {reset} {slave};set_interface_property {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset} {EXPORT_OF} {axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge.in_reset};add_interface {axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset} {reset} {slave};set_interface_property {axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset} {EXPORT_OF} {axi_dma_unfiltered1_reset_sink_reset_bridge.in_reset};set_module_assignment {interconnect_id.axi_dma_unfiltered1.altera_axi_master} {0};set_module_assignment {interconnect_id.hps_0.f2h_sdram2_data} {0};</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="AUTO_DEVICE_FAMILY">
-   <type>java.lang.String</type>
-   <value>CYCLONEV</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
-  </parameter>
-  <parameter name="AUTO_DEVICE">
-   <type>java.lang.String</type>
-   <value>5CSXFC6D6F31C6</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE</sysinfo_type>
-  </parameter>
-  <parameter name="AUTO_DEVICE_SPEEDGRADE">
-   <type>java.lang.String</type>
-   <value></value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE_SPEEDGRADE</sysinfo_type>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>Cyclone V</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>false</visible>
-   <valid>true</valid>
-   <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <interface
-     name="axi_dma_unfiltered1_altera_axi_master"
-     kind="altera_axi_slave"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>merlin.flow.m0</name>
-    <value>m0</value>
-   </assignment>
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="trustzoneAware">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingReads">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingWrites">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingTransactions">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>16</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="writeAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>16</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="combinedAcceptanceCapability">
-    <type>java.lang.Integer</type>
-    <value>16</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readDataReorderingDepth">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="bridgesToMaster">
-    <type>com.altera.entityinterfaces.IConnectionPoint</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="addressSpan">
-    <type>java.math.BigInteger</type>
-    <value>4294967296</value>
-    <derived>true</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>axi</type>
-   <isStart>false</isStart>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>awid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awaddr</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>awaddr</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awlen</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>awlen</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awsize</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>awsize</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awburst</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>awburst</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awlock</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>awlock</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awcache</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>awcache</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awprot</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>awprot</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>awvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_awready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>awready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_wid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>wid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_wdata</name>
-    <direction>Input</direction>
-    <width>64</width>
-    <role>wdata</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_wstrb</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>wstrb</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_wlast</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wlast</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_wvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_wready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_bid</name>
-    <direction>Output</direction>
-    <width>7</width>
-    <role>bid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_bresp</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>bresp</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_bvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>bvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_bready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>bready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arid</name>
-    <direction>Input</direction>
-    <width>7</width>
-    <role>arid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_araddr</name>
-    <direction>Input</direction>
-    <width>32</width>
-    <role>araddr</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arlen</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>arlen</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arsize</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>arsize</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arburst</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>arburst</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arlock</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>arlock</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arcache</name>
-    <direction>Input</direction>
-    <width>4</width>
-    <role>arcache</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arprot</name>
-    <direction>Input</direction>
-    <width>3</width>
-    <role>arprot</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>arvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_arready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>arready</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_rid</name>
-    <direction>Output</direction>
-    <width>7</width>
-    <role>rid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_rdata</name>
-    <direction>Output</direction>
-    <width>64</width>
-    <role>rdata</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_rresp</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>rresp</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_rlast</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rlast</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_rvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rvalid</role>
-   </port>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_rready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rready</role>
-   </port>
-  </interface>
-  <interface name="hps_0_f2h_sdram2_data" kind="altera_axi_master" version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <assignment>
-    <name>merlin.flow.s0</name>
-    <value>s0</value>
-   </assignment>
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedReset">
-    <type>java.lang.String</type>
-    <value>axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="trustzoneAware">
-    <type>boolean</type>
-    <value>true</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingReads">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingWrites">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="maximumOutstandingTransactions">
-    <type>java.lang.Integer</type>
-    <value>1</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="readIssuingCapability">
-    <type>java.lang.Integer</type>
-    <value>16</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="writeIssuingCapability">
-    <type>java.lang.Integer</type>
-    <value>16</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="combinedIssuingCapability">
-    <type>java.lang.Integer</type>
-    <value>16</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>axi</type>
-   <isStart>true</isStart>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awid</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>awid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awaddr</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>awaddr</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awlen</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>awlen</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awsize</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>awsize</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awburst</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>awburst</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awlock</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>awlock</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awcache</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>awcache</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awprot</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>awprot</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>awvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_awready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>awready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_wid</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>wid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_wdata</name>
-    <direction>Output</direction>
-    <width>64</width>
-    <role>wdata</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_wstrb</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>wstrb</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_wlast</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wlast</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_wvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>wvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_wready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>wready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_bid</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>bid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_bresp</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>bresp</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_bvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>bvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_bready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>bready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arid</name>
-    <direction>Output</direction>
-    <width>8</width>
-    <role>arid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_araddr</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>araddr</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arlen</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>arlen</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arsize</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>arsize</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arburst</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>arburst</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arlock</name>
-    <direction>Output</direction>
-    <width>2</width>
-    <role>arlock</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arcache</name>
-    <direction>Output</direction>
-    <width>4</width>
-    <role>arcache</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arprot</name>
-    <direction>Output</direction>
-    <width>3</width>
-    <role>arprot</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arvalid</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>arvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_arready</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>arready</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_rid</name>
-    <direction>Input</direction>
-    <width>8</width>
-    <role>rid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_rdata</name>
-    <direction>Input</direction>
-    <width>64</width>
-    <role>rdata</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_rresp</name>
-    <direction>Input</direction>
-    <width>2</width>
-    <role>rresp</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_rlast</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rlast</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_rvalid</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>rvalid</role>
-   </port>
-   <port>
-    <name>hps_0_f2h_sdram2_data_rready</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>rready</role>
-   </port>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>hps_0_fpga_interfaces</moduleName>
-    <slaveName>f2h_sdram2_data</slaveName>
-    <name>hps_0_fpga_interfaces.f2h_sdram2_data</name>
-    <baseAddress>0</baseAddress>
-    <span>4294967296</span>
-   </memoryBlock>
-  </interface>
-  <interface name="clk_0_clk" kind="clock_sink" version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="externallyDriven">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="ptfSchematicName">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>false</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>clock</type>
-   <isStart>false</isStart>
-   <port>
-    <name>clk_0_clk_clk</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>clk</role>
-   </port>
-  </interface>
-  <interface
-     name="axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset"
-     kind="reset_sink"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset_reset</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
-  <interface
-     name="axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset"
-     kind="reset_sink"
-     version="16.0">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clk_0_clk</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
- </module>
- <module
-   name="mm_interconnect_3"
-   kind="altera_mm_interconnect"
-   version="16.0"
-   path="mm_interconnect_3">
+   path="mm_interconnect_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -66379,57 +64209,6 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <connection
-   name="dma_yuv.altera_axi_master/hps_0_fpga_interfaces.f2h_sdram0_data"
-   kind="avalon"
-   version="16.0"
-   start="dma_yuv.altera_axi_master"
-   end="hps_0_fpga_interfaces.f2h_sdram0_data">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>dma_yuv</startModule>
-  <startConnectionPoint>altera_axi_master</startConnectionPoint>
-  <endModule>hps_0_fpga_interfaces</endModule>
-  <endConnectionPoint>f2h_sdram0_data</endConnectionPoint>
- </connection>
- <connection
    name="clk_0.clk/sad_result_low.clk"
    kind="clock"
    version="16.0"
@@ -66997,320 +64776,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>h2f_lw_axi_clock</endConnectionPoint>
  </connection>
  <connection
-   name="axi_dma_unfiltered2.altera_axi_master/mm_interconnect_1.axi_dma_unfiltered2_altera_axi_master"
-   kind="avalon"
-   version="16.0"
-   start="axi_dma_unfiltered2.altera_axi_master"
-   end="mm_interconnect_1.axi_dma_unfiltered2_altera_axi_master">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>axi_dma_unfiltered2</startModule>
-  <startConnectionPoint>altera_axi_master</startConnectionPoint>
-  <endModule>mm_interconnect_1</endModule>
-  <endConnectionPoint>axi_dma_unfiltered2_altera_axi_master</endConnectionPoint>
- </connection>
- <connection
-   name="clk_0.clk/mm_interconnect_1.clk_0_clk"
-   kind="clock"
-   version="16.0"
-   start="clk_0.clk"
-   end="mm_interconnect_1.clk_0_clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>clk_0</startModule>
-  <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>mm_interconnect_1</endModule>
-  <endConnectionPoint>clk_0_clk</endConnectionPoint>
- </connection>
- <connection
-   name="axi_dma_orig_block.altera_axi_master/mm_interconnect_1.axi_dma_orig_block_altera_axi_master"
-   kind="avalon"
-   version="16.0"
-   start="axi_dma_orig_block.altera_axi_master"
-   end="mm_interconnect_1.axi_dma_orig_block_altera_axi_master">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>axi_dma_orig_block</startModule>
-  <startConnectionPoint>altera_axi_master</startConnectionPoint>
-  <endModule>mm_interconnect_1</endModule>
-  <endConnectionPoint>axi_dma_orig_block_altera_axi_master</endConnectionPoint>
- </connection>
- <connection
-   name="mm_interconnect_1.hps_0_f2h_sdram1_data/hps_0_fpga_interfaces.f2h_sdram1_data"
-   kind="avalon"
-   version="16.0"
-   start="mm_interconnect_1.hps_0_f2h_sdram1_data"
-   end="hps_0_fpga_interfaces.f2h_sdram1_data">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>mm_interconnect_1</startModule>
-  <startConnectionPoint>hps_0_f2h_sdram1_data</startConnectionPoint>
-  <endModule>hps_0_fpga_interfaces</endModule>
-  <endConnectionPoint>f2h_sdram1_data</endConnectionPoint>
- </connection>
- <connection
-   name="axi_dma_unfiltered1.altera_axi_master/mm_interconnect_2.axi_dma_unfiltered1_altera_axi_master"
-   kind="avalon"
-   version="16.0"
-   start="axi_dma_unfiltered1.altera_axi_master"
-   end="mm_interconnect_2.axi_dma_unfiltered1_altera_axi_master">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>axi_dma_unfiltered1</startModule>
-  <startConnectionPoint>altera_axi_master</startConnectionPoint>
-  <endModule>mm_interconnect_2</endModule>
-  <endConnectionPoint>axi_dma_unfiltered1_altera_axi_master</endConnectionPoint>
- </connection>
- <connection
-   name="clk_0.clk/mm_interconnect_2.clk_0_clk"
-   kind="clock"
-   version="16.0"
-   start="clk_0.clk"
-   end="mm_interconnect_2.clk_0_clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>clk_0</startModule>
-  <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>mm_interconnect_2</endModule>
-  <endConnectionPoint>clk_0_clk</endConnectionPoint>
- </connection>
- <connection
-   name="mm_interconnect_2.hps_0_f2h_sdram2_data/hps_0_fpga_interfaces.f2h_sdram2_data"
-   kind="avalon"
-   version="16.0"
-   start="mm_interconnect_2.hps_0_f2h_sdram2_data"
-   end="hps_0_fpga_interfaces.f2h_sdram2_data">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>mm_interconnect_2</startModule>
-  <startConnectionPoint>hps_0_f2h_sdram2_data</startConnectionPoint>
-  <endModule>hps_0_fpga_interfaces</endModule>
-  <endConnectionPoint>f2h_sdram2_data</endConnectionPoint>
- </connection>
- <connection
-   name="hps_0_fpga_interfaces.h2f_axi_master/mm_interconnect_3.hps_0_h2f_axi_master"
+   name="hps_0_fpga_interfaces.h2f_axi_master/mm_interconnect_0.hps_0_h2f_axi_master"
    kind="avalon"
    version="16.0"
    start="hps_0_fpga_interfaces.h2f_axi_master"
-   end="mm_interconnect_3.hps_0_h2f_axi_master">
+   end="mm_interconnect_0.hps_0_h2f_axi_master">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -67353,15 +64823,15 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>hps_0_fpga_interfaces</startModule>
   <startConnectionPoint>h2f_axi_master</startConnectionPoint>
-  <endModule>mm_interconnect_3</endModule>
+  <endModule>mm_interconnect_0</endModule>
   <endConnectionPoint>hps_0_h2f_axi_master</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/mm_interconnect_3.clk_0_clk"
+   name="clk_0.clk/mm_interconnect_0.clk_0_clk"
    kind="clock"
    version="16.0"
    start="clk_0.clk"
-   end="mm_interconnect_3.clk_0_clk">
+   end="mm_interconnect_0.clk_0_clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -67380,14 +64850,14 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>mm_interconnect_3</endModule>
+  <endModule>mm_interconnect_0</endModule>
   <endConnectionPoint>clk_0_clk</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.axi_dma_unfiltered1_altera_axi_slave/axi_dma_unfiltered1.altera_axi_slave"
+   name="mm_interconnect_0.axi_dma_unfiltered1_altera_axi_slave/axi_dma_unfiltered1.altera_axi_slave"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.axi_dma_unfiltered1_altera_axi_slave"
+   start="mm_interconnect_0.axi_dma_unfiltered1_altera_axi_slave"
    end="axi_dma_unfiltered1.altera_axi_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67429,16 +64899,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>axi_dma_unfiltered1_altera_axi_slave</startConnectionPoint>
   <endModule>axi_dma_unfiltered1</endModule>
   <endConnectionPoint>altera_axi_slave</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.axi_dma_unfiltered2_altera_axi_slave/axi_dma_unfiltered2.altera_axi_slave"
+   name="mm_interconnect_0.axi_dma_unfiltered2_altera_axi_slave/axi_dma_unfiltered2.altera_axi_slave"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.axi_dma_unfiltered2_altera_axi_slave"
+   start="mm_interconnect_0.axi_dma_unfiltered2_altera_axi_slave"
    end="axi_dma_unfiltered2.altera_axi_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67480,16 +64950,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>axi_dma_unfiltered2_altera_axi_slave</startConnectionPoint>
   <endModule>axi_dma_unfiltered2</endModule>
   <endConnectionPoint>altera_axi_slave</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.axi_dma_orig_block_altera_axi_slave/axi_dma_orig_block.altera_axi_slave"
+   name="mm_interconnect_0.axi_dma_orig_block_altera_axi_slave/axi_dma_orig_block.altera_axi_slave"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.axi_dma_orig_block_altera_axi_slave"
+   start="mm_interconnect_0.axi_dma_orig_block_altera_axi_slave"
    end="axi_dma_orig_block.altera_axi_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67531,16 +65001,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>axi_dma_orig_block_altera_axi_slave</startConnectionPoint>
   <endModule>axi_dma_orig_block</endModule>
   <endConnectionPoint>altera_axi_slave</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.dma_yuv_altera_axi_slave/dma_yuv.altera_axi_slave"
+   name="mm_interconnect_0.dma_yuv_altera_axi_slave/dma_yuv.altera_axi_slave"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.dma_yuv_altera_axi_slave"
+   start="mm_interconnect_0.dma_yuv_altera_axi_slave"
    end="dma_yuv.altera_axi_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67582,16 +65052,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>dma_yuv_altera_axi_slave</startConnectionPoint>
   <endModule>dma_yuv</endModule>
   <endConnectionPoint>altera_axi_slave</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.acc_config_altera_axi_slave/acc_config.altera_axi_slave"
+   name="mm_interconnect_0.acc_config_altera_axi_slave/acc_config.altera_axi_slave"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.acc_config_altera_axi_slave"
+   start="mm_interconnect_0.acc_config_altera_axi_slave"
    end="acc_config.altera_axi_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67633,16 +65103,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>acc_config_altera_axi_slave</startConnectionPoint>
   <endModule>acc_config</endModule>
   <endConnectionPoint>altera_axi_slave</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.sad_result_low_s1/sad_result_low.s1"
+   name="mm_interconnect_0.sad_result_low_s1/sad_result_low.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.sad_result_low_s1"
+   start="mm_interconnect_0.sad_result_low_s1"
    end="sad_result_low.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67684,16 +65154,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>sad_result_low_s1</startConnectionPoint>
   <endModule>sad_result_low</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.sad_result_high_s1/sad_result_high.s1"
+   name="mm_interconnect_0.sad_result_high_s1/sad_result_high.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.sad_result_high_s1"
+   start="mm_interconnect_0.sad_result_high_s1"
    end="sad_result_high.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67735,16 +65205,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>sad_result_high_s1</startConnectionPoint>
   <endModule>sad_result_high</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.lambda_loaded_s1/lambda_loaded.s1"
+   name="mm_interconnect_0.lambda_loaded_s1/lambda_loaded.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.lambda_loaded_s1"
+   start="mm_interconnect_0.lambda_loaded_s1"
    end="lambda_loaded.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67786,16 +65256,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>lambda_loaded_s1</startConnectionPoint>
   <endModule>lambda_loaded</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.lcu_loaded_s1/lcu_loaded.s1"
+   name="mm_interconnect_0.lcu_loaded_s1/lcu_loaded.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.lcu_loaded_s1"
+   start="mm_interconnect_0.lcu_loaded_s1"
    end="lcu_loaded.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67837,16 +65307,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>lcu_loaded_s1</startConnectionPoint>
   <endModule>lcu_loaded</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.result_ready_s1/result_ready.s1"
+   name="mm_interconnect_0.result_ready_s1/result_ready.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.result_ready_s1"
+   start="mm_interconnect_0.result_ready_s1"
    end="result_ready.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67888,16 +65358,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>result_ready_s1</startConnectionPoint>
   <endModule>result_ready</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.configure_camera_s1/configure_camera.s1"
+   name="mm_interconnect_0.configure_camera_s1/configure_camera.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.configure_camera_s1"
+   start="mm_interconnect_0.configure_camera_s1"
    end="configure_camera.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67939,16 +65409,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>configure_camera_s1</startConnectionPoint>
   <endModule>configure_camera</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.yuv_ctrl_s1/yuv_ctrl.s1"
+   name="mm_interconnect_0.yuv_ctrl_s1/yuv_ctrl.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.yuv_ctrl_s1"
+   start="mm_interconnect_0.yuv_ctrl_s1"
    end="yuv_ctrl.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -67990,16 +65460,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>yuv_ctrl_s1</startConnectionPoint>
   <endModule>yuv_ctrl</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.yuv_status_s1/yuv_status.s1"
+   name="mm_interconnect_0.yuv_status_s1/yuv_status.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.yuv_status_s1"
+   start="mm_interconnect_0.yuv_status_s1"
    end="yuv_status.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -68041,16 +65511,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>yuv_status_s1</startConnectionPoint>
   <endModule>yuv_status</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="mm_interconnect_3.camera_control_oc_s1/camera_control_oc.s1"
+   name="mm_interconnect_0.camera_control_oc_s1/camera_control_oc.s1"
    kind="avalon"
    version="16.0"
-   start="mm_interconnect_3.camera_control_oc_s1"
+   start="mm_interconnect_0.camera_control_oc_s1"
    end="camera_control_oc.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -68092,7 +65562,7 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>mm_interconnect_3</startModule>
+  <startModule>mm_interconnect_0</startModule>
   <startConnectionPoint>camera_control_oc_s1</startConnectionPoint>
   <endModule>camera_control_oc</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
@@ -68713,11 +66183,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="rst_controller.reset_out/mm_interconnect_1.axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset"
+   name="rst_controller.reset_out/mm_interconnect_0.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset"
    kind="reset"
    version="16.0"
    start="rst_controller.reset_out"
-   end="mm_interconnect_1.axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset">
+   end="mm_interconnect_0.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -68736,61 +66206,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>rst_controller</startModule>
   <startConnectionPoint>reset_out</startConnectionPoint>
-  <endModule>mm_interconnect_1</endModule>
-  <endConnectionPoint>axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset</endConnectionPoint>
- </connection>
- <connection
-   name="rst_controller.reset_out/mm_interconnect_2.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset"
-   kind="reset"
-   version="16.0"
-   start="rst_controller.reset_out"
-   end="mm_interconnect_2.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>rst_controller</startModule>
-  <startConnectionPoint>reset_out</startConnectionPoint>
-  <endModule>mm_interconnect_2</endModule>
-  <endConnectionPoint>axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset</endConnectionPoint>
- </connection>
- <connection
-   name="rst_controller.reset_out/mm_interconnect_3.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset"
-   kind="reset"
-   version="16.0"
-   start="rst_controller.reset_out"
-   end="mm_interconnect_3.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>rst_controller</startModule>
-  <startConnectionPoint>reset_out</startConnectionPoint>
-  <endModule>mm_interconnect_3</endModule>
+  <endModule>mm_interconnect_0</endModule>
   <endConnectionPoint>axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset</endConnectionPoint>
  </connection>
  <connection
@@ -68848,11 +66264,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="rst_controller_001.reset_out/mm_interconnect_1.hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset"
+   name="rst_controller_001.reset_out/mm_interconnect_0.hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset"
    kind="reset"
    version="16.0"
    start="rst_controller_001.reset_out"
-   end="mm_interconnect_1.hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset">
+   end="mm_interconnect_0.hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -68871,61 +66287,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>rst_controller_001</startModule>
   <startConnectionPoint>reset_out</startConnectionPoint>
-  <endModule>mm_interconnect_1</endModule>
-  <endConnectionPoint>hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset</endConnectionPoint>
- </connection>
- <connection
-   name="rst_controller_001.reset_out/mm_interconnect_2.axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset"
-   kind="reset"
-   version="16.0"
-   start="rst_controller_001.reset_out"
-   end="mm_interconnect_2.axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>rst_controller_001</startModule>
-  <startConnectionPoint>reset_out</startConnectionPoint>
-  <endModule>mm_interconnect_2</endModule>
-  <endConnectionPoint>axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset</endConnectionPoint>
- </connection>
- <connection
-   name="rst_controller_001.reset_out/mm_interconnect_3.hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset"
-   kind="reset"
-   version="16.0"
-   start="rst_controller_001.reset_out"
-   end="mm_interconnect_3.hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>rst_controller_001</startModule>
-  <startConnectionPoint>reset_out</startConnectionPoint>
-  <endModule>mm_interconnect_3</endModule>
+  <endModule>mm_interconnect_0</endModule>
   <endConnectionPoint>hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset</endConnectionPoint>
  </connection>
  <connection
@@ -68991,7 +66353,7 @@ parameters are a RESULT of the module parameters. -->
   <version>1.0</version>
  </plugin>
  <plugin>
-  <instanceCount>35</instanceCount>
+  <instanceCount>33</instanceCount>
   <name>clock_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -68999,7 +66361,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>17</instanceCount>
+  <instanceCount>14</instanceCount>
   <name>altera_axi_slave</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -69007,7 +66369,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>31</instanceCount>
+  <instanceCount>27</instanceCount>
   <name>reset_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -69031,7 +66393,7 @@ parameters are a RESULT of the module parameters. -->
   <version>1.0</version>
  </plugin>
  <plugin>
-  <instanceCount>15</instanceCount>
+  <instanceCount>13</instanceCount>
   <name>altera_axi_master</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -69159,7 +66521,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>3</instanceCount>
+  <instanceCount>1</instanceCount>
   <name>altera_mm_interconnect</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
@@ -69191,14 +66553,6 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>1</instanceCount>
-  <name>avalon</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Avalon Memory Mapped Connection</displayName>
-  <version>16.0</version>
- </plugin>
- <plugin>
   <instanceCount>21</instanceCount>
   <name>clock</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -69207,7 +66561,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>20</instanceCount>
+  <instanceCount>15</instanceCount>
   <name>avalon</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -69215,7 +66569,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>5</instanceCount>
+  <instanceCount>3</instanceCount>
   <name>clock</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -69231,7 +66585,7 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <plugin>
-  <instanceCount>23</instanceCount>
+  <instanceCount>19</instanceCount>
   <name>reset</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -69239,5 +66593,5 @@ parameters are a RESULT of the module parameters. -->
   <version>16.0</version>
  </plugin>
  <reportVersion>16.0 211</reportVersion>
- <uniqueIdentifier>309C233B0050000001847F69F236</uniqueIdentifier>
+ <uniqueIdentifier>309C233B005000000184A3FCC63C</uniqueIdentifier>
 </EnsembleReport>

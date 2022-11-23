@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Nov 23 11:52:12 2022
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : Kvazaar_IP_acc_Camera
+Top-level Entity Name : Kvazaar_IP_acc_Camera
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 578
+Total pins : 206
+Total virtual pins : 0
+Total block memory bits : 412,368
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

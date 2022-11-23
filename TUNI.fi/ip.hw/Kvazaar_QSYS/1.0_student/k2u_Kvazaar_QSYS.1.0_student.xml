@@ -199,6 +199,14 @@ lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
 								<ipxact:name>dma_yuv_yuv_input_y_data_in_vz</ipxact:name>
 							</ipxact:physicalPort>
 						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_y_data_in_lz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
 					</ipxact:portMaps>
 				</ipxact:abstractionType>
 			</ipxact:abstractionTypes>
@@ -3894,6 +3902,7 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 		<ipxact:fileSet>
 			<ipxact:name>Kvazaar_QSYS/synthesis</ipxact:name>
 			<ipxact:group></ipxact:group>
+			<ipxact:group>generatedFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>../../../product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.qip</ipxact:name>
 				<ipxact:fileType user="QIP">user</ipxact:fileType>
@@ -3901,6 +3910,11 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 			<ipxact:file>
 				<ipxact:name>../../../product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v</ipxact:name>
 				<ipxact:fileType>verilogSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Kvazaar_QSYS.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:description>Generated at 10:38:14 on 23.11.2022 by Kactus2. </ipxact:description>
 			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>

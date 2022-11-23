@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // File          : Kvazaar_IP_acc_Camera.v
-// Creation date : 16.11.2022
-// Creation time : 11:46:07
+// Creation date : 23.11.2022
+// Creation time : 10:41:24
 // Description   : 
 // Created by    : 
 // Tool : Kactus2 3.5.84 32-bit
@@ -113,6 +113,24 @@ module Kvazaar_IP_acc_Camera(
     wire        Clock_Reset_0_clock_50MHz_ref_to_clock_50MHzCLK;
     // Clock_Reset_0_clock_camera_ref_to_clock_camera wires:
     wire        Clock_Reset_0_clock_camera_ref_to_clock_cameraCLK;
+    // Kvazaar_QSYS_0_sad_result_to_IP_SAD_Accelerator_0_sad_result wires:
+    wire [63:0] Kvazaar_QSYS_0_sad_result_to_IP_SAD_Accelerator_0_sad_resultSAD_RESULT;
+    // Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channel wires:
+    wire [31:0] Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_VZ;
+    // Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channel wires:
+    wire [15:0] Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_VZ;
+    // Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channel wires:
+    wire [15:0] Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_VZ;
+    // Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channel wires:
+    wire [31:0] Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_VZ;
     // LTP_Controller_0_LCD_to_LCD wires:
     wire [7:0]  LTP_Controller_0_LCD_to_LCDLCD_B;
     wire        LTP_Controller_0_LCD_to_LCDLCD_DCLK;
@@ -149,25 +167,101 @@ module Kvazaar_IP_acc_Camera(
     wire [15:0] CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSENSOR_START_COLUMN;
     wire [15:0] CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSENSOR_START_ROW;
     wire        CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSET_CONF;
+    // CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_config wires:
+    wire [5:0]  CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_ADDRESS;
+    wire [1:0]  CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_BYTEENABLE;
+    wire        CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_CHIPSELECT;
+    wire        CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_CLKEN;
+    wire [15:0] CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_READDATA;
+    wire        CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_WRITE;
+    wire [15:0] CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_WRITEDATA;
+    // CCD_Configer_0_camera_start_config_to_Kvazaar_QSYS_0_camera_start_config wires:
+    wire        CCD_Configer_0_camera_start_config_to_Kvazaar_QSYS_0_camera_start_configCONFIGURE_CAMERA_EXTERNAL_CONNECTION_EXPORT;
+    // Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channel wires:
+    wire [7:0]  Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_VZ;
+    // Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrl wires:
+    wire [3:0]  Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrlctrl;
+    wire        Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrldone;
+    // Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channel wires:
+    wire [7:0]  Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_VZ;
+    // Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channel wires:
+    wire [7:0]  Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_DATA;
+    wire        Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_LZ;
+    wire        Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_VZ;
+    // Kvazaar_QSYS_0_HPS_connection_to_HPS_connection wires:
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_CAN0_INST_RX;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_CAN0_INST_TX;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_MDC;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD0;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD1;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD2;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD3;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RX_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RX_CTL;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD0;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD1;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD2;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD3;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TX_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TX_CTL;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_QSPI_INST_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_QSPI_INST_SS0;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SDIO_INST_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_MISO;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_MOSI;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_SS0;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D0;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D1;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D2;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D3;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D4;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D5;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D6;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D7;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_UART0_INST_RX;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_UART0_INST_TX;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_CLK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_DIR;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_NXT;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_STP;
+    wire [14:0] Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_A;
+    wire [2:0]  Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_BA;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CAS_N;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CK;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CKE;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CK_N;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CS_N;
+    wire [4:0]  Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_DM;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_ODT;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_RAS_N;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_RESET_N;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_WE_N;
+    wire        Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_OCT_RZQIN;
     // RGB_to_YUV_0_CCD_data_to_CCD_data wires:
     wire [11:0] RGB_to_YUV_0_CCD_data_to_CCD_dataIDATA;
     wire        RGB_to_YUV_0_CCD_data_to_CCD_dataIFVAL;
     wire        RGB_to_YUV_0_CCD_data_to_CCD_dataILVAL;
     // CCD_Configer_I2C_0_I2C_data_to_i2c_data wires:
     wire        CCD_Configer_I2C_0_I2C_data_to_i2c_dataCAMERA_SCLK;
-    // Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHz wires:
-    wire        Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzCLK;
-    wire        Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzRST_N;
-    // Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_camera wires:
-    wire        Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraCLK;
-    wire        Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraRST_N;
+    // Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_camera wires:
+    wire        Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK;
+    wire        Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraRST_N;
+    // Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHz wires:
+    wire        Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzCLK;
+    wire        Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzRST_N;
     // Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHz wires:
     wire        Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHzCLK;
     wire        Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHzRST_N;
     // Clock_Reset_0_push_buttons_to_push_buttons wires:
     wire [1:0]  Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA;
-    // RAW_to_RGB_0_dip_switch_to_dip_switch wires:
-    wire [3:0]  RAW_to_RGB_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA;
+    // Kvazaar_QSYS_0_dip_switch_to_dip_switch wires:
+    wire [3:0]  Kvazaar_QSYS_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA;
 
     // Ad-hoc wires:
     wire        Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt1_fifo;
@@ -189,11 +283,14 @@ module Kvazaar_IP_acc_Camera(
     wire [15:0] CCD_Capture_0_oY_Cont;
     // CCD_Configer_0 port wires:
     wire [15:0] CCD_Configer_0_blue_gain;
+    wire [5:0]  CCD_Configer_0_camera_control_oc_address;
+    wire [15:0] CCD_Configer_0_camera_control_oc_data_in;
     wire        CCD_Configer_0_clk;
     wire        CCD_Configer_0_exposure_less;
     wire        CCD_Configer_0_exposure_more;
     wire [15:0] CCD_Configer_0_green1_gain;
     wire [15:0] CCD_Configer_0_green2_gain;
+    wire        CCD_Configer_0_read_confs;
     wire [15:0] CCD_Configer_0_red_gain;
     wire        CCD_Configer_0_rst_n;
     wire [15:0] CCD_Configer_0_sensor_column_mode;
@@ -240,16 +337,116 @@ module Kvazaar_IP_acc_Camera(
     wire        IP_SAD_Accelerator_0_clear_unfilt1_fifo;
     wire        IP_SAD_Accelerator_0_clear_unfilt2_fifo;
     wire        IP_SAD_Accelerator_0_clk;
+    wire        IP_SAD_Accelerator_0_ip_config_in_lz;
+    wire        IP_SAD_Accelerator_0_ip_config_in_vz;
+    wire [31:0] IP_SAD_Accelerator_0_ip_config_in_z;
     wire        IP_SAD_Accelerator_0_lambda_loaded;
     wire        IP_SAD_Accelerator_0_lcu_loaded;
+    wire        IP_SAD_Accelerator_0_orig_block_data_in_lz;
+    wire        IP_SAD_Accelerator_0_orig_block_data_in_vz;
+    wire [31:0] IP_SAD_Accelerator_0_orig_block_data_in_z;
     wire [1:0]  IP_SAD_Accelerator_0_result_ready;
+    wire [63:0] IP_SAD_Accelerator_0_sad_result;
+    wire        IP_SAD_Accelerator_0_unfiltered1_lz;
+    wire        IP_SAD_Accelerator_0_unfiltered1_vz;
+    wire [15:0] IP_SAD_Accelerator_0_unfiltered1_z;
+    wire        IP_SAD_Accelerator_0_unfiltered2_lz;
+    wire        IP_SAD_Accelerator_0_unfiltered2_vz;
+    wire [15:0] IP_SAD_Accelerator_0_unfiltered2_z;
     // Kvazaar_QSYS_0 port wires:
+    wire [31:0] Kvazaar_QSYS_0_acc_config_channel_data;
+    wire        Kvazaar_QSYS_0_acc_config_channel_lz;
+    wire        Kvazaar_QSYS_0_acc_config_channel_vz;
+    wire [31:0] Kvazaar_QSYS_0_axi_dma_orig_block_channel_data_export;
+    wire        Kvazaar_QSYS_0_axi_dma_orig_block_channel_lz_export;
+    wire        Kvazaar_QSYS_0_axi_dma_orig_block_channel_vz_export;
     wire        Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export;
+    wire [15:0] Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_data_export;
+    wire        Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_lz_export;
+    wire        Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_vz_export;
     wire        Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export;
+    wire [15:0] Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_data_export;
+    wire        Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_lz_export;
+    wire        Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_vz_export;
     wire        Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export;
+    wire [5:0]  Kvazaar_QSYS_0_camera_control_oc_s2_address;
+    wire [1:0]  Kvazaar_QSYS_0_camera_control_oc_s2_byteenable;
+    wire        Kvazaar_QSYS_0_camera_control_oc_s2_chipselect;
+    wire        Kvazaar_QSYS_0_camera_control_oc_s2_clken;
+    wire [15:0] Kvazaar_QSYS_0_camera_control_oc_s2_readdata;
+    wire        Kvazaar_QSYS_0_camera_control_oc_s2_write;
+    wire [15:0] Kvazaar_QSYS_0_camera_control_oc_s2_writedata;
+    wire        Kvazaar_QSYS_0_clk_clk;
+    wire        Kvazaar_QSYS_0_configure_camera_external_connection_export;
+    wire        Kvazaar_QSYS_0_dma_yuv_fifo_clk_clk;
+    wire        Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_lz;
+    wire        Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_vz;
+    wire [7:0]  Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_z;
+    wire        Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_lz;
+    wire        Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_vz;
+    wire [7:0]  Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_z;
+    wire        Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_lz;
+    wire        Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_vz;
+    wire [7:0]  Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_z;
+    wire [27:0] Kvazaar_QSYS_0_hps_0_f2h_stm_hw_events_stm_hwevents;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_can0_inst_RX;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_can0_inst_TX;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_MDC;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD0;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD1;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD2;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD3;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RX_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RX_CTL;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD0;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD1;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD2;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD3;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TX_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TX_CTL;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_qspi_inst_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_qspi_inst_SS0;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_sdio_inst_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_MISO;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_MOSI;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_SS0;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D0;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D1;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D2;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D3;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D4;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D5;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D6;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D7;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_uart0_inst_RX;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_uart0_inst_TX;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_CLK;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_DIR;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_NXT;
+    wire        Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_STP;
     wire        Kvazaar_QSYS_0_lambda_loaded_external_connection_export;
     wire        Kvazaar_QSYS_0_lcu_loaded_external_connection_export;
+    wire [14:0] Kvazaar_QSYS_0_memory_mem_a;
+    wire [2:0]  Kvazaar_QSYS_0_memory_mem_ba;
+    wire        Kvazaar_QSYS_0_memory_mem_cas_n;
+    wire        Kvazaar_QSYS_0_memory_mem_ck;
+    wire        Kvazaar_QSYS_0_memory_mem_ck_n;
+    wire        Kvazaar_QSYS_0_memory_mem_cke;
+    wire        Kvazaar_QSYS_0_memory_mem_cs_n;
+    wire [4:0]  Kvazaar_QSYS_0_memory_mem_dm;
+    wire        Kvazaar_QSYS_0_memory_mem_odt;
+    wire        Kvazaar_QSYS_0_memory_mem_ras_n;
+    wire        Kvazaar_QSYS_0_memory_mem_reset_n;
+    wire        Kvazaar_QSYS_0_memory_mem_we_n;
+    wire        Kvazaar_QSYS_0_memory_oct_rzqin;
+    wire        Kvazaar_QSYS_0_reset_reset_n;
     wire [1:0]  Kvazaar_QSYS_0_result_ready_external_connection_export;
+    wire [31:0] Kvazaar_QSYS_0_sad_result_high_external_connection_export;
+    wire [31:0] Kvazaar_QSYS_0_sad_result_low_external_connection_export;
+    wire [3:0]  Kvazaar_QSYS_0_yuv_ctrl_external_connection_export;
+    wire        Kvazaar_QSYS_0_yuv_status_external_connection_export;
     // LTP_Controller_0 port wires:
     wire [7:0]  LTP_Controller_0_LCD_blue;
     wire        LTP_Controller_0_LCD_clock;
@@ -289,7 +486,18 @@ module Kvazaar_IP_acc_Camera(
     wire        RGB_to_YUV_0_iDval_z;
     wire [7:0]  RGB_to_YUV_0_iGreen_z;
     wire [7:0]  RGB_to_YUV_0_iRed_z;
+    wire        RGB_to_YUV_0_oU_lz;
+    wire        RGB_to_YUV_0_oU_vz;
+    wire [7:0]  RGB_to_YUV_0_oU_z;
+    wire        RGB_to_YUV_0_oV_lz;
+    wire        RGB_to_YUV_0_oV_vz;
+    wire [7:0]  RGB_to_YUV_0_oV_z;
+    wire        RGB_to_YUV_0_oY_lz;
+    wire        RGB_to_YUV_0_oY_vz;
+    wire [7:0]  RGB_to_YUV_0_oY_z;
     wire        RGB_to_YUV_0_rst_n;
+    wire        RGB_to_YUV_0_write_done;
+    wire [3:0]  RGB_to_YUV_0_yuv_ctrl;
 
     // Assignments for the ports of the encompassing component:
     assign RGB_to_YUV_0_CCD_data_to_CCD_dataIDATA[11:0] = CAMERA_D[11:0];
@@ -298,6 +506,7 @@ module Kvazaar_IP_acc_Camera(
     assign Clock_Reset_0_clock_camera_ref_to_clock_cameraCLK = CAMERA_PIXCLK;
     assign CAMERA_RESET_n = Clock_Reset_0_clock_25MHz_to_clock_25MHzRST_N;
     assign CAMERA_SCLK = CCD_Configer_I2C_0_I2C_data_to_i2c_dataCAMERA_SCLK;
+    assign CAMERA_TRIGGER = 1;
     assign CAMERA_XCLKIN = Clock_Reset_0_clock_25MHz_to_clock_25MHzCLK;
     assign LCD_B[7:0] = LTP_Controller_0_LCD_to_LCDLCD_B[7:0];
     assign LCD_DCLK = LTP_Controller_0_LCD_to_LCDLCD_DCLK;
@@ -311,71 +520,82 @@ module Kvazaar_IP_acc_Camera(
     assign LCD_SHLR = LTP_Controller_0_LCD_to_LCDLCD_SHLR;
     assign LCD_UPDN = LTP_Controller_0_LCD_to_LCDLCD_UPDN;
     assign LCD_VSD = LTP_Controller_0_LCD_to_LCDLCD_VSD;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_CAN0_INST_RX = can_0_rx;
+    assign can_0_tx = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_CAN0_INST_TX;
     assign Clock_Reset_0_clock_50MHz_ref_to_clock_50MHzCLK = clk_50m_fpga;
-    assign RAW_to_RGB_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3:0] = user_dipsw_fpga[3:0];
+    assign ddr3_hps_a[14:0] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_A[14:0];
+    assign ddr3_hps_ba[2:0] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_BA[2:0];
+    assign ddr3_hps_casn = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CAS_N;
+    assign ddr3_hps_cke = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CKE;
+    assign ddr3_hps_clk_n = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CK_N;
+    assign ddr3_hps_clk_p = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CK;
+    assign ddr3_hps_csn = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CS_N;
+    assign ddr3_hps_dm[4:0] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_DM[4:0];
+    assign ddr3_hps_odt = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_ODT;
+    assign ddr3_hps_rasn = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_RAS_N;
+    assign ddr3_hps_resetn = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_RESET_N;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_OCT_RZQIN = ddr3_hps_rzq;
+    assign ddr3_hps_wen = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_WE_N;
+    assign enet_hps_gtx_clk = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TX_CLK;
+    assign enet_hps_mdc = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_MDC;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RX_CLK = enet_hps_rx_clk;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RX_CTL = enet_hps_rx_dv;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD0 = enet_hps_rxd[0];
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD1 = enet_hps_rxd[1];
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD2 = enet_hps_rxd[2];
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD3 = enet_hps_rxd[3];
+    assign enet_hps_tx_en = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TX_CTL;
+    assign enet_hps_txd[0] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD0;
+    assign enet_hps_txd[1] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD1;
+    assign enet_hps_txd[2] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD2;
+    assign enet_hps_txd[3] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD3;
+    assign qspi_clk = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_QSPI_INST_CLK;
+    assign qspi_ss0 = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_QSPI_INST_SS0;
+    assign sd_clk = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SDIO_INST_CLK;
+    assign spi_csn = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_SS0;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_MISO = spi_miso;
+    assign spi_mosi = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_MOSI;
+    assign spi_sck = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_CLK;
+    assign trace_clk_mic = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_CLK;
+    assign trace_data[0] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D0;
+    assign trace_data[1] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D1;
+    assign trace_data[2] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D2;
+    assign trace_data[3] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D3;
+    assign trace_data[4] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D4;
+    assign trace_data[5] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D5;
+    assign trace_data[6] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D6;
+    assign trace_data[7] = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D7;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_UART0_INST_RX = uart_rx;
+    assign uart_tx = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_UART0_INST_TX;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_CLK = usb_clk;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_DIR = usb_dir;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_NXT = usb_nxt;
+    assign usb_stp = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_STP;
+    assign Kvazaar_QSYS_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3:0] = user_dipsw_fpga[3:0];
     assign Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA[1:0] = user_pb_fpga[1:0];
 
-    assign CAMERA_TRIGGER = 0;
-    assign can_0_tx = 0;
-    assign ddr3_hps_a = 0;
-    assign ddr3_hps_ba = 0;
-    assign ddr3_hps_casn = 0;
-    assign ddr3_hps_cke = 0;
-    assign ddr3_hps_clk_n = 0;
-    assign ddr3_hps_clk_p = 0;
-    assign ddr3_hps_csn = 0;
-    assign ddr3_hps_dm = 0;
-    assign ddr3_hps_dq = 0;
-    assign ddr3_hps_dqs_n = 0;
-    assign ddr3_hps_dqs_p = 0;
-    assign ddr3_hps_odt = 0;
-    assign ddr3_hps_rasn = 0;
-    assign ddr3_hps_resetn = 0;
-    assign ddr3_hps_wen = 0;
-    assign enet_hps_gtx_clk = 0;
-    assign enet_hps_intn = 0;
-    assign enet_hps_mdc = 0;
-    assign enet_hps_mdio = 0;
-    assign enet_hps_tx_en = 0;
-    assign enet_hps_txd = 0;
-    assign gpio09 = 0;
-    assign i2c_scl_hps = 0;
-    assign i2c_sda_hps = 0;
-    assign qspi_clk = 0;
-    assign qspi_io = 0;
-    assign qspi_ss0 = 0;
-    assign sd_clk = 0;
-    assign sd_cmd = 0;
-    assign sd_dat = 0;
-    assign spi_csn = 0;
-    assign spi_mosi = 0;
-    assign spi_sck = 0;
-    assign trace_clk_mic = 0;
-    assign trace_data = 0;
-    assign uart_tx = 0;
-    assign usb_data = 0;
-    assign usb_stp = 0;
-    assign user_led_hps = 0;
-
     // CCD_Capture_0 assignments:
-    assign CCD_Capture_0_iCLK = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraCLK;
+    assign CCD_Capture_0_iCLK = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK;
     assign CCD_Capture_0_iDATA[11:0] = RGB_to_YUV_0_CCD_data_to_CCD_dataIDATA[11:0];
     assign CCD_Capture_0_iFVAL = RGB_to_YUV_0_CCD_data_to_CCD_dataIFVAL;
     assign CCD_Capture_0_iLVAL = RGB_to_YUV_0_CCD_data_to_CCD_dataILVAL;
-    assign CCD_Capture_0_iRST = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraRST_N;
+    assign CCD_Capture_0_iRST = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraRST_N;
     assign RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIDATA[11:0] = CCD_Capture_0_oDATA[11:0];
     assign RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIDVAL = CCD_Capture_0_oDVAL;
     assign RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIX_CONT[15:0] = CCD_Capture_0_oX_Cont[15:0];
     assign RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIY_CONT[15:0] = CCD_Capture_0_oY_Cont[15:0];
     // CCD_Configer_0 assignments:
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configBLUE_GAIN[15:0] = CCD_Configer_0_blue_gain[15:0];
-    assign CCD_Configer_0_clk = Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzCLK;
+    assign CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_ADDRESS[5:0] = CCD_Configer_0_camera_control_oc_address[5:0];
+    assign CCD_Configer_0_camera_control_oc_data_in[15:0] = CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_READDATA[15:0];
+    assign CCD_Configer_0_clk = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzCLK;
     assign CCD_Configer_0_exposure_less = Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA[1];
     assign CCD_Configer_0_exposure_more = Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA[0];
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configGREEN1_GAIN[15:0] = CCD_Configer_0_green1_gain[15:0];
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configGREEN2_GAIN[15:0] = CCD_Configer_0_green2_gain[15:0];
+    assign CCD_Configer_0_read_confs = CCD_Configer_0_camera_start_config_to_Kvazaar_QSYS_0_camera_start_configCONFIGURE_CAMERA_EXTERNAL_CONNECTION_EXPORT;
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configRED_GAIN[15:0] = CCD_Configer_0_red_gain[15:0];
-    assign CCD_Configer_0_rst_n = Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzRST_N;
+    assign CCD_Configer_0_rst_n = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzRST_N;
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSENSOR_COLUMN_MODE[15:0] = CCD_Configer_0_sensor_column_mode[15:0];
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSENSOR_COLUMN_SIZE[15:0] = CCD_Configer_0_sensor_column_size[15:0];
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSENSOR_EXPOSURE[15:0] = CCD_Configer_0_sensor_exposure[15:0];
@@ -386,9 +606,9 @@ module Kvazaar_IP_acc_Camera(
     assign CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSET_CONF = CCD_Configer_0_set_conf;
     // CCD_Configer_I2C_0 assignments:
     assign CCD_Configer_I2C_0_I2C_data_to_i2c_dataCAMERA_SCLK = CCD_Configer_I2C_0_I2C_SCLK;
-    assign CCD_Configer_I2C_0_iCLK = Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzCLK;
-    assign CCD_Configer_I2C_0_iMIRROR_SW = RAW_to_RGB_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3];
-    assign CCD_Configer_I2C_0_iRST_N = Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzRST_N;
+    assign CCD_Configer_I2C_0_iCLK = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzCLK;
+    assign CCD_Configer_I2C_0_iMIRROR_SW = Kvazaar_QSYS_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3];
+    assign CCD_Configer_I2C_0_iRST_N = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzRST_N;
     assign CCD_Configer_I2C_0_iSetConf = CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configSET_CONF;
     assign CCD_Configer_I2C_0_iblue_gain[15:0] = CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configBLUE_GAIN[15:0];
     assign CCD_Configer_I2C_0_igreen1_gain[15:0] = CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_configGREEN1_GAIN[15:0];
@@ -406,30 +626,131 @@ module Kvazaar_IP_acc_Camera(
     assign Clock_Reset_0_fpga_pb_1 = Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA[0];
     assign Clock_Reset_0_fpga_pb_2 = Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA[1];
     assign Clock_Reset_0_clock_25MHz_to_clock_25MHzCLK = Clock_Reset_0_outclk_0;
-    assign Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzCLK = Clock_Reset_0_outclk_1;
+    assign Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzCLK = Clock_Reset_0_outclk_1;
     assign Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHzCLK = Clock_Reset_0_outclk_2;
-    assign Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraCLK = Clock_Reset_0_outclk_3;
+    assign Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK = Clock_Reset_0_outclk_3;
     assign Clock_Reset_0_refclk = Clock_Reset_0_clock_50MHz_ref_to_clock_50MHzCLK;
     assign Clock_Reset_0_clock_25MHz_to_clock_25MHzRST_N = Clock_Reset_0_rst_n_0;
-    assign Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzRST_N = Clock_Reset_0_rst_n_1;
+    assign Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzRST_N = Clock_Reset_0_rst_n_1;
     assign Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHzRST_N = Clock_Reset_0_rst_n_2;
-    assign Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraRST_N = Clock_Reset_0_rst_n_3;
+    assign Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraRST_N = Clock_Reset_0_rst_n_3;
     // IP_SAD_Accelerator_0 assignments:
-    assign IP_SAD_Accelerator_0_arst_n = Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzRST_N;
+    assign IP_SAD_Accelerator_0_arst_n = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzRST_N;
     assign Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_orig_fifo = IP_SAD_Accelerator_0_clear_orig_fifo;
     assign Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt1_fifo = IP_SAD_Accelerator_0_clear_unfilt1_fifo;
     assign IP_SAD_Accelerator_0_clear_unfilt2_fifo_to_Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export = IP_SAD_Accelerator_0_clear_unfilt2_fifo;
-    assign IP_SAD_Accelerator_0_clk = Clock_Reset_0_clock_75MHz_to_IP_SAD_Accelerator_0_clock_75MHzCLK;
+    assign IP_SAD_Accelerator_0_clk = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzCLK;
+    assign Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_VZ = IP_SAD_Accelerator_0_ip_config_in_lz;
+    assign IP_SAD_Accelerator_0_ip_config_in_vz = Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_LZ;
+    assign IP_SAD_Accelerator_0_ip_config_in_z[31:0] = Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_DATA[31:0];
     assign Kvazaar_QSYS_0_lambda_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lambda_loaded = IP_SAD_Accelerator_0_lambda_loaded;
     assign Kvazaar_QSYS_0_lcu_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lcu_loaded = IP_SAD_Accelerator_0_lcu_loaded;
+    assign Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_VZ = IP_SAD_Accelerator_0_orig_block_data_in_lz;
+    assign IP_SAD_Accelerator_0_orig_block_data_in_vz = Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_LZ;
+    assign IP_SAD_Accelerator_0_orig_block_data_in_z[31:0] = Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_DATA[31:0];
     assign Kvazaar_QSYS_0_result_ready_external_connection_export_to_IP_SAD_Accelerator_0_result_ready[1:0] = IP_SAD_Accelerator_0_result_ready[1:0];
+    assign Kvazaar_QSYS_0_sad_result_to_IP_SAD_Accelerator_0_sad_resultSAD_RESULT[63:0] = IP_SAD_Accelerator_0_sad_result[63:0];
+    assign Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_VZ = IP_SAD_Accelerator_0_unfiltered1_lz;
+    assign IP_SAD_Accelerator_0_unfiltered1_vz = Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_LZ;
+    assign IP_SAD_Accelerator_0_unfiltered1_z[15:0] = Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_DATA[15:0];
+    assign Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_VZ = IP_SAD_Accelerator_0_unfiltered2_lz;
+    assign IP_SAD_Accelerator_0_unfiltered2_vz = Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_LZ;
+    assign IP_SAD_Accelerator_0_unfiltered2_z[15:0] = Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_DATA[15:0];
     // Kvazaar_QSYS_0 assignments:
+    assign Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_DATA[31:0] = Kvazaar_QSYS_0_acc_config_channel_data[31:0];
+    assign Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_LZ = Kvazaar_QSYS_0_acc_config_channel_lz;
+    assign Kvazaar_QSYS_0_acc_config_channel_vz = Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channelCHANNEL_VZ;
+    assign Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_DATA[31:0] = Kvazaar_QSYS_0_axi_dma_orig_block_channel_data_export[31:0];
+    assign Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_LZ = Kvazaar_QSYS_0_axi_dma_orig_block_channel_lz_export;
+    assign Kvazaar_QSYS_0_axi_dma_orig_block_channel_vz_export = Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channelCHANNEL_VZ;
     assign Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export = Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_orig_fifo;
+    assign Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_DATA[15:0] = Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_data_export[15:0];
+    assign Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_LZ = Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_lz_export;
+    assign Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_vz_export = Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channelCHANNEL_VZ;
     assign Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export = Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt1_fifo;
+    assign Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_DATA[15:0] = Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_data_export[15:0];
+    assign Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_LZ = Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_lz_export;
+    assign Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_vz_export = Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channelCHANNEL_VZ;
     assign Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export = IP_SAD_Accelerator_0_clear_unfilt2_fifo_to_Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export;
+    assign Kvazaar_QSYS_0_camera_control_oc_s2_address[5:0] = CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_ADDRESS[5:0];
+    assign Kvazaar_QSYS_0_camera_control_oc_s2_byteenable[1:0] = 3;
+    assign Kvazaar_QSYS_0_camera_control_oc_s2_chipselect = 1;
+    assign Kvazaar_QSYS_0_camera_control_oc_s2_clken = 1;
+    assign CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_configCAMERA_CONTROL_OC_S2_READDATA[15:0] = Kvazaar_QSYS_0_camera_control_oc_s2_readdata[15:0];
+    assign Kvazaar_QSYS_0_camera_control_oc_s2_write = 0;
+    assign Kvazaar_QSYS_0_camera_control_oc_s2_writedata[15:0] = 0;
+    assign Kvazaar_QSYS_0_clk_clk = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzCLK;
+    assign CCD_Configer_0_camera_start_config_to_Kvazaar_QSYS_0_camera_start_configCONFIGURE_CAMERA_EXTERNAL_CONNECTION_EXPORT = Kvazaar_QSYS_0_configure_camera_external_connection_export;
+    assign Kvazaar_QSYS_0_dma_yuv_fifo_clk_clk = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK;
+    assign Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_VZ = Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_lz;
+    assign Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_vz = Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_LZ;
+    assign Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_z[7:0] = Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_DATA[7:0];
+    assign Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_VZ = Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_lz;
+    assign Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_vz = Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_LZ;
+    assign Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_z[7:0] = Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_DATA[7:0];
+    assign Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_VZ = Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_lz;
+    assign Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_vz = Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_LZ;
+    assign Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_z[7:0] = Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_DATA[7:0];
+    assign Kvazaar_QSYS_0_hps_0_f2h_stm_hw_events_stm_hwevents[9:6] = Kvazaar_QSYS_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3:0];
+    assign Kvazaar_QSYS_0_hps_0_f2h_stm_hw_events_stm_hwevents[1:0] = Clock_Reset_0_push_buttons_to_push_buttonsUSER_PB_FPGA[1:0];
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_can0_inst_RX = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_CAN0_INST_RX;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_CAN0_INST_TX = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_can0_inst_TX;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_MDC = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_MDC;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD0 = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD0;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD1 = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD1;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD2 = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD2;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD3 = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RXD3;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RX_CLK = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RX_CLK;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RX_CTL = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_RX_CTL;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD0 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD0;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD1 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD1;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD2 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD2;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TXD3 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD3;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TX_CLK = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TX_CLK;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_EMAC1_INST_TX_CTL = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TX_CTL;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_QSPI_INST_CLK = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_qspi_inst_CLK;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_QSPI_INST_SS0 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_qspi_inst_SS0;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SDIO_INST_CLK = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_sdio_inst_CLK;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_CLK = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_CLK;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_MISO = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_MISO;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_MOSI = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_MOSI;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_SPIM0_INST_SS0 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_SS0;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_CLK = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_CLK;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D0 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D0;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D1 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D1;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D2 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D2;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D3 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D3;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D4 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D4;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D5 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D5;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D6 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D6;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_TRACE_INST_D7 = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D7;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_uart0_inst_RX = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_UART0_INST_RX;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_UART0_INST_TX = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_uart0_inst_TX;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_CLK = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_CLK;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_DIR = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_DIR;
+    assign Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_NXT = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_NXT;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionHPS_0_HPS_IO_HPS_IO_USB1_INST_STP = Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_STP;
     assign Kvazaar_QSYS_0_lambda_loaded_external_connection_export = Kvazaar_QSYS_0_lambda_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lambda_loaded;
     assign Kvazaar_QSYS_0_lcu_loaded_external_connection_export = Kvazaar_QSYS_0_lcu_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lcu_loaded;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_A[14:0] = Kvazaar_QSYS_0_memory_mem_a[14:0];
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_BA[2:0] = Kvazaar_QSYS_0_memory_mem_ba[2:0];
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CAS_N = Kvazaar_QSYS_0_memory_mem_cas_n;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CK = Kvazaar_QSYS_0_memory_mem_ck;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CK_N = Kvazaar_QSYS_0_memory_mem_ck_n;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CKE = Kvazaar_QSYS_0_memory_mem_cke;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_CS_N = Kvazaar_QSYS_0_memory_mem_cs_n;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_DM[4:0] = Kvazaar_QSYS_0_memory_mem_dm[4:0];
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_ODT = Kvazaar_QSYS_0_memory_mem_odt;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_RAS_N = Kvazaar_QSYS_0_memory_mem_ras_n;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_RESET_N = Kvazaar_QSYS_0_memory_mem_reset_n;
+    assign Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_MEM_WE_N = Kvazaar_QSYS_0_memory_mem_we_n;
+    assign Kvazaar_QSYS_0_memory_oct_rzqin = Kvazaar_QSYS_0_HPS_connection_to_HPS_connectionMEMORY_OCT_RZQIN;
+    assign Kvazaar_QSYS_0_reset_reset_n = Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHzRST_N;
     assign Kvazaar_QSYS_0_result_ready_external_connection_export[1:0] = Kvazaar_QSYS_0_result_ready_external_connection_export_to_IP_SAD_Accelerator_0_result_ready[1:0];
+    assign Kvazaar_QSYS_0_sad_result_high_external_connection_export[31:0] = Kvazaar_QSYS_0_sad_result_to_IP_SAD_Accelerator_0_sad_resultSAD_RESULT[63:32];
+    assign Kvazaar_QSYS_0_sad_result_low_external_connection_export[31:0] = Kvazaar_QSYS_0_sad_result_to_IP_SAD_Accelerator_0_sad_resultSAD_RESULT[31:0];
+    assign Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrlctrl[3:0] = Kvazaar_QSYS_0_yuv_ctrl_external_connection_export[3:0];
+    assign Kvazaar_QSYS_0_yuv_status_external_connection_export = Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrldone;
     // LTP_Controller_0 assignments:
     assign LTP_Controller_0_LCD_to_LCDLCD_B[7:0] = LTP_Controller_0_LCD_blue[7:0];
     assign LTP_Controller_0_LCD_to_LCDLCD_DCLK = LTP_Controller_0_LCD_clock;
@@ -443,7 +764,7 @@ module Kvazaar_IP_acc_Camera(
     assign LTP_Controller_0_LCD_to_LCDLCD_UPDN = LTP_Controller_0_LCD_updn;
     assign LTP_Controller_0_blue_in[7:0] = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataOBLUE[11:4];
     assign LTP_Controller_0_clk = Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHzCLK;
-    assign LTP_Controller_0_fifo_in_clk = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraCLK;
+    assign LTP_Controller_0_fifo_in_clk = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK;
     assign LTP_Controller_0_fifo_write = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataODVAL;
     assign LTP_Controller_0_green_in[7:0] = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataOGREEN[11:4];
     assign LTP_Controller_0_LCD_to_LCDLCD_HSD = LTP_Controller_0_horizontal_sync;
@@ -451,11 +772,11 @@ module Kvazaar_IP_acc_Camera(
     assign LTP_Controller_0_rst_n = Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHzRST_N;
     assign LTP_Controller_0_LCD_to_LCDLCD_VSD = LTP_Controller_0_vertical_sync;
     // RAW_to_RGB_0 assignments:
-    assign RAW_to_RGB_0_iCLK = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraCLK;
+    assign RAW_to_RGB_0_iCLK = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK;
     assign RAW_to_RGB_0_iData[11:0] = RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIDATA[11:0];
     assign RAW_to_RGB_0_iDval = RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIDVAL;
-    assign RAW_to_RGB_0_iMIRROR = RAW_to_RGB_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3];
-    assign RAW_to_RGB_0_iRST_n = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraRST_N;
+    assign RAW_to_RGB_0_iMIRROR = Kvazaar_QSYS_0_dip_switch_to_dip_switchUSER_DIPSW_FPGA[3];
+    assign RAW_to_RGB_0_iRST_n = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraRST_N;
     assign RAW_to_RGB_0_iX_Cont[15:0] = RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIX_CONT[15:0];
     assign RAW_to_RGB_0_iY_Cont[15:0] = RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_dataIY_CONT[15:0];
     assign RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataOBLUE[11:0] = RAW_to_RGB_0_oBlue[11:0];
@@ -463,13 +784,24 @@ module Kvazaar_IP_acc_Camera(
     assign RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataOGREEN[11:0] = RAW_to_RGB_0_oGreen[11:0];
     assign RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataORED[11:0] = RAW_to_RGB_0_oRed[11:0];
     // RGB_to_YUV_0 assignments:
-    assign RGB_to_YUV_0_clk = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraCLK;
+    assign RGB_to_YUV_0_clk = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraCLK;
     assign RGB_to_YUV_0_frame_valid = RGB_to_YUV_0_CCD_data_to_CCD_dataIFVAL;
     assign RGB_to_YUV_0_iBlue_z[7:0] = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataOBLUE[11:4];
     assign RGB_to_YUV_0_iDval_z = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataODVAL;
     assign RGB_to_YUV_0_iGreen_z[7:0] = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataOGREEN[11:4];
     assign RGB_to_YUV_0_iRed_z[7:0] = RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_dataORED[11:4];
-    assign RGB_to_YUV_0_rst_n = Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_cameraRST_N;
+    assign Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_LZ = RGB_to_YUV_0_oU_lz;
+    assign RGB_to_YUV_0_oU_vz = Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_VZ;
+    assign Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channelCHANNEL_DATA[7:0] = RGB_to_YUV_0_oU_z[7:0];
+    assign Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_LZ = RGB_to_YUV_0_oV_lz;
+    assign RGB_to_YUV_0_oV_vz = Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_VZ;
+    assign Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channelCHANNEL_DATA[7:0] = RGB_to_YUV_0_oV_z[7:0];
+    assign Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_LZ = RGB_to_YUV_0_oY_lz;
+    assign RGB_to_YUV_0_oY_vz = Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_VZ;
+    assign Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channelCHANNEL_DATA[7:0] = RGB_to_YUV_0_oY_z[7:0];
+    assign RGB_to_YUV_0_rst_n = Kvazaar_QSYS_0_clock_camera_to_Clock_Reset_0_clock_cameraRST_N;
+    assign Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrldone = RGB_to_YUV_0_write_done;
+    assign RGB_to_YUV_0_yuv_ctrl[3:0] = Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrlctrl[3:0];
 
     // IP-XACT VLNV: TUNI.fi:ip.hw:CCD_Capture:1.0
     CCD_Capture     CCD_Capture_0(
@@ -506,10 +838,10 @@ module Kvazaar_IP_acc_Camera(
         .sensor_start_row    (CCD_Configer_0_sensor_start_row),
         .set_conf            (CCD_Configer_0_set_conf),
         // Interface: camera_config
-        .camera_control_oc_data_in(0),
-        .camera_control_oc_address(),
+        .camera_control_oc_data_in(CCD_Configer_0_camera_control_oc_data_in),
+        .camera_control_oc_address(CCD_Configer_0_camera_control_oc_address),
         // Interface: camera_start_config
-        .read_confs          (0),
+        .read_confs          (CCD_Configer_0_read_confs),
         // Interface: clock_75MHz
         .clk                 (CCD_Configer_0_clk),
         .rst_n               (CCD_Configer_0_rst_n),
@@ -571,23 +903,23 @@ module Kvazaar_IP_acc_Camera(
         .arst_n              (IP_SAD_Accelerator_0_arst_n),
         .clk                 (IP_SAD_Accelerator_0_clk),
         // Interface: config_channel
-        .ip_config_in_vz     (0),
-        .ip_config_in_z      (0),
-        .ip_config_in_lz     (),
+        .ip_config_in_vz     (IP_SAD_Accelerator_0_ip_config_in_vz),
+        .ip_config_in_z      (IP_SAD_Accelerator_0_ip_config_in_z),
+        .ip_config_in_lz     (IP_SAD_Accelerator_0_ip_config_in_lz),
         // Interface: left_ref_channel
-        .unfiltered2_vz      (0),
-        .unfiltered2_z       (0),
-        .unfiltered2_lz      (),
+        .unfiltered2_vz      (IP_SAD_Accelerator_0_unfiltered2_vz),
+        .unfiltered2_z       (IP_SAD_Accelerator_0_unfiltered2_z),
+        .unfiltered2_lz      (IP_SAD_Accelerator_0_unfiltered2_lz),
         // Interface: orig_channel
-        .orig_block_data_in_vz(0),
-        .orig_block_data_in_z(0),
-        .orig_block_data_in_lz(),
+        .orig_block_data_in_vz(IP_SAD_Accelerator_0_orig_block_data_in_vz),
+        .orig_block_data_in_z(IP_SAD_Accelerator_0_orig_block_data_in_z),
+        .orig_block_data_in_lz(IP_SAD_Accelerator_0_orig_block_data_in_lz),
         // Interface: sad_result
-        .sad_result          (),
+        .sad_result          (IP_SAD_Accelerator_0_sad_result),
         // Interface: top_ref_channel
-        .unfiltered1_vz      (0),
-        .unfiltered1_z       (0),
-        .unfiltered1_lz      (),
+        .unfiltered1_vz      (IP_SAD_Accelerator_0_unfiltered1_vz),
+        .unfiltered1_z       (IP_SAD_Accelerator_0_unfiltered1_z),
+        .unfiltered1_lz      (IP_SAD_Accelerator_0_unfiltered1_lz),
         // These ports are not in any interface
         .clear_orig_fifo     (IP_SAD_Accelerator_0_clear_orig_fifo),
         .clear_unfilt1_fifo  (IP_SAD_Accelerator_0_clear_unfilt1_fifo),
@@ -599,135 +931,136 @@ module Kvazaar_IP_acc_Camera(
     // IP-XACT VLNV: TUNI.fi:ip.hw:Kvazaar_QSYS:1.0_student
     Kvazaar_QSYS Kvazaar_QSYS_0(
         // Interface: HPS_connection
-        .hps_0_hps_io_hps_io_can0_inst_RX(0),
-        .hps_0_hps_io_hps_io_emac1_inst_RX_CLK(0),
-        .hps_0_hps_io_hps_io_emac1_inst_RX_CTL(0),
-        .hps_0_hps_io_hps_io_emac1_inst_RXD0(0),
-        .hps_0_hps_io_hps_io_emac1_inst_RXD1(0),
-        .hps_0_hps_io_hps_io_emac1_inst_RXD2(0),
-        .hps_0_hps_io_hps_io_emac1_inst_RXD3(0),
-        .hps_0_hps_io_hps_io_spim0_inst_MISO(0),
-        .hps_0_hps_io_hps_io_uart0_inst_RX(0),
-        .hps_0_hps_io_hps_io_usb1_inst_CLK(0),
-        .hps_0_hps_io_hps_io_usb1_inst_DIR(0),
-        .hps_0_hps_io_hps_io_usb1_inst_NXT(0),
-        .memory_oct_rzqin    (0),
-        .hps_0_hps_io_hps_io_can0_inst_TX(),
-        .hps_0_hps_io_hps_io_emac1_inst_MDC(),
-        .hps_0_hps_io_hps_io_emac1_inst_TX_CLK(),
-        .hps_0_hps_io_hps_io_emac1_inst_TX_CTL(),
-        .hps_0_hps_io_hps_io_emac1_inst_TXD0(),
-        .hps_0_hps_io_hps_io_emac1_inst_TXD1(),
-        .hps_0_hps_io_hps_io_emac1_inst_TXD2(),
-        .hps_0_hps_io_hps_io_emac1_inst_TXD3(),
-        .hps_0_hps_io_hps_io_qspi_inst_CLK(),
-        .hps_0_hps_io_hps_io_qspi_inst_SS0(),
-        .hps_0_hps_io_hps_io_sdio_inst_CLK(),
-        .hps_0_hps_io_hps_io_spim0_inst_CLK(),
-        .hps_0_hps_io_hps_io_spim0_inst_MOSI(),
-        .hps_0_hps_io_hps_io_spim0_inst_SS0(),
-        .hps_0_hps_io_hps_io_trace_inst_CLK(),
-        .hps_0_hps_io_hps_io_trace_inst_D0(),
-        .hps_0_hps_io_hps_io_trace_inst_D1(),
-        .hps_0_hps_io_hps_io_trace_inst_D2(),
-        .hps_0_hps_io_hps_io_trace_inst_D3(),
-        .hps_0_hps_io_hps_io_trace_inst_D4(),
-        .hps_0_hps_io_hps_io_trace_inst_D5(),
-        .hps_0_hps_io_hps_io_trace_inst_D6(),
-        .hps_0_hps_io_hps_io_trace_inst_D7(),
-        .hps_0_hps_io_hps_io_uart0_inst_TX(),
-        .hps_0_hps_io_hps_io_usb1_inst_STP(),
-        .memory_mem_a        (),
-        .memory_mem_ba       (),
-        .memory_mem_cas_n    (),
-        .memory_mem_ck       (),
-        .memory_mem_ck_n     (),
-        .memory_mem_cke      (),
-        .memory_mem_cs_n     (),
-        .memory_mem_dm       (),
-        .memory_mem_odt      (),
-        .memory_mem_ras_n    (),
-        .memory_mem_reset_n  (),
-        .memory_mem_we_n     (),
-        .hps_0_hps_io_hps_io_emac1_inst_MDIO(),
-        .hps_0_hps_io_hps_io_gpio_inst_GPIO09(),
-        .hps_0_hps_io_hps_io_gpio_inst_GPIO35(),
-        .hps_0_hps_io_hps_io_gpio_inst_GPIO41(),
-        .hps_0_hps_io_hps_io_gpio_inst_GPIO42(),
-        .hps_0_hps_io_hps_io_gpio_inst_GPIO43(),
-        .hps_0_hps_io_hps_io_gpio_inst_GPIO44(),
-        .hps_0_hps_io_hps_io_i2c0_inst_SCL(),
-        .hps_0_hps_io_hps_io_i2c0_inst_SDA(),
-        .hps_0_hps_io_hps_io_qspi_inst_IO0(),
-        .hps_0_hps_io_hps_io_qspi_inst_IO1(),
-        .hps_0_hps_io_hps_io_qspi_inst_IO2(),
-        .hps_0_hps_io_hps_io_qspi_inst_IO3(),
-        .hps_0_hps_io_hps_io_sdio_inst_CMD(),
-        .hps_0_hps_io_hps_io_sdio_inst_D0(),
-        .hps_0_hps_io_hps_io_sdio_inst_D1(),
-        .hps_0_hps_io_hps_io_sdio_inst_D2(),
-        .hps_0_hps_io_hps_io_sdio_inst_D3(),
-        .hps_0_hps_io_hps_io_usb1_inst_D0(),
-        .hps_0_hps_io_hps_io_usb1_inst_D1(),
-        .hps_0_hps_io_hps_io_usb1_inst_D2(),
-        .hps_0_hps_io_hps_io_usb1_inst_D3(),
-        .hps_0_hps_io_hps_io_usb1_inst_D4(),
-        .hps_0_hps_io_hps_io_usb1_inst_D5(),
-        .hps_0_hps_io_hps_io_usb1_inst_D6(),
-        .hps_0_hps_io_hps_io_usb1_inst_D7(),
-        .memory_mem_dq       (),
-        .memory_mem_dqs      (),
-        .memory_mem_dqs_n    (),
+        .hps_0_hps_io_hps_io_can0_inst_RX(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_can0_inst_RX),
+        .hps_0_hps_io_hps_io_emac1_inst_RX_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RX_CLK),
+        .hps_0_hps_io_hps_io_emac1_inst_RX_CTL(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RX_CTL),
+        .hps_0_hps_io_hps_io_emac1_inst_RXD0(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD0),
+        .hps_0_hps_io_hps_io_emac1_inst_RXD1(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD1),
+        .hps_0_hps_io_hps_io_emac1_inst_RXD2(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD2),
+        .hps_0_hps_io_hps_io_emac1_inst_RXD3(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_RXD3),
+        .hps_0_hps_io_hps_io_spim0_inst_MISO(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_MISO),
+        .hps_0_hps_io_hps_io_uart0_inst_RX(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_uart0_inst_RX),
+        .hps_0_hps_io_hps_io_usb1_inst_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_CLK),
+        .hps_0_hps_io_hps_io_usb1_inst_DIR(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_DIR),
+        .hps_0_hps_io_hps_io_usb1_inst_NXT(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_NXT),
+        .memory_oct_rzqin    (Kvazaar_QSYS_0_memory_oct_rzqin),
+        .hps_0_hps_io_hps_io_can0_inst_TX(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_can0_inst_TX),
+        .hps_0_hps_io_hps_io_emac1_inst_MDC(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_MDC),
+        .hps_0_hps_io_hps_io_emac1_inst_TX_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TX_CLK),
+        .hps_0_hps_io_hps_io_emac1_inst_TX_CTL(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TX_CTL),
+        .hps_0_hps_io_hps_io_emac1_inst_TXD0(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD0),
+        .hps_0_hps_io_hps_io_emac1_inst_TXD1(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD1),
+        .hps_0_hps_io_hps_io_emac1_inst_TXD2(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD2),
+        .hps_0_hps_io_hps_io_emac1_inst_TXD3(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_emac1_inst_TXD3),
+        .hps_0_hps_io_hps_io_qspi_inst_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_qspi_inst_CLK),
+        .hps_0_hps_io_hps_io_qspi_inst_SS0(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_qspi_inst_SS0),
+        .hps_0_hps_io_hps_io_sdio_inst_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_sdio_inst_CLK),
+        .hps_0_hps_io_hps_io_spim0_inst_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_CLK),
+        .hps_0_hps_io_hps_io_spim0_inst_MOSI(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_MOSI),
+        .hps_0_hps_io_hps_io_spim0_inst_SS0(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_spim0_inst_SS0),
+        .hps_0_hps_io_hps_io_trace_inst_CLK(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_CLK),
+        .hps_0_hps_io_hps_io_trace_inst_D0(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D0),
+        .hps_0_hps_io_hps_io_trace_inst_D1(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D1),
+        .hps_0_hps_io_hps_io_trace_inst_D2(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D2),
+        .hps_0_hps_io_hps_io_trace_inst_D3(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D3),
+        .hps_0_hps_io_hps_io_trace_inst_D4(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D4),
+        .hps_0_hps_io_hps_io_trace_inst_D5(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D5),
+        .hps_0_hps_io_hps_io_trace_inst_D6(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D6),
+        .hps_0_hps_io_hps_io_trace_inst_D7(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_trace_inst_D7),
+        .hps_0_hps_io_hps_io_uart0_inst_TX(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_uart0_inst_TX),
+        .hps_0_hps_io_hps_io_usb1_inst_STP(Kvazaar_QSYS_0_hps_0_hps_io_hps_io_usb1_inst_STP),
+        .memory_mem_a        (Kvazaar_QSYS_0_memory_mem_a),
+        .memory_mem_ba       (Kvazaar_QSYS_0_memory_mem_ba),
+        .memory_mem_cas_n    (Kvazaar_QSYS_0_memory_mem_cas_n),
+        .memory_mem_ck       (Kvazaar_QSYS_0_memory_mem_ck),
+        .memory_mem_ck_n     (Kvazaar_QSYS_0_memory_mem_ck_n),
+        .memory_mem_cke      (Kvazaar_QSYS_0_memory_mem_cke),
+        .memory_mem_cs_n     (Kvazaar_QSYS_0_memory_mem_cs_n),
+        .memory_mem_dm       (Kvazaar_QSYS_0_memory_mem_dm),
+        .memory_mem_odt      (Kvazaar_QSYS_0_memory_mem_odt),
+        .memory_mem_ras_n    (Kvazaar_QSYS_0_memory_mem_ras_n),
+        .memory_mem_reset_n  (Kvazaar_QSYS_0_memory_mem_reset_n),
+        .memory_mem_we_n     (Kvazaar_QSYS_0_memory_mem_we_n),
+        .hps_0_hps_io_hps_io_emac1_inst_MDIO(enet_hps_mdio),
+        .hps_0_hps_io_hps_io_gpio_inst_GPIO09(gpio09),
+        .hps_0_hps_io_hps_io_gpio_inst_GPIO35(enet_hps_intn),
+        .hps_0_hps_io_hps_io_gpio_inst_GPIO41(user_led_hps[3]),
+        .hps_0_hps_io_hps_io_gpio_inst_GPIO42(user_led_hps[2]),
+        .hps_0_hps_io_hps_io_gpio_inst_GPIO43(user_led_hps[1]),
+        .hps_0_hps_io_hps_io_gpio_inst_GPIO44(user_led_hps[0]),
+        .hps_0_hps_io_hps_io_i2c0_inst_SCL(i2c_scl_hps),
+        .hps_0_hps_io_hps_io_i2c0_inst_SDA(i2c_sda_hps),
+        .hps_0_hps_io_hps_io_qspi_inst_IO0(qspi_io[0]),
+        .hps_0_hps_io_hps_io_qspi_inst_IO1(qspi_io[1]),
+        .hps_0_hps_io_hps_io_qspi_inst_IO2(qspi_io[2]),
+        .hps_0_hps_io_hps_io_qspi_inst_IO3(qspi_io[3]),
+        .hps_0_hps_io_hps_io_sdio_inst_CMD(sd_cmd),
+        .hps_0_hps_io_hps_io_sdio_inst_D0(sd_dat[0]),
+        .hps_0_hps_io_hps_io_sdio_inst_D1(sd_dat[1]),
+        .hps_0_hps_io_hps_io_sdio_inst_D2(sd_dat[2]),
+        .hps_0_hps_io_hps_io_sdio_inst_D3(sd_dat[3]),
+        .hps_0_hps_io_hps_io_usb1_inst_D0(usb_data[0]),
+        .hps_0_hps_io_hps_io_usb1_inst_D1(usb_data[1]),
+        .hps_0_hps_io_hps_io_usb1_inst_D2(usb_data[2]),
+        .hps_0_hps_io_hps_io_usb1_inst_D3(usb_data[3]),
+        .hps_0_hps_io_hps_io_usb1_inst_D4(usb_data[4]),
+        .hps_0_hps_io_hps_io_usb1_inst_D5(usb_data[5]),
+        .hps_0_hps_io_hps_io_usb1_inst_D6(usb_data[6]),
+        .hps_0_hps_io_hps_io_usb1_inst_D7(usb_data[7]),
+        .memory_mem_dq       (ddr3_hps_dq[39:0]),
+        .memory_mem_dqs      (ddr3_hps_dqs_p[4:0]),
+        .memory_mem_dqs_n    (ddr3_hps_dqs_n[4:0]),
         // Interface: camera_config
-        .camera_control_oc_s2_address(0),
-        .camera_control_oc_s2_byteenable(3),
-        .camera_control_oc_s2_chipselect(1),
-        .camera_control_oc_s2_clken(1),
-        .camera_control_oc_s2_write(0),
-        .camera_control_oc_s2_writedata(0),
-        .camera_control_oc_s2_readdata(),
+        .camera_control_oc_s2_address(Kvazaar_QSYS_0_camera_control_oc_s2_address),
+        .camera_control_oc_s2_byteenable(Kvazaar_QSYS_0_camera_control_oc_s2_byteenable),
+        .camera_control_oc_s2_chipselect(Kvazaar_QSYS_0_camera_control_oc_s2_chipselect),
+        .camera_control_oc_s2_clken(Kvazaar_QSYS_0_camera_control_oc_s2_clken),
+        .camera_control_oc_s2_write(Kvazaar_QSYS_0_camera_control_oc_s2_write),
+        .camera_control_oc_s2_writedata(Kvazaar_QSYS_0_camera_control_oc_s2_writedata),
+        .camera_control_oc_s2_readdata(Kvazaar_QSYS_0_camera_control_oc_s2_readdata),
         // Interface: camera_start_config
-        .configure_camera_external_connection_export(),
+        .configure_camera_external_connection_export(Kvazaar_QSYS_0_configure_camera_external_connection_export),
         // Interface: clock_75MHz
-        .clk_clk             (0),
-        .reset_reset_n       (0),
+        .clk_clk             (Kvazaar_QSYS_0_clk_clk),
+        .reset_reset_n       (Kvazaar_QSYS_0_reset_reset_n),
         // Interface: clock_camera
-        .dma_yuv_fifo_clk_clk(0),
+        .dma_yuv_fifo_clk_clk(Kvazaar_QSYS_0_dma_yuv_fifo_clk_clk),
         // Interface: config_channel
-        .acc_config_channel_vz(0),
-        .acc_config_channel_data(),
-        .acc_config_channel_lz(),
+        .acc_config_channel_vz(Kvazaar_QSYS_0_acc_config_channel_vz),
+        .acc_config_channel_data(Kvazaar_QSYS_0_acc_config_channel_data),
+        .acc_config_channel_lz(Kvazaar_QSYS_0_acc_config_channel_lz),
         // Interface: left_ref_channel
-        .axi_dma_unfiltered2_channel_vz_export(0),
-        .axi_dma_unfiltered2_channel_data_export(),
-        .axi_dma_unfiltered2_channel_lz_export(),
+        .axi_dma_unfiltered2_channel_vz_export(Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_vz_export),
+        .axi_dma_unfiltered2_channel_data_export(Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_data_export),
+        .axi_dma_unfiltered2_channel_lz_export(Kvazaar_QSYS_0_axi_dma_unfiltered2_channel_lz_export),
         // Interface: orig_channel
-        .axi_dma_orig_block_channel_vz_export(0),
-        .axi_dma_orig_block_channel_data_export(),
-        .axi_dma_orig_block_channel_lz_export(),
+        .axi_dma_orig_block_channel_vz_export(Kvazaar_QSYS_0_axi_dma_orig_block_channel_vz_export),
+        .axi_dma_orig_block_channel_data_export(Kvazaar_QSYS_0_axi_dma_orig_block_channel_data_export),
+        .axi_dma_orig_block_channel_lz_export(Kvazaar_QSYS_0_axi_dma_orig_block_channel_lz_export),
         // Interface: sad_result
-        .sad_result_high_external_connection_export(0),
-        .sad_result_low_external_connection_export(0),
+        .sad_result_high_external_connection_export(Kvazaar_QSYS_0_sad_result_high_external_connection_export),
+        .sad_result_low_external_connection_export(Kvazaar_QSYS_0_sad_result_low_external_connection_export),
         // Interface: top_ref_channel
-        .axi_dma_unfiltered1_channel_vz_export(0),
-        .axi_dma_unfiltered1_channel_data_export(),
-        .axi_dma_unfiltered1_channel_lz_export(),
+        .axi_dma_unfiltered1_channel_vz_export(Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_vz_export),
+        .axi_dma_unfiltered1_channel_data_export(Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_data_export),
+        .axi_dma_unfiltered1_channel_lz_export(Kvazaar_QSYS_0_axi_dma_unfiltered1_channel_lz_export),
         // Interface: u_channel
-        .dma_yuv_yuv_input_u_data_in_vz(0),
-        .dma_yuv_yuv_input_u_data_in_z(0),
-        .dma_yuv_yuv_input_u_data_in_lz(),
+        .dma_yuv_yuv_input_u_data_in_vz(Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_vz),
+        .dma_yuv_yuv_input_u_data_in_z(Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_z),
+        .dma_yuv_yuv_input_u_data_in_lz(Kvazaar_QSYS_0_dma_yuv_yuv_input_u_data_in_lz),
         // Interface: v_channel
-        .dma_yuv_yuv_input_v_data_in_vz(0),
-        .dma_yuv_yuv_input_v_data_in_z(0),
-        .dma_yuv_yuv_input_v_data_in_lz(),
+        .dma_yuv_yuv_input_v_data_in_vz(Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_vz),
+        .dma_yuv_yuv_input_v_data_in_z(Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_z),
+        .dma_yuv_yuv_input_v_data_in_lz(Kvazaar_QSYS_0_dma_yuv_yuv_input_v_data_in_lz),
         // Interface: y_channel
-        .dma_yuv_yuv_input_y_data_in_vz(0),
-        .dma_yuv_yuv_input_y_data_in_z(0),
+        .dma_yuv_yuv_input_y_data_in_vz(Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_vz),
+        .dma_yuv_yuv_input_y_data_in_z(Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_z),
+        .dma_yuv_yuv_input_y_data_in_lz(Kvazaar_QSYS_0_dma_yuv_yuv_input_y_data_in_lz),
         // Interface: yuv_ctrl
-        .yuv_status_external_connection_export(0),
-        .yuv_ctrl_external_connection_export(),
+        .yuv_status_external_connection_export(Kvazaar_QSYS_0_yuv_status_external_connection_export),
+        .yuv_ctrl_external_connection_export(Kvazaar_QSYS_0_yuv_ctrl_external_connection_export),
         // There ports are contained in many interfaces
-        .hps_0_f2h_stm_hw_events_stm_hwevents(0),
+        .hps_0_f2h_stm_hw_events_stm_hwevents(Kvazaar_QSYS_0_hps_0_f2h_stm_hw_events_stm_hwevents),
         // These ports are not in any interface
         .axi_dma_orig_block_clear_fifo_export(Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export),
         .axi_dma_unfiltered1_clear_fifo_export(Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export),
@@ -739,7 +1072,6 @@ module Kvazaar_IP_acc_Camera(
         .lambda_loaded_external_connection_export(Kvazaar_QSYS_0_lambda_loaded_external_connection_export),
         .lcu_loaded_external_connection_export(Kvazaar_QSYS_0_lcu_loaded_external_connection_export),
         .result_ready_external_connection_export(Kvazaar_QSYS_0_result_ready_external_connection_export),
-        .dma_yuv_yuv_input_y_data_in_lz(),
         .hps_0_h2f_reset_reset_n());
 
     // IP-XACT VLNV: TUNI.fi:ip.hw:LTP_Controller:1.0
@@ -803,20 +1135,20 @@ module Kvazaar_IP_acc_Camera(
         .clk                 (RGB_to_YUV_0_clk),
         .rst_n               (RGB_to_YUV_0_rst_n),
         // Interface: u_channel
-        .oU_vz               (0),
-        .oU_lz               (),
-        .oU_z                (),
+        .oU_vz               (RGB_to_YUV_0_oU_vz),
+        .oU_lz               (RGB_to_YUV_0_oU_lz),
+        .oU_z                (RGB_to_YUV_0_oU_z),
         // Interface: v_channel
-        .oV_vz               (0),
-        .oV_lz               (),
-        .oV_z                (),
+        .oV_vz               (RGB_to_YUV_0_oV_vz),
+        .oV_lz               (RGB_to_YUV_0_oV_lz),
+        .oV_z                (RGB_to_YUV_0_oV_z),
         // Interface: y_channel
-        .oY_vz               (0),
-        .oY_lz               (),
-        .oY_z                (),
+        .oY_vz               (RGB_to_YUV_0_oY_vz),
+        .oY_lz               (RGB_to_YUV_0_oY_lz),
+        .oY_z                (RGB_to_YUV_0_oY_z),
         // Interface: yuv_ctrl
-        .yuv_ctrl            (0),
-        .write_done          (),
+        .yuv_ctrl            (RGB_to_YUV_0_yuv_ctrl),
+        .write_done          (RGB_to_YUV_0_write_done),
         // These ports are not in any interface
         .x_pixels            (800),
         .y_pixels            (480));

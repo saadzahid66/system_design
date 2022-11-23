@@ -41,6 +41,114 @@ module Kvazaar_QSYS (
 		output wire        dma_yuv_yuv_input_u_data_in_lz,              //                                     .u_data_in_lz
 		input  wire        hps_0_f2h_cold_reset_req_reset_n,            //             hps_0_f2h_cold_reset_req.reset_n
 		input  wire        hps_0_f2h_debug_reset_req_reset_n,           //            hps_0_f2h_debug_reset_req.reset_n
+		input  wire [31:0] hps_0_f2h_sdram0_data_araddr,                //                hps_0_f2h_sdram0_data.araddr
+		input  wire [3:0]  hps_0_f2h_sdram0_data_arlen,                 //                                     .arlen
+		input  wire [7:0]  hps_0_f2h_sdram0_data_arid,                  //                                     .arid
+		input  wire [2:0]  hps_0_f2h_sdram0_data_arsize,                //                                     .arsize
+		input  wire [1:0]  hps_0_f2h_sdram0_data_arburst,               //                                     .arburst
+		input  wire [1:0]  hps_0_f2h_sdram0_data_arlock,                //                                     .arlock
+		input  wire [2:0]  hps_0_f2h_sdram0_data_arprot,                //                                     .arprot
+		input  wire        hps_0_f2h_sdram0_data_arvalid,               //                                     .arvalid
+		input  wire [3:0]  hps_0_f2h_sdram0_data_arcache,               //                                     .arcache
+		input  wire [31:0] hps_0_f2h_sdram0_data_awaddr,                //                                     .awaddr
+		input  wire [3:0]  hps_0_f2h_sdram0_data_awlen,                 //                                     .awlen
+		input  wire [7:0]  hps_0_f2h_sdram0_data_awid,                  //                                     .awid
+		input  wire [2:0]  hps_0_f2h_sdram0_data_awsize,                //                                     .awsize
+		input  wire [1:0]  hps_0_f2h_sdram0_data_awburst,               //                                     .awburst
+		input  wire [1:0]  hps_0_f2h_sdram0_data_awlock,                //                                     .awlock
+		input  wire [2:0]  hps_0_f2h_sdram0_data_awprot,                //                                     .awprot
+		input  wire        hps_0_f2h_sdram0_data_awvalid,               //                                     .awvalid
+		input  wire [3:0]  hps_0_f2h_sdram0_data_awcache,               //                                     .awcache
+		output wire [1:0]  hps_0_f2h_sdram0_data_bresp,                 //                                     .bresp
+		output wire [7:0]  hps_0_f2h_sdram0_data_bid,                   //                                     .bid
+		output wire        hps_0_f2h_sdram0_data_bvalid,                //                                     .bvalid
+		input  wire        hps_0_f2h_sdram0_data_bready,                //                                     .bready
+		output wire        hps_0_f2h_sdram0_data_arready,               //                                     .arready
+		output wire        hps_0_f2h_sdram0_data_awready,               //                                     .awready
+		input  wire        hps_0_f2h_sdram0_data_rready,                //                                     .rready
+		output wire [63:0] hps_0_f2h_sdram0_data_rdata,                 //                                     .rdata
+		output wire [1:0]  hps_0_f2h_sdram0_data_rresp,                 //                                     .rresp
+		output wire        hps_0_f2h_sdram0_data_rlast,                 //                                     .rlast
+		output wire [7:0]  hps_0_f2h_sdram0_data_rid,                   //                                     .rid
+		output wire        hps_0_f2h_sdram0_data_rvalid,                //                                     .rvalid
+		input  wire        hps_0_f2h_sdram0_data_wlast,                 //                                     .wlast
+		input  wire        hps_0_f2h_sdram0_data_wvalid,                //                                     .wvalid
+		input  wire [63:0] hps_0_f2h_sdram0_data_wdata,                 //                                     .wdata
+		input  wire [7:0]  hps_0_f2h_sdram0_data_wstrb,                 //                                     .wstrb
+		output wire        hps_0_f2h_sdram0_data_wready,                //                                     .wready
+		input  wire [7:0]  hps_0_f2h_sdram0_data_wid,                   //                                     .wid
+		input  wire [31:0] hps_0_f2h_sdram1_data_araddr,                //                hps_0_f2h_sdram1_data.araddr
+		input  wire [3:0]  hps_0_f2h_sdram1_data_arlen,                 //                                     .arlen
+		input  wire [7:0]  hps_0_f2h_sdram1_data_arid,                  //                                     .arid
+		input  wire [2:0]  hps_0_f2h_sdram1_data_arsize,                //                                     .arsize
+		input  wire [1:0]  hps_0_f2h_sdram1_data_arburst,               //                                     .arburst
+		input  wire [1:0]  hps_0_f2h_sdram1_data_arlock,                //                                     .arlock
+		input  wire [2:0]  hps_0_f2h_sdram1_data_arprot,                //                                     .arprot
+		input  wire        hps_0_f2h_sdram1_data_arvalid,               //                                     .arvalid
+		input  wire [3:0]  hps_0_f2h_sdram1_data_arcache,               //                                     .arcache
+		input  wire [31:0] hps_0_f2h_sdram1_data_awaddr,                //                                     .awaddr
+		input  wire [3:0]  hps_0_f2h_sdram1_data_awlen,                 //                                     .awlen
+		input  wire [7:0]  hps_0_f2h_sdram1_data_awid,                  //                                     .awid
+		input  wire [2:0]  hps_0_f2h_sdram1_data_awsize,                //                                     .awsize
+		input  wire [1:0]  hps_0_f2h_sdram1_data_awburst,               //                                     .awburst
+		input  wire [1:0]  hps_0_f2h_sdram1_data_awlock,                //                                     .awlock
+		input  wire [2:0]  hps_0_f2h_sdram1_data_awprot,                //                                     .awprot
+		input  wire        hps_0_f2h_sdram1_data_awvalid,               //                                     .awvalid
+		input  wire [3:0]  hps_0_f2h_sdram1_data_awcache,               //                                     .awcache
+		output wire [1:0]  hps_0_f2h_sdram1_data_bresp,                 //                                     .bresp
+		output wire [7:0]  hps_0_f2h_sdram1_data_bid,                   //                                     .bid
+		output wire        hps_0_f2h_sdram1_data_bvalid,                //                                     .bvalid
+		input  wire        hps_0_f2h_sdram1_data_bready,                //                                     .bready
+		output wire        hps_0_f2h_sdram1_data_arready,               //                                     .arready
+		output wire        hps_0_f2h_sdram1_data_awready,               //                                     .awready
+		input  wire        hps_0_f2h_sdram1_data_rready,                //                                     .rready
+		output wire [63:0] hps_0_f2h_sdram1_data_rdata,                 //                                     .rdata
+		output wire [1:0]  hps_0_f2h_sdram1_data_rresp,                 //                                     .rresp
+		output wire        hps_0_f2h_sdram1_data_rlast,                 //                                     .rlast
+		output wire [7:0]  hps_0_f2h_sdram1_data_rid,                   //                                     .rid
+		output wire        hps_0_f2h_sdram1_data_rvalid,                //                                     .rvalid
+		input  wire        hps_0_f2h_sdram1_data_wlast,                 //                                     .wlast
+		input  wire        hps_0_f2h_sdram1_data_wvalid,                //                                     .wvalid
+		input  wire [63:0] hps_0_f2h_sdram1_data_wdata,                 //                                     .wdata
+		input  wire [7:0]  hps_0_f2h_sdram1_data_wstrb,                 //                                     .wstrb
+		output wire        hps_0_f2h_sdram1_data_wready,                //                                     .wready
+		input  wire [7:0]  hps_0_f2h_sdram1_data_wid,                   //                                     .wid
+		input  wire [31:0] hps_0_f2h_sdram2_data_araddr,                //                hps_0_f2h_sdram2_data.araddr
+		input  wire [3:0]  hps_0_f2h_sdram2_data_arlen,                 //                                     .arlen
+		input  wire [7:0]  hps_0_f2h_sdram2_data_arid,                  //                                     .arid
+		input  wire [2:0]  hps_0_f2h_sdram2_data_arsize,                //                                     .arsize
+		input  wire [1:0]  hps_0_f2h_sdram2_data_arburst,               //                                     .arburst
+		input  wire [1:0]  hps_0_f2h_sdram2_data_arlock,                //                                     .arlock
+		input  wire [2:0]  hps_0_f2h_sdram2_data_arprot,                //                                     .arprot
+		input  wire        hps_0_f2h_sdram2_data_arvalid,               //                                     .arvalid
+		input  wire [3:0]  hps_0_f2h_sdram2_data_arcache,               //                                     .arcache
+		input  wire [31:0] hps_0_f2h_sdram2_data_awaddr,                //                                     .awaddr
+		input  wire [3:0]  hps_0_f2h_sdram2_data_awlen,                 //                                     .awlen
+		input  wire [7:0]  hps_0_f2h_sdram2_data_awid,                  //                                     .awid
+		input  wire [2:0]  hps_0_f2h_sdram2_data_awsize,                //                                     .awsize
+		input  wire [1:0]  hps_0_f2h_sdram2_data_awburst,               //                                     .awburst
+		input  wire [1:0]  hps_0_f2h_sdram2_data_awlock,                //                                     .awlock
+		input  wire [2:0]  hps_0_f2h_sdram2_data_awprot,                //                                     .awprot
+		input  wire        hps_0_f2h_sdram2_data_awvalid,               //                                     .awvalid
+		input  wire [3:0]  hps_0_f2h_sdram2_data_awcache,               //                                     .awcache
+		output wire [1:0]  hps_0_f2h_sdram2_data_bresp,                 //                                     .bresp
+		output wire [7:0]  hps_0_f2h_sdram2_data_bid,                   //                                     .bid
+		output wire        hps_0_f2h_sdram2_data_bvalid,                //                                     .bvalid
+		input  wire        hps_0_f2h_sdram2_data_bready,                //                                     .bready
+		output wire        hps_0_f2h_sdram2_data_arready,               //                                     .arready
+		output wire        hps_0_f2h_sdram2_data_awready,               //                                     .awready
+		input  wire        hps_0_f2h_sdram2_data_rready,                //                                     .rready
+		output wire [63:0] hps_0_f2h_sdram2_data_rdata,                 //                                     .rdata
+		output wire [1:0]  hps_0_f2h_sdram2_data_rresp,                 //                                     .rresp
+		output wire        hps_0_f2h_sdram2_data_rlast,                 //                                     .rlast
+		output wire [7:0]  hps_0_f2h_sdram2_data_rid,                   //                                     .rid
+		output wire        hps_0_f2h_sdram2_data_rvalid,                //                                     .rvalid
+		input  wire        hps_0_f2h_sdram2_data_wlast,                 //                                     .wlast
+		input  wire        hps_0_f2h_sdram2_data_wvalid,                //                                     .wvalid
+		input  wire [63:0] hps_0_f2h_sdram2_data_wdata,                 //                                     .wdata
+		input  wire [7:0]  hps_0_f2h_sdram2_data_wstrb,                 //                                     .wstrb
+		output wire        hps_0_f2h_sdram2_data_wready,                //                                     .wready
+		input  wire [7:0]  hps_0_f2h_sdram2_data_wid,                   //                                     .wid
 		input  wire [27:0] hps_0_f2h_stm_hw_events_stm_hwevents,        //              hps_0_f2h_stm_hw_events.stm_hwevents
 		input  wire        hps_0_f2h_warm_reset_req_reset_n,            //             hps_0_f2h_warm_reset_req.reset_n
 		output wire        hps_0_h2f_reset_reset_n,                     //                      hps_0_h2f_reset.reset_n
@@ -133,493 +241,277 @@ module Kvazaar_QSYS (
 		input  wire        yuv_status_external_connection_export        //       yuv_status_external_connection.export
 	);
 
-	wire   [1:0] dma_yuv_altera_axi_master_awburst;                              // dma_yuv:axi_master_awburst -> hps_0:f2h_sdram0_AWBURST
-	wire   [3:0] dma_yuv_altera_axi_master_arlen;                                // dma_yuv:axi_master_arlen -> hps_0:f2h_sdram0_ARLEN
-	wire   [7:0] dma_yuv_altera_axi_master_wstrb;                                // dma_yuv:axi_master_wstrb -> hps_0:f2h_sdram0_WSTRB
-	wire         dma_yuv_altera_axi_master_wready;                               // hps_0:f2h_sdram0_WREADY -> dma_yuv:axi_master_wready
-	wire   [7:0] dma_yuv_altera_axi_master_rid;                                  // hps_0:f2h_sdram0_RID -> dma_yuv:axi_master_rid
-	wire         dma_yuv_altera_axi_master_rready;                               // dma_yuv:axi_master_rready -> hps_0:f2h_sdram0_RREADY
-	wire   [3:0] dma_yuv_altera_axi_master_awlen;                                // dma_yuv:axi_master_awlen -> hps_0:f2h_sdram0_AWLEN
-	wire   [7:0] dma_yuv_altera_axi_master_wid;                                  // dma_yuv:axi_master_wid -> hps_0:f2h_sdram0_WID
-	wire   [3:0] dma_yuv_altera_axi_master_arcache;                              // dma_yuv:axi_master_arcache -> hps_0:f2h_sdram0_ARCACHE
-	wire         dma_yuv_altera_axi_master_wvalid;                               // dma_yuv:axi_master_wvalid -> hps_0:f2h_sdram0_WVALID
-	wire  [31:0] dma_yuv_altera_axi_master_araddr;                               // dma_yuv:axi_master_araddr -> hps_0:f2h_sdram0_ARADDR
-	wire   [2:0] dma_yuv_altera_axi_master_arprot;                               // dma_yuv:axi_master_arprot -> hps_0:f2h_sdram0_ARPROT
-	wire   [2:0] dma_yuv_altera_axi_master_awprot;                               // dma_yuv:axi_master_awprot -> hps_0:f2h_sdram0_AWPROT
-	wire  [63:0] dma_yuv_altera_axi_master_wdata;                                // dma_yuv:axi_master_wdata -> hps_0:f2h_sdram0_WDATA
-	wire         dma_yuv_altera_axi_master_arvalid;                              // dma_yuv:axi_master_arvalid -> hps_0:f2h_sdram0_ARVALID
-	wire   [3:0] dma_yuv_altera_axi_master_awcache;                              // dma_yuv:axi_master_awcache -> hps_0:f2h_sdram0_AWCACHE
-	wire   [7:0] dma_yuv_altera_axi_master_arid;                                 // dma_yuv:axi_master_arid -> hps_0:f2h_sdram0_ARID
-	wire   [1:0] dma_yuv_altera_axi_master_arlock;                               // dma_yuv:axi_master_arlock -> hps_0:f2h_sdram0_ARLOCK
-	wire   [1:0] dma_yuv_altera_axi_master_awlock;                               // dma_yuv:axi_master_awlock -> hps_0:f2h_sdram0_AWLOCK
-	wire  [31:0] dma_yuv_altera_axi_master_awaddr;                               // dma_yuv:axi_master_awaddr -> hps_0:f2h_sdram0_AWADDR
-	wire   [1:0] dma_yuv_altera_axi_master_bresp;                                // hps_0:f2h_sdram0_BRESP -> dma_yuv:axi_master_bresp
-	wire         dma_yuv_altera_axi_master_arready;                              // hps_0:f2h_sdram0_ARREADY -> dma_yuv:axi_master_arready
-	wire  [63:0] dma_yuv_altera_axi_master_rdata;                                // hps_0:f2h_sdram0_RDATA -> dma_yuv:axi_master_rdata
-	wire         dma_yuv_altera_axi_master_awready;                              // hps_0:f2h_sdram0_AWREADY -> dma_yuv:axi_master_awready
-	wire   [1:0] dma_yuv_altera_axi_master_arburst;                              // dma_yuv:axi_master_arburst -> hps_0:f2h_sdram0_ARBURST
-	wire   [2:0] dma_yuv_altera_axi_master_arsize;                               // dma_yuv:axi_master_arsize -> hps_0:f2h_sdram0_ARSIZE
-	wire         dma_yuv_altera_axi_master_bready;                               // dma_yuv:axi_master_bready -> hps_0:f2h_sdram0_BREADY
-	wire         dma_yuv_altera_axi_master_rlast;                                // hps_0:f2h_sdram0_RLAST -> dma_yuv:axi_master_rlast
-	wire         dma_yuv_altera_axi_master_wlast;                                // dma_yuv:axi_master_wlast -> hps_0:f2h_sdram0_WLAST
-	wire   [1:0] dma_yuv_altera_axi_master_rresp;                                // hps_0:f2h_sdram0_RRESP -> dma_yuv:axi_master_rresp
-	wire   [7:0] dma_yuv_altera_axi_master_bid;                                  // hps_0:f2h_sdram0_BID -> dma_yuv:axi_master_bid
-	wire   [7:0] dma_yuv_altera_axi_master_awid;                                 // dma_yuv:axi_master_awid -> hps_0:f2h_sdram0_AWID
-	wire         dma_yuv_altera_axi_master_bvalid;                               // hps_0:f2h_sdram0_BVALID -> dma_yuv:axi_master_bvalid
-	wire         dma_yuv_altera_axi_master_awvalid;                              // dma_yuv:axi_master_awvalid -> hps_0:f2h_sdram0_AWVALID
-	wire         dma_yuv_altera_axi_master_rvalid;                               // hps_0:f2h_sdram0_RVALID -> dma_yuv:axi_master_rvalid
-	wire   [2:0] dma_yuv_altera_axi_master_awsize;                               // dma_yuv:axi_master_awsize -> hps_0:f2h_sdram0_AWSIZE
-	wire   [1:0] axi_dma_unfiltered2_altera_axi_master_awburst;                  // axi_dma_unfiltered2:axi_master_awburst -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awburst
-	wire   [3:0] axi_dma_unfiltered2_altera_axi_master_arlen;                    // axi_dma_unfiltered2:axi_master_arlen -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arlen
-	wire   [7:0] axi_dma_unfiltered2_altera_axi_master_wstrb;                    // axi_dma_unfiltered2:axi_master_wstrb -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_wstrb
-	wire         axi_dma_unfiltered2_altera_axi_master_wready;                   // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_wready -> axi_dma_unfiltered2:axi_master_wready
-	wire   [6:0] axi_dma_unfiltered2_altera_axi_master_rid;                      // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_rid -> axi_dma_unfiltered2:axi_master_rid
-	wire         axi_dma_unfiltered2_altera_axi_master_rready;                   // axi_dma_unfiltered2:axi_master_rready -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_rready
-	wire   [3:0] axi_dma_unfiltered2_altera_axi_master_awlen;                    // axi_dma_unfiltered2:axi_master_awlen -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awlen
-	wire   [6:0] axi_dma_unfiltered2_altera_axi_master_wid;                      // axi_dma_unfiltered2:axi_master_wid -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_wid
-	wire   [3:0] axi_dma_unfiltered2_altera_axi_master_arcache;                  // axi_dma_unfiltered2:axi_master_arcache -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arcache
-	wire         axi_dma_unfiltered2_altera_axi_master_wvalid;                   // axi_dma_unfiltered2:axi_master_wvalid -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_wvalid
-	wire  [31:0] axi_dma_unfiltered2_altera_axi_master_araddr;                   // axi_dma_unfiltered2:axi_master_araddr -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_araddr
-	wire   [2:0] axi_dma_unfiltered2_altera_axi_master_arprot;                   // axi_dma_unfiltered2:axi_master_arprot -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arprot
-	wire   [2:0] axi_dma_unfiltered2_altera_axi_master_awprot;                   // axi_dma_unfiltered2:axi_master_awprot -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awprot
-	wire  [63:0] axi_dma_unfiltered2_altera_axi_master_wdata;                    // axi_dma_unfiltered2:axi_master_wdata -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_wdata
-	wire         axi_dma_unfiltered2_altera_axi_master_arvalid;                  // axi_dma_unfiltered2:axi_master_arvalid -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arvalid
-	wire   [3:0] axi_dma_unfiltered2_altera_axi_master_awcache;                  // axi_dma_unfiltered2:axi_master_awcache -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awcache
-	wire   [6:0] axi_dma_unfiltered2_altera_axi_master_arid;                     // axi_dma_unfiltered2:axi_master_arid -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arid
-	wire   [1:0] axi_dma_unfiltered2_altera_axi_master_arlock;                   // axi_dma_unfiltered2:axi_master_arlock -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arlock
-	wire   [1:0] axi_dma_unfiltered2_altera_axi_master_awlock;                   // axi_dma_unfiltered2:axi_master_awlock -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awlock
-	wire  [31:0] axi_dma_unfiltered2_altera_axi_master_awaddr;                   // axi_dma_unfiltered2:axi_master_awaddr -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awaddr
-	wire   [1:0] axi_dma_unfiltered2_altera_axi_master_bresp;                    // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_bresp -> axi_dma_unfiltered2:axi_master_bresp
-	wire         axi_dma_unfiltered2_altera_axi_master_arready;                  // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arready -> axi_dma_unfiltered2:axi_master_arready
-	wire  [63:0] axi_dma_unfiltered2_altera_axi_master_rdata;                    // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_rdata -> axi_dma_unfiltered2:axi_master_rdata
-	wire         axi_dma_unfiltered2_altera_axi_master_awready;                  // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awready -> axi_dma_unfiltered2:axi_master_awready
-	wire   [1:0] axi_dma_unfiltered2_altera_axi_master_arburst;                  // axi_dma_unfiltered2:axi_master_arburst -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arburst
-	wire   [2:0] axi_dma_unfiltered2_altera_axi_master_arsize;                   // axi_dma_unfiltered2:axi_master_arsize -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_arsize
-	wire         axi_dma_unfiltered2_altera_axi_master_bready;                   // axi_dma_unfiltered2:axi_master_bready -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_bready
-	wire         axi_dma_unfiltered2_altera_axi_master_rlast;                    // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_rlast -> axi_dma_unfiltered2:axi_master_rlast
-	wire         axi_dma_unfiltered2_altera_axi_master_wlast;                    // axi_dma_unfiltered2:axi_master_wlast -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_wlast
-	wire   [1:0] axi_dma_unfiltered2_altera_axi_master_rresp;                    // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_rresp -> axi_dma_unfiltered2:axi_master_rresp
-	wire   [6:0] axi_dma_unfiltered2_altera_axi_master_bid;                      // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_bid -> axi_dma_unfiltered2:axi_master_bid
-	wire   [6:0] axi_dma_unfiltered2_altera_axi_master_awid;                     // axi_dma_unfiltered2:axi_master_awid -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awid
-	wire         axi_dma_unfiltered2_altera_axi_master_bvalid;                   // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_bvalid -> axi_dma_unfiltered2:axi_master_bvalid
-	wire         axi_dma_unfiltered2_altera_axi_master_awvalid;                  // axi_dma_unfiltered2:axi_master_awvalid -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awvalid
-	wire         axi_dma_unfiltered2_altera_axi_master_rvalid;                   // mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_rvalid -> axi_dma_unfiltered2:axi_master_rvalid
-	wire   [2:0] axi_dma_unfiltered2_altera_axi_master_awsize;                   // axi_dma_unfiltered2:axi_master_awsize -> mm_interconnect_1:axi_dma_unfiltered2_altera_axi_master_awsize
-	wire   [1:0] axi_dma_orig_block_altera_axi_master_awburst;                   // axi_dma_orig_block:axi_master_awburst -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awburst
-	wire   [3:0] axi_dma_orig_block_altera_axi_master_arlen;                     // axi_dma_orig_block:axi_master_arlen -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arlen
-	wire   [7:0] axi_dma_orig_block_altera_axi_master_wstrb;                     // axi_dma_orig_block:axi_master_wstrb -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_wstrb
-	wire         axi_dma_orig_block_altera_axi_master_wready;                    // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_wready -> axi_dma_orig_block:axi_master_wready
-	wire   [6:0] axi_dma_orig_block_altera_axi_master_rid;                       // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_rid -> axi_dma_orig_block:axi_master_rid
-	wire         axi_dma_orig_block_altera_axi_master_rready;                    // axi_dma_orig_block:axi_master_rready -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_rready
-	wire   [3:0] axi_dma_orig_block_altera_axi_master_awlen;                     // axi_dma_orig_block:axi_master_awlen -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awlen
-	wire   [6:0] axi_dma_orig_block_altera_axi_master_wid;                       // axi_dma_orig_block:axi_master_wid -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_wid
-	wire   [3:0] axi_dma_orig_block_altera_axi_master_arcache;                   // axi_dma_orig_block:axi_master_arcache -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arcache
-	wire         axi_dma_orig_block_altera_axi_master_wvalid;                    // axi_dma_orig_block:axi_master_wvalid -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_wvalid
-	wire  [31:0] axi_dma_orig_block_altera_axi_master_araddr;                    // axi_dma_orig_block:axi_master_araddr -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_araddr
-	wire   [2:0] axi_dma_orig_block_altera_axi_master_arprot;                    // axi_dma_orig_block:axi_master_arprot -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arprot
-	wire   [2:0] axi_dma_orig_block_altera_axi_master_awprot;                    // axi_dma_orig_block:axi_master_awprot -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awprot
-	wire  [63:0] axi_dma_orig_block_altera_axi_master_wdata;                     // axi_dma_orig_block:axi_master_wdata -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_wdata
-	wire         axi_dma_orig_block_altera_axi_master_arvalid;                   // axi_dma_orig_block:axi_master_arvalid -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arvalid
-	wire   [3:0] axi_dma_orig_block_altera_axi_master_awcache;                   // axi_dma_orig_block:axi_master_awcache -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awcache
-	wire   [6:0] axi_dma_orig_block_altera_axi_master_arid;                      // axi_dma_orig_block:axi_master_arid -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arid
-	wire   [1:0] axi_dma_orig_block_altera_axi_master_arlock;                    // axi_dma_orig_block:axi_master_arlock -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arlock
-	wire   [1:0] axi_dma_orig_block_altera_axi_master_awlock;                    // axi_dma_orig_block:axi_master_awlock -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awlock
-	wire  [31:0] axi_dma_orig_block_altera_axi_master_awaddr;                    // axi_dma_orig_block:axi_master_awaddr -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awaddr
-	wire   [1:0] axi_dma_orig_block_altera_axi_master_bresp;                     // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_bresp -> axi_dma_orig_block:axi_master_bresp
-	wire         axi_dma_orig_block_altera_axi_master_arready;                   // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arready -> axi_dma_orig_block:axi_master_arready
-	wire  [63:0] axi_dma_orig_block_altera_axi_master_rdata;                     // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_rdata -> axi_dma_orig_block:axi_master_rdata
-	wire         axi_dma_orig_block_altera_axi_master_awready;                   // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awready -> axi_dma_orig_block:axi_master_awready
-	wire   [1:0] axi_dma_orig_block_altera_axi_master_arburst;                   // axi_dma_orig_block:axi_master_arburst -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arburst
-	wire   [2:0] axi_dma_orig_block_altera_axi_master_arsize;                    // axi_dma_orig_block:axi_master_arsize -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_arsize
-	wire         axi_dma_orig_block_altera_axi_master_bready;                    // axi_dma_orig_block:axi_master_bready -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_bready
-	wire         axi_dma_orig_block_altera_axi_master_rlast;                     // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_rlast -> axi_dma_orig_block:axi_master_rlast
-	wire         axi_dma_orig_block_altera_axi_master_wlast;                     // axi_dma_orig_block:axi_master_wlast -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_wlast
-	wire   [1:0] axi_dma_orig_block_altera_axi_master_rresp;                     // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_rresp -> axi_dma_orig_block:axi_master_rresp
-	wire   [6:0] axi_dma_orig_block_altera_axi_master_bid;                       // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_bid -> axi_dma_orig_block:axi_master_bid
-	wire   [6:0] axi_dma_orig_block_altera_axi_master_awid;                      // axi_dma_orig_block:axi_master_awid -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awid
-	wire         axi_dma_orig_block_altera_axi_master_bvalid;                    // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_bvalid -> axi_dma_orig_block:axi_master_bvalid
-	wire         axi_dma_orig_block_altera_axi_master_awvalid;                   // axi_dma_orig_block:axi_master_awvalid -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awvalid
-	wire         axi_dma_orig_block_altera_axi_master_rvalid;                    // mm_interconnect_1:axi_dma_orig_block_altera_axi_master_rvalid -> axi_dma_orig_block:axi_master_rvalid
-	wire   [2:0] axi_dma_orig_block_altera_axi_master_awsize;                    // axi_dma_orig_block:axi_master_awsize -> mm_interconnect_1:axi_dma_orig_block_altera_axi_master_awsize
-	wire   [1:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awburst;                // mm_interconnect_1:hps_0_f2h_sdram1_data_awburst -> hps_0:f2h_sdram1_AWBURST
-	wire   [3:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arlen;                  // mm_interconnect_1:hps_0_f2h_sdram1_data_arlen -> hps_0:f2h_sdram1_ARLEN
-	wire   [7:0] mm_interconnect_1_hps_0_f2h_sdram1_data_wstrb;                  // mm_interconnect_1:hps_0_f2h_sdram1_data_wstrb -> hps_0:f2h_sdram1_WSTRB
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_wready;                 // hps_0:f2h_sdram1_WREADY -> mm_interconnect_1:hps_0_f2h_sdram1_data_wready
-	wire   [7:0] mm_interconnect_1_hps_0_f2h_sdram1_data_rid;                    // hps_0:f2h_sdram1_RID -> mm_interconnect_1:hps_0_f2h_sdram1_data_rid
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_rready;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_rready -> hps_0:f2h_sdram1_RREADY
-	wire   [3:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awlen;                  // mm_interconnect_1:hps_0_f2h_sdram1_data_awlen -> hps_0:f2h_sdram1_AWLEN
-	wire   [7:0] mm_interconnect_1_hps_0_f2h_sdram1_data_wid;                    // mm_interconnect_1:hps_0_f2h_sdram1_data_wid -> hps_0:f2h_sdram1_WID
-	wire   [3:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arcache;                // mm_interconnect_1:hps_0_f2h_sdram1_data_arcache -> hps_0:f2h_sdram1_ARCACHE
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_wvalid;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_wvalid -> hps_0:f2h_sdram1_WVALID
-	wire  [31:0] mm_interconnect_1_hps_0_f2h_sdram1_data_araddr;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_araddr -> hps_0:f2h_sdram1_ARADDR
-	wire   [2:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arprot;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_arprot -> hps_0:f2h_sdram1_ARPROT
-	wire   [2:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awprot;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_awprot -> hps_0:f2h_sdram1_AWPROT
-	wire  [63:0] mm_interconnect_1_hps_0_f2h_sdram1_data_wdata;                  // mm_interconnect_1:hps_0_f2h_sdram1_data_wdata -> hps_0:f2h_sdram1_WDATA
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_arvalid;                // mm_interconnect_1:hps_0_f2h_sdram1_data_arvalid -> hps_0:f2h_sdram1_ARVALID
-	wire   [3:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awcache;                // mm_interconnect_1:hps_0_f2h_sdram1_data_awcache -> hps_0:f2h_sdram1_AWCACHE
-	wire   [7:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arid;                   // mm_interconnect_1:hps_0_f2h_sdram1_data_arid -> hps_0:f2h_sdram1_ARID
-	wire   [1:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arlock;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_arlock -> hps_0:f2h_sdram1_ARLOCK
-	wire   [1:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awlock;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_awlock -> hps_0:f2h_sdram1_AWLOCK
-	wire  [31:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awaddr;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_awaddr -> hps_0:f2h_sdram1_AWADDR
-	wire   [1:0] mm_interconnect_1_hps_0_f2h_sdram1_data_bresp;                  // hps_0:f2h_sdram1_BRESP -> mm_interconnect_1:hps_0_f2h_sdram1_data_bresp
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_arready;                // hps_0:f2h_sdram1_ARREADY -> mm_interconnect_1:hps_0_f2h_sdram1_data_arready
-	wire  [63:0] mm_interconnect_1_hps_0_f2h_sdram1_data_rdata;                  // hps_0:f2h_sdram1_RDATA -> mm_interconnect_1:hps_0_f2h_sdram1_data_rdata
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_awready;                // hps_0:f2h_sdram1_AWREADY -> mm_interconnect_1:hps_0_f2h_sdram1_data_awready
-	wire   [1:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arburst;                // mm_interconnect_1:hps_0_f2h_sdram1_data_arburst -> hps_0:f2h_sdram1_ARBURST
-	wire   [2:0] mm_interconnect_1_hps_0_f2h_sdram1_data_arsize;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_arsize -> hps_0:f2h_sdram1_ARSIZE
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_bready;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_bready -> hps_0:f2h_sdram1_BREADY
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_rlast;                  // hps_0:f2h_sdram1_RLAST -> mm_interconnect_1:hps_0_f2h_sdram1_data_rlast
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_wlast;                  // mm_interconnect_1:hps_0_f2h_sdram1_data_wlast -> hps_0:f2h_sdram1_WLAST
-	wire   [1:0] mm_interconnect_1_hps_0_f2h_sdram1_data_rresp;                  // hps_0:f2h_sdram1_RRESP -> mm_interconnect_1:hps_0_f2h_sdram1_data_rresp
-	wire   [7:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awid;                   // mm_interconnect_1:hps_0_f2h_sdram1_data_awid -> hps_0:f2h_sdram1_AWID
-	wire   [7:0] mm_interconnect_1_hps_0_f2h_sdram1_data_bid;                    // hps_0:f2h_sdram1_BID -> mm_interconnect_1:hps_0_f2h_sdram1_data_bid
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_bvalid;                 // hps_0:f2h_sdram1_BVALID -> mm_interconnect_1:hps_0_f2h_sdram1_data_bvalid
-	wire   [2:0] mm_interconnect_1_hps_0_f2h_sdram1_data_awsize;                 // mm_interconnect_1:hps_0_f2h_sdram1_data_awsize -> hps_0:f2h_sdram1_AWSIZE
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_awvalid;                // mm_interconnect_1:hps_0_f2h_sdram1_data_awvalid -> hps_0:f2h_sdram1_AWVALID
-	wire         mm_interconnect_1_hps_0_f2h_sdram1_data_rvalid;                 // hps_0:f2h_sdram1_RVALID -> mm_interconnect_1:hps_0_f2h_sdram1_data_rvalid
-	wire   [1:0] axi_dma_unfiltered1_altera_axi_master_awburst;                  // axi_dma_unfiltered1:axi_master_awburst -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awburst
-	wire   [3:0] axi_dma_unfiltered1_altera_axi_master_arlen;                    // axi_dma_unfiltered1:axi_master_arlen -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arlen
-	wire   [7:0] axi_dma_unfiltered1_altera_axi_master_wstrb;                    // axi_dma_unfiltered1:axi_master_wstrb -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_wstrb
-	wire         axi_dma_unfiltered1_altera_axi_master_wready;                   // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_wready -> axi_dma_unfiltered1:axi_master_wready
-	wire   [6:0] axi_dma_unfiltered1_altera_axi_master_rid;                      // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_rid -> axi_dma_unfiltered1:axi_master_rid
-	wire         axi_dma_unfiltered1_altera_axi_master_rready;                   // axi_dma_unfiltered1:axi_master_rready -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_rready
-	wire   [3:0] axi_dma_unfiltered1_altera_axi_master_awlen;                    // axi_dma_unfiltered1:axi_master_awlen -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awlen
-	wire   [6:0] axi_dma_unfiltered1_altera_axi_master_wid;                      // axi_dma_unfiltered1:axi_master_wid -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_wid
-	wire   [3:0] axi_dma_unfiltered1_altera_axi_master_arcache;                  // axi_dma_unfiltered1:axi_master_arcache -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arcache
-	wire         axi_dma_unfiltered1_altera_axi_master_wvalid;                   // axi_dma_unfiltered1:axi_master_wvalid -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_wvalid
-	wire  [31:0] axi_dma_unfiltered1_altera_axi_master_araddr;                   // axi_dma_unfiltered1:axi_master_araddr -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_araddr
-	wire   [2:0] axi_dma_unfiltered1_altera_axi_master_arprot;                   // axi_dma_unfiltered1:axi_master_arprot -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arprot
-	wire   [2:0] axi_dma_unfiltered1_altera_axi_master_awprot;                   // axi_dma_unfiltered1:axi_master_awprot -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awprot
-	wire  [63:0] axi_dma_unfiltered1_altera_axi_master_wdata;                    // axi_dma_unfiltered1:axi_master_wdata -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_wdata
-	wire         axi_dma_unfiltered1_altera_axi_master_arvalid;                  // axi_dma_unfiltered1:axi_master_arvalid -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arvalid
-	wire   [3:0] axi_dma_unfiltered1_altera_axi_master_awcache;                  // axi_dma_unfiltered1:axi_master_awcache -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awcache
-	wire   [6:0] axi_dma_unfiltered1_altera_axi_master_arid;                     // axi_dma_unfiltered1:axi_master_arid -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arid
-	wire   [1:0] axi_dma_unfiltered1_altera_axi_master_arlock;                   // axi_dma_unfiltered1:axi_master_arlock -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arlock
-	wire   [1:0] axi_dma_unfiltered1_altera_axi_master_awlock;                   // axi_dma_unfiltered1:axi_master_awlock -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awlock
-	wire  [31:0] axi_dma_unfiltered1_altera_axi_master_awaddr;                   // axi_dma_unfiltered1:axi_master_awaddr -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awaddr
-	wire   [1:0] axi_dma_unfiltered1_altera_axi_master_bresp;                    // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_bresp -> axi_dma_unfiltered1:axi_master_bresp
-	wire         axi_dma_unfiltered1_altera_axi_master_arready;                  // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arready -> axi_dma_unfiltered1:axi_master_arready
-	wire  [63:0] axi_dma_unfiltered1_altera_axi_master_rdata;                    // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_rdata -> axi_dma_unfiltered1:axi_master_rdata
-	wire         axi_dma_unfiltered1_altera_axi_master_awready;                  // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awready -> axi_dma_unfiltered1:axi_master_awready
-	wire   [1:0] axi_dma_unfiltered1_altera_axi_master_arburst;                  // axi_dma_unfiltered1:axi_master_arburst -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arburst
-	wire   [2:0] axi_dma_unfiltered1_altera_axi_master_arsize;                   // axi_dma_unfiltered1:axi_master_arsize -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_arsize
-	wire         axi_dma_unfiltered1_altera_axi_master_bready;                   // axi_dma_unfiltered1:axi_master_bready -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_bready
-	wire         axi_dma_unfiltered1_altera_axi_master_rlast;                    // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_rlast -> axi_dma_unfiltered1:axi_master_rlast
-	wire         axi_dma_unfiltered1_altera_axi_master_wlast;                    // axi_dma_unfiltered1:axi_master_wlast -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_wlast
-	wire   [1:0] axi_dma_unfiltered1_altera_axi_master_rresp;                    // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_rresp -> axi_dma_unfiltered1:axi_master_rresp
-	wire   [6:0] axi_dma_unfiltered1_altera_axi_master_bid;                      // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_bid -> axi_dma_unfiltered1:axi_master_bid
-	wire   [6:0] axi_dma_unfiltered1_altera_axi_master_awid;                     // axi_dma_unfiltered1:axi_master_awid -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awid
-	wire         axi_dma_unfiltered1_altera_axi_master_bvalid;                   // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_bvalid -> axi_dma_unfiltered1:axi_master_bvalid
-	wire         axi_dma_unfiltered1_altera_axi_master_awvalid;                  // axi_dma_unfiltered1:axi_master_awvalid -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awvalid
-	wire         axi_dma_unfiltered1_altera_axi_master_rvalid;                   // mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_rvalid -> axi_dma_unfiltered1:axi_master_rvalid
-	wire   [2:0] axi_dma_unfiltered1_altera_axi_master_awsize;                   // axi_dma_unfiltered1:axi_master_awsize -> mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_awsize
-	wire   [1:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awburst;                // mm_interconnect_2:hps_0_f2h_sdram2_data_awburst -> hps_0:f2h_sdram2_AWBURST
-	wire   [3:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arlen;                  // mm_interconnect_2:hps_0_f2h_sdram2_data_arlen -> hps_0:f2h_sdram2_ARLEN
-	wire   [7:0] mm_interconnect_2_hps_0_f2h_sdram2_data_wstrb;                  // mm_interconnect_2:hps_0_f2h_sdram2_data_wstrb -> hps_0:f2h_sdram2_WSTRB
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_wready;                 // hps_0:f2h_sdram2_WREADY -> mm_interconnect_2:hps_0_f2h_sdram2_data_wready
-	wire   [7:0] mm_interconnect_2_hps_0_f2h_sdram2_data_rid;                    // hps_0:f2h_sdram2_RID -> mm_interconnect_2:hps_0_f2h_sdram2_data_rid
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_rready;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_rready -> hps_0:f2h_sdram2_RREADY
-	wire   [3:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awlen;                  // mm_interconnect_2:hps_0_f2h_sdram2_data_awlen -> hps_0:f2h_sdram2_AWLEN
-	wire   [7:0] mm_interconnect_2_hps_0_f2h_sdram2_data_wid;                    // mm_interconnect_2:hps_0_f2h_sdram2_data_wid -> hps_0:f2h_sdram2_WID
-	wire   [3:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arcache;                // mm_interconnect_2:hps_0_f2h_sdram2_data_arcache -> hps_0:f2h_sdram2_ARCACHE
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_wvalid;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_wvalid -> hps_0:f2h_sdram2_WVALID
-	wire  [31:0] mm_interconnect_2_hps_0_f2h_sdram2_data_araddr;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_araddr -> hps_0:f2h_sdram2_ARADDR
-	wire   [2:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arprot;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_arprot -> hps_0:f2h_sdram2_ARPROT
-	wire   [2:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awprot;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_awprot -> hps_0:f2h_sdram2_AWPROT
-	wire  [63:0] mm_interconnect_2_hps_0_f2h_sdram2_data_wdata;                  // mm_interconnect_2:hps_0_f2h_sdram2_data_wdata -> hps_0:f2h_sdram2_WDATA
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_arvalid;                // mm_interconnect_2:hps_0_f2h_sdram2_data_arvalid -> hps_0:f2h_sdram2_ARVALID
-	wire   [3:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awcache;                // mm_interconnect_2:hps_0_f2h_sdram2_data_awcache -> hps_0:f2h_sdram2_AWCACHE
-	wire   [7:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arid;                   // mm_interconnect_2:hps_0_f2h_sdram2_data_arid -> hps_0:f2h_sdram2_ARID
-	wire   [1:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arlock;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_arlock -> hps_0:f2h_sdram2_ARLOCK
-	wire   [1:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awlock;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_awlock -> hps_0:f2h_sdram2_AWLOCK
-	wire  [31:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awaddr;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_awaddr -> hps_0:f2h_sdram2_AWADDR
-	wire   [1:0] mm_interconnect_2_hps_0_f2h_sdram2_data_bresp;                  // hps_0:f2h_sdram2_BRESP -> mm_interconnect_2:hps_0_f2h_sdram2_data_bresp
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_arready;                // hps_0:f2h_sdram2_ARREADY -> mm_interconnect_2:hps_0_f2h_sdram2_data_arready
-	wire  [63:0] mm_interconnect_2_hps_0_f2h_sdram2_data_rdata;                  // hps_0:f2h_sdram2_RDATA -> mm_interconnect_2:hps_0_f2h_sdram2_data_rdata
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_awready;                // hps_0:f2h_sdram2_AWREADY -> mm_interconnect_2:hps_0_f2h_sdram2_data_awready
-	wire   [1:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arburst;                // mm_interconnect_2:hps_0_f2h_sdram2_data_arburst -> hps_0:f2h_sdram2_ARBURST
-	wire   [2:0] mm_interconnect_2_hps_0_f2h_sdram2_data_arsize;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_arsize -> hps_0:f2h_sdram2_ARSIZE
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_bready;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_bready -> hps_0:f2h_sdram2_BREADY
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_rlast;                  // hps_0:f2h_sdram2_RLAST -> mm_interconnect_2:hps_0_f2h_sdram2_data_rlast
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_wlast;                  // mm_interconnect_2:hps_0_f2h_sdram2_data_wlast -> hps_0:f2h_sdram2_WLAST
-	wire   [1:0] mm_interconnect_2_hps_0_f2h_sdram2_data_rresp;                  // hps_0:f2h_sdram2_RRESP -> mm_interconnect_2:hps_0_f2h_sdram2_data_rresp
-	wire   [7:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awid;                   // mm_interconnect_2:hps_0_f2h_sdram2_data_awid -> hps_0:f2h_sdram2_AWID
-	wire   [7:0] mm_interconnect_2_hps_0_f2h_sdram2_data_bid;                    // hps_0:f2h_sdram2_BID -> mm_interconnect_2:hps_0_f2h_sdram2_data_bid
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_bvalid;                 // hps_0:f2h_sdram2_BVALID -> mm_interconnect_2:hps_0_f2h_sdram2_data_bvalid
-	wire   [2:0] mm_interconnect_2_hps_0_f2h_sdram2_data_awsize;                 // mm_interconnect_2:hps_0_f2h_sdram2_data_awsize -> hps_0:f2h_sdram2_AWSIZE
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_awvalid;                // mm_interconnect_2:hps_0_f2h_sdram2_data_awvalid -> hps_0:f2h_sdram2_AWVALID
-	wire         mm_interconnect_2_hps_0_f2h_sdram2_data_rvalid;                 // hps_0:f2h_sdram2_RVALID -> mm_interconnect_2:hps_0_f2h_sdram2_data_rvalid
-	wire   [1:0] hps_0_h2f_axi_master_awburst;                                   // hps_0:h2f_AWBURST -> mm_interconnect_3:hps_0_h2f_axi_master_awburst
-	wire   [3:0] hps_0_h2f_axi_master_arlen;                                     // hps_0:h2f_ARLEN -> mm_interconnect_3:hps_0_h2f_axi_master_arlen
-	wire   [7:0] hps_0_h2f_axi_master_wstrb;                                     // hps_0:h2f_WSTRB -> mm_interconnect_3:hps_0_h2f_axi_master_wstrb
-	wire         hps_0_h2f_axi_master_wready;                                    // mm_interconnect_3:hps_0_h2f_axi_master_wready -> hps_0:h2f_WREADY
-	wire  [11:0] hps_0_h2f_axi_master_rid;                                       // mm_interconnect_3:hps_0_h2f_axi_master_rid -> hps_0:h2f_RID
-	wire         hps_0_h2f_axi_master_rready;                                    // hps_0:h2f_RREADY -> mm_interconnect_3:hps_0_h2f_axi_master_rready
-	wire   [3:0] hps_0_h2f_axi_master_awlen;                                     // hps_0:h2f_AWLEN -> mm_interconnect_3:hps_0_h2f_axi_master_awlen
-	wire  [11:0] hps_0_h2f_axi_master_wid;                                       // hps_0:h2f_WID -> mm_interconnect_3:hps_0_h2f_axi_master_wid
-	wire   [3:0] hps_0_h2f_axi_master_arcache;                                   // hps_0:h2f_ARCACHE -> mm_interconnect_3:hps_0_h2f_axi_master_arcache
-	wire         hps_0_h2f_axi_master_wvalid;                                    // hps_0:h2f_WVALID -> mm_interconnect_3:hps_0_h2f_axi_master_wvalid
-	wire  [29:0] hps_0_h2f_axi_master_araddr;                                    // hps_0:h2f_ARADDR -> mm_interconnect_3:hps_0_h2f_axi_master_araddr
-	wire   [2:0] hps_0_h2f_axi_master_arprot;                                    // hps_0:h2f_ARPROT -> mm_interconnect_3:hps_0_h2f_axi_master_arprot
-	wire   [2:0] hps_0_h2f_axi_master_awprot;                                    // hps_0:h2f_AWPROT -> mm_interconnect_3:hps_0_h2f_axi_master_awprot
-	wire  [63:0] hps_0_h2f_axi_master_wdata;                                     // hps_0:h2f_WDATA -> mm_interconnect_3:hps_0_h2f_axi_master_wdata
-	wire         hps_0_h2f_axi_master_arvalid;                                   // hps_0:h2f_ARVALID -> mm_interconnect_3:hps_0_h2f_axi_master_arvalid
-	wire   [3:0] hps_0_h2f_axi_master_awcache;                                   // hps_0:h2f_AWCACHE -> mm_interconnect_3:hps_0_h2f_axi_master_awcache
-	wire  [11:0] hps_0_h2f_axi_master_arid;                                      // hps_0:h2f_ARID -> mm_interconnect_3:hps_0_h2f_axi_master_arid
-	wire   [1:0] hps_0_h2f_axi_master_arlock;                                    // hps_0:h2f_ARLOCK -> mm_interconnect_3:hps_0_h2f_axi_master_arlock
-	wire   [1:0] hps_0_h2f_axi_master_awlock;                                    // hps_0:h2f_AWLOCK -> mm_interconnect_3:hps_0_h2f_axi_master_awlock
-	wire  [29:0] hps_0_h2f_axi_master_awaddr;                                    // hps_0:h2f_AWADDR -> mm_interconnect_3:hps_0_h2f_axi_master_awaddr
-	wire   [1:0] hps_0_h2f_axi_master_bresp;                                     // mm_interconnect_3:hps_0_h2f_axi_master_bresp -> hps_0:h2f_BRESP
-	wire         hps_0_h2f_axi_master_arready;                                   // mm_interconnect_3:hps_0_h2f_axi_master_arready -> hps_0:h2f_ARREADY
-	wire  [63:0] hps_0_h2f_axi_master_rdata;                                     // mm_interconnect_3:hps_0_h2f_axi_master_rdata -> hps_0:h2f_RDATA
-	wire         hps_0_h2f_axi_master_awready;                                   // mm_interconnect_3:hps_0_h2f_axi_master_awready -> hps_0:h2f_AWREADY
-	wire   [1:0] hps_0_h2f_axi_master_arburst;                                   // hps_0:h2f_ARBURST -> mm_interconnect_3:hps_0_h2f_axi_master_arburst
-	wire   [2:0] hps_0_h2f_axi_master_arsize;                                    // hps_0:h2f_ARSIZE -> mm_interconnect_3:hps_0_h2f_axi_master_arsize
-	wire         hps_0_h2f_axi_master_bready;                                    // hps_0:h2f_BREADY -> mm_interconnect_3:hps_0_h2f_axi_master_bready
-	wire         hps_0_h2f_axi_master_rlast;                                     // mm_interconnect_3:hps_0_h2f_axi_master_rlast -> hps_0:h2f_RLAST
-	wire         hps_0_h2f_axi_master_wlast;                                     // hps_0:h2f_WLAST -> mm_interconnect_3:hps_0_h2f_axi_master_wlast
-	wire   [1:0] hps_0_h2f_axi_master_rresp;                                     // mm_interconnect_3:hps_0_h2f_axi_master_rresp -> hps_0:h2f_RRESP
-	wire  [11:0] hps_0_h2f_axi_master_awid;                                      // hps_0:h2f_AWID -> mm_interconnect_3:hps_0_h2f_axi_master_awid
-	wire  [11:0] hps_0_h2f_axi_master_bid;                                       // mm_interconnect_3:hps_0_h2f_axi_master_bid -> hps_0:h2f_BID
-	wire         hps_0_h2f_axi_master_bvalid;                                    // mm_interconnect_3:hps_0_h2f_axi_master_bvalid -> hps_0:h2f_BVALID
-	wire   [2:0] hps_0_h2f_axi_master_awsize;                                    // hps_0:h2f_AWSIZE -> mm_interconnect_3:hps_0_h2f_axi_master_awsize
-	wire         hps_0_h2f_axi_master_awvalid;                                   // hps_0:h2f_AWVALID -> mm_interconnect_3:hps_0_h2f_axi_master_awvalid
-	wire         hps_0_h2f_axi_master_rvalid;                                    // mm_interconnect_3:hps_0_h2f_axi_master_rvalid -> hps_0:h2f_RVALID
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awburst; // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awburst -> axi_dma_unfiltered1:axi_slave_awburst
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arlen;   // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arlen -> axi_dma_unfiltered1:axi_slave_arlen
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wstrb;   // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_wstrb -> axi_dma_unfiltered1:axi_slave_wstrb
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wready;  // axi_dma_unfiltered1:axi_slave_wready -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_wready
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rid;     // axi_dma_unfiltered1:axi_slave_rid -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_rid
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rready;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_rready -> axi_dma_unfiltered1:axi_slave_rready
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awlen;   // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awlen -> axi_dma_unfiltered1:axi_slave_awlen
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wid;     // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_wid -> axi_dma_unfiltered1:axi_slave_wid
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arcache; // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arcache -> axi_dma_unfiltered1:axi_slave_arcache
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wvalid;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_wvalid -> axi_dma_unfiltered1:axi_slave_wvalid
-	wire   [7:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_araddr;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_araddr -> axi_dma_unfiltered1:axi_slave_araddr
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arprot;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arprot -> axi_dma_unfiltered1:axi_slave_arprot
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awprot;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awprot -> axi_dma_unfiltered1:axi_slave_awprot
-	wire  [31:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wdata;   // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_wdata -> axi_dma_unfiltered1:axi_slave_wdata
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arvalid; // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arvalid -> axi_dma_unfiltered1:axi_slave_arvalid
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awcache; // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awcache -> axi_dma_unfiltered1:axi_slave_awcache
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arid;    // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arid -> axi_dma_unfiltered1:axi_slave_arid
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arlock;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arlock -> axi_dma_unfiltered1:axi_slave_arlock
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awlock;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awlock -> axi_dma_unfiltered1:axi_slave_awlock
-	wire   [7:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awaddr;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awaddr -> axi_dma_unfiltered1:axi_slave_awaddr
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bresp;   // axi_dma_unfiltered1:axi_slave_bresp -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_bresp
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arready; // axi_dma_unfiltered1:axi_slave_arready -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arready
-	wire  [31:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rdata;   // axi_dma_unfiltered1:axi_slave_rdata -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_rdata
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awready; // axi_dma_unfiltered1:axi_slave_awready -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awready
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arburst; // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arburst -> axi_dma_unfiltered1:axi_slave_arburst
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arsize;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_arsize -> axi_dma_unfiltered1:axi_slave_arsize
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bready;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_bready -> axi_dma_unfiltered1:axi_slave_bready
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rlast;   // axi_dma_unfiltered1:axi_slave_rlast -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_rlast
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wlast;   // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_wlast -> axi_dma_unfiltered1:axi_slave_wlast
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rresp;   // axi_dma_unfiltered1:axi_slave_rresp -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_rresp
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awid;    // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awid -> axi_dma_unfiltered1:axi_slave_awid
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bid;     // axi_dma_unfiltered1:axi_slave_bid -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_bid
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bvalid;  // axi_dma_unfiltered1:axi_slave_bvalid -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_bvalid
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awsize;  // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awsize -> axi_dma_unfiltered1:axi_slave_awsize
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awvalid; // mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_awvalid -> axi_dma_unfiltered1:axi_slave_awvalid
-	wire         mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rvalid;  // axi_dma_unfiltered1:axi_slave_rvalid -> mm_interconnect_3:axi_dma_unfiltered1_altera_axi_slave_rvalid
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awburst; // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awburst -> axi_dma_unfiltered2:axi_slave_awburst
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arlen;   // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arlen -> axi_dma_unfiltered2:axi_slave_arlen
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wstrb;   // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_wstrb -> axi_dma_unfiltered2:axi_slave_wstrb
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wready;  // axi_dma_unfiltered2:axi_slave_wready -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_wready
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rid;     // axi_dma_unfiltered2:axi_slave_rid -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_rid
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rready;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_rready -> axi_dma_unfiltered2:axi_slave_rready
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awlen;   // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awlen -> axi_dma_unfiltered2:axi_slave_awlen
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wid;     // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_wid -> axi_dma_unfiltered2:axi_slave_wid
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arcache; // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arcache -> axi_dma_unfiltered2:axi_slave_arcache
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wvalid;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_wvalid -> axi_dma_unfiltered2:axi_slave_wvalid
-	wire   [7:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_araddr;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_araddr -> axi_dma_unfiltered2:axi_slave_araddr
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arprot;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arprot -> axi_dma_unfiltered2:axi_slave_arprot
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awprot;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awprot -> axi_dma_unfiltered2:axi_slave_awprot
-	wire  [31:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wdata;   // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_wdata -> axi_dma_unfiltered2:axi_slave_wdata
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arvalid; // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arvalid -> axi_dma_unfiltered2:axi_slave_arvalid
-	wire   [3:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awcache; // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awcache -> axi_dma_unfiltered2:axi_slave_awcache
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arid;    // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arid -> axi_dma_unfiltered2:axi_slave_arid
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arlock;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arlock -> axi_dma_unfiltered2:axi_slave_arlock
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awlock;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awlock -> axi_dma_unfiltered2:axi_slave_awlock
-	wire   [7:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awaddr;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awaddr -> axi_dma_unfiltered2:axi_slave_awaddr
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bresp;   // axi_dma_unfiltered2:axi_slave_bresp -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_bresp
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arready; // axi_dma_unfiltered2:axi_slave_arready -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arready
-	wire  [31:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rdata;   // axi_dma_unfiltered2:axi_slave_rdata -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_rdata
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awready; // axi_dma_unfiltered2:axi_slave_awready -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awready
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arburst; // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arburst -> axi_dma_unfiltered2:axi_slave_arburst
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arsize;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_arsize -> axi_dma_unfiltered2:axi_slave_arsize
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bready;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_bready -> axi_dma_unfiltered2:axi_slave_bready
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rlast;   // axi_dma_unfiltered2:axi_slave_rlast -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_rlast
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wlast;   // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_wlast -> axi_dma_unfiltered2:axi_slave_wlast
-	wire   [1:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rresp;   // axi_dma_unfiltered2:axi_slave_rresp -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_rresp
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awid;    // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awid -> axi_dma_unfiltered2:axi_slave_awid
-	wire  [11:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bid;     // axi_dma_unfiltered2:axi_slave_bid -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_bid
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bvalid;  // axi_dma_unfiltered2:axi_slave_bvalid -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_bvalid
-	wire   [2:0] mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awsize;  // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awsize -> axi_dma_unfiltered2:axi_slave_awsize
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awvalid; // mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_awvalid -> axi_dma_unfiltered2:axi_slave_awvalid
-	wire         mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rvalid;  // axi_dma_unfiltered2:axi_slave_rvalid -> mm_interconnect_3:axi_dma_unfiltered2_altera_axi_slave_rvalid
-	wire   [1:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awburst;  // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awburst -> axi_dma_orig_block:axi_slave_awburst
-	wire   [3:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arlen;    // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arlen -> axi_dma_orig_block:axi_slave_arlen
-	wire   [3:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wstrb;    // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_wstrb -> axi_dma_orig_block:axi_slave_wstrb
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wready;   // axi_dma_orig_block:axi_slave_wready -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_wready
-	wire  [11:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rid;      // axi_dma_orig_block:axi_slave_rid -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_rid
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rready;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_rready -> axi_dma_orig_block:axi_slave_rready
-	wire   [3:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awlen;    // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awlen -> axi_dma_orig_block:axi_slave_awlen
-	wire  [11:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wid;      // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_wid -> axi_dma_orig_block:axi_slave_wid
-	wire   [3:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arcache;  // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arcache -> axi_dma_orig_block:axi_slave_arcache
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wvalid;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_wvalid -> axi_dma_orig_block:axi_slave_wvalid
-	wire   [7:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_araddr;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_araddr -> axi_dma_orig_block:axi_slave_araddr
-	wire   [2:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arprot;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arprot -> axi_dma_orig_block:axi_slave_arprot
-	wire   [2:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awprot;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awprot -> axi_dma_orig_block:axi_slave_awprot
-	wire  [31:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wdata;    // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_wdata -> axi_dma_orig_block:axi_slave_wdata
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arvalid;  // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arvalid -> axi_dma_orig_block:axi_slave_arvalid
-	wire   [3:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awcache;  // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awcache -> axi_dma_orig_block:axi_slave_awcache
-	wire  [11:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arid;     // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arid -> axi_dma_orig_block:axi_slave_arid
-	wire   [1:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arlock;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arlock -> axi_dma_orig_block:axi_slave_arlock
-	wire   [1:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awlock;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awlock -> axi_dma_orig_block:axi_slave_awlock
-	wire   [7:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awaddr;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awaddr -> axi_dma_orig_block:axi_slave_awaddr
-	wire   [1:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bresp;    // axi_dma_orig_block:axi_slave_bresp -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_bresp
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arready;  // axi_dma_orig_block:axi_slave_arready -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arready
-	wire  [31:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rdata;    // axi_dma_orig_block:axi_slave_rdata -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_rdata
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awready;  // axi_dma_orig_block:axi_slave_awready -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awready
-	wire   [1:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arburst;  // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arburst -> axi_dma_orig_block:axi_slave_arburst
-	wire   [2:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arsize;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_arsize -> axi_dma_orig_block:axi_slave_arsize
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bready;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_bready -> axi_dma_orig_block:axi_slave_bready
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rlast;    // axi_dma_orig_block:axi_slave_rlast -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_rlast
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wlast;    // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_wlast -> axi_dma_orig_block:axi_slave_wlast
-	wire   [1:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rresp;    // axi_dma_orig_block:axi_slave_rresp -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_rresp
-	wire  [11:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awid;     // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awid -> axi_dma_orig_block:axi_slave_awid
-	wire  [11:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bid;      // axi_dma_orig_block:axi_slave_bid -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_bid
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bvalid;   // axi_dma_orig_block:axi_slave_bvalid -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_bvalid
-	wire   [2:0] mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awsize;   // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awsize -> axi_dma_orig_block:axi_slave_awsize
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awvalid;  // mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_awvalid -> axi_dma_orig_block:axi_slave_awvalid
-	wire         mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rvalid;   // axi_dma_orig_block:axi_slave_rvalid -> mm_interconnect_3:axi_dma_orig_block_altera_axi_slave_rvalid
-	wire   [1:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awburst;             // mm_interconnect_3:dma_yuv_altera_axi_slave_awburst -> dma_yuv:axi_slave_awburst
-	wire   [3:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arlen;               // mm_interconnect_3:dma_yuv_altera_axi_slave_arlen -> dma_yuv:axi_slave_arlen
-	wire   [3:0] mm_interconnect_3_dma_yuv_altera_axi_slave_wstrb;               // mm_interconnect_3:dma_yuv_altera_axi_slave_wstrb -> dma_yuv:axi_slave_wstrb
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_wready;              // dma_yuv:axi_slave_wready -> mm_interconnect_3:dma_yuv_altera_axi_slave_wready
-	wire  [11:0] mm_interconnect_3_dma_yuv_altera_axi_slave_rid;                 // dma_yuv:axi_slave_rid -> mm_interconnect_3:dma_yuv_altera_axi_slave_rid
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_rready;              // mm_interconnect_3:dma_yuv_altera_axi_slave_rready -> dma_yuv:axi_slave_rready
-	wire   [3:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awlen;               // mm_interconnect_3:dma_yuv_altera_axi_slave_awlen -> dma_yuv:axi_slave_awlen
-	wire  [11:0] mm_interconnect_3_dma_yuv_altera_axi_slave_wid;                 // mm_interconnect_3:dma_yuv_altera_axi_slave_wid -> dma_yuv:axi_slave_wid
-	wire   [3:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arcache;             // mm_interconnect_3:dma_yuv_altera_axi_slave_arcache -> dma_yuv:axi_slave_arcache
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_wvalid;              // mm_interconnect_3:dma_yuv_altera_axi_slave_wvalid -> dma_yuv:axi_slave_wvalid
-	wire   [7:0] mm_interconnect_3_dma_yuv_altera_axi_slave_araddr;              // mm_interconnect_3:dma_yuv_altera_axi_slave_araddr -> dma_yuv:axi_slave_araddr
-	wire   [2:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arprot;              // mm_interconnect_3:dma_yuv_altera_axi_slave_arprot -> dma_yuv:axi_slave_arprot
-	wire   [2:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awprot;              // mm_interconnect_3:dma_yuv_altera_axi_slave_awprot -> dma_yuv:axi_slave_awprot
-	wire  [31:0] mm_interconnect_3_dma_yuv_altera_axi_slave_wdata;               // mm_interconnect_3:dma_yuv_altera_axi_slave_wdata -> dma_yuv:axi_slave_wdata
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_arvalid;             // mm_interconnect_3:dma_yuv_altera_axi_slave_arvalid -> dma_yuv:axi_slave_arvalid
-	wire   [3:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awcache;             // mm_interconnect_3:dma_yuv_altera_axi_slave_awcache -> dma_yuv:axi_slave_awcache
-	wire  [11:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arid;                // mm_interconnect_3:dma_yuv_altera_axi_slave_arid -> dma_yuv:axi_slave_arid
-	wire   [1:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arlock;              // mm_interconnect_3:dma_yuv_altera_axi_slave_arlock -> dma_yuv:axi_slave_arlock
-	wire   [1:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awlock;              // mm_interconnect_3:dma_yuv_altera_axi_slave_awlock -> dma_yuv:axi_slave_awlock
-	wire   [7:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awaddr;              // mm_interconnect_3:dma_yuv_altera_axi_slave_awaddr -> dma_yuv:axi_slave_awaddr
-	wire   [1:0] mm_interconnect_3_dma_yuv_altera_axi_slave_bresp;               // dma_yuv:axi_slave_bresp -> mm_interconnect_3:dma_yuv_altera_axi_slave_bresp
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_arready;             // dma_yuv:axi_slave_arready -> mm_interconnect_3:dma_yuv_altera_axi_slave_arready
-	wire  [31:0] mm_interconnect_3_dma_yuv_altera_axi_slave_rdata;               // dma_yuv:axi_slave_rdata -> mm_interconnect_3:dma_yuv_altera_axi_slave_rdata
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_awready;             // dma_yuv:axi_slave_awready -> mm_interconnect_3:dma_yuv_altera_axi_slave_awready
-	wire   [1:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arburst;             // mm_interconnect_3:dma_yuv_altera_axi_slave_arburst -> dma_yuv:axi_slave_arburst
-	wire   [2:0] mm_interconnect_3_dma_yuv_altera_axi_slave_arsize;              // mm_interconnect_3:dma_yuv_altera_axi_slave_arsize -> dma_yuv:axi_slave_arsize
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_bready;              // mm_interconnect_3:dma_yuv_altera_axi_slave_bready -> dma_yuv:axi_slave_bready
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_rlast;               // dma_yuv:axi_slave_rlast -> mm_interconnect_3:dma_yuv_altera_axi_slave_rlast
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_wlast;               // mm_interconnect_3:dma_yuv_altera_axi_slave_wlast -> dma_yuv:axi_slave_wlast
-	wire   [1:0] mm_interconnect_3_dma_yuv_altera_axi_slave_rresp;               // dma_yuv:axi_slave_rresp -> mm_interconnect_3:dma_yuv_altera_axi_slave_rresp
-	wire  [11:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awid;                // mm_interconnect_3:dma_yuv_altera_axi_slave_awid -> dma_yuv:axi_slave_awid
-	wire  [11:0] mm_interconnect_3_dma_yuv_altera_axi_slave_bid;                 // dma_yuv:axi_slave_bid -> mm_interconnect_3:dma_yuv_altera_axi_slave_bid
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_bvalid;              // dma_yuv:axi_slave_bvalid -> mm_interconnect_3:dma_yuv_altera_axi_slave_bvalid
-	wire   [2:0] mm_interconnect_3_dma_yuv_altera_axi_slave_awsize;              // mm_interconnect_3:dma_yuv_altera_axi_slave_awsize -> dma_yuv:axi_slave_awsize
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_awvalid;             // mm_interconnect_3:dma_yuv_altera_axi_slave_awvalid -> dma_yuv:axi_slave_awvalid
-	wire         mm_interconnect_3_dma_yuv_altera_axi_slave_rvalid;              // dma_yuv:axi_slave_rvalid -> mm_interconnect_3:dma_yuv_altera_axi_slave_rvalid
-	wire   [1:0] mm_interconnect_3_acc_config_altera_axi_slave_awburst;          // mm_interconnect_3:acc_config_altera_axi_slave_awburst -> acc_config:axi_slave_awburst
-	wire   [3:0] mm_interconnect_3_acc_config_altera_axi_slave_arlen;            // mm_interconnect_3:acc_config_altera_axi_slave_arlen -> acc_config:axi_slave_arlen
-	wire   [3:0] mm_interconnect_3_acc_config_altera_axi_slave_wstrb;            // mm_interconnect_3:acc_config_altera_axi_slave_wstrb -> acc_config:axi_slave_wstrb
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_wready;           // acc_config:axi_slave_wready -> mm_interconnect_3:acc_config_altera_axi_slave_wready
-	wire  [11:0] mm_interconnect_3_acc_config_altera_axi_slave_rid;              // acc_config:axi_slave_rid -> mm_interconnect_3:acc_config_altera_axi_slave_rid
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_rready;           // mm_interconnect_3:acc_config_altera_axi_slave_rready -> acc_config:axi_slave_rready
-	wire   [3:0] mm_interconnect_3_acc_config_altera_axi_slave_awlen;            // mm_interconnect_3:acc_config_altera_axi_slave_awlen -> acc_config:axi_slave_awlen
-	wire  [11:0] mm_interconnect_3_acc_config_altera_axi_slave_wid;              // mm_interconnect_3:acc_config_altera_axi_slave_wid -> acc_config:axi_slave_wid
-	wire   [3:0] mm_interconnect_3_acc_config_altera_axi_slave_arcache;          // mm_interconnect_3:acc_config_altera_axi_slave_arcache -> acc_config:axi_slave_arcache
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_wvalid;           // mm_interconnect_3:acc_config_altera_axi_slave_wvalid -> acc_config:axi_slave_wvalid
-	wire   [7:0] mm_interconnect_3_acc_config_altera_axi_slave_araddr;           // mm_interconnect_3:acc_config_altera_axi_slave_araddr -> acc_config:axi_slave_araddr
-	wire   [2:0] mm_interconnect_3_acc_config_altera_axi_slave_arprot;           // mm_interconnect_3:acc_config_altera_axi_slave_arprot -> acc_config:axi_slave_arprot
-	wire   [2:0] mm_interconnect_3_acc_config_altera_axi_slave_awprot;           // mm_interconnect_3:acc_config_altera_axi_slave_awprot -> acc_config:axi_slave_awprot
-	wire  [31:0] mm_interconnect_3_acc_config_altera_axi_slave_wdata;            // mm_interconnect_3:acc_config_altera_axi_slave_wdata -> acc_config:axi_slave_wdata
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_arvalid;          // mm_interconnect_3:acc_config_altera_axi_slave_arvalid -> acc_config:axi_slave_arvalid
-	wire   [3:0] mm_interconnect_3_acc_config_altera_axi_slave_awcache;          // mm_interconnect_3:acc_config_altera_axi_slave_awcache -> acc_config:axi_slave_awcache
-	wire  [11:0] mm_interconnect_3_acc_config_altera_axi_slave_arid;             // mm_interconnect_3:acc_config_altera_axi_slave_arid -> acc_config:axi_slave_arid
-	wire   [1:0] mm_interconnect_3_acc_config_altera_axi_slave_arlock;           // mm_interconnect_3:acc_config_altera_axi_slave_arlock -> acc_config:axi_slave_arlock
-	wire   [1:0] mm_interconnect_3_acc_config_altera_axi_slave_awlock;           // mm_interconnect_3:acc_config_altera_axi_slave_awlock -> acc_config:axi_slave_awlock
-	wire   [7:0] mm_interconnect_3_acc_config_altera_axi_slave_awaddr;           // mm_interconnect_3:acc_config_altera_axi_slave_awaddr -> acc_config:axi_slave_awaddr
-	wire   [1:0] mm_interconnect_3_acc_config_altera_axi_slave_bresp;            // acc_config:axi_slave_bresp -> mm_interconnect_3:acc_config_altera_axi_slave_bresp
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_arready;          // acc_config:axi_slave_arready -> mm_interconnect_3:acc_config_altera_axi_slave_arready
-	wire  [31:0] mm_interconnect_3_acc_config_altera_axi_slave_rdata;            // acc_config:axi_slave_rdata -> mm_interconnect_3:acc_config_altera_axi_slave_rdata
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_awready;          // acc_config:axi_slave_awready -> mm_interconnect_3:acc_config_altera_axi_slave_awready
-	wire   [1:0] mm_interconnect_3_acc_config_altera_axi_slave_arburst;          // mm_interconnect_3:acc_config_altera_axi_slave_arburst -> acc_config:axi_slave_arburst
-	wire   [2:0] mm_interconnect_3_acc_config_altera_axi_slave_arsize;           // mm_interconnect_3:acc_config_altera_axi_slave_arsize -> acc_config:axi_slave_arsize
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_bready;           // mm_interconnect_3:acc_config_altera_axi_slave_bready -> acc_config:axi_slave_bready
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_rlast;            // acc_config:axi_slave_rlast -> mm_interconnect_3:acc_config_altera_axi_slave_rlast
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_wlast;            // mm_interconnect_3:acc_config_altera_axi_slave_wlast -> acc_config:axi_slave_wlast
-	wire   [1:0] mm_interconnect_3_acc_config_altera_axi_slave_rresp;            // acc_config:axi_slave_rresp -> mm_interconnect_3:acc_config_altera_axi_slave_rresp
-	wire  [11:0] mm_interconnect_3_acc_config_altera_axi_slave_awid;             // mm_interconnect_3:acc_config_altera_axi_slave_awid -> acc_config:axi_slave_awid
-	wire  [11:0] mm_interconnect_3_acc_config_altera_axi_slave_bid;              // acc_config:axi_slave_bid -> mm_interconnect_3:acc_config_altera_axi_slave_bid
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_bvalid;           // acc_config:axi_slave_bvalid -> mm_interconnect_3:acc_config_altera_axi_slave_bvalid
-	wire   [2:0] mm_interconnect_3_acc_config_altera_axi_slave_awsize;           // mm_interconnect_3:acc_config_altera_axi_slave_awsize -> acc_config:axi_slave_awsize
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_awvalid;          // mm_interconnect_3:acc_config_altera_axi_slave_awvalid -> acc_config:axi_slave_awvalid
-	wire         mm_interconnect_3_acc_config_altera_axi_slave_rvalid;           // acc_config:axi_slave_rvalid -> mm_interconnect_3:acc_config_altera_axi_slave_rvalid
-	wire         mm_interconnect_3_sad_result_low_s1_chipselect;                 // mm_interconnect_3:sad_result_low_s1_chipselect -> sad_result_low:chipselect
-	wire  [31:0] mm_interconnect_3_sad_result_low_s1_readdata;                   // sad_result_low:readdata -> mm_interconnect_3:sad_result_low_s1_readdata
-	wire   [1:0] mm_interconnect_3_sad_result_low_s1_address;                    // mm_interconnect_3:sad_result_low_s1_address -> sad_result_low:address
-	wire         mm_interconnect_3_sad_result_low_s1_write;                      // mm_interconnect_3:sad_result_low_s1_write -> sad_result_low:write_n
-	wire  [31:0] mm_interconnect_3_sad_result_low_s1_writedata;                  // mm_interconnect_3:sad_result_low_s1_writedata -> sad_result_low:writedata
-	wire         mm_interconnect_3_sad_result_high_s1_chipselect;                // mm_interconnect_3:sad_result_high_s1_chipselect -> sad_result_high:chipselect
-	wire  [31:0] mm_interconnect_3_sad_result_high_s1_readdata;                  // sad_result_high:readdata -> mm_interconnect_3:sad_result_high_s1_readdata
-	wire   [1:0] mm_interconnect_3_sad_result_high_s1_address;                   // mm_interconnect_3:sad_result_high_s1_address -> sad_result_high:address
-	wire         mm_interconnect_3_sad_result_high_s1_write;                     // mm_interconnect_3:sad_result_high_s1_write -> sad_result_high:write_n
-	wire  [31:0] mm_interconnect_3_sad_result_high_s1_writedata;                 // mm_interconnect_3:sad_result_high_s1_writedata -> sad_result_high:writedata
-	wire         mm_interconnect_3_lambda_loaded_s1_chipselect;                  // mm_interconnect_3:lambda_loaded_s1_chipselect -> lambda_loaded:chipselect
-	wire  [31:0] mm_interconnect_3_lambda_loaded_s1_readdata;                    // lambda_loaded:readdata -> mm_interconnect_3:lambda_loaded_s1_readdata
-	wire   [1:0] mm_interconnect_3_lambda_loaded_s1_address;                     // mm_interconnect_3:lambda_loaded_s1_address -> lambda_loaded:address
-	wire         mm_interconnect_3_lambda_loaded_s1_write;                       // mm_interconnect_3:lambda_loaded_s1_write -> lambda_loaded:write_n
-	wire  [31:0] mm_interconnect_3_lambda_loaded_s1_writedata;                   // mm_interconnect_3:lambda_loaded_s1_writedata -> lambda_loaded:writedata
-	wire         mm_interconnect_3_lcu_loaded_s1_chipselect;                     // mm_interconnect_3:lcu_loaded_s1_chipselect -> lcu_loaded:chipselect
-	wire  [31:0] mm_interconnect_3_lcu_loaded_s1_readdata;                       // lcu_loaded:readdata -> mm_interconnect_3:lcu_loaded_s1_readdata
-	wire   [1:0] mm_interconnect_3_lcu_loaded_s1_address;                        // mm_interconnect_3:lcu_loaded_s1_address -> lcu_loaded:address
-	wire         mm_interconnect_3_lcu_loaded_s1_write;                          // mm_interconnect_3:lcu_loaded_s1_write -> lcu_loaded:write_n
-	wire  [31:0] mm_interconnect_3_lcu_loaded_s1_writedata;                      // mm_interconnect_3:lcu_loaded_s1_writedata -> lcu_loaded:writedata
-	wire         mm_interconnect_3_result_ready_s1_chipselect;                   // mm_interconnect_3:result_ready_s1_chipselect -> result_ready:chipselect
-	wire  [31:0] mm_interconnect_3_result_ready_s1_readdata;                     // result_ready:readdata -> mm_interconnect_3:result_ready_s1_readdata
-	wire   [1:0] mm_interconnect_3_result_ready_s1_address;                      // mm_interconnect_3:result_ready_s1_address -> result_ready:address
-	wire         mm_interconnect_3_result_ready_s1_write;                        // mm_interconnect_3:result_ready_s1_write -> result_ready:write_n
-	wire  [31:0] mm_interconnect_3_result_ready_s1_writedata;                    // mm_interconnect_3:result_ready_s1_writedata -> result_ready:writedata
-	wire         mm_interconnect_3_configure_camera_s1_chipselect;               // mm_interconnect_3:configure_camera_s1_chipselect -> configure_camera:chipselect
-	wire  [31:0] mm_interconnect_3_configure_camera_s1_readdata;                 // configure_camera:readdata -> mm_interconnect_3:configure_camera_s1_readdata
-	wire   [1:0] mm_interconnect_3_configure_camera_s1_address;                  // mm_interconnect_3:configure_camera_s1_address -> configure_camera:address
-	wire         mm_interconnect_3_configure_camera_s1_write;                    // mm_interconnect_3:configure_camera_s1_write -> configure_camera:write_n
-	wire  [31:0] mm_interconnect_3_configure_camera_s1_writedata;                // mm_interconnect_3:configure_camera_s1_writedata -> configure_camera:writedata
-	wire         mm_interconnect_3_yuv_ctrl_s1_chipselect;                       // mm_interconnect_3:yuv_ctrl_s1_chipselect -> yuv_ctrl:chipselect
-	wire  [31:0] mm_interconnect_3_yuv_ctrl_s1_readdata;                         // yuv_ctrl:readdata -> mm_interconnect_3:yuv_ctrl_s1_readdata
-	wire   [1:0] mm_interconnect_3_yuv_ctrl_s1_address;                          // mm_interconnect_3:yuv_ctrl_s1_address -> yuv_ctrl:address
-	wire         mm_interconnect_3_yuv_ctrl_s1_write;                            // mm_interconnect_3:yuv_ctrl_s1_write -> yuv_ctrl:write_n
-	wire  [31:0] mm_interconnect_3_yuv_ctrl_s1_writedata;                        // mm_interconnect_3:yuv_ctrl_s1_writedata -> yuv_ctrl:writedata
-	wire         mm_interconnect_3_yuv_status_s1_chipselect;                     // mm_interconnect_3:yuv_status_s1_chipselect -> yuv_status:chipselect
-	wire  [31:0] mm_interconnect_3_yuv_status_s1_readdata;                       // yuv_status:readdata -> mm_interconnect_3:yuv_status_s1_readdata
-	wire   [1:0] mm_interconnect_3_yuv_status_s1_address;                        // mm_interconnect_3:yuv_status_s1_address -> yuv_status:address
-	wire         mm_interconnect_3_yuv_status_s1_write;                          // mm_interconnect_3:yuv_status_s1_write -> yuv_status:write_n
-	wire  [31:0] mm_interconnect_3_yuv_status_s1_writedata;                      // mm_interconnect_3:yuv_status_s1_writedata -> yuv_status:writedata
-	wire         mm_interconnect_3_camera_control_oc_s1_chipselect;              // mm_interconnect_3:camera_control_oc_s1_chipselect -> camera_control_oc:chipselect
-	wire  [15:0] mm_interconnect_3_camera_control_oc_s1_readdata;                // camera_control_oc:readdata -> mm_interconnect_3:camera_control_oc_s1_readdata
-	wire   [5:0] mm_interconnect_3_camera_control_oc_s1_address;                 // mm_interconnect_3:camera_control_oc_s1_address -> camera_control_oc:address
-	wire   [1:0] mm_interconnect_3_camera_control_oc_s1_byteenable;              // mm_interconnect_3:camera_control_oc_s1_byteenable -> camera_control_oc:byteenable
-	wire         mm_interconnect_3_camera_control_oc_s1_write;                   // mm_interconnect_3:camera_control_oc_s1_write -> camera_control_oc:write
-	wire  [15:0] mm_interconnect_3_camera_control_oc_s1_writedata;               // mm_interconnect_3:camera_control_oc_s1_writedata -> camera_control_oc:writedata
-	wire         mm_interconnect_3_camera_control_oc_s1_clken;                   // mm_interconnect_3:camera_control_oc_s1_clken -> camera_control_oc:clken
+	wire   [1:0] hps_0_h2f_axi_master_awburst;                                   // hps_0:h2f_AWBURST -> mm_interconnect_0:hps_0_h2f_axi_master_awburst
+	wire   [3:0] hps_0_h2f_axi_master_arlen;                                     // hps_0:h2f_ARLEN -> mm_interconnect_0:hps_0_h2f_axi_master_arlen
+	wire   [7:0] hps_0_h2f_axi_master_wstrb;                                     // hps_0:h2f_WSTRB -> mm_interconnect_0:hps_0_h2f_axi_master_wstrb
+	wire         hps_0_h2f_axi_master_wready;                                    // mm_interconnect_0:hps_0_h2f_axi_master_wready -> hps_0:h2f_WREADY
+	wire  [11:0] hps_0_h2f_axi_master_rid;                                       // mm_interconnect_0:hps_0_h2f_axi_master_rid -> hps_0:h2f_RID
+	wire         hps_0_h2f_axi_master_rready;                                    // hps_0:h2f_RREADY -> mm_interconnect_0:hps_0_h2f_axi_master_rready
+	wire   [3:0] hps_0_h2f_axi_master_awlen;                                     // hps_0:h2f_AWLEN -> mm_interconnect_0:hps_0_h2f_axi_master_awlen
+	wire  [11:0] hps_0_h2f_axi_master_wid;                                       // hps_0:h2f_WID -> mm_interconnect_0:hps_0_h2f_axi_master_wid
+	wire   [3:0] hps_0_h2f_axi_master_arcache;                                   // hps_0:h2f_ARCACHE -> mm_interconnect_0:hps_0_h2f_axi_master_arcache
+	wire         hps_0_h2f_axi_master_wvalid;                                    // hps_0:h2f_WVALID -> mm_interconnect_0:hps_0_h2f_axi_master_wvalid
+	wire  [29:0] hps_0_h2f_axi_master_araddr;                                    // hps_0:h2f_ARADDR -> mm_interconnect_0:hps_0_h2f_axi_master_araddr
+	wire   [2:0] hps_0_h2f_axi_master_arprot;                                    // hps_0:h2f_ARPROT -> mm_interconnect_0:hps_0_h2f_axi_master_arprot
+	wire   [2:0] hps_0_h2f_axi_master_awprot;                                    // hps_0:h2f_AWPROT -> mm_interconnect_0:hps_0_h2f_axi_master_awprot
+	wire  [63:0] hps_0_h2f_axi_master_wdata;                                     // hps_0:h2f_WDATA -> mm_interconnect_0:hps_0_h2f_axi_master_wdata
+	wire         hps_0_h2f_axi_master_arvalid;                                   // hps_0:h2f_ARVALID -> mm_interconnect_0:hps_0_h2f_axi_master_arvalid
+	wire   [3:0] hps_0_h2f_axi_master_awcache;                                   // hps_0:h2f_AWCACHE -> mm_interconnect_0:hps_0_h2f_axi_master_awcache
+	wire  [11:0] hps_0_h2f_axi_master_arid;                                      // hps_0:h2f_ARID -> mm_interconnect_0:hps_0_h2f_axi_master_arid
+	wire   [1:0] hps_0_h2f_axi_master_arlock;                                    // hps_0:h2f_ARLOCK -> mm_interconnect_0:hps_0_h2f_axi_master_arlock
+	wire   [1:0] hps_0_h2f_axi_master_awlock;                                    // hps_0:h2f_AWLOCK -> mm_interconnect_0:hps_0_h2f_axi_master_awlock
+	wire  [29:0] hps_0_h2f_axi_master_awaddr;                                    // hps_0:h2f_AWADDR -> mm_interconnect_0:hps_0_h2f_axi_master_awaddr
+	wire   [1:0] hps_0_h2f_axi_master_bresp;                                     // mm_interconnect_0:hps_0_h2f_axi_master_bresp -> hps_0:h2f_BRESP
+	wire         hps_0_h2f_axi_master_arready;                                   // mm_interconnect_0:hps_0_h2f_axi_master_arready -> hps_0:h2f_ARREADY
+	wire  [63:0] hps_0_h2f_axi_master_rdata;                                     // mm_interconnect_0:hps_0_h2f_axi_master_rdata -> hps_0:h2f_RDATA
+	wire         hps_0_h2f_axi_master_awready;                                   // mm_interconnect_0:hps_0_h2f_axi_master_awready -> hps_0:h2f_AWREADY
+	wire   [1:0] hps_0_h2f_axi_master_arburst;                                   // hps_0:h2f_ARBURST -> mm_interconnect_0:hps_0_h2f_axi_master_arburst
+	wire   [2:0] hps_0_h2f_axi_master_arsize;                                    // hps_0:h2f_ARSIZE -> mm_interconnect_0:hps_0_h2f_axi_master_arsize
+	wire         hps_0_h2f_axi_master_bready;                                    // hps_0:h2f_BREADY -> mm_interconnect_0:hps_0_h2f_axi_master_bready
+	wire         hps_0_h2f_axi_master_rlast;                                     // mm_interconnect_0:hps_0_h2f_axi_master_rlast -> hps_0:h2f_RLAST
+	wire         hps_0_h2f_axi_master_wlast;                                     // hps_0:h2f_WLAST -> mm_interconnect_0:hps_0_h2f_axi_master_wlast
+	wire   [1:0] hps_0_h2f_axi_master_rresp;                                     // mm_interconnect_0:hps_0_h2f_axi_master_rresp -> hps_0:h2f_RRESP
+	wire  [11:0] hps_0_h2f_axi_master_awid;                                      // hps_0:h2f_AWID -> mm_interconnect_0:hps_0_h2f_axi_master_awid
+	wire  [11:0] hps_0_h2f_axi_master_bid;                                       // mm_interconnect_0:hps_0_h2f_axi_master_bid -> hps_0:h2f_BID
+	wire         hps_0_h2f_axi_master_bvalid;                                    // mm_interconnect_0:hps_0_h2f_axi_master_bvalid -> hps_0:h2f_BVALID
+	wire   [2:0] hps_0_h2f_axi_master_awsize;                                    // hps_0:h2f_AWSIZE -> mm_interconnect_0:hps_0_h2f_axi_master_awsize
+	wire         hps_0_h2f_axi_master_awvalid;                                   // hps_0:h2f_AWVALID -> mm_interconnect_0:hps_0_h2f_axi_master_awvalid
+	wire         hps_0_h2f_axi_master_rvalid;                                    // mm_interconnect_0:hps_0_h2f_axi_master_rvalid -> hps_0:h2f_RVALID
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awburst; // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awburst -> axi_dma_unfiltered1:axi_slave_awburst
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arlen;   // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arlen -> axi_dma_unfiltered1:axi_slave_arlen
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wstrb;   // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_wstrb -> axi_dma_unfiltered1:axi_slave_wstrb
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wready;  // axi_dma_unfiltered1:axi_slave_wready -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_wready
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rid;     // axi_dma_unfiltered1:axi_slave_rid -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_rid
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rready;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_rready -> axi_dma_unfiltered1:axi_slave_rready
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awlen;   // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awlen -> axi_dma_unfiltered1:axi_slave_awlen
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wid;     // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_wid -> axi_dma_unfiltered1:axi_slave_wid
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arcache; // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arcache -> axi_dma_unfiltered1:axi_slave_arcache
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wvalid;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_wvalid -> axi_dma_unfiltered1:axi_slave_wvalid
+	wire   [7:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_araddr;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_araddr -> axi_dma_unfiltered1:axi_slave_araddr
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arprot;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arprot -> axi_dma_unfiltered1:axi_slave_arprot
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awprot;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awprot -> axi_dma_unfiltered1:axi_slave_awprot
+	wire  [31:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wdata;   // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_wdata -> axi_dma_unfiltered1:axi_slave_wdata
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arvalid; // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arvalid -> axi_dma_unfiltered1:axi_slave_arvalid
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awcache; // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awcache -> axi_dma_unfiltered1:axi_slave_awcache
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arid;    // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arid -> axi_dma_unfiltered1:axi_slave_arid
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arlock;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arlock -> axi_dma_unfiltered1:axi_slave_arlock
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awlock;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awlock -> axi_dma_unfiltered1:axi_slave_awlock
+	wire   [7:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awaddr;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awaddr -> axi_dma_unfiltered1:axi_slave_awaddr
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bresp;   // axi_dma_unfiltered1:axi_slave_bresp -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_bresp
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arready; // axi_dma_unfiltered1:axi_slave_arready -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arready
+	wire  [31:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rdata;   // axi_dma_unfiltered1:axi_slave_rdata -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_rdata
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awready; // axi_dma_unfiltered1:axi_slave_awready -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awready
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arburst; // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arburst -> axi_dma_unfiltered1:axi_slave_arburst
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arsize;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_arsize -> axi_dma_unfiltered1:axi_slave_arsize
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bready;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_bready -> axi_dma_unfiltered1:axi_slave_bready
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rlast;   // axi_dma_unfiltered1:axi_slave_rlast -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_rlast
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wlast;   // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_wlast -> axi_dma_unfiltered1:axi_slave_wlast
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rresp;   // axi_dma_unfiltered1:axi_slave_rresp -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_rresp
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awid;    // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awid -> axi_dma_unfiltered1:axi_slave_awid
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bid;     // axi_dma_unfiltered1:axi_slave_bid -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_bid
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bvalid;  // axi_dma_unfiltered1:axi_slave_bvalid -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_bvalid
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awsize;  // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awsize -> axi_dma_unfiltered1:axi_slave_awsize
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awvalid; // mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_awvalid -> axi_dma_unfiltered1:axi_slave_awvalid
+	wire         mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rvalid;  // axi_dma_unfiltered1:axi_slave_rvalid -> mm_interconnect_0:axi_dma_unfiltered1_altera_axi_slave_rvalid
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awburst; // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awburst -> axi_dma_unfiltered2:axi_slave_awburst
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arlen;   // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arlen -> axi_dma_unfiltered2:axi_slave_arlen
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wstrb;   // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_wstrb -> axi_dma_unfiltered2:axi_slave_wstrb
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wready;  // axi_dma_unfiltered2:axi_slave_wready -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_wready
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rid;     // axi_dma_unfiltered2:axi_slave_rid -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_rid
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rready;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_rready -> axi_dma_unfiltered2:axi_slave_rready
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awlen;   // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awlen -> axi_dma_unfiltered2:axi_slave_awlen
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wid;     // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_wid -> axi_dma_unfiltered2:axi_slave_wid
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arcache; // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arcache -> axi_dma_unfiltered2:axi_slave_arcache
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wvalid;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_wvalid -> axi_dma_unfiltered2:axi_slave_wvalid
+	wire   [7:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_araddr;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_araddr -> axi_dma_unfiltered2:axi_slave_araddr
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arprot;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arprot -> axi_dma_unfiltered2:axi_slave_arprot
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awprot;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awprot -> axi_dma_unfiltered2:axi_slave_awprot
+	wire  [31:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wdata;   // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_wdata -> axi_dma_unfiltered2:axi_slave_wdata
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arvalid; // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arvalid -> axi_dma_unfiltered2:axi_slave_arvalid
+	wire   [3:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awcache; // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awcache -> axi_dma_unfiltered2:axi_slave_awcache
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arid;    // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arid -> axi_dma_unfiltered2:axi_slave_arid
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arlock;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arlock -> axi_dma_unfiltered2:axi_slave_arlock
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awlock;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awlock -> axi_dma_unfiltered2:axi_slave_awlock
+	wire   [7:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awaddr;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awaddr -> axi_dma_unfiltered2:axi_slave_awaddr
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bresp;   // axi_dma_unfiltered2:axi_slave_bresp -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_bresp
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arready; // axi_dma_unfiltered2:axi_slave_arready -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arready
+	wire  [31:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rdata;   // axi_dma_unfiltered2:axi_slave_rdata -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_rdata
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awready; // axi_dma_unfiltered2:axi_slave_awready -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awready
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arburst; // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arburst -> axi_dma_unfiltered2:axi_slave_arburst
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arsize;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_arsize -> axi_dma_unfiltered2:axi_slave_arsize
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bready;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_bready -> axi_dma_unfiltered2:axi_slave_bready
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rlast;   // axi_dma_unfiltered2:axi_slave_rlast -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_rlast
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wlast;   // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_wlast -> axi_dma_unfiltered2:axi_slave_wlast
+	wire   [1:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rresp;   // axi_dma_unfiltered2:axi_slave_rresp -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_rresp
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awid;    // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awid -> axi_dma_unfiltered2:axi_slave_awid
+	wire  [11:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bid;     // axi_dma_unfiltered2:axi_slave_bid -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_bid
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bvalid;  // axi_dma_unfiltered2:axi_slave_bvalid -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_bvalid
+	wire   [2:0] mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awsize;  // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awsize -> axi_dma_unfiltered2:axi_slave_awsize
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awvalid; // mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_awvalid -> axi_dma_unfiltered2:axi_slave_awvalid
+	wire         mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rvalid;  // axi_dma_unfiltered2:axi_slave_rvalid -> mm_interconnect_0:axi_dma_unfiltered2_altera_axi_slave_rvalid
+	wire   [1:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awburst;  // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awburst -> axi_dma_orig_block:axi_slave_awburst
+	wire   [3:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arlen;    // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arlen -> axi_dma_orig_block:axi_slave_arlen
+	wire   [3:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wstrb;    // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_wstrb -> axi_dma_orig_block:axi_slave_wstrb
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wready;   // axi_dma_orig_block:axi_slave_wready -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_wready
+	wire  [11:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rid;      // axi_dma_orig_block:axi_slave_rid -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_rid
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rready;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_rready -> axi_dma_orig_block:axi_slave_rready
+	wire   [3:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awlen;    // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awlen -> axi_dma_orig_block:axi_slave_awlen
+	wire  [11:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wid;      // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_wid -> axi_dma_orig_block:axi_slave_wid
+	wire   [3:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arcache;  // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arcache -> axi_dma_orig_block:axi_slave_arcache
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wvalid;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_wvalid -> axi_dma_orig_block:axi_slave_wvalid
+	wire   [7:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_araddr;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_araddr -> axi_dma_orig_block:axi_slave_araddr
+	wire   [2:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arprot;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arprot -> axi_dma_orig_block:axi_slave_arprot
+	wire   [2:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awprot;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awprot -> axi_dma_orig_block:axi_slave_awprot
+	wire  [31:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wdata;    // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_wdata -> axi_dma_orig_block:axi_slave_wdata
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arvalid;  // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arvalid -> axi_dma_orig_block:axi_slave_arvalid
+	wire   [3:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awcache;  // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awcache -> axi_dma_orig_block:axi_slave_awcache
+	wire  [11:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arid;     // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arid -> axi_dma_orig_block:axi_slave_arid
+	wire   [1:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arlock;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arlock -> axi_dma_orig_block:axi_slave_arlock
+	wire   [1:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awlock;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awlock -> axi_dma_orig_block:axi_slave_awlock
+	wire   [7:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awaddr;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awaddr -> axi_dma_orig_block:axi_slave_awaddr
+	wire   [1:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bresp;    // axi_dma_orig_block:axi_slave_bresp -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_bresp
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arready;  // axi_dma_orig_block:axi_slave_arready -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arready
+	wire  [31:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rdata;    // axi_dma_orig_block:axi_slave_rdata -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_rdata
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awready;  // axi_dma_orig_block:axi_slave_awready -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awready
+	wire   [1:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arburst;  // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arburst -> axi_dma_orig_block:axi_slave_arburst
+	wire   [2:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arsize;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_arsize -> axi_dma_orig_block:axi_slave_arsize
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bready;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_bready -> axi_dma_orig_block:axi_slave_bready
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rlast;    // axi_dma_orig_block:axi_slave_rlast -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_rlast
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wlast;    // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_wlast -> axi_dma_orig_block:axi_slave_wlast
+	wire   [1:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rresp;    // axi_dma_orig_block:axi_slave_rresp -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_rresp
+	wire  [11:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awid;     // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awid -> axi_dma_orig_block:axi_slave_awid
+	wire  [11:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bid;      // axi_dma_orig_block:axi_slave_bid -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_bid
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bvalid;   // axi_dma_orig_block:axi_slave_bvalid -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_bvalid
+	wire   [2:0] mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awsize;   // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awsize -> axi_dma_orig_block:axi_slave_awsize
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awvalid;  // mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_awvalid -> axi_dma_orig_block:axi_slave_awvalid
+	wire         mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rvalid;   // axi_dma_orig_block:axi_slave_rvalid -> mm_interconnect_0:axi_dma_orig_block_altera_axi_slave_rvalid
+	wire   [1:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awburst;             // mm_interconnect_0:dma_yuv_altera_axi_slave_awburst -> dma_yuv:axi_slave_awburst
+	wire   [3:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arlen;               // mm_interconnect_0:dma_yuv_altera_axi_slave_arlen -> dma_yuv:axi_slave_arlen
+	wire   [3:0] mm_interconnect_0_dma_yuv_altera_axi_slave_wstrb;               // mm_interconnect_0:dma_yuv_altera_axi_slave_wstrb -> dma_yuv:axi_slave_wstrb
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_wready;              // dma_yuv:axi_slave_wready -> mm_interconnect_0:dma_yuv_altera_axi_slave_wready
+	wire  [11:0] mm_interconnect_0_dma_yuv_altera_axi_slave_rid;                 // dma_yuv:axi_slave_rid -> mm_interconnect_0:dma_yuv_altera_axi_slave_rid
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_rready;              // mm_interconnect_0:dma_yuv_altera_axi_slave_rready -> dma_yuv:axi_slave_rready
+	wire   [3:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awlen;               // mm_interconnect_0:dma_yuv_altera_axi_slave_awlen -> dma_yuv:axi_slave_awlen
+	wire  [11:0] mm_interconnect_0_dma_yuv_altera_axi_slave_wid;                 // mm_interconnect_0:dma_yuv_altera_axi_slave_wid -> dma_yuv:axi_slave_wid
+	wire   [3:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arcache;             // mm_interconnect_0:dma_yuv_altera_axi_slave_arcache -> dma_yuv:axi_slave_arcache
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_wvalid;              // mm_interconnect_0:dma_yuv_altera_axi_slave_wvalid -> dma_yuv:axi_slave_wvalid
+	wire   [7:0] mm_interconnect_0_dma_yuv_altera_axi_slave_araddr;              // mm_interconnect_0:dma_yuv_altera_axi_slave_araddr -> dma_yuv:axi_slave_araddr
+	wire   [2:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arprot;              // mm_interconnect_0:dma_yuv_altera_axi_slave_arprot -> dma_yuv:axi_slave_arprot
+	wire   [2:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awprot;              // mm_interconnect_0:dma_yuv_altera_axi_slave_awprot -> dma_yuv:axi_slave_awprot
+	wire  [31:0] mm_interconnect_0_dma_yuv_altera_axi_slave_wdata;               // mm_interconnect_0:dma_yuv_altera_axi_slave_wdata -> dma_yuv:axi_slave_wdata
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_arvalid;             // mm_interconnect_0:dma_yuv_altera_axi_slave_arvalid -> dma_yuv:axi_slave_arvalid
+	wire   [3:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awcache;             // mm_interconnect_0:dma_yuv_altera_axi_slave_awcache -> dma_yuv:axi_slave_awcache
+	wire  [11:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arid;                // mm_interconnect_0:dma_yuv_altera_axi_slave_arid -> dma_yuv:axi_slave_arid
+	wire   [1:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arlock;              // mm_interconnect_0:dma_yuv_altera_axi_slave_arlock -> dma_yuv:axi_slave_arlock
+	wire   [1:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awlock;              // mm_interconnect_0:dma_yuv_altera_axi_slave_awlock -> dma_yuv:axi_slave_awlock
+	wire   [7:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awaddr;              // mm_interconnect_0:dma_yuv_altera_axi_slave_awaddr -> dma_yuv:axi_slave_awaddr
+	wire   [1:0] mm_interconnect_0_dma_yuv_altera_axi_slave_bresp;               // dma_yuv:axi_slave_bresp -> mm_interconnect_0:dma_yuv_altera_axi_slave_bresp
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_arready;             // dma_yuv:axi_slave_arready -> mm_interconnect_0:dma_yuv_altera_axi_slave_arready
+	wire  [31:0] mm_interconnect_0_dma_yuv_altera_axi_slave_rdata;               // dma_yuv:axi_slave_rdata -> mm_interconnect_0:dma_yuv_altera_axi_slave_rdata
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_awready;             // dma_yuv:axi_slave_awready -> mm_interconnect_0:dma_yuv_altera_axi_slave_awready
+	wire   [1:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arburst;             // mm_interconnect_0:dma_yuv_altera_axi_slave_arburst -> dma_yuv:axi_slave_arburst
+	wire   [2:0] mm_interconnect_0_dma_yuv_altera_axi_slave_arsize;              // mm_interconnect_0:dma_yuv_altera_axi_slave_arsize -> dma_yuv:axi_slave_arsize
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_bready;              // mm_interconnect_0:dma_yuv_altera_axi_slave_bready -> dma_yuv:axi_slave_bready
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_rlast;               // dma_yuv:axi_slave_rlast -> mm_interconnect_0:dma_yuv_altera_axi_slave_rlast
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_wlast;               // mm_interconnect_0:dma_yuv_altera_axi_slave_wlast -> dma_yuv:axi_slave_wlast
+	wire   [1:0] mm_interconnect_0_dma_yuv_altera_axi_slave_rresp;               // dma_yuv:axi_slave_rresp -> mm_interconnect_0:dma_yuv_altera_axi_slave_rresp
+	wire  [11:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awid;                // mm_interconnect_0:dma_yuv_altera_axi_slave_awid -> dma_yuv:axi_slave_awid
+	wire  [11:0] mm_interconnect_0_dma_yuv_altera_axi_slave_bid;                 // dma_yuv:axi_slave_bid -> mm_interconnect_0:dma_yuv_altera_axi_slave_bid
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_bvalid;              // dma_yuv:axi_slave_bvalid -> mm_interconnect_0:dma_yuv_altera_axi_slave_bvalid
+	wire   [2:0] mm_interconnect_0_dma_yuv_altera_axi_slave_awsize;              // mm_interconnect_0:dma_yuv_altera_axi_slave_awsize -> dma_yuv:axi_slave_awsize
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_awvalid;             // mm_interconnect_0:dma_yuv_altera_axi_slave_awvalid -> dma_yuv:axi_slave_awvalid
+	wire         mm_interconnect_0_dma_yuv_altera_axi_slave_rvalid;              // dma_yuv:axi_slave_rvalid -> mm_interconnect_0:dma_yuv_altera_axi_slave_rvalid
+	wire   [1:0] mm_interconnect_0_acc_config_altera_axi_slave_awburst;          // mm_interconnect_0:acc_config_altera_axi_slave_awburst -> acc_config:axi_slave_awburst
+	wire   [3:0] mm_interconnect_0_acc_config_altera_axi_slave_arlen;            // mm_interconnect_0:acc_config_altera_axi_slave_arlen -> acc_config:axi_slave_arlen
+	wire   [3:0] mm_interconnect_0_acc_config_altera_axi_slave_wstrb;            // mm_interconnect_0:acc_config_altera_axi_slave_wstrb -> acc_config:axi_slave_wstrb
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_wready;           // acc_config:axi_slave_wready -> mm_interconnect_0:acc_config_altera_axi_slave_wready
+	wire  [11:0] mm_interconnect_0_acc_config_altera_axi_slave_rid;              // acc_config:axi_slave_rid -> mm_interconnect_0:acc_config_altera_axi_slave_rid
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_rready;           // mm_interconnect_0:acc_config_altera_axi_slave_rready -> acc_config:axi_slave_rready
+	wire   [3:0] mm_interconnect_0_acc_config_altera_axi_slave_awlen;            // mm_interconnect_0:acc_config_altera_axi_slave_awlen -> acc_config:axi_slave_awlen
+	wire  [11:0] mm_interconnect_0_acc_config_altera_axi_slave_wid;              // mm_interconnect_0:acc_config_altera_axi_slave_wid -> acc_config:axi_slave_wid
+	wire   [3:0] mm_interconnect_0_acc_config_altera_axi_slave_arcache;          // mm_interconnect_0:acc_config_altera_axi_slave_arcache -> acc_config:axi_slave_arcache
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_wvalid;           // mm_interconnect_0:acc_config_altera_axi_slave_wvalid -> acc_config:axi_slave_wvalid
+	wire   [7:0] mm_interconnect_0_acc_config_altera_axi_slave_araddr;           // mm_interconnect_0:acc_config_altera_axi_slave_araddr -> acc_config:axi_slave_araddr
+	wire   [2:0] mm_interconnect_0_acc_config_altera_axi_slave_arprot;           // mm_interconnect_0:acc_config_altera_axi_slave_arprot -> acc_config:axi_slave_arprot
+	wire   [2:0] mm_interconnect_0_acc_config_altera_axi_slave_awprot;           // mm_interconnect_0:acc_config_altera_axi_slave_awprot -> acc_config:axi_slave_awprot
+	wire  [31:0] mm_interconnect_0_acc_config_altera_axi_slave_wdata;            // mm_interconnect_0:acc_config_altera_axi_slave_wdata -> acc_config:axi_slave_wdata
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_arvalid;          // mm_interconnect_0:acc_config_altera_axi_slave_arvalid -> acc_config:axi_slave_arvalid
+	wire   [3:0] mm_interconnect_0_acc_config_altera_axi_slave_awcache;          // mm_interconnect_0:acc_config_altera_axi_slave_awcache -> acc_config:axi_slave_awcache
+	wire  [11:0] mm_interconnect_0_acc_config_altera_axi_slave_arid;             // mm_interconnect_0:acc_config_altera_axi_slave_arid -> acc_config:axi_slave_arid
+	wire   [1:0] mm_interconnect_0_acc_config_altera_axi_slave_arlock;           // mm_interconnect_0:acc_config_altera_axi_slave_arlock -> acc_config:axi_slave_arlock
+	wire   [1:0] mm_interconnect_0_acc_config_altera_axi_slave_awlock;           // mm_interconnect_0:acc_config_altera_axi_slave_awlock -> acc_config:axi_slave_awlock
+	wire   [7:0] mm_interconnect_0_acc_config_altera_axi_slave_awaddr;           // mm_interconnect_0:acc_config_altera_axi_slave_awaddr -> acc_config:axi_slave_awaddr
+	wire   [1:0] mm_interconnect_0_acc_config_altera_axi_slave_bresp;            // acc_config:axi_slave_bresp -> mm_interconnect_0:acc_config_altera_axi_slave_bresp
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_arready;          // acc_config:axi_slave_arready -> mm_interconnect_0:acc_config_altera_axi_slave_arready
+	wire  [31:0] mm_interconnect_0_acc_config_altera_axi_slave_rdata;            // acc_config:axi_slave_rdata -> mm_interconnect_0:acc_config_altera_axi_slave_rdata
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_awready;          // acc_config:axi_slave_awready -> mm_interconnect_0:acc_config_altera_axi_slave_awready
+	wire   [1:0] mm_interconnect_0_acc_config_altera_axi_slave_arburst;          // mm_interconnect_0:acc_config_altera_axi_slave_arburst -> acc_config:axi_slave_arburst
+	wire   [2:0] mm_interconnect_0_acc_config_altera_axi_slave_arsize;           // mm_interconnect_0:acc_config_altera_axi_slave_arsize -> acc_config:axi_slave_arsize
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_bready;           // mm_interconnect_0:acc_config_altera_axi_slave_bready -> acc_config:axi_slave_bready
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_rlast;            // acc_config:axi_slave_rlast -> mm_interconnect_0:acc_config_altera_axi_slave_rlast
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_wlast;            // mm_interconnect_0:acc_config_altera_axi_slave_wlast -> acc_config:axi_slave_wlast
+	wire   [1:0] mm_interconnect_0_acc_config_altera_axi_slave_rresp;            // acc_config:axi_slave_rresp -> mm_interconnect_0:acc_config_altera_axi_slave_rresp
+	wire  [11:0] mm_interconnect_0_acc_config_altera_axi_slave_awid;             // mm_interconnect_0:acc_config_altera_axi_slave_awid -> acc_config:axi_slave_awid
+	wire  [11:0] mm_interconnect_0_acc_config_altera_axi_slave_bid;              // acc_config:axi_slave_bid -> mm_interconnect_0:acc_config_altera_axi_slave_bid
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_bvalid;           // acc_config:axi_slave_bvalid -> mm_interconnect_0:acc_config_altera_axi_slave_bvalid
+	wire   [2:0] mm_interconnect_0_acc_config_altera_axi_slave_awsize;           // mm_interconnect_0:acc_config_altera_axi_slave_awsize -> acc_config:axi_slave_awsize
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_awvalid;          // mm_interconnect_0:acc_config_altera_axi_slave_awvalid -> acc_config:axi_slave_awvalid
+	wire         mm_interconnect_0_acc_config_altera_axi_slave_rvalid;           // acc_config:axi_slave_rvalid -> mm_interconnect_0:acc_config_altera_axi_slave_rvalid
+	wire         mm_interconnect_0_sad_result_low_s1_chipselect;                 // mm_interconnect_0:sad_result_low_s1_chipselect -> sad_result_low:chipselect
+	wire  [31:0] mm_interconnect_0_sad_result_low_s1_readdata;                   // sad_result_low:readdata -> mm_interconnect_0:sad_result_low_s1_readdata
+	wire   [1:0] mm_interconnect_0_sad_result_low_s1_address;                    // mm_interconnect_0:sad_result_low_s1_address -> sad_result_low:address
+	wire         mm_interconnect_0_sad_result_low_s1_write;                      // mm_interconnect_0:sad_result_low_s1_write -> sad_result_low:write_n
+	wire  [31:0] mm_interconnect_0_sad_result_low_s1_writedata;                  // mm_interconnect_0:sad_result_low_s1_writedata -> sad_result_low:writedata
+	wire         mm_interconnect_0_sad_result_high_s1_chipselect;                // mm_interconnect_0:sad_result_high_s1_chipselect -> sad_result_high:chipselect
+	wire  [31:0] mm_interconnect_0_sad_result_high_s1_readdata;                  // sad_result_high:readdata -> mm_interconnect_0:sad_result_high_s1_readdata
+	wire   [1:0] mm_interconnect_0_sad_result_high_s1_address;                   // mm_interconnect_0:sad_result_high_s1_address -> sad_result_high:address
+	wire         mm_interconnect_0_sad_result_high_s1_write;                     // mm_interconnect_0:sad_result_high_s1_write -> sad_result_high:write_n
+	wire  [31:0] mm_interconnect_0_sad_result_high_s1_writedata;                 // mm_interconnect_0:sad_result_high_s1_writedata -> sad_result_high:writedata
+	wire         mm_interconnect_0_lambda_loaded_s1_chipselect;                  // mm_interconnect_0:lambda_loaded_s1_chipselect -> lambda_loaded:chipselect
+	wire  [31:0] mm_interconnect_0_lambda_loaded_s1_readdata;                    // lambda_loaded:readdata -> mm_interconnect_0:lambda_loaded_s1_readdata
+	wire   [1:0] mm_interconnect_0_lambda_loaded_s1_address;                     // mm_interconnect_0:lambda_loaded_s1_address -> lambda_loaded:address
+	wire         mm_interconnect_0_lambda_loaded_s1_write;                       // mm_interconnect_0:lambda_loaded_s1_write -> lambda_loaded:write_n
+	wire  [31:0] mm_interconnect_0_lambda_loaded_s1_writedata;                   // mm_interconnect_0:lambda_loaded_s1_writedata -> lambda_loaded:writedata
+	wire         mm_interconnect_0_lcu_loaded_s1_chipselect;                     // mm_interconnect_0:lcu_loaded_s1_chipselect -> lcu_loaded:chipselect
+	wire  [31:0] mm_interconnect_0_lcu_loaded_s1_readdata;                       // lcu_loaded:readdata -> mm_interconnect_0:lcu_loaded_s1_readdata
+	wire   [1:0] mm_interconnect_0_lcu_loaded_s1_address;                        // mm_interconnect_0:lcu_loaded_s1_address -> lcu_loaded:address
+	wire         mm_interconnect_0_lcu_loaded_s1_write;                          // mm_interconnect_0:lcu_loaded_s1_write -> lcu_loaded:write_n
+	wire  [31:0] mm_interconnect_0_lcu_loaded_s1_writedata;                      // mm_interconnect_0:lcu_loaded_s1_writedata -> lcu_loaded:writedata
+	wire         mm_interconnect_0_result_ready_s1_chipselect;                   // mm_interconnect_0:result_ready_s1_chipselect -> result_ready:chipselect
+	wire  [31:0] mm_interconnect_0_result_ready_s1_readdata;                     // result_ready:readdata -> mm_interconnect_0:result_ready_s1_readdata
+	wire   [1:0] mm_interconnect_0_result_ready_s1_address;                      // mm_interconnect_0:result_ready_s1_address -> result_ready:address
+	wire         mm_interconnect_0_result_ready_s1_write;                        // mm_interconnect_0:result_ready_s1_write -> result_ready:write_n
+	wire  [31:0] mm_interconnect_0_result_ready_s1_writedata;                    // mm_interconnect_0:result_ready_s1_writedata -> result_ready:writedata
+	wire         mm_interconnect_0_configure_camera_s1_chipselect;               // mm_interconnect_0:configure_camera_s1_chipselect -> configure_camera:chipselect
+	wire  [31:0] mm_interconnect_0_configure_camera_s1_readdata;                 // configure_camera:readdata -> mm_interconnect_0:configure_camera_s1_readdata
+	wire   [1:0] mm_interconnect_0_configure_camera_s1_address;                  // mm_interconnect_0:configure_camera_s1_address -> configure_camera:address
+	wire         mm_interconnect_0_configure_camera_s1_write;                    // mm_interconnect_0:configure_camera_s1_write -> configure_camera:write_n
+	wire  [31:0] mm_interconnect_0_configure_camera_s1_writedata;                // mm_interconnect_0:configure_camera_s1_writedata -> configure_camera:writedata
+	wire         mm_interconnect_0_yuv_ctrl_s1_chipselect;                       // mm_interconnect_0:yuv_ctrl_s1_chipselect -> yuv_ctrl:chipselect
+	wire  [31:0] mm_interconnect_0_yuv_ctrl_s1_readdata;                         // yuv_ctrl:readdata -> mm_interconnect_0:yuv_ctrl_s1_readdata
+	wire   [1:0] mm_interconnect_0_yuv_ctrl_s1_address;                          // mm_interconnect_0:yuv_ctrl_s1_address -> yuv_ctrl:address
+	wire         mm_interconnect_0_yuv_ctrl_s1_write;                            // mm_interconnect_0:yuv_ctrl_s1_write -> yuv_ctrl:write_n
+	wire  [31:0] mm_interconnect_0_yuv_ctrl_s1_writedata;                        // mm_interconnect_0:yuv_ctrl_s1_writedata -> yuv_ctrl:writedata
+	wire         mm_interconnect_0_yuv_status_s1_chipselect;                     // mm_interconnect_0:yuv_status_s1_chipselect -> yuv_status:chipselect
+	wire  [31:0] mm_interconnect_0_yuv_status_s1_readdata;                       // yuv_status:readdata -> mm_interconnect_0:yuv_status_s1_readdata
+	wire   [1:0] mm_interconnect_0_yuv_status_s1_address;                        // mm_interconnect_0:yuv_status_s1_address -> yuv_status:address
+	wire         mm_interconnect_0_yuv_status_s1_write;                          // mm_interconnect_0:yuv_status_s1_write -> yuv_status:write_n
+	wire  [31:0] mm_interconnect_0_yuv_status_s1_writedata;                      // mm_interconnect_0:yuv_status_s1_writedata -> yuv_status:writedata
+	wire         mm_interconnect_0_camera_control_oc_s1_chipselect;              // mm_interconnect_0:camera_control_oc_s1_chipselect -> camera_control_oc:chipselect
+	wire  [15:0] mm_interconnect_0_camera_control_oc_s1_readdata;                // camera_control_oc:readdata -> mm_interconnect_0:camera_control_oc_s1_readdata
+	wire   [5:0] mm_interconnect_0_camera_control_oc_s1_address;                 // mm_interconnect_0:camera_control_oc_s1_address -> camera_control_oc:address
+	wire   [1:0] mm_interconnect_0_camera_control_oc_s1_byteenable;              // mm_interconnect_0:camera_control_oc_s1_byteenable -> camera_control_oc:byteenable
+	wire         mm_interconnect_0_camera_control_oc_s1_write;                   // mm_interconnect_0:camera_control_oc_s1_write -> camera_control_oc:write
+	wire  [15:0] mm_interconnect_0_camera_control_oc_s1_writedata;               // mm_interconnect_0:camera_control_oc_s1_writedata -> camera_control_oc:writedata
+	wire         mm_interconnect_0_camera_control_oc_s1_clken;                   // mm_interconnect_0:camera_control_oc_s1_clken -> camera_control_oc:clken
 	wire  [31:0] hps_0_f2h_irq0_irq;                                             // irq_mapper:sender_irq -> hps_0:f2h_irq_p0
 	wire         irq_mapper_001_receiver0_irq;                                   // result_ready:irq -> irq_mapper_001:receiver0_irq
 	wire         irq_mapper_001_receiver1_irq;                                   // lcu_loaded:irq -> irq_mapper_001:receiver1_irq
 	wire         irq_mapper_001_receiver2_irq;                                   // lambda_loaded:irq -> irq_mapper_001:receiver2_irq
 	wire         irq_mapper_001_receiver3_irq;                                   // yuv_status:irq -> irq_mapper_001:receiver3_irq
 	wire  [31:0] hps_0_f2h_irq1_irq;                                             // irq_mapper_001:sender_irq -> hps_0:f2h_irq_p1
-	wire         rst_controller_reset_out_reset;                                 // rst_controller:reset_out -> [acc_config:rst_n, axi_dma_orig_block:rst_n, axi_dma_unfiltered1:rst_n, axi_dma_unfiltered2:rst_n, camera_control_oc:reset, camera_control_oc:reset2, configure_camera:reset_n, dma_yuv:rst_n, lambda_loaded:reset_n, lcu_loaded:reset_n, mm_interconnect_1:axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_2:axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_3:axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset, result_ready:reset_n, sad_result_high:reset_n, sad_result_low:reset_n, yuv_ctrl:reset_n, yuv_status:reset_n]
-	wire         rst_controller_001_reset_out_reset;                             // rst_controller_001:reset_out -> [mm_interconnect_1:hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_3:hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset]
+	wire         rst_controller_reset_out_reset;                                 // rst_controller:reset_out -> [acc_config:rst_n, axi_dma_orig_block:rst_n, axi_dma_unfiltered1:rst_n, axi_dma_unfiltered2:rst_n, camera_control_oc:reset, camera_control_oc:reset2, configure_camera:reset_n, dma_yuv:rst_n, lambda_loaded:reset_n, lcu_loaded:reset_n, mm_interconnect_0:axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset, result_ready:reset_n, sad_result_high:reset_n, sad_result_low:reset_n, yuv_ctrl:reset_n, yuv_status:reset_n]
+	wire         rst_controller_001_reset_out_reset;                             // rst_controller_001:reset_out -> mm_interconnect_0:hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset
 
 	axi3_to_channel #(
 		.slave_data_width_g    (32),
@@ -628,42 +520,42 @@ module Kvazaar_QSYS (
 		.channel_width_g       (32)
 	) acc_config (
 		.clk               (clk_clk),                                               //            clock.clk
-		.axi_slave_awid    (mm_interconnect_3_acc_config_altera_axi_slave_awid),    // altera_axi_slave.awid
-		.axi_slave_awaddr  (mm_interconnect_3_acc_config_altera_axi_slave_awaddr),  //                 .awaddr
-		.axi_slave_awlen   (mm_interconnect_3_acc_config_altera_axi_slave_awlen),   //                 .awlen
-		.axi_slave_awsize  (mm_interconnect_3_acc_config_altera_axi_slave_awsize),  //                 .awsize
-		.axi_slave_awburst (mm_interconnect_3_acc_config_altera_axi_slave_awburst), //                 .awburst
-		.axi_slave_awlock  (mm_interconnect_3_acc_config_altera_axi_slave_awlock),  //                 .awlock
-		.axi_slave_awcache (mm_interconnect_3_acc_config_altera_axi_slave_awcache), //                 .awcache
-		.axi_slave_awprot  (mm_interconnect_3_acc_config_altera_axi_slave_awprot),  //                 .awprot
-		.axi_slave_awvalid (mm_interconnect_3_acc_config_altera_axi_slave_awvalid), //                 .awvalid
-		.axi_slave_awready (mm_interconnect_3_acc_config_altera_axi_slave_awready), //                 .awready
-		.axi_slave_wid     (mm_interconnect_3_acc_config_altera_axi_slave_wid),     //                 .wid
-		.axi_slave_wdata   (mm_interconnect_3_acc_config_altera_axi_slave_wdata),   //                 .wdata
-		.axi_slave_wstrb   (mm_interconnect_3_acc_config_altera_axi_slave_wstrb),   //                 .wstrb
-		.axi_slave_wlast   (mm_interconnect_3_acc_config_altera_axi_slave_wlast),   //                 .wlast
-		.axi_slave_wvalid  (mm_interconnect_3_acc_config_altera_axi_slave_wvalid),  //                 .wvalid
-		.axi_slave_wready  (mm_interconnect_3_acc_config_altera_axi_slave_wready),  //                 .wready
-		.axi_slave_bid     (mm_interconnect_3_acc_config_altera_axi_slave_bid),     //                 .bid
-		.axi_slave_bresp   (mm_interconnect_3_acc_config_altera_axi_slave_bresp),   //                 .bresp
-		.axi_slave_bvalid  (mm_interconnect_3_acc_config_altera_axi_slave_bvalid),  //                 .bvalid
-		.axi_slave_bready  (mm_interconnect_3_acc_config_altera_axi_slave_bready),  //                 .bready
-		.axi_slave_arid    (mm_interconnect_3_acc_config_altera_axi_slave_arid),    //                 .arid
-		.axi_slave_araddr  (mm_interconnect_3_acc_config_altera_axi_slave_araddr),  //                 .araddr
-		.axi_slave_arlen   (mm_interconnect_3_acc_config_altera_axi_slave_arlen),   //                 .arlen
-		.axi_slave_arsize  (mm_interconnect_3_acc_config_altera_axi_slave_arsize),  //                 .arsize
-		.axi_slave_arburst (mm_interconnect_3_acc_config_altera_axi_slave_arburst), //                 .arburst
-		.axi_slave_arlock  (mm_interconnect_3_acc_config_altera_axi_slave_arlock),  //                 .arlock
-		.axi_slave_arcache (mm_interconnect_3_acc_config_altera_axi_slave_arcache), //                 .arcache
-		.axi_slave_arprot  (mm_interconnect_3_acc_config_altera_axi_slave_arprot),  //                 .arprot
-		.axi_slave_arvalid (mm_interconnect_3_acc_config_altera_axi_slave_arvalid), //                 .arvalid
-		.axi_slave_rid     (mm_interconnect_3_acc_config_altera_axi_slave_rid),     //                 .rid
-		.axi_slave_rdata   (mm_interconnect_3_acc_config_altera_axi_slave_rdata),   //                 .rdata
-		.axi_slave_rresp   (mm_interconnect_3_acc_config_altera_axi_slave_rresp),   //                 .rresp
-		.axi_slave_rlast   (mm_interconnect_3_acc_config_altera_axi_slave_rlast),   //                 .rlast
-		.axi_slave_rvalid  (mm_interconnect_3_acc_config_altera_axi_slave_rvalid),  //                 .rvalid
-		.axi_slave_rready  (mm_interconnect_3_acc_config_altera_axi_slave_rready),  //                 .rready
-		.axi_slave_arready (mm_interconnect_3_acc_config_altera_axi_slave_arready), //                 .arready
+		.axi_slave_awid    (mm_interconnect_0_acc_config_altera_axi_slave_awid),    // altera_axi_slave.awid
+		.axi_slave_awaddr  (mm_interconnect_0_acc_config_altera_axi_slave_awaddr),  //                 .awaddr
+		.axi_slave_awlen   (mm_interconnect_0_acc_config_altera_axi_slave_awlen),   //                 .awlen
+		.axi_slave_awsize  (mm_interconnect_0_acc_config_altera_axi_slave_awsize),  //                 .awsize
+		.axi_slave_awburst (mm_interconnect_0_acc_config_altera_axi_slave_awburst), //                 .awburst
+		.axi_slave_awlock  (mm_interconnect_0_acc_config_altera_axi_slave_awlock),  //                 .awlock
+		.axi_slave_awcache (mm_interconnect_0_acc_config_altera_axi_slave_awcache), //                 .awcache
+		.axi_slave_awprot  (mm_interconnect_0_acc_config_altera_axi_slave_awprot),  //                 .awprot
+		.axi_slave_awvalid (mm_interconnect_0_acc_config_altera_axi_slave_awvalid), //                 .awvalid
+		.axi_slave_awready (mm_interconnect_0_acc_config_altera_axi_slave_awready), //                 .awready
+		.axi_slave_wid     (mm_interconnect_0_acc_config_altera_axi_slave_wid),     //                 .wid
+		.axi_slave_wdata   (mm_interconnect_0_acc_config_altera_axi_slave_wdata),   //                 .wdata
+		.axi_slave_wstrb   (mm_interconnect_0_acc_config_altera_axi_slave_wstrb),   //                 .wstrb
+		.axi_slave_wlast   (mm_interconnect_0_acc_config_altera_axi_slave_wlast),   //                 .wlast
+		.axi_slave_wvalid  (mm_interconnect_0_acc_config_altera_axi_slave_wvalid),  //                 .wvalid
+		.axi_slave_wready  (mm_interconnect_0_acc_config_altera_axi_slave_wready),  //                 .wready
+		.axi_slave_bid     (mm_interconnect_0_acc_config_altera_axi_slave_bid),     //                 .bid
+		.axi_slave_bresp   (mm_interconnect_0_acc_config_altera_axi_slave_bresp),   //                 .bresp
+		.axi_slave_bvalid  (mm_interconnect_0_acc_config_altera_axi_slave_bvalid),  //                 .bvalid
+		.axi_slave_bready  (mm_interconnect_0_acc_config_altera_axi_slave_bready),  //                 .bready
+		.axi_slave_arid    (mm_interconnect_0_acc_config_altera_axi_slave_arid),    //                 .arid
+		.axi_slave_araddr  (mm_interconnect_0_acc_config_altera_axi_slave_araddr),  //                 .araddr
+		.axi_slave_arlen   (mm_interconnect_0_acc_config_altera_axi_slave_arlen),   //                 .arlen
+		.axi_slave_arsize  (mm_interconnect_0_acc_config_altera_axi_slave_arsize),  //                 .arsize
+		.axi_slave_arburst (mm_interconnect_0_acc_config_altera_axi_slave_arburst), //                 .arburst
+		.axi_slave_arlock  (mm_interconnect_0_acc_config_altera_axi_slave_arlock),  //                 .arlock
+		.axi_slave_arcache (mm_interconnect_0_acc_config_altera_axi_slave_arcache), //                 .arcache
+		.axi_slave_arprot  (mm_interconnect_0_acc_config_altera_axi_slave_arprot),  //                 .arprot
+		.axi_slave_arvalid (mm_interconnect_0_acc_config_altera_axi_slave_arvalid), //                 .arvalid
+		.axi_slave_rid     (mm_interconnect_0_acc_config_altera_axi_slave_rid),     //                 .rid
+		.axi_slave_rdata   (mm_interconnect_0_acc_config_altera_axi_slave_rdata),   //                 .rdata
+		.axi_slave_rresp   (mm_interconnect_0_acc_config_altera_axi_slave_rresp),   //                 .rresp
+		.axi_slave_rlast   (mm_interconnect_0_acc_config_altera_axi_slave_rlast),   //                 .rlast
+		.axi_slave_rvalid  (mm_interconnect_0_acc_config_altera_axi_slave_rvalid),  //                 .rvalid
+		.axi_slave_rready  (mm_interconnect_0_acc_config_altera_axi_slave_rready),  //                 .rready
+		.axi_slave_arready (mm_interconnect_0_acc_config_altera_axi_slave_arready), //                 .arready
 		.rst_n             (~rst_controller_reset_out_reset),                       //       reset_sink.reset_n
 		.channel_vz        (acc_config_channel_vz),                                 //          channel.export
 		.channel_data      (acc_config_channel_data),                               //                 .export
@@ -681,80 +573,80 @@ module Kvazaar_QSYS (
 		.fifo_size_g            (32),
 		.channel_width_g        (32)
 	) axi_dma_orig_block (
-		.axi_slave_awid     (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awid),    //  altera_axi_slave.awid
-		.axi_slave_awaddr   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awaddr),  //                  .awaddr
-		.axi_slave_awlen    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awlen),   //                  .awlen
-		.axi_slave_awsize   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awsize),  //                  .awsize
-		.axi_slave_awburst  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awburst), //                  .awburst
-		.axi_slave_awlock   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awlock),  //                  .awlock
-		.axi_slave_awcache  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awcache), //                  .awcache
-		.axi_slave_awvalid  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awvalid), //                  .awvalid
-		.axi_slave_awready  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awready), //                  .awready
-		.axi_slave_wid      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wid),     //                  .wid
-		.axi_slave_wdata    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wdata),   //                  .wdata
-		.axi_slave_wstrb    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wstrb),   //                  .wstrb
-		.axi_slave_wlast    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wlast),   //                  .wlast
-		.axi_slave_wvalid   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wvalid),  //                  .wvalid
-		.axi_slave_wready   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wready),  //                  .wready
-		.axi_slave_bid      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bid),     //                  .bid
-		.axi_slave_bresp    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bresp),   //                  .bresp
-		.axi_slave_bvalid   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bvalid),  //                  .bvalid
-		.axi_slave_bready   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bready),  //                  .bready
-		.axi_slave_arid     (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arid),    //                  .arid
-		.axi_slave_araddr   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_araddr),  //                  .araddr
-		.axi_slave_arlen    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arlen),   //                  .arlen
-		.axi_slave_arsize   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arsize),  //                  .arsize
-		.axi_slave_arburst  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arburst), //                  .arburst
-		.axi_slave_arlock   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arlock),  //                  .arlock
-		.axi_slave_arcache  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arcache), //                  .arcache
-		.axi_slave_arprot   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arprot),  //                  .arprot
-		.axi_slave_arvalid  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arvalid), //                  .arvalid
-		.axi_slave_arready  (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arready), //                  .arready
-		.axi_slave_rid      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rid),     //                  .rid
-		.axi_slave_rdata    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rdata),   //                  .rdata
-		.axi_slave_rresp    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rresp),   //                  .rresp
-		.axi_slave_rlast    (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rlast),   //                  .rlast
-		.axi_slave_rvalid   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rvalid),  //                  .rvalid
-		.axi_slave_rready   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rready),  //                  .rready
-		.axi_slave_awprot   (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awprot),  //                  .awprot
+		.axi_slave_awid     (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awid),    //  altera_axi_slave.awid
+		.axi_slave_awaddr   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awaddr),  //                  .awaddr
+		.axi_slave_awlen    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awlen),   //                  .awlen
+		.axi_slave_awsize   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awsize),  //                  .awsize
+		.axi_slave_awburst  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awburst), //                  .awburst
+		.axi_slave_awlock   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awlock),  //                  .awlock
+		.axi_slave_awcache  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awcache), //                  .awcache
+		.axi_slave_awvalid  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awvalid), //                  .awvalid
+		.axi_slave_awready  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awready), //                  .awready
+		.axi_slave_wid      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wid),     //                  .wid
+		.axi_slave_wdata    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wdata),   //                  .wdata
+		.axi_slave_wstrb    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wstrb),   //                  .wstrb
+		.axi_slave_wlast    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wlast),   //                  .wlast
+		.axi_slave_wvalid   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wvalid),  //                  .wvalid
+		.axi_slave_wready   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wready),  //                  .wready
+		.axi_slave_bid      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bid),     //                  .bid
+		.axi_slave_bresp    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bresp),   //                  .bresp
+		.axi_slave_bvalid   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bvalid),  //                  .bvalid
+		.axi_slave_bready   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bready),  //                  .bready
+		.axi_slave_arid     (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arid),    //                  .arid
+		.axi_slave_araddr   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_araddr),  //                  .araddr
+		.axi_slave_arlen    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arlen),   //                  .arlen
+		.axi_slave_arsize   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arsize),  //                  .arsize
+		.axi_slave_arburst  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arburst), //                  .arburst
+		.axi_slave_arlock   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arlock),  //                  .arlock
+		.axi_slave_arcache  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arcache), //                  .arcache
+		.axi_slave_arprot   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arprot),  //                  .arprot
+		.axi_slave_arvalid  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arvalid), //                  .arvalid
+		.axi_slave_arready  (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arready), //                  .arready
+		.axi_slave_rid      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rid),     //                  .rid
+		.axi_slave_rdata    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rdata),   //                  .rdata
+		.axi_slave_rresp    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rresp),   //                  .rresp
+		.axi_slave_rlast    (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rlast),   //                  .rlast
+		.axi_slave_rvalid   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rvalid),  //                  .rvalid
+		.axi_slave_rready   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rready),  //                  .rready
+		.axi_slave_awprot   (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awprot),  //                  .awprot
 		.rst_n              (~rst_controller_reset_out_reset),                               //        reset_sink.reset_n
 		.clk                (clk_clk),                                                       //        clock_sink.clk
-		.axi_master_awaddr  (axi_dma_orig_block_altera_axi_master_awaddr),                   // altera_axi_master.awaddr
-		.axi_master_awlen   (axi_dma_orig_block_altera_axi_master_awlen),                    //                  .awlen
-		.axi_master_awburst (axi_dma_orig_block_altera_axi_master_awburst),                  //                  .awburst
-		.axi_master_awlock  (axi_dma_orig_block_altera_axi_master_awlock),                   //                  .awlock
-		.axi_master_awcache (axi_dma_orig_block_altera_axi_master_awcache),                  //                  .awcache
-		.axi_master_awprot  (axi_dma_orig_block_altera_axi_master_awprot),                   //                  .awprot
-		.axi_master_awvalid (axi_dma_orig_block_altera_axi_master_awvalid),                  //                  .awvalid
-		.axi_master_awready (axi_dma_orig_block_altera_axi_master_awready),                  //                  .awready
-		.axi_master_wid     (axi_dma_orig_block_altera_axi_master_wid),                      //                  .wid
-		.axi_master_wdata   (axi_dma_orig_block_altera_axi_master_wdata),                    //                  .wdata
-		.axi_master_wstrb   (axi_dma_orig_block_altera_axi_master_wstrb),                    //                  .wstrb
-		.axi_master_wlast   (axi_dma_orig_block_altera_axi_master_wlast),                    //                  .wlast
-		.axi_master_wvalid  (axi_dma_orig_block_altera_axi_master_wvalid),                   //                  .wvalid
-		.axi_master_wready  (axi_dma_orig_block_altera_axi_master_wready),                   //                  .wready
-		.axi_master_bid     (axi_dma_orig_block_altera_axi_master_bid),                      //                  .bid
-		.axi_master_bresp   (axi_dma_orig_block_altera_axi_master_bresp),                    //                  .bresp
-		.axi_master_bvalid  (axi_dma_orig_block_altera_axi_master_bvalid),                   //                  .bvalid
-		.axi_master_bready  (axi_dma_orig_block_altera_axi_master_bready),                   //                  .bready
-		.axi_master_arid    (axi_dma_orig_block_altera_axi_master_arid),                     //                  .arid
-		.axi_master_araddr  (axi_dma_orig_block_altera_axi_master_araddr),                   //                  .araddr
-		.axi_master_arlen   (axi_dma_orig_block_altera_axi_master_arlen),                    //                  .arlen
-		.axi_master_arsize  (axi_dma_orig_block_altera_axi_master_arsize),                   //                  .arsize
-		.axi_master_arburst (axi_dma_orig_block_altera_axi_master_arburst),                  //                  .arburst
-		.axi_master_arlock  (axi_dma_orig_block_altera_axi_master_arlock),                   //                  .arlock
-		.axi_master_arcache (axi_dma_orig_block_altera_axi_master_arcache),                  //                  .arcache
-		.axi_master_arprot  (axi_dma_orig_block_altera_axi_master_arprot),                   //                  .arprot
-		.axi_master_arvalid (axi_dma_orig_block_altera_axi_master_arvalid),                  //                  .arvalid
-		.axi_master_arready (axi_dma_orig_block_altera_axi_master_arready),                  //                  .arready
-		.axi_master_rid     (axi_dma_orig_block_altera_axi_master_rid),                      //                  .rid
-		.axi_master_rdata   (axi_dma_orig_block_altera_axi_master_rdata),                    //                  .rdata
-		.axi_master_rresp   (axi_dma_orig_block_altera_axi_master_rresp),                    //                  .rresp
-		.axi_master_rlast   (axi_dma_orig_block_altera_axi_master_rlast),                    //                  .rlast
-		.axi_master_rvalid  (axi_dma_orig_block_altera_axi_master_rvalid),                   //                  .rvalid
-		.axi_master_rready  (axi_dma_orig_block_altera_axi_master_rready),                   //                  .rready
-		.axi_master_awid    (axi_dma_orig_block_altera_axi_master_awid),                     //                  .awid
-		.axi_master_awsize  (axi_dma_orig_block_altera_axi_master_awsize),                   //                  .awsize
+		.axi_master_awaddr  (),                                                              // altera_axi_master.awaddr
+		.axi_master_awlen   (),                                                              //                  .awlen
+		.axi_master_awburst (),                                                              //                  .awburst
+		.axi_master_awlock  (),                                                              //                  .awlock
+		.axi_master_awcache (),                                                              //                  .awcache
+		.axi_master_awprot  (),                                                              //                  .awprot
+		.axi_master_awvalid (),                                                              //                  .awvalid
+		.axi_master_awready (),                                                              //                  .awready
+		.axi_master_wid     (),                                                              //                  .wid
+		.axi_master_wdata   (),                                                              //                  .wdata
+		.axi_master_wstrb   (),                                                              //                  .wstrb
+		.axi_master_wlast   (),                                                              //                  .wlast
+		.axi_master_wvalid  (),                                                              //                  .wvalid
+		.axi_master_wready  (),                                                              //                  .wready
+		.axi_master_bid     (),                                                              //                  .bid
+		.axi_master_bresp   (),                                                              //                  .bresp
+		.axi_master_bvalid  (),                                                              //                  .bvalid
+		.axi_master_bready  (),                                                              //                  .bready
+		.axi_master_arid    (),                                                              //                  .arid
+		.axi_master_araddr  (),                                                              //                  .araddr
+		.axi_master_arlen   (),                                                              //                  .arlen
+		.axi_master_arsize  (),                                                              //                  .arsize
+		.axi_master_arburst (),                                                              //                  .arburst
+		.axi_master_arlock  (),                                                              //                  .arlock
+		.axi_master_arcache (),                                                              //                  .arcache
+		.axi_master_arprot  (),                                                              //                  .arprot
+		.axi_master_arvalid (),                                                              //                  .arvalid
+		.axi_master_arready (),                                                              //                  .arready
+		.axi_master_rid     (),                                                              //                  .rid
+		.axi_master_rdata   (),                                                              //                  .rdata
+		.axi_master_rresp   (),                                                              //                  .rresp
+		.axi_master_rlast   (),                                                              //                  .rlast
+		.axi_master_rvalid  (),                                                              //                  .rvalid
+		.axi_master_rready  (),                                                              //                  .rready
+		.axi_master_awid    (),                                                              //                  .awid
+		.axi_master_awsize  (),                                                              //                  .awsize
 		.channel_lz         (axi_dma_orig_block_channel_lz_export),                          //        channel_lz.export
 		.channel_vz         (axi_dma_orig_block_channel_vz_export),                          //        channel_vz.export
 		.channel_data       (axi_dma_orig_block_channel_data_export),                        //      channel_data.export
@@ -772,80 +664,80 @@ module Kvazaar_QSYS (
 		.fifo_size_g            (8),
 		.channel_width_g        (16)
 	) axi_dma_unfiltered1 (
-		.axi_slave_awid     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awid),    //  altera_axi_slave.awid
-		.axi_slave_awaddr   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awaddr),  //                  .awaddr
-		.axi_slave_awlen    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awlen),   //                  .awlen
-		.axi_slave_awsize   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awsize),  //                  .awsize
-		.axi_slave_awburst  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awburst), //                  .awburst
-		.axi_slave_awlock   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awlock),  //                  .awlock
-		.axi_slave_awcache  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awcache), //                  .awcache
-		.axi_slave_awvalid  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awvalid), //                  .awvalid
-		.axi_slave_awready  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awready), //                  .awready
-		.axi_slave_wid      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wid),     //                  .wid
-		.axi_slave_wdata    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wdata),   //                  .wdata
-		.axi_slave_wstrb    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wstrb),   //                  .wstrb
-		.axi_slave_wlast    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wlast),   //                  .wlast
-		.axi_slave_wvalid   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wvalid),  //                  .wvalid
-		.axi_slave_wready   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wready),  //                  .wready
-		.axi_slave_bid      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bid),     //                  .bid
-		.axi_slave_bresp    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bresp),   //                  .bresp
-		.axi_slave_bvalid   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bvalid),  //                  .bvalid
-		.axi_slave_bready   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bready),  //                  .bready
-		.axi_slave_arid     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arid),    //                  .arid
-		.axi_slave_araddr   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_araddr),  //                  .araddr
-		.axi_slave_arlen    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arlen),   //                  .arlen
-		.axi_slave_arsize   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arsize),  //                  .arsize
-		.axi_slave_arburst  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arburst), //                  .arburst
-		.axi_slave_arlock   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arlock),  //                  .arlock
-		.axi_slave_arcache  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arcache), //                  .arcache
-		.axi_slave_arprot   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arprot),  //                  .arprot
-		.axi_slave_arvalid  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arvalid), //                  .arvalid
-		.axi_slave_arready  (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arready), //                  .arready
-		.axi_slave_rid      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rid),     //                  .rid
-		.axi_slave_rdata    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rdata),   //                  .rdata
-		.axi_slave_rresp    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rresp),   //                  .rresp
-		.axi_slave_rlast    (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rlast),   //                  .rlast
-		.axi_slave_rvalid   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rvalid),  //                  .rvalid
-		.axi_slave_rready   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rready),  //                  .rready
-		.axi_slave_awprot   (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awprot),  //                  .awprot
+		.axi_slave_awid     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awid),    //  altera_axi_slave.awid
+		.axi_slave_awaddr   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awaddr),  //                  .awaddr
+		.axi_slave_awlen    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awlen),   //                  .awlen
+		.axi_slave_awsize   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awsize),  //                  .awsize
+		.axi_slave_awburst  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awburst), //                  .awburst
+		.axi_slave_awlock   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awlock),  //                  .awlock
+		.axi_slave_awcache  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awcache), //                  .awcache
+		.axi_slave_awvalid  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awvalid), //                  .awvalid
+		.axi_slave_awready  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awready), //                  .awready
+		.axi_slave_wid      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wid),     //                  .wid
+		.axi_slave_wdata    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wdata),   //                  .wdata
+		.axi_slave_wstrb    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wstrb),   //                  .wstrb
+		.axi_slave_wlast    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wlast),   //                  .wlast
+		.axi_slave_wvalid   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wvalid),  //                  .wvalid
+		.axi_slave_wready   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wready),  //                  .wready
+		.axi_slave_bid      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bid),     //                  .bid
+		.axi_slave_bresp    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bresp),   //                  .bresp
+		.axi_slave_bvalid   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bvalid),  //                  .bvalid
+		.axi_slave_bready   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bready),  //                  .bready
+		.axi_slave_arid     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arid),    //                  .arid
+		.axi_slave_araddr   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_araddr),  //                  .araddr
+		.axi_slave_arlen    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arlen),   //                  .arlen
+		.axi_slave_arsize   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arsize),  //                  .arsize
+		.axi_slave_arburst  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arburst), //                  .arburst
+		.axi_slave_arlock   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arlock),  //                  .arlock
+		.axi_slave_arcache  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arcache), //                  .arcache
+		.axi_slave_arprot   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arprot),  //                  .arprot
+		.axi_slave_arvalid  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arvalid), //                  .arvalid
+		.axi_slave_arready  (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arready), //                  .arready
+		.axi_slave_rid      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rid),     //                  .rid
+		.axi_slave_rdata    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rdata),   //                  .rdata
+		.axi_slave_rresp    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rresp),   //                  .rresp
+		.axi_slave_rlast    (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rlast),   //                  .rlast
+		.axi_slave_rvalid   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rvalid),  //                  .rvalid
+		.axi_slave_rready   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rready),  //                  .rready
+		.axi_slave_awprot   (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awprot),  //                  .awprot
 		.rst_n              (~rst_controller_reset_out_reset),                                //        reset_sink.reset_n
 		.clk                (clk_clk),                                                        //        clock_sink.clk
-		.axi_master_awaddr  (axi_dma_unfiltered1_altera_axi_master_awaddr),                   // altera_axi_master.awaddr
-		.axi_master_awlen   (axi_dma_unfiltered1_altera_axi_master_awlen),                    //                  .awlen
-		.axi_master_awburst (axi_dma_unfiltered1_altera_axi_master_awburst),                  //                  .awburst
-		.axi_master_awlock  (axi_dma_unfiltered1_altera_axi_master_awlock),                   //                  .awlock
-		.axi_master_awcache (axi_dma_unfiltered1_altera_axi_master_awcache),                  //                  .awcache
-		.axi_master_awprot  (axi_dma_unfiltered1_altera_axi_master_awprot),                   //                  .awprot
-		.axi_master_awvalid (axi_dma_unfiltered1_altera_axi_master_awvalid),                  //                  .awvalid
-		.axi_master_awready (axi_dma_unfiltered1_altera_axi_master_awready),                  //                  .awready
-		.axi_master_wid     (axi_dma_unfiltered1_altera_axi_master_wid),                      //                  .wid
-		.axi_master_wdata   (axi_dma_unfiltered1_altera_axi_master_wdata),                    //                  .wdata
-		.axi_master_wstrb   (axi_dma_unfiltered1_altera_axi_master_wstrb),                    //                  .wstrb
-		.axi_master_wlast   (axi_dma_unfiltered1_altera_axi_master_wlast),                    //                  .wlast
-		.axi_master_wvalid  (axi_dma_unfiltered1_altera_axi_master_wvalid),                   //                  .wvalid
-		.axi_master_wready  (axi_dma_unfiltered1_altera_axi_master_wready),                   //                  .wready
-		.axi_master_bid     (axi_dma_unfiltered1_altera_axi_master_bid),                      //                  .bid
-		.axi_master_bresp   (axi_dma_unfiltered1_altera_axi_master_bresp),                    //                  .bresp
-		.axi_master_bvalid  (axi_dma_unfiltered1_altera_axi_master_bvalid),                   //                  .bvalid
-		.axi_master_bready  (axi_dma_unfiltered1_altera_axi_master_bready),                   //                  .bready
-		.axi_master_arid    (axi_dma_unfiltered1_altera_axi_master_arid),                     //                  .arid
-		.axi_master_araddr  (axi_dma_unfiltered1_altera_axi_master_araddr),                   //                  .araddr
-		.axi_master_arlen   (axi_dma_unfiltered1_altera_axi_master_arlen),                    //                  .arlen
-		.axi_master_arsize  (axi_dma_unfiltered1_altera_axi_master_arsize),                   //                  .arsize
-		.axi_master_arburst (axi_dma_unfiltered1_altera_axi_master_arburst),                  //                  .arburst
-		.axi_master_arlock  (axi_dma_unfiltered1_altera_axi_master_arlock),                   //                  .arlock
-		.axi_master_arcache (axi_dma_unfiltered1_altera_axi_master_arcache),                  //                  .arcache
-		.axi_master_arprot  (axi_dma_unfiltered1_altera_axi_master_arprot),                   //                  .arprot
-		.axi_master_arvalid (axi_dma_unfiltered1_altera_axi_master_arvalid),                  //                  .arvalid
-		.axi_master_arready (axi_dma_unfiltered1_altera_axi_master_arready),                  //                  .arready
-		.axi_master_rid     (axi_dma_unfiltered1_altera_axi_master_rid),                      //                  .rid
-		.axi_master_rdata   (axi_dma_unfiltered1_altera_axi_master_rdata),                    //                  .rdata
-		.axi_master_rresp   (axi_dma_unfiltered1_altera_axi_master_rresp),                    //                  .rresp
-		.axi_master_rlast   (axi_dma_unfiltered1_altera_axi_master_rlast),                    //                  .rlast
-		.axi_master_rvalid  (axi_dma_unfiltered1_altera_axi_master_rvalid),                   //                  .rvalid
-		.axi_master_rready  (axi_dma_unfiltered1_altera_axi_master_rready),                   //                  .rready
-		.axi_master_awid    (axi_dma_unfiltered1_altera_axi_master_awid),                     //                  .awid
-		.axi_master_awsize  (axi_dma_unfiltered1_altera_axi_master_awsize),                   //                  .awsize
+		.axi_master_awaddr  (),                                                               // altera_axi_master.awaddr
+		.axi_master_awlen   (),                                                               //                  .awlen
+		.axi_master_awburst (),                                                               //                  .awburst
+		.axi_master_awlock  (),                                                               //                  .awlock
+		.axi_master_awcache (),                                                               //                  .awcache
+		.axi_master_awprot  (),                                                               //                  .awprot
+		.axi_master_awvalid (),                                                               //                  .awvalid
+		.axi_master_awready (),                                                               //                  .awready
+		.axi_master_wid     (),                                                               //                  .wid
+		.axi_master_wdata   (),                                                               //                  .wdata
+		.axi_master_wstrb   (),                                                               //                  .wstrb
+		.axi_master_wlast   (),                                                               //                  .wlast
+		.axi_master_wvalid  (),                                                               //                  .wvalid
+		.axi_master_wready  (),                                                               //                  .wready
+		.axi_master_bid     (),                                                               //                  .bid
+		.axi_master_bresp   (),                                                               //                  .bresp
+		.axi_master_bvalid  (),                                                               //                  .bvalid
+		.axi_master_bready  (),                                                               //                  .bready
+		.axi_master_arid    (),                                                               //                  .arid
+		.axi_master_araddr  (),                                                               //                  .araddr
+		.axi_master_arlen   (),                                                               //                  .arlen
+		.axi_master_arsize  (),                                                               //                  .arsize
+		.axi_master_arburst (),                                                               //                  .arburst
+		.axi_master_arlock  (),                                                               //                  .arlock
+		.axi_master_arcache (),                                                               //                  .arcache
+		.axi_master_arprot  (),                                                               //                  .arprot
+		.axi_master_arvalid (),                                                               //                  .arvalid
+		.axi_master_arready (),                                                               //                  .arready
+		.axi_master_rid     (),                                                               //                  .rid
+		.axi_master_rdata   (),                                                               //                  .rdata
+		.axi_master_rresp   (),                                                               //                  .rresp
+		.axi_master_rlast   (),                                                               //                  .rlast
+		.axi_master_rvalid  (),                                                               //                  .rvalid
+		.axi_master_rready  (),                                                               //                  .rready
+		.axi_master_awid    (),                                                               //                  .awid
+		.axi_master_awsize  (),                                                               //                  .awsize
 		.channel_lz         (axi_dma_unfiltered1_channel_lz_export),                          //        channel_lz.export
 		.channel_vz         (axi_dma_unfiltered1_channel_vz_export),                          //        channel_vz.export
 		.channel_data       (axi_dma_unfiltered1_channel_data_export),                        //      channel_data.export
@@ -863,80 +755,80 @@ module Kvazaar_QSYS (
 		.fifo_size_g            (8),
 		.channel_width_g        (16)
 	) axi_dma_unfiltered2 (
-		.axi_slave_awid     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awid),    //  altera_axi_slave.awid
-		.axi_slave_awaddr   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awaddr),  //                  .awaddr
-		.axi_slave_awlen    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awlen),   //                  .awlen
-		.axi_slave_awsize   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awsize),  //                  .awsize
-		.axi_slave_awburst  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awburst), //                  .awburst
-		.axi_slave_awlock   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awlock),  //                  .awlock
-		.axi_slave_awcache  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awcache), //                  .awcache
-		.axi_slave_awvalid  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awvalid), //                  .awvalid
-		.axi_slave_awready  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awready), //                  .awready
-		.axi_slave_wid      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wid),     //                  .wid
-		.axi_slave_wdata    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wdata),   //                  .wdata
-		.axi_slave_wstrb    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wstrb),   //                  .wstrb
-		.axi_slave_wlast    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wlast),   //                  .wlast
-		.axi_slave_wvalid   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wvalid),  //                  .wvalid
-		.axi_slave_wready   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wready),  //                  .wready
-		.axi_slave_bid      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bid),     //                  .bid
-		.axi_slave_bresp    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bresp),   //                  .bresp
-		.axi_slave_bvalid   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bvalid),  //                  .bvalid
-		.axi_slave_bready   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bready),  //                  .bready
-		.axi_slave_arid     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arid),    //                  .arid
-		.axi_slave_araddr   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_araddr),  //                  .araddr
-		.axi_slave_arlen    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arlen),   //                  .arlen
-		.axi_slave_arsize   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arsize),  //                  .arsize
-		.axi_slave_arburst  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arburst), //                  .arburst
-		.axi_slave_arlock   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arlock),  //                  .arlock
-		.axi_slave_arcache  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arcache), //                  .arcache
-		.axi_slave_arprot   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arprot),  //                  .arprot
-		.axi_slave_arvalid  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arvalid), //                  .arvalid
-		.axi_slave_arready  (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arready), //                  .arready
-		.axi_slave_rid      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rid),     //                  .rid
-		.axi_slave_rdata    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rdata),   //                  .rdata
-		.axi_slave_rresp    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rresp),   //                  .rresp
-		.axi_slave_rlast    (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rlast),   //                  .rlast
-		.axi_slave_rvalid   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rvalid),  //                  .rvalid
-		.axi_slave_rready   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rready),  //                  .rready
-		.axi_slave_awprot   (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awprot),  //                  .awprot
+		.axi_slave_awid     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awid),    //  altera_axi_slave.awid
+		.axi_slave_awaddr   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awaddr),  //                  .awaddr
+		.axi_slave_awlen    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awlen),   //                  .awlen
+		.axi_slave_awsize   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awsize),  //                  .awsize
+		.axi_slave_awburst  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awburst), //                  .awburst
+		.axi_slave_awlock   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awlock),  //                  .awlock
+		.axi_slave_awcache  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awcache), //                  .awcache
+		.axi_slave_awvalid  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awvalid), //                  .awvalid
+		.axi_slave_awready  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awready), //                  .awready
+		.axi_slave_wid      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wid),     //                  .wid
+		.axi_slave_wdata    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wdata),   //                  .wdata
+		.axi_slave_wstrb    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wstrb),   //                  .wstrb
+		.axi_slave_wlast    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wlast),   //                  .wlast
+		.axi_slave_wvalid   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wvalid),  //                  .wvalid
+		.axi_slave_wready   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wready),  //                  .wready
+		.axi_slave_bid      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bid),     //                  .bid
+		.axi_slave_bresp    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bresp),   //                  .bresp
+		.axi_slave_bvalid   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bvalid),  //                  .bvalid
+		.axi_slave_bready   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bready),  //                  .bready
+		.axi_slave_arid     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arid),    //                  .arid
+		.axi_slave_araddr   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_araddr),  //                  .araddr
+		.axi_slave_arlen    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arlen),   //                  .arlen
+		.axi_slave_arsize   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arsize),  //                  .arsize
+		.axi_slave_arburst  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arburst), //                  .arburst
+		.axi_slave_arlock   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arlock),  //                  .arlock
+		.axi_slave_arcache  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arcache), //                  .arcache
+		.axi_slave_arprot   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arprot),  //                  .arprot
+		.axi_slave_arvalid  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arvalid), //                  .arvalid
+		.axi_slave_arready  (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arready), //                  .arready
+		.axi_slave_rid      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rid),     //                  .rid
+		.axi_slave_rdata    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rdata),   //                  .rdata
+		.axi_slave_rresp    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rresp),   //                  .rresp
+		.axi_slave_rlast    (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rlast),   //                  .rlast
+		.axi_slave_rvalid   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rvalid),  //                  .rvalid
+		.axi_slave_rready   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rready),  //                  .rready
+		.axi_slave_awprot   (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awprot),  //                  .awprot
 		.rst_n              (~rst_controller_reset_out_reset),                                //        reset_sink.reset_n
 		.clk                (clk_clk),                                                        //        clock_sink.clk
-		.axi_master_awaddr  (axi_dma_unfiltered2_altera_axi_master_awaddr),                   // altera_axi_master.awaddr
-		.axi_master_awlen   (axi_dma_unfiltered2_altera_axi_master_awlen),                    //                  .awlen
-		.axi_master_awburst (axi_dma_unfiltered2_altera_axi_master_awburst),                  //                  .awburst
-		.axi_master_awlock  (axi_dma_unfiltered2_altera_axi_master_awlock),                   //                  .awlock
-		.axi_master_awcache (axi_dma_unfiltered2_altera_axi_master_awcache),                  //                  .awcache
-		.axi_master_awprot  (axi_dma_unfiltered2_altera_axi_master_awprot),                   //                  .awprot
-		.axi_master_awvalid (axi_dma_unfiltered2_altera_axi_master_awvalid),                  //                  .awvalid
-		.axi_master_awready (axi_dma_unfiltered2_altera_axi_master_awready),                  //                  .awready
-		.axi_master_wid     (axi_dma_unfiltered2_altera_axi_master_wid),                      //                  .wid
-		.axi_master_wdata   (axi_dma_unfiltered2_altera_axi_master_wdata),                    //                  .wdata
-		.axi_master_wstrb   (axi_dma_unfiltered2_altera_axi_master_wstrb),                    //                  .wstrb
-		.axi_master_wlast   (axi_dma_unfiltered2_altera_axi_master_wlast),                    //                  .wlast
-		.axi_master_wvalid  (axi_dma_unfiltered2_altera_axi_master_wvalid),                   //                  .wvalid
-		.axi_master_wready  (axi_dma_unfiltered2_altera_axi_master_wready),                   //                  .wready
-		.axi_master_bid     (axi_dma_unfiltered2_altera_axi_master_bid),                      //                  .bid
-		.axi_master_bresp   (axi_dma_unfiltered2_altera_axi_master_bresp),                    //                  .bresp
-		.axi_master_bvalid  (axi_dma_unfiltered2_altera_axi_master_bvalid),                   //                  .bvalid
-		.axi_master_bready  (axi_dma_unfiltered2_altera_axi_master_bready),                   //                  .bready
-		.axi_master_arid    (axi_dma_unfiltered2_altera_axi_master_arid),                     //                  .arid
-		.axi_master_araddr  (axi_dma_unfiltered2_altera_axi_master_araddr),                   //                  .araddr
-		.axi_master_arlen   (axi_dma_unfiltered2_altera_axi_master_arlen),                    //                  .arlen
-		.axi_master_arsize  (axi_dma_unfiltered2_altera_axi_master_arsize),                   //                  .arsize
-		.axi_master_arburst (axi_dma_unfiltered2_altera_axi_master_arburst),                  //                  .arburst
-		.axi_master_arlock  (axi_dma_unfiltered2_altera_axi_master_arlock),                   //                  .arlock
-		.axi_master_arcache (axi_dma_unfiltered2_altera_axi_master_arcache),                  //                  .arcache
-		.axi_master_arprot  (axi_dma_unfiltered2_altera_axi_master_arprot),                   //                  .arprot
-		.axi_master_arvalid (axi_dma_unfiltered2_altera_axi_master_arvalid),                  //                  .arvalid
-		.axi_master_arready (axi_dma_unfiltered2_altera_axi_master_arready),                  //                  .arready
-		.axi_master_rid     (axi_dma_unfiltered2_altera_axi_master_rid),                      //                  .rid
-		.axi_master_rdata   (axi_dma_unfiltered2_altera_axi_master_rdata),                    //                  .rdata
-		.axi_master_rresp   (axi_dma_unfiltered2_altera_axi_master_rresp),                    //                  .rresp
-		.axi_master_rlast   (axi_dma_unfiltered2_altera_axi_master_rlast),                    //                  .rlast
-		.axi_master_rvalid  (axi_dma_unfiltered2_altera_axi_master_rvalid),                   //                  .rvalid
-		.axi_master_rready  (axi_dma_unfiltered2_altera_axi_master_rready),                   //                  .rready
-		.axi_master_awid    (axi_dma_unfiltered2_altera_axi_master_awid),                     //                  .awid
-		.axi_master_awsize  (axi_dma_unfiltered2_altera_axi_master_awsize),                   //                  .awsize
+		.axi_master_awaddr  (),                                                               // altera_axi_master.awaddr
+		.axi_master_awlen   (),                                                               //                  .awlen
+		.axi_master_awburst (),                                                               //                  .awburst
+		.axi_master_awlock  (),                                                               //                  .awlock
+		.axi_master_awcache (),                                                               //                  .awcache
+		.axi_master_awprot  (),                                                               //                  .awprot
+		.axi_master_awvalid (),                                                               //                  .awvalid
+		.axi_master_awready (),                                                               //                  .awready
+		.axi_master_wid     (),                                                               //                  .wid
+		.axi_master_wdata   (),                                                               //                  .wdata
+		.axi_master_wstrb   (),                                                               //                  .wstrb
+		.axi_master_wlast   (),                                                               //                  .wlast
+		.axi_master_wvalid  (),                                                               //                  .wvalid
+		.axi_master_wready  (),                                                               //                  .wready
+		.axi_master_bid     (),                                                               //                  .bid
+		.axi_master_bresp   (),                                                               //                  .bresp
+		.axi_master_bvalid  (),                                                               //                  .bvalid
+		.axi_master_bready  (),                                                               //                  .bready
+		.axi_master_arid    (),                                                               //                  .arid
+		.axi_master_araddr  (),                                                               //                  .araddr
+		.axi_master_arlen   (),                                                               //                  .arlen
+		.axi_master_arsize  (),                                                               //                  .arsize
+		.axi_master_arburst (),                                                               //                  .arburst
+		.axi_master_arlock  (),                                                               //                  .arlock
+		.axi_master_arcache (),                                                               //                  .arcache
+		.axi_master_arprot  (),                                                               //                  .arprot
+		.axi_master_arvalid (),                                                               //                  .arvalid
+		.axi_master_arready (),                                                               //                  .arready
+		.axi_master_rid     (),                                                               //                  .rid
+		.axi_master_rdata   (),                                                               //                  .rdata
+		.axi_master_rresp   (),                                                               //                  .rresp
+		.axi_master_rlast   (),                                                               //                  .rlast
+		.axi_master_rvalid  (),                                                               //                  .rvalid
+		.axi_master_rready  (),                                                               //                  .rready
+		.axi_master_awid    (),                                                               //                  .awid
+		.axi_master_awsize  (),                                                               //                  .awsize
 		.channel_lz         (axi_dma_unfiltered2_channel_lz_export),                          //        channel_lz.export
 		.channel_vz         (axi_dma_unfiltered2_channel_vz_export),                          //        channel_vz.export
 		.channel_data       (axi_dma_unfiltered2_channel_data_export),                        //      channel_data.export
@@ -945,13 +837,13 @@ module Kvazaar_QSYS (
 
 	Kvazaar_QSYS_camera_control_oc camera_control_oc (
 		.clk         (clk_clk),                                           //   clk1.clk
-		.address     (mm_interconnect_3_camera_control_oc_s1_address),    //     s1.address
-		.clken       (mm_interconnect_3_camera_control_oc_s1_clken),      //       .clken
-		.chipselect  (mm_interconnect_3_camera_control_oc_s1_chipselect), //       .chipselect
-		.write       (mm_interconnect_3_camera_control_oc_s1_write),      //       .write
-		.readdata    (mm_interconnect_3_camera_control_oc_s1_readdata),   //       .readdata
-		.writedata   (mm_interconnect_3_camera_control_oc_s1_writedata),  //       .writedata
-		.byteenable  (mm_interconnect_3_camera_control_oc_s1_byteenable), //       .byteenable
+		.address     (mm_interconnect_0_camera_control_oc_s1_address),    //     s1.address
+		.clken       (mm_interconnect_0_camera_control_oc_s1_clken),      //       .clken
+		.chipselect  (mm_interconnect_0_camera_control_oc_s1_chipselect), //       .chipselect
+		.write       (mm_interconnect_0_camera_control_oc_s1_write),      //       .write
+		.readdata    (mm_interconnect_0_camera_control_oc_s1_readdata),   //       .readdata
+		.writedata   (mm_interconnect_0_camera_control_oc_s1_writedata),  //       .writedata
+		.byteenable  (mm_interconnect_0_camera_control_oc_s1_byteenable), //       .byteenable
 		.reset       (rst_controller_reset_out_reset),                    // reset1.reset
 		.address2    (camera_control_oc_s2_address),                      //     s2.address
 		.chipselect2 (camera_control_oc_s2_chipselect),                   //       .chipselect
@@ -969,11 +861,11 @@ module Kvazaar_QSYS (
 	Kvazaar_QSYS_configure_camera configure_camera (
 		.clk        (clk_clk),                                          //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                  //               reset.reset_n
-		.address    (mm_interconnect_3_configure_camera_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_configure_camera_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_configure_camera_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_configure_camera_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_configure_camera_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_configure_camera_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_configure_camera_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_configure_camera_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_configure_camera_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_configure_camera_s1_readdata),   //                    .readdata
 		.out_port   (configure_camera_external_connection_export)       // external_connection.export
 	);
 
@@ -990,80 +882,80 @@ module Kvazaar_QSYS (
 		.v_fifo_size_g          (512),
 		.channel_width_g        (8)
 	) dma_yuv (
-		.axi_slave_awid     (mm_interconnect_3_dma_yuv_altera_axi_slave_awid),    //  altera_axi_slave.awid
-		.axi_slave_awaddr   (mm_interconnect_3_dma_yuv_altera_axi_slave_awaddr),  //                  .awaddr
-		.axi_slave_awlen    (mm_interconnect_3_dma_yuv_altera_axi_slave_awlen),   //                  .awlen
-		.axi_slave_awsize   (mm_interconnect_3_dma_yuv_altera_axi_slave_awsize),  //                  .awsize
-		.axi_slave_awburst  (mm_interconnect_3_dma_yuv_altera_axi_slave_awburst), //                  .awburst
-		.axi_slave_awlock   (mm_interconnect_3_dma_yuv_altera_axi_slave_awlock),  //                  .awlock
-		.axi_slave_awcache  (mm_interconnect_3_dma_yuv_altera_axi_slave_awcache), //                  .awcache
-		.axi_slave_awvalid  (mm_interconnect_3_dma_yuv_altera_axi_slave_awvalid), //                  .awvalid
-		.axi_slave_awready  (mm_interconnect_3_dma_yuv_altera_axi_slave_awready), //                  .awready
-		.axi_slave_wid      (mm_interconnect_3_dma_yuv_altera_axi_slave_wid),     //                  .wid
-		.axi_slave_wdata    (mm_interconnect_3_dma_yuv_altera_axi_slave_wdata),   //                  .wdata
-		.axi_slave_wstrb    (mm_interconnect_3_dma_yuv_altera_axi_slave_wstrb),   //                  .wstrb
-		.axi_slave_wlast    (mm_interconnect_3_dma_yuv_altera_axi_slave_wlast),   //                  .wlast
-		.axi_slave_wvalid   (mm_interconnect_3_dma_yuv_altera_axi_slave_wvalid),  //                  .wvalid
-		.axi_slave_wready   (mm_interconnect_3_dma_yuv_altera_axi_slave_wready),  //                  .wready
-		.axi_slave_bid      (mm_interconnect_3_dma_yuv_altera_axi_slave_bid),     //                  .bid
-		.axi_slave_bresp    (mm_interconnect_3_dma_yuv_altera_axi_slave_bresp),   //                  .bresp
-		.axi_slave_bvalid   (mm_interconnect_3_dma_yuv_altera_axi_slave_bvalid),  //                  .bvalid
-		.axi_slave_bready   (mm_interconnect_3_dma_yuv_altera_axi_slave_bready),  //                  .bready
-		.axi_slave_arid     (mm_interconnect_3_dma_yuv_altera_axi_slave_arid),    //                  .arid
-		.axi_slave_araddr   (mm_interconnect_3_dma_yuv_altera_axi_slave_araddr),  //                  .araddr
-		.axi_slave_arlen    (mm_interconnect_3_dma_yuv_altera_axi_slave_arlen),   //                  .arlen
-		.axi_slave_arsize   (mm_interconnect_3_dma_yuv_altera_axi_slave_arsize),  //                  .arsize
-		.axi_slave_arburst  (mm_interconnect_3_dma_yuv_altera_axi_slave_arburst), //                  .arburst
-		.axi_slave_arlock   (mm_interconnect_3_dma_yuv_altera_axi_slave_arlock),  //                  .arlock
-		.axi_slave_arcache  (mm_interconnect_3_dma_yuv_altera_axi_slave_arcache), //                  .arcache
-		.axi_slave_arprot   (mm_interconnect_3_dma_yuv_altera_axi_slave_arprot),  //                  .arprot
-		.axi_slave_arvalid  (mm_interconnect_3_dma_yuv_altera_axi_slave_arvalid), //                  .arvalid
-		.axi_slave_arready  (mm_interconnect_3_dma_yuv_altera_axi_slave_arready), //                  .arready
-		.axi_slave_rid      (mm_interconnect_3_dma_yuv_altera_axi_slave_rid),     //                  .rid
-		.axi_slave_rdata    (mm_interconnect_3_dma_yuv_altera_axi_slave_rdata),   //                  .rdata
-		.axi_slave_rresp    (mm_interconnect_3_dma_yuv_altera_axi_slave_rresp),   //                  .rresp
-		.axi_slave_rlast    (mm_interconnect_3_dma_yuv_altera_axi_slave_rlast),   //                  .rlast
-		.axi_slave_rvalid   (mm_interconnect_3_dma_yuv_altera_axi_slave_rvalid),  //                  .rvalid
-		.axi_slave_rready   (mm_interconnect_3_dma_yuv_altera_axi_slave_rready),  //                  .rready
-		.axi_slave_awprot   (mm_interconnect_3_dma_yuv_altera_axi_slave_awprot),  //                  .awprot
+		.axi_slave_awid     (mm_interconnect_0_dma_yuv_altera_axi_slave_awid),    //  altera_axi_slave.awid
+		.axi_slave_awaddr   (mm_interconnect_0_dma_yuv_altera_axi_slave_awaddr),  //                  .awaddr
+		.axi_slave_awlen    (mm_interconnect_0_dma_yuv_altera_axi_slave_awlen),   //                  .awlen
+		.axi_slave_awsize   (mm_interconnect_0_dma_yuv_altera_axi_slave_awsize),  //                  .awsize
+		.axi_slave_awburst  (mm_interconnect_0_dma_yuv_altera_axi_slave_awburst), //                  .awburst
+		.axi_slave_awlock   (mm_interconnect_0_dma_yuv_altera_axi_slave_awlock),  //                  .awlock
+		.axi_slave_awcache  (mm_interconnect_0_dma_yuv_altera_axi_slave_awcache), //                  .awcache
+		.axi_slave_awvalid  (mm_interconnect_0_dma_yuv_altera_axi_slave_awvalid), //                  .awvalid
+		.axi_slave_awready  (mm_interconnect_0_dma_yuv_altera_axi_slave_awready), //                  .awready
+		.axi_slave_wid      (mm_interconnect_0_dma_yuv_altera_axi_slave_wid),     //                  .wid
+		.axi_slave_wdata    (mm_interconnect_0_dma_yuv_altera_axi_slave_wdata),   //                  .wdata
+		.axi_slave_wstrb    (mm_interconnect_0_dma_yuv_altera_axi_slave_wstrb),   //                  .wstrb
+		.axi_slave_wlast    (mm_interconnect_0_dma_yuv_altera_axi_slave_wlast),   //                  .wlast
+		.axi_slave_wvalid   (mm_interconnect_0_dma_yuv_altera_axi_slave_wvalid),  //                  .wvalid
+		.axi_slave_wready   (mm_interconnect_0_dma_yuv_altera_axi_slave_wready),  //                  .wready
+		.axi_slave_bid      (mm_interconnect_0_dma_yuv_altera_axi_slave_bid),     //                  .bid
+		.axi_slave_bresp    (mm_interconnect_0_dma_yuv_altera_axi_slave_bresp),   //                  .bresp
+		.axi_slave_bvalid   (mm_interconnect_0_dma_yuv_altera_axi_slave_bvalid),  //                  .bvalid
+		.axi_slave_bready   (mm_interconnect_0_dma_yuv_altera_axi_slave_bready),  //                  .bready
+		.axi_slave_arid     (mm_interconnect_0_dma_yuv_altera_axi_slave_arid),    //                  .arid
+		.axi_slave_araddr   (mm_interconnect_0_dma_yuv_altera_axi_slave_araddr),  //                  .araddr
+		.axi_slave_arlen    (mm_interconnect_0_dma_yuv_altera_axi_slave_arlen),   //                  .arlen
+		.axi_slave_arsize   (mm_interconnect_0_dma_yuv_altera_axi_slave_arsize),  //                  .arsize
+		.axi_slave_arburst  (mm_interconnect_0_dma_yuv_altera_axi_slave_arburst), //                  .arburst
+		.axi_slave_arlock   (mm_interconnect_0_dma_yuv_altera_axi_slave_arlock),  //                  .arlock
+		.axi_slave_arcache  (mm_interconnect_0_dma_yuv_altera_axi_slave_arcache), //                  .arcache
+		.axi_slave_arprot   (mm_interconnect_0_dma_yuv_altera_axi_slave_arprot),  //                  .arprot
+		.axi_slave_arvalid  (mm_interconnect_0_dma_yuv_altera_axi_slave_arvalid), //                  .arvalid
+		.axi_slave_arready  (mm_interconnect_0_dma_yuv_altera_axi_slave_arready), //                  .arready
+		.axi_slave_rid      (mm_interconnect_0_dma_yuv_altera_axi_slave_rid),     //                  .rid
+		.axi_slave_rdata    (mm_interconnect_0_dma_yuv_altera_axi_slave_rdata),   //                  .rdata
+		.axi_slave_rresp    (mm_interconnect_0_dma_yuv_altera_axi_slave_rresp),   //                  .rresp
+		.axi_slave_rlast    (mm_interconnect_0_dma_yuv_altera_axi_slave_rlast),   //                  .rlast
+		.axi_slave_rvalid   (mm_interconnect_0_dma_yuv_altera_axi_slave_rvalid),  //                  .rvalid
+		.axi_slave_rready   (mm_interconnect_0_dma_yuv_altera_axi_slave_rready),  //                  .rready
+		.axi_slave_awprot   (mm_interconnect_0_dma_yuv_altera_axi_slave_awprot),  //                  .awprot
 		.rst_n              (~rst_controller_reset_out_reset),                    //        reset_sink.reset_n
 		.clk                (clk_clk),                                            //        clock_sink.clk
-		.axi_master_awaddr  (dma_yuv_altera_axi_master_awaddr),                   // altera_axi_master.awaddr
-		.axi_master_awlen   (dma_yuv_altera_axi_master_awlen),                    //                  .awlen
-		.axi_master_awburst (dma_yuv_altera_axi_master_awburst),                  //                  .awburst
-		.axi_master_awlock  (dma_yuv_altera_axi_master_awlock),                   //                  .awlock
-		.axi_master_awcache (dma_yuv_altera_axi_master_awcache),                  //                  .awcache
-		.axi_master_awprot  (dma_yuv_altera_axi_master_awprot),                   //                  .awprot
-		.axi_master_awvalid (dma_yuv_altera_axi_master_awvalid),                  //                  .awvalid
-		.axi_master_awready (dma_yuv_altera_axi_master_awready),                  //                  .awready
-		.axi_master_wid     (dma_yuv_altera_axi_master_wid),                      //                  .wid
-		.axi_master_wdata   (dma_yuv_altera_axi_master_wdata),                    //                  .wdata
-		.axi_master_wstrb   (dma_yuv_altera_axi_master_wstrb),                    //                  .wstrb
-		.axi_master_wlast   (dma_yuv_altera_axi_master_wlast),                    //                  .wlast
-		.axi_master_wvalid  (dma_yuv_altera_axi_master_wvalid),                   //                  .wvalid
-		.axi_master_wready  (dma_yuv_altera_axi_master_wready),                   //                  .wready
-		.axi_master_bid     (dma_yuv_altera_axi_master_bid),                      //                  .bid
-		.axi_master_bresp   (dma_yuv_altera_axi_master_bresp),                    //                  .bresp
-		.axi_master_bvalid  (dma_yuv_altera_axi_master_bvalid),                   //                  .bvalid
-		.axi_master_bready  (dma_yuv_altera_axi_master_bready),                   //                  .bready
-		.axi_master_arid    (dma_yuv_altera_axi_master_arid),                     //                  .arid
-		.axi_master_araddr  (dma_yuv_altera_axi_master_araddr),                   //                  .araddr
-		.axi_master_arlen   (dma_yuv_altera_axi_master_arlen),                    //                  .arlen
-		.axi_master_arsize  (dma_yuv_altera_axi_master_arsize),                   //                  .arsize
-		.axi_master_arburst (dma_yuv_altera_axi_master_arburst),                  //                  .arburst
-		.axi_master_arlock  (dma_yuv_altera_axi_master_arlock),                   //                  .arlock
-		.axi_master_arcache (dma_yuv_altera_axi_master_arcache),                  //                  .arcache
-		.axi_master_arprot  (dma_yuv_altera_axi_master_arprot),                   //                  .arprot
-		.axi_master_arvalid (dma_yuv_altera_axi_master_arvalid),                  //                  .arvalid
-		.axi_master_arready (dma_yuv_altera_axi_master_arready),                  //                  .arready
-		.axi_master_rid     (dma_yuv_altera_axi_master_rid),                      //                  .rid
-		.axi_master_rdata   (dma_yuv_altera_axi_master_rdata),                    //                  .rdata
-		.axi_master_rresp   (dma_yuv_altera_axi_master_rresp),                    //                  .rresp
-		.axi_master_rlast   (dma_yuv_altera_axi_master_rlast),                    //                  .rlast
-		.axi_master_rvalid  (dma_yuv_altera_axi_master_rvalid),                   //                  .rvalid
-		.axi_master_rready  (dma_yuv_altera_axi_master_rready),                   //                  .rready
-		.axi_master_awid    (dma_yuv_altera_axi_master_awid),                     //                  .awid
-		.axi_master_awsize  (dma_yuv_altera_axi_master_awsize),                   //                  .awsize
+		.axi_master_awaddr  (),                                                   // altera_axi_master.awaddr
+		.axi_master_awlen   (),                                                   //                  .awlen
+		.axi_master_awburst (),                                                   //                  .awburst
+		.axi_master_awlock  (),                                                   //                  .awlock
+		.axi_master_awcache (),                                                   //                  .awcache
+		.axi_master_awprot  (),                                                   //                  .awprot
+		.axi_master_awvalid (),                                                   //                  .awvalid
+		.axi_master_awready (),                                                   //                  .awready
+		.axi_master_wid     (),                                                   //                  .wid
+		.axi_master_wdata   (),                                                   //                  .wdata
+		.axi_master_wstrb   (),                                                   //                  .wstrb
+		.axi_master_wlast   (),                                                   //                  .wlast
+		.axi_master_wvalid  (),                                                   //                  .wvalid
+		.axi_master_wready  (),                                                   //                  .wready
+		.axi_master_bid     (),                                                   //                  .bid
+		.axi_master_bresp   (),                                                   //                  .bresp
+		.axi_master_bvalid  (),                                                   //                  .bvalid
+		.axi_master_bready  (),                                                   //                  .bready
+		.axi_master_arid    (),                                                   //                  .arid
+		.axi_master_araddr  (),                                                   //                  .araddr
+		.axi_master_arlen   (),                                                   //                  .arlen
+		.axi_master_arsize  (),                                                   //                  .arsize
+		.axi_master_arburst (),                                                   //                  .arburst
+		.axi_master_arlock  (),                                                   //                  .arlock
+		.axi_master_arcache (),                                                   //                  .arcache
+		.axi_master_arprot  (),                                                   //                  .arprot
+		.axi_master_arvalid (),                                                   //                  .arvalid
+		.axi_master_arready (),                                                   //                  .arready
+		.axi_master_rid     (),                                                   //                  .rid
+		.axi_master_rdata   (),                                                   //                  .rdata
+		.axi_master_rresp   (),                                                   //                  .rresp
+		.axi_master_rlast   (),                                                   //                  .rlast
+		.axi_master_rvalid  (),                                                   //                  .rvalid
+		.axi_master_rready  (),                                                   //                  .rready
+		.axi_master_awid    (),                                                   //                  .awid
+		.axi_master_awsize  (),                                                   //                  .awsize
 		.fifo_clk           (dma_yuv_fifo_clk_clk),                               //          fifo_clk.clk
 		.u_data_in_z        (dma_yuv_yuv_input_u_data_in_z),                      //         yuv_input.export
 		.v_data_in_lz       (dma_yuv_yuv_input_v_data_in_lz),                     //                  .export
@@ -1081,326 +973,326 @@ module Kvazaar_QSYS (
 		.F2S_Width (2),
 		.S2F_Width (2)
 	) hps_0 (
-		.f2h_cold_rst_req_n       (hps_0_f2h_cold_reset_req_reset_n),                //  f2h_cold_reset_req.reset_n
-		.f2h_dbg_rst_req_n        (hps_0_f2h_debug_reset_req_reset_n),               // f2h_debug_reset_req.reset_n
-		.f2h_warm_rst_req_n       (hps_0_f2h_warm_reset_req_reset_n),                //  f2h_warm_reset_req.reset_n
-		.f2h_stm_hwevents         (hps_0_f2h_stm_hw_events_stm_hwevents),            //   f2h_stm_hw_events.stm_hwevents
-		.mem_a                    (memory_mem_a),                                    //              memory.mem_a
-		.mem_ba                   (memory_mem_ba),                                   //                    .mem_ba
-		.mem_ck                   (memory_mem_ck),                                   //                    .mem_ck
-		.mem_ck_n                 (memory_mem_ck_n),                                 //                    .mem_ck_n
-		.mem_cke                  (memory_mem_cke),                                  //                    .mem_cke
-		.mem_cs_n                 (memory_mem_cs_n),                                 //                    .mem_cs_n
-		.mem_ras_n                (memory_mem_ras_n),                                //                    .mem_ras_n
-		.mem_cas_n                (memory_mem_cas_n),                                //                    .mem_cas_n
-		.mem_we_n                 (memory_mem_we_n),                                 //                    .mem_we_n
-		.mem_reset_n              (memory_mem_reset_n),                              //                    .mem_reset_n
-		.mem_dq                   (memory_mem_dq),                                   //                    .mem_dq
-		.mem_dqs                  (memory_mem_dqs),                                  //                    .mem_dqs
-		.mem_dqs_n                (memory_mem_dqs_n),                                //                    .mem_dqs_n
-		.mem_odt                  (memory_mem_odt),                                  //                    .mem_odt
-		.mem_dm                   (memory_mem_dm),                                   //                    .mem_dm
-		.oct_rzqin                (memory_oct_rzqin),                                //                    .oct_rzqin
-		.hps_io_emac1_inst_TX_CLK (hps_0_hps_io_hps_io_emac1_inst_TX_CLK),           //              hps_io.hps_io_emac1_inst_TX_CLK
-		.hps_io_emac1_inst_TXD0   (hps_0_hps_io_hps_io_emac1_inst_TXD0),             //                    .hps_io_emac1_inst_TXD0
-		.hps_io_emac1_inst_TXD1   (hps_0_hps_io_hps_io_emac1_inst_TXD1),             //                    .hps_io_emac1_inst_TXD1
-		.hps_io_emac1_inst_TXD2   (hps_0_hps_io_hps_io_emac1_inst_TXD2),             //                    .hps_io_emac1_inst_TXD2
-		.hps_io_emac1_inst_TXD3   (hps_0_hps_io_hps_io_emac1_inst_TXD3),             //                    .hps_io_emac1_inst_TXD3
-		.hps_io_emac1_inst_RXD0   (hps_0_hps_io_hps_io_emac1_inst_RXD0),             //                    .hps_io_emac1_inst_RXD0
-		.hps_io_emac1_inst_MDIO   (hps_0_hps_io_hps_io_emac1_inst_MDIO),             //                    .hps_io_emac1_inst_MDIO
-		.hps_io_emac1_inst_MDC    (hps_0_hps_io_hps_io_emac1_inst_MDC),              //                    .hps_io_emac1_inst_MDC
-		.hps_io_emac1_inst_RX_CTL (hps_0_hps_io_hps_io_emac1_inst_RX_CTL),           //                    .hps_io_emac1_inst_RX_CTL
-		.hps_io_emac1_inst_TX_CTL (hps_0_hps_io_hps_io_emac1_inst_TX_CTL),           //                    .hps_io_emac1_inst_TX_CTL
-		.hps_io_emac1_inst_RX_CLK (hps_0_hps_io_hps_io_emac1_inst_RX_CLK),           //                    .hps_io_emac1_inst_RX_CLK
-		.hps_io_emac1_inst_RXD1   (hps_0_hps_io_hps_io_emac1_inst_RXD1),             //                    .hps_io_emac1_inst_RXD1
-		.hps_io_emac1_inst_RXD2   (hps_0_hps_io_hps_io_emac1_inst_RXD2),             //                    .hps_io_emac1_inst_RXD2
-		.hps_io_emac1_inst_RXD3   (hps_0_hps_io_hps_io_emac1_inst_RXD3),             //                    .hps_io_emac1_inst_RXD3
-		.hps_io_qspi_inst_IO0     (hps_0_hps_io_hps_io_qspi_inst_IO0),               //                    .hps_io_qspi_inst_IO0
-		.hps_io_qspi_inst_IO1     (hps_0_hps_io_hps_io_qspi_inst_IO1),               //                    .hps_io_qspi_inst_IO1
-		.hps_io_qspi_inst_IO2     (hps_0_hps_io_hps_io_qspi_inst_IO2),               //                    .hps_io_qspi_inst_IO2
-		.hps_io_qspi_inst_IO3     (hps_0_hps_io_hps_io_qspi_inst_IO3),               //                    .hps_io_qspi_inst_IO3
-		.hps_io_qspi_inst_SS0     (hps_0_hps_io_hps_io_qspi_inst_SS0),               //                    .hps_io_qspi_inst_SS0
-		.hps_io_qspi_inst_CLK     (hps_0_hps_io_hps_io_qspi_inst_CLK),               //                    .hps_io_qspi_inst_CLK
-		.hps_io_sdio_inst_CMD     (hps_0_hps_io_hps_io_sdio_inst_CMD),               //                    .hps_io_sdio_inst_CMD
-		.hps_io_sdio_inst_D0      (hps_0_hps_io_hps_io_sdio_inst_D0),                //                    .hps_io_sdio_inst_D0
-		.hps_io_sdio_inst_D1      (hps_0_hps_io_hps_io_sdio_inst_D1),                //                    .hps_io_sdio_inst_D1
-		.hps_io_sdio_inst_CLK     (hps_0_hps_io_hps_io_sdio_inst_CLK),               //                    .hps_io_sdio_inst_CLK
-		.hps_io_sdio_inst_D2      (hps_0_hps_io_hps_io_sdio_inst_D2),                //                    .hps_io_sdio_inst_D2
-		.hps_io_sdio_inst_D3      (hps_0_hps_io_hps_io_sdio_inst_D3),                //                    .hps_io_sdio_inst_D3
-		.hps_io_usb1_inst_D0      (hps_0_hps_io_hps_io_usb1_inst_D0),                //                    .hps_io_usb1_inst_D0
-		.hps_io_usb1_inst_D1      (hps_0_hps_io_hps_io_usb1_inst_D1),                //                    .hps_io_usb1_inst_D1
-		.hps_io_usb1_inst_D2      (hps_0_hps_io_hps_io_usb1_inst_D2),                //                    .hps_io_usb1_inst_D2
-		.hps_io_usb1_inst_D3      (hps_0_hps_io_hps_io_usb1_inst_D3),                //                    .hps_io_usb1_inst_D3
-		.hps_io_usb1_inst_D4      (hps_0_hps_io_hps_io_usb1_inst_D4),                //                    .hps_io_usb1_inst_D4
-		.hps_io_usb1_inst_D5      (hps_0_hps_io_hps_io_usb1_inst_D5),                //                    .hps_io_usb1_inst_D5
-		.hps_io_usb1_inst_D6      (hps_0_hps_io_hps_io_usb1_inst_D6),                //                    .hps_io_usb1_inst_D6
-		.hps_io_usb1_inst_D7      (hps_0_hps_io_hps_io_usb1_inst_D7),                //                    .hps_io_usb1_inst_D7
-		.hps_io_usb1_inst_CLK     (hps_0_hps_io_hps_io_usb1_inst_CLK),               //                    .hps_io_usb1_inst_CLK
-		.hps_io_usb1_inst_STP     (hps_0_hps_io_hps_io_usb1_inst_STP),               //                    .hps_io_usb1_inst_STP
-		.hps_io_usb1_inst_DIR     (hps_0_hps_io_hps_io_usb1_inst_DIR),               //                    .hps_io_usb1_inst_DIR
-		.hps_io_usb1_inst_NXT     (hps_0_hps_io_hps_io_usb1_inst_NXT),               //                    .hps_io_usb1_inst_NXT
-		.hps_io_spim0_inst_CLK    (hps_0_hps_io_hps_io_spim0_inst_CLK),              //                    .hps_io_spim0_inst_CLK
-		.hps_io_spim0_inst_MOSI   (hps_0_hps_io_hps_io_spim0_inst_MOSI),             //                    .hps_io_spim0_inst_MOSI
-		.hps_io_spim0_inst_MISO   (hps_0_hps_io_hps_io_spim0_inst_MISO),             //                    .hps_io_spim0_inst_MISO
-		.hps_io_spim0_inst_SS0    (hps_0_hps_io_hps_io_spim0_inst_SS0),              //                    .hps_io_spim0_inst_SS0
-		.hps_io_uart0_inst_RX     (hps_0_hps_io_hps_io_uart0_inst_RX),               //                    .hps_io_uart0_inst_RX
-		.hps_io_uart0_inst_TX     (hps_0_hps_io_hps_io_uart0_inst_TX),               //                    .hps_io_uart0_inst_TX
-		.hps_io_i2c0_inst_SDA     (hps_0_hps_io_hps_io_i2c0_inst_SDA),               //                    .hps_io_i2c0_inst_SDA
-		.hps_io_i2c0_inst_SCL     (hps_0_hps_io_hps_io_i2c0_inst_SCL),               //                    .hps_io_i2c0_inst_SCL
-		.hps_io_can0_inst_RX      (hps_0_hps_io_hps_io_can0_inst_RX),                //                    .hps_io_can0_inst_RX
-		.hps_io_can0_inst_TX      (hps_0_hps_io_hps_io_can0_inst_TX),                //                    .hps_io_can0_inst_TX
-		.hps_io_trace_inst_CLK    (hps_0_hps_io_hps_io_trace_inst_CLK),              //                    .hps_io_trace_inst_CLK
-		.hps_io_trace_inst_D0     (hps_0_hps_io_hps_io_trace_inst_D0),               //                    .hps_io_trace_inst_D0
-		.hps_io_trace_inst_D1     (hps_0_hps_io_hps_io_trace_inst_D1),               //                    .hps_io_trace_inst_D1
-		.hps_io_trace_inst_D2     (hps_0_hps_io_hps_io_trace_inst_D2),               //                    .hps_io_trace_inst_D2
-		.hps_io_trace_inst_D3     (hps_0_hps_io_hps_io_trace_inst_D3),               //                    .hps_io_trace_inst_D3
-		.hps_io_trace_inst_D4     (hps_0_hps_io_hps_io_trace_inst_D4),               //                    .hps_io_trace_inst_D4
-		.hps_io_trace_inst_D5     (hps_0_hps_io_hps_io_trace_inst_D5),               //                    .hps_io_trace_inst_D5
-		.hps_io_trace_inst_D6     (hps_0_hps_io_hps_io_trace_inst_D6),               //                    .hps_io_trace_inst_D6
-		.hps_io_trace_inst_D7     (hps_0_hps_io_hps_io_trace_inst_D7),               //                    .hps_io_trace_inst_D7
-		.hps_io_gpio_inst_GPIO09  (hps_0_hps_io_hps_io_gpio_inst_GPIO09),            //                    .hps_io_gpio_inst_GPIO09
-		.hps_io_gpio_inst_GPIO35  (hps_0_hps_io_hps_io_gpio_inst_GPIO35),            //                    .hps_io_gpio_inst_GPIO35
-		.hps_io_gpio_inst_GPIO41  (hps_0_hps_io_hps_io_gpio_inst_GPIO41),            //                    .hps_io_gpio_inst_GPIO41
-		.hps_io_gpio_inst_GPIO42  (hps_0_hps_io_hps_io_gpio_inst_GPIO42),            //                    .hps_io_gpio_inst_GPIO42
-		.hps_io_gpio_inst_GPIO43  (hps_0_hps_io_hps_io_gpio_inst_GPIO43),            //                    .hps_io_gpio_inst_GPIO43
-		.hps_io_gpio_inst_GPIO44  (hps_0_hps_io_hps_io_gpio_inst_GPIO44),            //                    .hps_io_gpio_inst_GPIO44
-		.h2f_rst_n                (hps_0_h2f_reset_reset_n),                         //           h2f_reset.reset_n
-		.f2h_sdram0_clk           (clk_clk),                                         //    f2h_sdram0_clock.clk
-		.f2h_sdram0_ARADDR        (dma_yuv_altera_axi_master_araddr),                //     f2h_sdram0_data.araddr
-		.f2h_sdram0_ARLEN         (dma_yuv_altera_axi_master_arlen),                 //                    .arlen
-		.f2h_sdram0_ARID          (dma_yuv_altera_axi_master_arid),                  //                    .arid
-		.f2h_sdram0_ARSIZE        (dma_yuv_altera_axi_master_arsize),                //                    .arsize
-		.f2h_sdram0_ARBURST       (dma_yuv_altera_axi_master_arburst),               //                    .arburst
-		.f2h_sdram0_ARLOCK        (dma_yuv_altera_axi_master_arlock),                //                    .arlock
-		.f2h_sdram0_ARPROT        (dma_yuv_altera_axi_master_arprot),                //                    .arprot
-		.f2h_sdram0_ARVALID       (dma_yuv_altera_axi_master_arvalid),               //                    .arvalid
-		.f2h_sdram0_ARCACHE       (dma_yuv_altera_axi_master_arcache),               //                    .arcache
-		.f2h_sdram0_AWADDR        (dma_yuv_altera_axi_master_awaddr),                //                    .awaddr
-		.f2h_sdram0_AWLEN         (dma_yuv_altera_axi_master_awlen),                 //                    .awlen
-		.f2h_sdram0_AWID          (dma_yuv_altera_axi_master_awid),                  //                    .awid
-		.f2h_sdram0_AWSIZE        (dma_yuv_altera_axi_master_awsize),                //                    .awsize
-		.f2h_sdram0_AWBURST       (dma_yuv_altera_axi_master_awburst),               //                    .awburst
-		.f2h_sdram0_AWLOCK        (dma_yuv_altera_axi_master_awlock),                //                    .awlock
-		.f2h_sdram0_AWPROT        (dma_yuv_altera_axi_master_awprot),                //                    .awprot
-		.f2h_sdram0_AWVALID       (dma_yuv_altera_axi_master_awvalid),               //                    .awvalid
-		.f2h_sdram0_AWCACHE       (dma_yuv_altera_axi_master_awcache),               //                    .awcache
-		.f2h_sdram0_BRESP         (dma_yuv_altera_axi_master_bresp),                 //                    .bresp
-		.f2h_sdram0_BID           (dma_yuv_altera_axi_master_bid),                   //                    .bid
-		.f2h_sdram0_BVALID        (dma_yuv_altera_axi_master_bvalid),                //                    .bvalid
-		.f2h_sdram0_BREADY        (dma_yuv_altera_axi_master_bready),                //                    .bready
-		.f2h_sdram0_ARREADY       (dma_yuv_altera_axi_master_arready),               //                    .arready
-		.f2h_sdram0_AWREADY       (dma_yuv_altera_axi_master_awready),               //                    .awready
-		.f2h_sdram0_RREADY        (dma_yuv_altera_axi_master_rready),                //                    .rready
-		.f2h_sdram0_RDATA         (dma_yuv_altera_axi_master_rdata),                 //                    .rdata
-		.f2h_sdram0_RRESP         (dma_yuv_altera_axi_master_rresp),                 //                    .rresp
-		.f2h_sdram0_RLAST         (dma_yuv_altera_axi_master_rlast),                 //                    .rlast
-		.f2h_sdram0_RID           (dma_yuv_altera_axi_master_rid),                   //                    .rid
-		.f2h_sdram0_RVALID        (dma_yuv_altera_axi_master_rvalid),                //                    .rvalid
-		.f2h_sdram0_WLAST         (dma_yuv_altera_axi_master_wlast),                 //                    .wlast
-		.f2h_sdram0_WVALID        (dma_yuv_altera_axi_master_wvalid),                //                    .wvalid
-		.f2h_sdram0_WDATA         (dma_yuv_altera_axi_master_wdata),                 //                    .wdata
-		.f2h_sdram0_WSTRB         (dma_yuv_altera_axi_master_wstrb),                 //                    .wstrb
-		.f2h_sdram0_WREADY        (dma_yuv_altera_axi_master_wready),                //                    .wready
-		.f2h_sdram0_WID           (dma_yuv_altera_axi_master_wid),                   //                    .wid
-		.f2h_sdram1_clk           (clk_clk),                                         //    f2h_sdram1_clock.clk
-		.f2h_sdram1_ARADDR        (mm_interconnect_1_hps_0_f2h_sdram1_data_araddr),  //     f2h_sdram1_data.araddr
-		.f2h_sdram1_ARLEN         (mm_interconnect_1_hps_0_f2h_sdram1_data_arlen),   //                    .arlen
-		.f2h_sdram1_ARID          (mm_interconnect_1_hps_0_f2h_sdram1_data_arid),    //                    .arid
-		.f2h_sdram1_ARSIZE        (mm_interconnect_1_hps_0_f2h_sdram1_data_arsize),  //                    .arsize
-		.f2h_sdram1_ARBURST       (mm_interconnect_1_hps_0_f2h_sdram1_data_arburst), //                    .arburst
-		.f2h_sdram1_ARLOCK        (mm_interconnect_1_hps_0_f2h_sdram1_data_arlock),  //                    .arlock
-		.f2h_sdram1_ARPROT        (mm_interconnect_1_hps_0_f2h_sdram1_data_arprot),  //                    .arprot
-		.f2h_sdram1_ARVALID       (mm_interconnect_1_hps_0_f2h_sdram1_data_arvalid), //                    .arvalid
-		.f2h_sdram1_ARCACHE       (mm_interconnect_1_hps_0_f2h_sdram1_data_arcache), //                    .arcache
-		.f2h_sdram1_AWADDR        (mm_interconnect_1_hps_0_f2h_sdram1_data_awaddr),  //                    .awaddr
-		.f2h_sdram1_AWLEN         (mm_interconnect_1_hps_0_f2h_sdram1_data_awlen),   //                    .awlen
-		.f2h_sdram1_AWID          (mm_interconnect_1_hps_0_f2h_sdram1_data_awid),    //                    .awid
-		.f2h_sdram1_AWSIZE        (mm_interconnect_1_hps_0_f2h_sdram1_data_awsize),  //                    .awsize
-		.f2h_sdram1_AWBURST       (mm_interconnect_1_hps_0_f2h_sdram1_data_awburst), //                    .awburst
-		.f2h_sdram1_AWLOCK        (mm_interconnect_1_hps_0_f2h_sdram1_data_awlock),  //                    .awlock
-		.f2h_sdram1_AWPROT        (mm_interconnect_1_hps_0_f2h_sdram1_data_awprot),  //                    .awprot
-		.f2h_sdram1_AWVALID       (mm_interconnect_1_hps_0_f2h_sdram1_data_awvalid), //                    .awvalid
-		.f2h_sdram1_AWCACHE       (mm_interconnect_1_hps_0_f2h_sdram1_data_awcache), //                    .awcache
-		.f2h_sdram1_BRESP         (mm_interconnect_1_hps_0_f2h_sdram1_data_bresp),   //                    .bresp
-		.f2h_sdram1_BID           (mm_interconnect_1_hps_0_f2h_sdram1_data_bid),     //                    .bid
-		.f2h_sdram1_BVALID        (mm_interconnect_1_hps_0_f2h_sdram1_data_bvalid),  //                    .bvalid
-		.f2h_sdram1_BREADY        (mm_interconnect_1_hps_0_f2h_sdram1_data_bready),  //                    .bready
-		.f2h_sdram1_ARREADY       (mm_interconnect_1_hps_0_f2h_sdram1_data_arready), //                    .arready
-		.f2h_sdram1_AWREADY       (mm_interconnect_1_hps_0_f2h_sdram1_data_awready), //                    .awready
-		.f2h_sdram1_RREADY        (mm_interconnect_1_hps_0_f2h_sdram1_data_rready),  //                    .rready
-		.f2h_sdram1_RDATA         (mm_interconnect_1_hps_0_f2h_sdram1_data_rdata),   //                    .rdata
-		.f2h_sdram1_RRESP         (mm_interconnect_1_hps_0_f2h_sdram1_data_rresp),   //                    .rresp
-		.f2h_sdram1_RLAST         (mm_interconnect_1_hps_0_f2h_sdram1_data_rlast),   //                    .rlast
-		.f2h_sdram1_RID           (mm_interconnect_1_hps_0_f2h_sdram1_data_rid),     //                    .rid
-		.f2h_sdram1_RVALID        (mm_interconnect_1_hps_0_f2h_sdram1_data_rvalid),  //                    .rvalid
-		.f2h_sdram1_WLAST         (mm_interconnect_1_hps_0_f2h_sdram1_data_wlast),   //                    .wlast
-		.f2h_sdram1_WVALID        (mm_interconnect_1_hps_0_f2h_sdram1_data_wvalid),  //                    .wvalid
-		.f2h_sdram1_WDATA         (mm_interconnect_1_hps_0_f2h_sdram1_data_wdata),   //                    .wdata
-		.f2h_sdram1_WSTRB         (mm_interconnect_1_hps_0_f2h_sdram1_data_wstrb),   //                    .wstrb
-		.f2h_sdram1_WREADY        (mm_interconnect_1_hps_0_f2h_sdram1_data_wready),  //                    .wready
-		.f2h_sdram1_WID           (mm_interconnect_1_hps_0_f2h_sdram1_data_wid),     //                    .wid
-		.f2h_sdram2_clk           (clk_clk),                                         //    f2h_sdram2_clock.clk
-		.f2h_sdram2_ARADDR        (mm_interconnect_2_hps_0_f2h_sdram2_data_araddr),  //     f2h_sdram2_data.araddr
-		.f2h_sdram2_ARLEN         (mm_interconnect_2_hps_0_f2h_sdram2_data_arlen),   //                    .arlen
-		.f2h_sdram2_ARID          (mm_interconnect_2_hps_0_f2h_sdram2_data_arid),    //                    .arid
-		.f2h_sdram2_ARSIZE        (mm_interconnect_2_hps_0_f2h_sdram2_data_arsize),  //                    .arsize
-		.f2h_sdram2_ARBURST       (mm_interconnect_2_hps_0_f2h_sdram2_data_arburst), //                    .arburst
-		.f2h_sdram2_ARLOCK        (mm_interconnect_2_hps_0_f2h_sdram2_data_arlock),  //                    .arlock
-		.f2h_sdram2_ARPROT        (mm_interconnect_2_hps_0_f2h_sdram2_data_arprot),  //                    .arprot
-		.f2h_sdram2_ARVALID       (mm_interconnect_2_hps_0_f2h_sdram2_data_arvalid), //                    .arvalid
-		.f2h_sdram2_ARCACHE       (mm_interconnect_2_hps_0_f2h_sdram2_data_arcache), //                    .arcache
-		.f2h_sdram2_AWADDR        (mm_interconnect_2_hps_0_f2h_sdram2_data_awaddr),  //                    .awaddr
-		.f2h_sdram2_AWLEN         (mm_interconnect_2_hps_0_f2h_sdram2_data_awlen),   //                    .awlen
-		.f2h_sdram2_AWID          (mm_interconnect_2_hps_0_f2h_sdram2_data_awid),    //                    .awid
-		.f2h_sdram2_AWSIZE        (mm_interconnect_2_hps_0_f2h_sdram2_data_awsize),  //                    .awsize
-		.f2h_sdram2_AWBURST       (mm_interconnect_2_hps_0_f2h_sdram2_data_awburst), //                    .awburst
-		.f2h_sdram2_AWLOCK        (mm_interconnect_2_hps_0_f2h_sdram2_data_awlock),  //                    .awlock
-		.f2h_sdram2_AWPROT        (mm_interconnect_2_hps_0_f2h_sdram2_data_awprot),  //                    .awprot
-		.f2h_sdram2_AWVALID       (mm_interconnect_2_hps_0_f2h_sdram2_data_awvalid), //                    .awvalid
-		.f2h_sdram2_AWCACHE       (mm_interconnect_2_hps_0_f2h_sdram2_data_awcache), //                    .awcache
-		.f2h_sdram2_BRESP         (mm_interconnect_2_hps_0_f2h_sdram2_data_bresp),   //                    .bresp
-		.f2h_sdram2_BID           (mm_interconnect_2_hps_0_f2h_sdram2_data_bid),     //                    .bid
-		.f2h_sdram2_BVALID        (mm_interconnect_2_hps_0_f2h_sdram2_data_bvalid),  //                    .bvalid
-		.f2h_sdram2_BREADY        (mm_interconnect_2_hps_0_f2h_sdram2_data_bready),  //                    .bready
-		.f2h_sdram2_ARREADY       (mm_interconnect_2_hps_0_f2h_sdram2_data_arready), //                    .arready
-		.f2h_sdram2_AWREADY       (mm_interconnect_2_hps_0_f2h_sdram2_data_awready), //                    .awready
-		.f2h_sdram2_RREADY        (mm_interconnect_2_hps_0_f2h_sdram2_data_rready),  //                    .rready
-		.f2h_sdram2_RDATA         (mm_interconnect_2_hps_0_f2h_sdram2_data_rdata),   //                    .rdata
-		.f2h_sdram2_RRESP         (mm_interconnect_2_hps_0_f2h_sdram2_data_rresp),   //                    .rresp
-		.f2h_sdram2_RLAST         (mm_interconnect_2_hps_0_f2h_sdram2_data_rlast),   //                    .rlast
-		.f2h_sdram2_RID           (mm_interconnect_2_hps_0_f2h_sdram2_data_rid),     //                    .rid
-		.f2h_sdram2_RVALID        (mm_interconnect_2_hps_0_f2h_sdram2_data_rvalid),  //                    .rvalid
-		.f2h_sdram2_WLAST         (mm_interconnect_2_hps_0_f2h_sdram2_data_wlast),   //                    .wlast
-		.f2h_sdram2_WVALID        (mm_interconnect_2_hps_0_f2h_sdram2_data_wvalid),  //                    .wvalid
-		.f2h_sdram2_WDATA         (mm_interconnect_2_hps_0_f2h_sdram2_data_wdata),   //                    .wdata
-		.f2h_sdram2_WSTRB         (mm_interconnect_2_hps_0_f2h_sdram2_data_wstrb),   //                    .wstrb
-		.f2h_sdram2_WREADY        (mm_interconnect_2_hps_0_f2h_sdram2_data_wready),  //                    .wready
-		.f2h_sdram2_WID           (mm_interconnect_2_hps_0_f2h_sdram2_data_wid),     //                    .wid
-		.h2f_axi_clk              (clk_clk),                                         //       h2f_axi_clock.clk
-		.h2f_AWID                 (hps_0_h2f_axi_master_awid),                       //      h2f_axi_master.awid
-		.h2f_AWADDR               (hps_0_h2f_axi_master_awaddr),                     //                    .awaddr
-		.h2f_AWLEN                (hps_0_h2f_axi_master_awlen),                      //                    .awlen
-		.h2f_AWSIZE               (hps_0_h2f_axi_master_awsize),                     //                    .awsize
-		.h2f_AWBURST              (hps_0_h2f_axi_master_awburst),                    //                    .awburst
-		.h2f_AWLOCK               (hps_0_h2f_axi_master_awlock),                     //                    .awlock
-		.h2f_AWCACHE              (hps_0_h2f_axi_master_awcache),                    //                    .awcache
-		.h2f_AWPROT               (hps_0_h2f_axi_master_awprot),                     //                    .awprot
-		.h2f_AWVALID              (hps_0_h2f_axi_master_awvalid),                    //                    .awvalid
-		.h2f_AWREADY              (hps_0_h2f_axi_master_awready),                    //                    .awready
-		.h2f_WID                  (hps_0_h2f_axi_master_wid),                        //                    .wid
-		.h2f_WDATA                (hps_0_h2f_axi_master_wdata),                      //                    .wdata
-		.h2f_WSTRB                (hps_0_h2f_axi_master_wstrb),                      //                    .wstrb
-		.h2f_WLAST                (hps_0_h2f_axi_master_wlast),                      //                    .wlast
-		.h2f_WVALID               (hps_0_h2f_axi_master_wvalid),                     //                    .wvalid
-		.h2f_WREADY               (hps_0_h2f_axi_master_wready),                     //                    .wready
-		.h2f_BID                  (hps_0_h2f_axi_master_bid),                        //                    .bid
-		.h2f_BRESP                (hps_0_h2f_axi_master_bresp),                      //                    .bresp
-		.h2f_BVALID               (hps_0_h2f_axi_master_bvalid),                     //                    .bvalid
-		.h2f_BREADY               (hps_0_h2f_axi_master_bready),                     //                    .bready
-		.h2f_ARID                 (hps_0_h2f_axi_master_arid),                       //                    .arid
-		.h2f_ARADDR               (hps_0_h2f_axi_master_araddr),                     //                    .araddr
-		.h2f_ARLEN                (hps_0_h2f_axi_master_arlen),                      //                    .arlen
-		.h2f_ARSIZE               (hps_0_h2f_axi_master_arsize),                     //                    .arsize
-		.h2f_ARBURST              (hps_0_h2f_axi_master_arburst),                    //                    .arburst
-		.h2f_ARLOCK               (hps_0_h2f_axi_master_arlock),                     //                    .arlock
-		.h2f_ARCACHE              (hps_0_h2f_axi_master_arcache),                    //                    .arcache
-		.h2f_ARPROT               (hps_0_h2f_axi_master_arprot),                     //                    .arprot
-		.h2f_ARVALID              (hps_0_h2f_axi_master_arvalid),                    //                    .arvalid
-		.h2f_ARREADY              (hps_0_h2f_axi_master_arready),                    //                    .arready
-		.h2f_RID                  (hps_0_h2f_axi_master_rid),                        //                    .rid
-		.h2f_RDATA                (hps_0_h2f_axi_master_rdata),                      //                    .rdata
-		.h2f_RRESP                (hps_0_h2f_axi_master_rresp),                      //                    .rresp
-		.h2f_RLAST                (hps_0_h2f_axi_master_rlast),                      //                    .rlast
-		.h2f_RVALID               (hps_0_h2f_axi_master_rvalid),                     //                    .rvalid
-		.h2f_RREADY               (hps_0_h2f_axi_master_rready),                     //                    .rready
-		.f2h_axi_clk              (clk_clk),                                         //       f2h_axi_clock.clk
-		.f2h_AWID                 (),                                                //       f2h_axi_slave.awid
-		.f2h_AWADDR               (),                                                //                    .awaddr
-		.f2h_AWLEN                (),                                                //                    .awlen
-		.f2h_AWSIZE               (),                                                //                    .awsize
-		.f2h_AWBURST              (),                                                //                    .awburst
-		.f2h_AWLOCK               (),                                                //                    .awlock
-		.f2h_AWCACHE              (),                                                //                    .awcache
-		.f2h_AWPROT               (),                                                //                    .awprot
-		.f2h_AWVALID              (),                                                //                    .awvalid
-		.f2h_AWREADY              (),                                                //                    .awready
-		.f2h_AWUSER               (),                                                //                    .awuser
-		.f2h_WID                  (),                                                //                    .wid
-		.f2h_WDATA                (),                                                //                    .wdata
-		.f2h_WSTRB                (),                                                //                    .wstrb
-		.f2h_WLAST                (),                                                //                    .wlast
-		.f2h_WVALID               (),                                                //                    .wvalid
-		.f2h_WREADY               (),                                                //                    .wready
-		.f2h_BID                  (),                                                //                    .bid
-		.f2h_BRESP                (),                                                //                    .bresp
-		.f2h_BVALID               (),                                                //                    .bvalid
-		.f2h_BREADY               (),                                                //                    .bready
-		.f2h_ARID                 (),                                                //                    .arid
-		.f2h_ARADDR               (),                                                //                    .araddr
-		.f2h_ARLEN                (),                                                //                    .arlen
-		.f2h_ARSIZE               (),                                                //                    .arsize
-		.f2h_ARBURST              (),                                                //                    .arburst
-		.f2h_ARLOCK               (),                                                //                    .arlock
-		.f2h_ARCACHE              (),                                                //                    .arcache
-		.f2h_ARPROT               (),                                                //                    .arprot
-		.f2h_ARVALID              (),                                                //                    .arvalid
-		.f2h_ARREADY              (),                                                //                    .arready
-		.f2h_ARUSER               (),                                                //                    .aruser
-		.f2h_RID                  (),                                                //                    .rid
-		.f2h_RDATA                (),                                                //                    .rdata
-		.f2h_RRESP                (),                                                //                    .rresp
-		.f2h_RLAST                (),                                                //                    .rlast
-		.f2h_RVALID               (),                                                //                    .rvalid
-		.f2h_RREADY               (),                                                //                    .rready
-		.h2f_lw_axi_clk           (clk_clk),                                         //    h2f_lw_axi_clock.clk
-		.h2f_lw_AWID              (),                                                //   h2f_lw_axi_master.awid
-		.h2f_lw_AWADDR            (),                                                //                    .awaddr
-		.h2f_lw_AWLEN             (),                                                //                    .awlen
-		.h2f_lw_AWSIZE            (),                                                //                    .awsize
-		.h2f_lw_AWBURST           (),                                                //                    .awburst
-		.h2f_lw_AWLOCK            (),                                                //                    .awlock
-		.h2f_lw_AWCACHE           (),                                                //                    .awcache
-		.h2f_lw_AWPROT            (),                                                //                    .awprot
-		.h2f_lw_AWVALID           (),                                                //                    .awvalid
-		.h2f_lw_AWREADY           (),                                                //                    .awready
-		.h2f_lw_WID               (),                                                //                    .wid
-		.h2f_lw_WDATA             (),                                                //                    .wdata
-		.h2f_lw_WSTRB             (),                                                //                    .wstrb
-		.h2f_lw_WLAST             (),                                                //                    .wlast
-		.h2f_lw_WVALID            (),                                                //                    .wvalid
-		.h2f_lw_WREADY            (),                                                //                    .wready
-		.h2f_lw_BID               (),                                                //                    .bid
-		.h2f_lw_BRESP             (),                                                //                    .bresp
-		.h2f_lw_BVALID            (),                                                //                    .bvalid
-		.h2f_lw_BREADY            (),                                                //                    .bready
-		.h2f_lw_ARID              (),                                                //                    .arid
-		.h2f_lw_ARADDR            (),                                                //                    .araddr
-		.h2f_lw_ARLEN             (),                                                //                    .arlen
-		.h2f_lw_ARSIZE            (),                                                //                    .arsize
-		.h2f_lw_ARBURST           (),                                                //                    .arburst
-		.h2f_lw_ARLOCK            (),                                                //                    .arlock
-		.h2f_lw_ARCACHE           (),                                                //                    .arcache
-		.h2f_lw_ARPROT            (),                                                //                    .arprot
-		.h2f_lw_ARVALID           (),                                                //                    .arvalid
-		.h2f_lw_ARREADY           (),                                                //                    .arready
-		.h2f_lw_RID               (),                                                //                    .rid
-		.h2f_lw_RDATA             (),                                                //                    .rdata
-		.h2f_lw_RRESP             (),                                                //                    .rresp
-		.h2f_lw_RLAST             (),                                                //                    .rlast
-		.h2f_lw_RVALID            (),                                                //                    .rvalid
-		.h2f_lw_RREADY            (),                                                //                    .rready
-		.f2h_irq_p0               (hps_0_f2h_irq0_irq),                              //            f2h_irq0.irq
-		.f2h_irq_p1               (hps_0_f2h_irq1_irq)                               //            f2h_irq1.irq
+		.f2h_cold_rst_req_n       (hps_0_f2h_cold_reset_req_reset_n),      //  f2h_cold_reset_req.reset_n
+		.f2h_dbg_rst_req_n        (hps_0_f2h_debug_reset_req_reset_n),     // f2h_debug_reset_req.reset_n
+		.f2h_warm_rst_req_n       (hps_0_f2h_warm_reset_req_reset_n),      //  f2h_warm_reset_req.reset_n
+		.f2h_stm_hwevents         (hps_0_f2h_stm_hw_events_stm_hwevents),  //   f2h_stm_hw_events.stm_hwevents
+		.mem_a                    (memory_mem_a),                          //              memory.mem_a
+		.mem_ba                   (memory_mem_ba),                         //                    .mem_ba
+		.mem_ck                   (memory_mem_ck),                         //                    .mem_ck
+		.mem_ck_n                 (memory_mem_ck_n),                       //                    .mem_ck_n
+		.mem_cke                  (memory_mem_cke),                        //                    .mem_cke
+		.mem_cs_n                 (memory_mem_cs_n),                       //                    .mem_cs_n
+		.mem_ras_n                (memory_mem_ras_n),                      //                    .mem_ras_n
+		.mem_cas_n                (memory_mem_cas_n),                      //                    .mem_cas_n
+		.mem_we_n                 (memory_mem_we_n),                       //                    .mem_we_n
+		.mem_reset_n              (memory_mem_reset_n),                    //                    .mem_reset_n
+		.mem_dq                   (memory_mem_dq),                         //                    .mem_dq
+		.mem_dqs                  (memory_mem_dqs),                        //                    .mem_dqs
+		.mem_dqs_n                (memory_mem_dqs_n),                      //                    .mem_dqs_n
+		.mem_odt                  (memory_mem_odt),                        //                    .mem_odt
+		.mem_dm                   (memory_mem_dm),                         //                    .mem_dm
+		.oct_rzqin                (memory_oct_rzqin),                      //                    .oct_rzqin
+		.hps_io_emac1_inst_TX_CLK (hps_0_hps_io_hps_io_emac1_inst_TX_CLK), //              hps_io.hps_io_emac1_inst_TX_CLK
+		.hps_io_emac1_inst_TXD0   (hps_0_hps_io_hps_io_emac1_inst_TXD0),   //                    .hps_io_emac1_inst_TXD0
+		.hps_io_emac1_inst_TXD1   (hps_0_hps_io_hps_io_emac1_inst_TXD1),   //                    .hps_io_emac1_inst_TXD1
+		.hps_io_emac1_inst_TXD2   (hps_0_hps_io_hps_io_emac1_inst_TXD2),   //                    .hps_io_emac1_inst_TXD2
+		.hps_io_emac1_inst_TXD3   (hps_0_hps_io_hps_io_emac1_inst_TXD3),   //                    .hps_io_emac1_inst_TXD3
+		.hps_io_emac1_inst_RXD0   (hps_0_hps_io_hps_io_emac1_inst_RXD0),   //                    .hps_io_emac1_inst_RXD0
+		.hps_io_emac1_inst_MDIO   (hps_0_hps_io_hps_io_emac1_inst_MDIO),   //                    .hps_io_emac1_inst_MDIO
+		.hps_io_emac1_inst_MDC    (hps_0_hps_io_hps_io_emac1_inst_MDC),    //                    .hps_io_emac1_inst_MDC
+		.hps_io_emac1_inst_RX_CTL (hps_0_hps_io_hps_io_emac1_inst_RX_CTL), //                    .hps_io_emac1_inst_RX_CTL
+		.hps_io_emac1_inst_TX_CTL (hps_0_hps_io_hps_io_emac1_inst_TX_CTL), //                    .hps_io_emac1_inst_TX_CTL
+		.hps_io_emac1_inst_RX_CLK (hps_0_hps_io_hps_io_emac1_inst_RX_CLK), //                    .hps_io_emac1_inst_RX_CLK
+		.hps_io_emac1_inst_RXD1   (hps_0_hps_io_hps_io_emac1_inst_RXD1),   //                    .hps_io_emac1_inst_RXD1
+		.hps_io_emac1_inst_RXD2   (hps_0_hps_io_hps_io_emac1_inst_RXD2),   //                    .hps_io_emac1_inst_RXD2
+		.hps_io_emac1_inst_RXD3   (hps_0_hps_io_hps_io_emac1_inst_RXD3),   //                    .hps_io_emac1_inst_RXD3
+		.hps_io_qspi_inst_IO0     (hps_0_hps_io_hps_io_qspi_inst_IO0),     //                    .hps_io_qspi_inst_IO0
+		.hps_io_qspi_inst_IO1     (hps_0_hps_io_hps_io_qspi_inst_IO1),     //                    .hps_io_qspi_inst_IO1
+		.hps_io_qspi_inst_IO2     (hps_0_hps_io_hps_io_qspi_inst_IO2),     //                    .hps_io_qspi_inst_IO2
+		.hps_io_qspi_inst_IO3     (hps_0_hps_io_hps_io_qspi_inst_IO3),     //                    .hps_io_qspi_inst_IO3
+		.hps_io_qspi_inst_SS0     (hps_0_hps_io_hps_io_qspi_inst_SS0),     //                    .hps_io_qspi_inst_SS0
+		.hps_io_qspi_inst_CLK     (hps_0_hps_io_hps_io_qspi_inst_CLK),     //                    .hps_io_qspi_inst_CLK
+		.hps_io_sdio_inst_CMD     (hps_0_hps_io_hps_io_sdio_inst_CMD),     //                    .hps_io_sdio_inst_CMD
+		.hps_io_sdio_inst_D0      (hps_0_hps_io_hps_io_sdio_inst_D0),      //                    .hps_io_sdio_inst_D0
+		.hps_io_sdio_inst_D1      (hps_0_hps_io_hps_io_sdio_inst_D1),      //                    .hps_io_sdio_inst_D1
+		.hps_io_sdio_inst_CLK     (hps_0_hps_io_hps_io_sdio_inst_CLK),     //                    .hps_io_sdio_inst_CLK
+		.hps_io_sdio_inst_D2      (hps_0_hps_io_hps_io_sdio_inst_D2),      //                    .hps_io_sdio_inst_D2
+		.hps_io_sdio_inst_D3      (hps_0_hps_io_hps_io_sdio_inst_D3),      //                    .hps_io_sdio_inst_D3
+		.hps_io_usb1_inst_D0      (hps_0_hps_io_hps_io_usb1_inst_D0),      //                    .hps_io_usb1_inst_D0
+		.hps_io_usb1_inst_D1      (hps_0_hps_io_hps_io_usb1_inst_D1),      //                    .hps_io_usb1_inst_D1
+		.hps_io_usb1_inst_D2      (hps_0_hps_io_hps_io_usb1_inst_D2),      //                    .hps_io_usb1_inst_D2
+		.hps_io_usb1_inst_D3      (hps_0_hps_io_hps_io_usb1_inst_D3),      //                    .hps_io_usb1_inst_D3
+		.hps_io_usb1_inst_D4      (hps_0_hps_io_hps_io_usb1_inst_D4),      //                    .hps_io_usb1_inst_D4
+		.hps_io_usb1_inst_D5      (hps_0_hps_io_hps_io_usb1_inst_D5),      //                    .hps_io_usb1_inst_D5
+		.hps_io_usb1_inst_D6      (hps_0_hps_io_hps_io_usb1_inst_D6),      //                    .hps_io_usb1_inst_D6
+		.hps_io_usb1_inst_D7      (hps_0_hps_io_hps_io_usb1_inst_D7),      //                    .hps_io_usb1_inst_D7
+		.hps_io_usb1_inst_CLK     (hps_0_hps_io_hps_io_usb1_inst_CLK),     //                    .hps_io_usb1_inst_CLK
+		.hps_io_usb1_inst_STP     (hps_0_hps_io_hps_io_usb1_inst_STP),     //                    .hps_io_usb1_inst_STP
+		.hps_io_usb1_inst_DIR     (hps_0_hps_io_hps_io_usb1_inst_DIR),     //                    .hps_io_usb1_inst_DIR
+		.hps_io_usb1_inst_NXT     (hps_0_hps_io_hps_io_usb1_inst_NXT),     //                    .hps_io_usb1_inst_NXT
+		.hps_io_spim0_inst_CLK    (hps_0_hps_io_hps_io_spim0_inst_CLK),    //                    .hps_io_spim0_inst_CLK
+		.hps_io_spim0_inst_MOSI   (hps_0_hps_io_hps_io_spim0_inst_MOSI),   //                    .hps_io_spim0_inst_MOSI
+		.hps_io_spim0_inst_MISO   (hps_0_hps_io_hps_io_spim0_inst_MISO),   //                    .hps_io_spim0_inst_MISO
+		.hps_io_spim0_inst_SS0    (hps_0_hps_io_hps_io_spim0_inst_SS0),    //                    .hps_io_spim0_inst_SS0
+		.hps_io_uart0_inst_RX     (hps_0_hps_io_hps_io_uart0_inst_RX),     //                    .hps_io_uart0_inst_RX
+		.hps_io_uart0_inst_TX     (hps_0_hps_io_hps_io_uart0_inst_TX),     //                    .hps_io_uart0_inst_TX
+		.hps_io_i2c0_inst_SDA     (hps_0_hps_io_hps_io_i2c0_inst_SDA),     //                    .hps_io_i2c0_inst_SDA
+		.hps_io_i2c0_inst_SCL     (hps_0_hps_io_hps_io_i2c0_inst_SCL),     //                    .hps_io_i2c0_inst_SCL
+		.hps_io_can0_inst_RX      (hps_0_hps_io_hps_io_can0_inst_RX),      //                    .hps_io_can0_inst_RX
+		.hps_io_can0_inst_TX      (hps_0_hps_io_hps_io_can0_inst_TX),      //                    .hps_io_can0_inst_TX
+		.hps_io_trace_inst_CLK    (hps_0_hps_io_hps_io_trace_inst_CLK),    //                    .hps_io_trace_inst_CLK
+		.hps_io_trace_inst_D0     (hps_0_hps_io_hps_io_trace_inst_D0),     //                    .hps_io_trace_inst_D0
+		.hps_io_trace_inst_D1     (hps_0_hps_io_hps_io_trace_inst_D1),     //                    .hps_io_trace_inst_D1
+		.hps_io_trace_inst_D2     (hps_0_hps_io_hps_io_trace_inst_D2),     //                    .hps_io_trace_inst_D2
+		.hps_io_trace_inst_D3     (hps_0_hps_io_hps_io_trace_inst_D3),     //                    .hps_io_trace_inst_D3
+		.hps_io_trace_inst_D4     (hps_0_hps_io_hps_io_trace_inst_D4),     //                    .hps_io_trace_inst_D4
+		.hps_io_trace_inst_D5     (hps_0_hps_io_hps_io_trace_inst_D5),     //                    .hps_io_trace_inst_D5
+		.hps_io_trace_inst_D6     (hps_0_hps_io_hps_io_trace_inst_D6),     //                    .hps_io_trace_inst_D6
+		.hps_io_trace_inst_D7     (hps_0_hps_io_hps_io_trace_inst_D7),     //                    .hps_io_trace_inst_D7
+		.hps_io_gpio_inst_GPIO09  (hps_0_hps_io_hps_io_gpio_inst_GPIO09),  //                    .hps_io_gpio_inst_GPIO09
+		.hps_io_gpio_inst_GPIO35  (hps_0_hps_io_hps_io_gpio_inst_GPIO35),  //                    .hps_io_gpio_inst_GPIO35
+		.hps_io_gpio_inst_GPIO41  (hps_0_hps_io_hps_io_gpio_inst_GPIO41),  //                    .hps_io_gpio_inst_GPIO41
+		.hps_io_gpio_inst_GPIO42  (hps_0_hps_io_hps_io_gpio_inst_GPIO42),  //                    .hps_io_gpio_inst_GPIO42
+		.hps_io_gpio_inst_GPIO43  (hps_0_hps_io_hps_io_gpio_inst_GPIO43),  //                    .hps_io_gpio_inst_GPIO43
+		.hps_io_gpio_inst_GPIO44  (hps_0_hps_io_hps_io_gpio_inst_GPIO44),  //                    .hps_io_gpio_inst_GPIO44
+		.h2f_rst_n                (hps_0_h2f_reset_reset_n),               //           h2f_reset.reset_n
+		.f2h_sdram0_clk           (clk_clk),                               //    f2h_sdram0_clock.clk
+		.f2h_sdram0_ARADDR        (hps_0_f2h_sdram0_data_araddr),          //     f2h_sdram0_data.araddr
+		.f2h_sdram0_ARLEN         (hps_0_f2h_sdram0_data_arlen),           //                    .arlen
+		.f2h_sdram0_ARID          (hps_0_f2h_sdram0_data_arid),            //                    .arid
+		.f2h_sdram0_ARSIZE        (hps_0_f2h_sdram0_data_arsize),          //                    .arsize
+		.f2h_sdram0_ARBURST       (hps_0_f2h_sdram0_data_arburst),         //                    .arburst
+		.f2h_sdram0_ARLOCK        (hps_0_f2h_sdram0_data_arlock),          //                    .arlock
+		.f2h_sdram0_ARPROT        (hps_0_f2h_sdram0_data_arprot),          //                    .arprot
+		.f2h_sdram0_ARVALID       (hps_0_f2h_sdram0_data_arvalid),         //                    .arvalid
+		.f2h_sdram0_ARCACHE       (hps_0_f2h_sdram0_data_arcache),         //                    .arcache
+		.f2h_sdram0_AWADDR        (hps_0_f2h_sdram0_data_awaddr),          //                    .awaddr
+		.f2h_sdram0_AWLEN         (hps_0_f2h_sdram0_data_awlen),           //                    .awlen
+		.f2h_sdram0_AWID          (hps_0_f2h_sdram0_data_awid),            //                    .awid
+		.f2h_sdram0_AWSIZE        (hps_0_f2h_sdram0_data_awsize),          //                    .awsize
+		.f2h_sdram0_AWBURST       (hps_0_f2h_sdram0_data_awburst),         //                    .awburst
+		.f2h_sdram0_AWLOCK        (hps_0_f2h_sdram0_data_awlock),          //                    .awlock
+		.f2h_sdram0_AWPROT        (hps_0_f2h_sdram0_data_awprot),          //                    .awprot
+		.f2h_sdram0_AWVALID       (hps_0_f2h_sdram0_data_awvalid),         //                    .awvalid
+		.f2h_sdram0_AWCACHE       (hps_0_f2h_sdram0_data_awcache),         //                    .awcache
+		.f2h_sdram0_BRESP         (hps_0_f2h_sdram0_data_bresp),           //                    .bresp
+		.f2h_sdram0_BID           (hps_0_f2h_sdram0_data_bid),             //                    .bid
+		.f2h_sdram0_BVALID        (hps_0_f2h_sdram0_data_bvalid),          //                    .bvalid
+		.f2h_sdram0_BREADY        (hps_0_f2h_sdram0_data_bready),          //                    .bready
+		.f2h_sdram0_ARREADY       (hps_0_f2h_sdram0_data_arready),         //                    .arready
+		.f2h_sdram0_AWREADY       (hps_0_f2h_sdram0_data_awready),         //                    .awready
+		.f2h_sdram0_RREADY        (hps_0_f2h_sdram0_data_rready),          //                    .rready
+		.f2h_sdram0_RDATA         (hps_0_f2h_sdram0_data_rdata),           //                    .rdata
+		.f2h_sdram0_RRESP         (hps_0_f2h_sdram0_data_rresp),           //                    .rresp
+		.f2h_sdram0_RLAST         (hps_0_f2h_sdram0_data_rlast),           //                    .rlast
+		.f2h_sdram0_RID           (hps_0_f2h_sdram0_data_rid),             //                    .rid
+		.f2h_sdram0_RVALID        (hps_0_f2h_sdram0_data_rvalid),          //                    .rvalid
+		.f2h_sdram0_WLAST         (hps_0_f2h_sdram0_data_wlast),           //                    .wlast
+		.f2h_sdram0_WVALID        (hps_0_f2h_sdram0_data_wvalid),          //                    .wvalid
+		.f2h_sdram0_WDATA         (hps_0_f2h_sdram0_data_wdata),           //                    .wdata
+		.f2h_sdram0_WSTRB         (hps_0_f2h_sdram0_data_wstrb),           //                    .wstrb
+		.f2h_sdram0_WREADY        (hps_0_f2h_sdram0_data_wready),          //                    .wready
+		.f2h_sdram0_WID           (hps_0_f2h_sdram0_data_wid),             //                    .wid
+		.f2h_sdram1_clk           (clk_clk),                               //    f2h_sdram1_clock.clk
+		.f2h_sdram1_ARADDR        (hps_0_f2h_sdram1_data_araddr),          //     f2h_sdram1_data.araddr
+		.f2h_sdram1_ARLEN         (hps_0_f2h_sdram1_data_arlen),           //                    .arlen
+		.f2h_sdram1_ARID          (hps_0_f2h_sdram1_data_arid),            //                    .arid
+		.f2h_sdram1_ARSIZE        (hps_0_f2h_sdram1_data_arsize),          //                    .arsize
+		.f2h_sdram1_ARBURST       (hps_0_f2h_sdram1_data_arburst),         //                    .arburst
+		.f2h_sdram1_ARLOCK        (hps_0_f2h_sdram1_data_arlock),          //                    .arlock
+		.f2h_sdram1_ARPROT        (hps_0_f2h_sdram1_data_arprot),          //                    .arprot
+		.f2h_sdram1_ARVALID       (hps_0_f2h_sdram1_data_arvalid),         //                    .arvalid
+		.f2h_sdram1_ARCACHE       (hps_0_f2h_sdram1_data_arcache),         //                    .arcache
+		.f2h_sdram1_AWADDR        (hps_0_f2h_sdram1_data_awaddr),          //                    .awaddr
+		.f2h_sdram1_AWLEN         (hps_0_f2h_sdram1_data_awlen),           //                    .awlen
+		.f2h_sdram1_AWID          (hps_0_f2h_sdram1_data_awid),            //                    .awid
+		.f2h_sdram1_AWSIZE        (hps_0_f2h_sdram1_data_awsize),          //                    .awsize
+		.f2h_sdram1_AWBURST       (hps_0_f2h_sdram1_data_awburst),         //                    .awburst
+		.f2h_sdram1_AWLOCK        (hps_0_f2h_sdram1_data_awlock),          //                    .awlock
+		.f2h_sdram1_AWPROT        (hps_0_f2h_sdram1_data_awprot),          //                    .awprot
+		.f2h_sdram1_AWVALID       (hps_0_f2h_sdram1_data_awvalid),         //                    .awvalid
+		.f2h_sdram1_AWCACHE       (hps_0_f2h_sdram1_data_awcache),         //                    .awcache
+		.f2h_sdram1_BRESP         (hps_0_f2h_sdram1_data_bresp),           //                    .bresp
+		.f2h_sdram1_BID           (hps_0_f2h_sdram1_data_bid),             //                    .bid
+		.f2h_sdram1_BVALID        (hps_0_f2h_sdram1_data_bvalid),          //                    .bvalid
+		.f2h_sdram1_BREADY        (hps_0_f2h_sdram1_data_bready),          //                    .bready
+		.f2h_sdram1_ARREADY       (hps_0_f2h_sdram1_data_arready),         //                    .arready
+		.f2h_sdram1_AWREADY       (hps_0_f2h_sdram1_data_awready),         //                    .awready
+		.f2h_sdram1_RREADY        (hps_0_f2h_sdram1_data_rready),          //                    .rready
+		.f2h_sdram1_RDATA         (hps_0_f2h_sdram1_data_rdata),           //                    .rdata
+		.f2h_sdram1_RRESP         (hps_0_f2h_sdram1_data_rresp),           //                    .rresp
+		.f2h_sdram1_RLAST         (hps_0_f2h_sdram1_data_rlast),           //                    .rlast
+		.f2h_sdram1_RID           (hps_0_f2h_sdram1_data_rid),             //                    .rid
+		.f2h_sdram1_RVALID        (hps_0_f2h_sdram1_data_rvalid),          //                    .rvalid
+		.f2h_sdram1_WLAST         (hps_0_f2h_sdram1_data_wlast),           //                    .wlast
+		.f2h_sdram1_WVALID        (hps_0_f2h_sdram1_data_wvalid),          //                    .wvalid
+		.f2h_sdram1_WDATA         (hps_0_f2h_sdram1_data_wdata),           //                    .wdata
+		.f2h_sdram1_WSTRB         (hps_0_f2h_sdram1_data_wstrb),           //                    .wstrb
+		.f2h_sdram1_WREADY        (hps_0_f2h_sdram1_data_wready),          //                    .wready
+		.f2h_sdram1_WID           (hps_0_f2h_sdram1_data_wid),             //                    .wid
+		.f2h_sdram2_clk           (clk_clk),                               //    f2h_sdram2_clock.clk
+		.f2h_sdram2_ARADDR        (hps_0_f2h_sdram2_data_araddr),          //     f2h_sdram2_data.araddr
+		.f2h_sdram2_ARLEN         (hps_0_f2h_sdram2_data_arlen),           //                    .arlen
+		.f2h_sdram2_ARID          (hps_0_f2h_sdram2_data_arid),            //                    .arid
+		.f2h_sdram2_ARSIZE        (hps_0_f2h_sdram2_data_arsize),          //                    .arsize
+		.f2h_sdram2_ARBURST       (hps_0_f2h_sdram2_data_arburst),         //                    .arburst
+		.f2h_sdram2_ARLOCK        (hps_0_f2h_sdram2_data_arlock),          //                    .arlock
+		.f2h_sdram2_ARPROT        (hps_0_f2h_sdram2_data_arprot),          //                    .arprot
+		.f2h_sdram2_ARVALID       (hps_0_f2h_sdram2_data_arvalid),         //                    .arvalid
+		.f2h_sdram2_ARCACHE       (hps_0_f2h_sdram2_data_arcache),         //                    .arcache
+		.f2h_sdram2_AWADDR        (hps_0_f2h_sdram2_data_awaddr),          //                    .awaddr
+		.f2h_sdram2_AWLEN         (hps_0_f2h_sdram2_data_awlen),           //                    .awlen
+		.f2h_sdram2_AWID          (hps_0_f2h_sdram2_data_awid),            //                    .awid
+		.f2h_sdram2_AWSIZE        (hps_0_f2h_sdram2_data_awsize),          //                    .awsize
+		.f2h_sdram2_AWBURST       (hps_0_f2h_sdram2_data_awburst),         //                    .awburst
+		.f2h_sdram2_AWLOCK        (hps_0_f2h_sdram2_data_awlock),          //                    .awlock
+		.f2h_sdram2_AWPROT        (hps_0_f2h_sdram2_data_awprot),          //                    .awprot
+		.f2h_sdram2_AWVALID       (hps_0_f2h_sdram2_data_awvalid),         //                    .awvalid
+		.f2h_sdram2_AWCACHE       (hps_0_f2h_sdram2_data_awcache),         //                    .awcache
+		.f2h_sdram2_BRESP         (hps_0_f2h_sdram2_data_bresp),           //                    .bresp
+		.f2h_sdram2_BID           (hps_0_f2h_sdram2_data_bid),             //                    .bid
+		.f2h_sdram2_BVALID        (hps_0_f2h_sdram2_data_bvalid),          //                    .bvalid
+		.f2h_sdram2_BREADY        (hps_0_f2h_sdram2_data_bready),          //                    .bready
+		.f2h_sdram2_ARREADY       (hps_0_f2h_sdram2_data_arready),         //                    .arready
+		.f2h_sdram2_AWREADY       (hps_0_f2h_sdram2_data_awready),         //                    .awready
+		.f2h_sdram2_RREADY        (hps_0_f2h_sdram2_data_rready),          //                    .rready
+		.f2h_sdram2_RDATA         (hps_0_f2h_sdram2_data_rdata),           //                    .rdata
+		.f2h_sdram2_RRESP         (hps_0_f2h_sdram2_data_rresp),           //                    .rresp
+		.f2h_sdram2_RLAST         (hps_0_f2h_sdram2_data_rlast),           //                    .rlast
+		.f2h_sdram2_RID           (hps_0_f2h_sdram2_data_rid),             //                    .rid
+		.f2h_sdram2_RVALID        (hps_0_f2h_sdram2_data_rvalid),          //                    .rvalid
+		.f2h_sdram2_WLAST         (hps_0_f2h_sdram2_data_wlast),           //                    .wlast
+		.f2h_sdram2_WVALID        (hps_0_f2h_sdram2_data_wvalid),          //                    .wvalid
+		.f2h_sdram2_WDATA         (hps_0_f2h_sdram2_data_wdata),           //                    .wdata
+		.f2h_sdram2_WSTRB         (hps_0_f2h_sdram2_data_wstrb),           //                    .wstrb
+		.f2h_sdram2_WREADY        (hps_0_f2h_sdram2_data_wready),          //                    .wready
+		.f2h_sdram2_WID           (hps_0_f2h_sdram2_data_wid),             //                    .wid
+		.h2f_axi_clk              (clk_clk),                               //       h2f_axi_clock.clk
+		.h2f_AWID                 (hps_0_h2f_axi_master_awid),             //      h2f_axi_master.awid
+		.h2f_AWADDR               (hps_0_h2f_axi_master_awaddr),           //                    .awaddr
+		.h2f_AWLEN                (hps_0_h2f_axi_master_awlen),            //                    .awlen
+		.h2f_AWSIZE               (hps_0_h2f_axi_master_awsize),           //                    .awsize
+		.h2f_AWBURST              (hps_0_h2f_axi_master_awburst),          //                    .awburst
+		.h2f_AWLOCK               (hps_0_h2f_axi_master_awlock),           //                    .awlock
+		.h2f_AWCACHE              (hps_0_h2f_axi_master_awcache),          //                    .awcache
+		.h2f_AWPROT               (hps_0_h2f_axi_master_awprot),           //                    .awprot
+		.h2f_AWVALID              (hps_0_h2f_axi_master_awvalid),          //                    .awvalid
+		.h2f_AWREADY              (hps_0_h2f_axi_master_awready),          //                    .awready
+		.h2f_WID                  (hps_0_h2f_axi_master_wid),              //                    .wid
+		.h2f_WDATA                (hps_0_h2f_axi_master_wdata),            //                    .wdata
+		.h2f_WSTRB                (hps_0_h2f_axi_master_wstrb),            //                    .wstrb
+		.h2f_WLAST                (hps_0_h2f_axi_master_wlast),            //                    .wlast
+		.h2f_WVALID               (hps_0_h2f_axi_master_wvalid),           //                    .wvalid
+		.h2f_WREADY               (hps_0_h2f_axi_master_wready),           //                    .wready
+		.h2f_BID                  (hps_0_h2f_axi_master_bid),              //                    .bid
+		.h2f_BRESP                (hps_0_h2f_axi_master_bresp),            //                    .bresp
+		.h2f_BVALID               (hps_0_h2f_axi_master_bvalid),           //                    .bvalid
+		.h2f_BREADY               (hps_0_h2f_axi_master_bready),           //                    .bready
+		.h2f_ARID                 (hps_0_h2f_axi_master_arid),             //                    .arid
+		.h2f_ARADDR               (hps_0_h2f_axi_master_araddr),           //                    .araddr
+		.h2f_ARLEN                (hps_0_h2f_axi_master_arlen),            //                    .arlen
+		.h2f_ARSIZE               (hps_0_h2f_axi_master_arsize),           //                    .arsize
+		.h2f_ARBURST              (hps_0_h2f_axi_master_arburst),          //                    .arburst
+		.h2f_ARLOCK               (hps_0_h2f_axi_master_arlock),           //                    .arlock
+		.h2f_ARCACHE              (hps_0_h2f_axi_master_arcache),          //                    .arcache
+		.h2f_ARPROT               (hps_0_h2f_axi_master_arprot),           //                    .arprot
+		.h2f_ARVALID              (hps_0_h2f_axi_master_arvalid),          //                    .arvalid
+		.h2f_ARREADY              (hps_0_h2f_axi_master_arready),          //                    .arready
+		.h2f_RID                  (hps_0_h2f_axi_master_rid),              //                    .rid
+		.h2f_RDATA                (hps_0_h2f_axi_master_rdata),            //                    .rdata
+		.h2f_RRESP                (hps_0_h2f_axi_master_rresp),            //                    .rresp
+		.h2f_RLAST                (hps_0_h2f_axi_master_rlast),            //                    .rlast
+		.h2f_RVALID               (hps_0_h2f_axi_master_rvalid),           //                    .rvalid
+		.h2f_RREADY               (hps_0_h2f_axi_master_rready),           //                    .rready
+		.f2h_axi_clk              (clk_clk),                               //       f2h_axi_clock.clk
+		.f2h_AWID                 (),                                      //       f2h_axi_slave.awid
+		.f2h_AWADDR               (),                                      //                    .awaddr
+		.f2h_AWLEN                (),                                      //                    .awlen
+		.f2h_AWSIZE               (),                                      //                    .awsize
+		.f2h_AWBURST              (),                                      //                    .awburst
+		.f2h_AWLOCK               (),                                      //                    .awlock
+		.f2h_AWCACHE              (),                                      //                    .awcache
+		.f2h_AWPROT               (),                                      //                    .awprot
+		.f2h_AWVALID              (),                                      //                    .awvalid
+		.f2h_AWREADY              (),                                      //                    .awready
+		.f2h_AWUSER               (),                                      //                    .awuser
+		.f2h_WID                  (),                                      //                    .wid
+		.f2h_WDATA                (),                                      //                    .wdata
+		.f2h_WSTRB                (),                                      //                    .wstrb
+		.f2h_WLAST                (),                                      //                    .wlast
+		.f2h_WVALID               (),                                      //                    .wvalid
+		.f2h_WREADY               (),                                      //                    .wready
+		.f2h_BID                  (),                                      //                    .bid
+		.f2h_BRESP                (),                                      //                    .bresp
+		.f2h_BVALID               (),                                      //                    .bvalid
+		.f2h_BREADY               (),                                      //                    .bready
+		.f2h_ARID                 (),                                      //                    .arid
+		.f2h_ARADDR               (),                                      //                    .araddr
+		.f2h_ARLEN                (),                                      //                    .arlen
+		.f2h_ARSIZE               (),                                      //                    .arsize
+		.f2h_ARBURST              (),                                      //                    .arburst
+		.f2h_ARLOCK               (),                                      //                    .arlock
+		.f2h_ARCACHE              (),                                      //                    .arcache
+		.f2h_ARPROT               (),                                      //                    .arprot
+		.f2h_ARVALID              (),                                      //                    .arvalid
+		.f2h_ARREADY              (),                                      //                    .arready
+		.f2h_ARUSER               (),                                      //                    .aruser
+		.f2h_RID                  (),                                      //                    .rid
+		.f2h_RDATA                (),                                      //                    .rdata
+		.f2h_RRESP                (),                                      //                    .rresp
+		.f2h_RLAST                (),                                      //                    .rlast
+		.f2h_RVALID               (),                                      //                    .rvalid
+		.f2h_RREADY               (),                                      //                    .rready
+		.h2f_lw_axi_clk           (clk_clk),                               //    h2f_lw_axi_clock.clk
+		.h2f_lw_AWID              (),                                      //   h2f_lw_axi_master.awid
+		.h2f_lw_AWADDR            (),                                      //                    .awaddr
+		.h2f_lw_AWLEN             (),                                      //                    .awlen
+		.h2f_lw_AWSIZE            (),                                      //                    .awsize
+		.h2f_lw_AWBURST           (),                                      //                    .awburst
+		.h2f_lw_AWLOCK            (),                                      //                    .awlock
+		.h2f_lw_AWCACHE           (),                                      //                    .awcache
+		.h2f_lw_AWPROT            (),                                      //                    .awprot
+		.h2f_lw_AWVALID           (),                                      //                    .awvalid
+		.h2f_lw_AWREADY           (),                                      //                    .awready
+		.h2f_lw_WID               (),                                      //                    .wid
+		.h2f_lw_WDATA             (),                                      //                    .wdata
+		.h2f_lw_WSTRB             (),                                      //                    .wstrb
+		.h2f_lw_WLAST             (),                                      //                    .wlast
+		.h2f_lw_WVALID            (),                                      //                    .wvalid
+		.h2f_lw_WREADY            (),                                      //                    .wready
+		.h2f_lw_BID               (),                                      //                    .bid
+		.h2f_lw_BRESP             (),                                      //                    .bresp
+		.h2f_lw_BVALID            (),                                      //                    .bvalid
+		.h2f_lw_BREADY            (),                                      //                    .bready
+		.h2f_lw_ARID              (),                                      //                    .arid
+		.h2f_lw_ARADDR            (),                                      //                    .araddr
+		.h2f_lw_ARLEN             (),                                      //                    .arlen
+		.h2f_lw_ARSIZE            (),                                      //                    .arsize
+		.h2f_lw_ARBURST           (),                                      //                    .arburst
+		.h2f_lw_ARLOCK            (),                                      //                    .arlock
+		.h2f_lw_ARCACHE           (),                                      //                    .arcache
+		.h2f_lw_ARPROT            (),                                      //                    .arprot
+		.h2f_lw_ARVALID           (),                                      //                    .arvalid
+		.h2f_lw_ARREADY           (),                                      //                    .arready
+		.h2f_lw_RID               (),                                      //                    .rid
+		.h2f_lw_RDATA             (),                                      //                    .rdata
+		.h2f_lw_RRESP             (),                                      //                    .rresp
+		.h2f_lw_RLAST             (),                                      //                    .rlast
+		.h2f_lw_RVALID            (),                                      //                    .rvalid
+		.h2f_lw_RREADY            (),                                      //                    .rready
+		.f2h_irq_p0               (hps_0_f2h_irq0_irq),                    //            f2h_irq0.irq
+		.f2h_irq_p1               (hps_0_f2h_irq1_irq)                     //            f2h_irq1.irq
 	);
 
 	Kvazaar_QSYS_lambda_loaded lambda_loaded (
 		.clk        (clk_clk),                                       //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),               //               reset.reset_n
-		.address    (mm_interconnect_3_lambda_loaded_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_lambda_loaded_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_lambda_loaded_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_lambda_loaded_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_lambda_loaded_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_lambda_loaded_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_lambda_loaded_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_lambda_loaded_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_lambda_loaded_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_lambda_loaded_s1_readdata),   //                    .readdata
 		.in_port    (lambda_loaded_external_connection_export),      // external_connection.export
 		.irq        (irq_mapper_001_receiver2_irq)                   //                 irq.irq
 	);
@@ -1408,11 +1300,11 @@ module Kvazaar_QSYS (
 	Kvazaar_QSYS_lcu_loaded lcu_loaded (
 		.clk        (clk_clk),                                    //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),            //               reset.reset_n
-		.address    (mm_interconnect_3_lcu_loaded_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_lcu_loaded_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_lcu_loaded_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_lcu_loaded_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_lcu_loaded_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_lcu_loaded_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_lcu_loaded_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_lcu_loaded_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_lcu_loaded_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_lcu_loaded_s1_readdata),   //                    .readdata
 		.in_port    (lcu_loaded_external_connection_export),      // external_connection.export
 		.irq        (irq_mapper_001_receiver1_irq)                //                 irq.irq
 	);
@@ -1420,11 +1312,11 @@ module Kvazaar_QSYS (
 	Kvazaar_QSYS_result_ready result_ready (
 		.clk        (clk_clk),                                      //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),              //               reset.reset_n
-		.address    (mm_interconnect_3_result_ready_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_result_ready_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_result_ready_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_result_ready_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_result_ready_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_result_ready_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_result_ready_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_result_ready_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_result_ready_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_result_ready_s1_readdata),   //                    .readdata
 		.in_port    (result_ready_external_connection_export),      // external_connection.export
 		.irq        (irq_mapper_001_receiver0_irq)                  //                 irq.irq
 	);
@@ -1432,421 +1324,229 @@ module Kvazaar_QSYS (
 	Kvazaar_QSYS_sad_result_high sad_result_high (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_3_sad_result_high_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_sad_result_high_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_sad_result_high_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_sad_result_high_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_sad_result_high_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_sad_result_high_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_sad_result_high_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_sad_result_high_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_sad_result_high_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_sad_result_high_s1_readdata),   //                    .readdata
 		.in_port    (sad_result_high_external_connection_export)       // external_connection.export
 	);
 
 	Kvazaar_QSYS_sad_result_high sad_result_low (
 		.clk        (clk_clk),                                        //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                //               reset.reset_n
-		.address    (mm_interconnect_3_sad_result_low_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_sad_result_low_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_sad_result_low_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_sad_result_low_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_sad_result_low_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_sad_result_low_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_sad_result_low_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_sad_result_low_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_sad_result_low_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_sad_result_low_s1_readdata),   //                    .readdata
 		.in_port    (sad_result_low_external_connection_export)       // external_connection.export
 	);
 
 	Kvazaar_QSYS_yuv_ctrl yuv_ctrl (
 		.clk        (clk_clk),                                  //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),          //               reset.reset_n
-		.address    (mm_interconnect_3_yuv_ctrl_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_yuv_ctrl_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_yuv_ctrl_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_yuv_ctrl_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_yuv_ctrl_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_yuv_ctrl_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_yuv_ctrl_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_yuv_ctrl_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_yuv_ctrl_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_yuv_ctrl_s1_readdata),   //                    .readdata
 		.out_port   (yuv_ctrl_external_connection_export)       // external_connection.export
 	);
 
 	Kvazaar_QSYS_lcu_loaded yuv_status (
 		.clk        (clk_clk),                                    //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),            //               reset.reset_n
-		.address    (mm_interconnect_3_yuv_status_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_3_yuv_status_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_3_yuv_status_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_3_yuv_status_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_3_yuv_status_s1_readdata),   //                    .readdata
+		.address    (mm_interconnect_0_yuv_status_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_yuv_status_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_yuv_status_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_yuv_status_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_yuv_status_s1_readdata),   //                    .readdata
 		.in_port    (yuv_status_external_connection_export),      // external_connection.export
 		.irq        (irq_mapper_001_receiver3_irq)                //                 irq.irq
 	);
 
-	Kvazaar_QSYS_mm_interconnect_1 mm_interconnect_1 (
-		.axi_dma_orig_block_altera_axi_master_awid                          (axi_dma_orig_block_altera_axi_master_awid),       //                         axi_dma_orig_block_altera_axi_master.awid
-		.axi_dma_orig_block_altera_axi_master_awaddr                        (axi_dma_orig_block_altera_axi_master_awaddr),     //                                                             .awaddr
-		.axi_dma_orig_block_altera_axi_master_awlen                         (axi_dma_orig_block_altera_axi_master_awlen),      //                                                             .awlen
-		.axi_dma_orig_block_altera_axi_master_awsize                        (axi_dma_orig_block_altera_axi_master_awsize),     //                                                             .awsize
-		.axi_dma_orig_block_altera_axi_master_awburst                       (axi_dma_orig_block_altera_axi_master_awburst),    //                                                             .awburst
-		.axi_dma_orig_block_altera_axi_master_awlock                        (axi_dma_orig_block_altera_axi_master_awlock),     //                                                             .awlock
-		.axi_dma_orig_block_altera_axi_master_awcache                       (axi_dma_orig_block_altera_axi_master_awcache),    //                                                             .awcache
-		.axi_dma_orig_block_altera_axi_master_awprot                        (axi_dma_orig_block_altera_axi_master_awprot),     //                                                             .awprot
-		.axi_dma_orig_block_altera_axi_master_awvalid                       (axi_dma_orig_block_altera_axi_master_awvalid),    //                                                             .awvalid
-		.axi_dma_orig_block_altera_axi_master_awready                       (axi_dma_orig_block_altera_axi_master_awready),    //                                                             .awready
-		.axi_dma_orig_block_altera_axi_master_wid                           (axi_dma_orig_block_altera_axi_master_wid),        //                                                             .wid
-		.axi_dma_orig_block_altera_axi_master_wdata                         (axi_dma_orig_block_altera_axi_master_wdata),      //                                                             .wdata
-		.axi_dma_orig_block_altera_axi_master_wstrb                         (axi_dma_orig_block_altera_axi_master_wstrb),      //                                                             .wstrb
-		.axi_dma_orig_block_altera_axi_master_wlast                         (axi_dma_orig_block_altera_axi_master_wlast),      //                                                             .wlast
-		.axi_dma_orig_block_altera_axi_master_wvalid                        (axi_dma_orig_block_altera_axi_master_wvalid),     //                                                             .wvalid
-		.axi_dma_orig_block_altera_axi_master_wready                        (axi_dma_orig_block_altera_axi_master_wready),     //                                                             .wready
-		.axi_dma_orig_block_altera_axi_master_bid                           (axi_dma_orig_block_altera_axi_master_bid),        //                                                             .bid
-		.axi_dma_orig_block_altera_axi_master_bresp                         (axi_dma_orig_block_altera_axi_master_bresp),      //                                                             .bresp
-		.axi_dma_orig_block_altera_axi_master_bvalid                        (axi_dma_orig_block_altera_axi_master_bvalid),     //                                                             .bvalid
-		.axi_dma_orig_block_altera_axi_master_bready                        (axi_dma_orig_block_altera_axi_master_bready),     //                                                             .bready
-		.axi_dma_orig_block_altera_axi_master_arid                          (axi_dma_orig_block_altera_axi_master_arid),       //                                                             .arid
-		.axi_dma_orig_block_altera_axi_master_araddr                        (axi_dma_orig_block_altera_axi_master_araddr),     //                                                             .araddr
-		.axi_dma_orig_block_altera_axi_master_arlen                         (axi_dma_orig_block_altera_axi_master_arlen),      //                                                             .arlen
-		.axi_dma_orig_block_altera_axi_master_arsize                        (axi_dma_orig_block_altera_axi_master_arsize),     //                                                             .arsize
-		.axi_dma_orig_block_altera_axi_master_arburst                       (axi_dma_orig_block_altera_axi_master_arburst),    //                                                             .arburst
-		.axi_dma_orig_block_altera_axi_master_arlock                        (axi_dma_orig_block_altera_axi_master_arlock),     //                                                             .arlock
-		.axi_dma_orig_block_altera_axi_master_arcache                       (axi_dma_orig_block_altera_axi_master_arcache),    //                                                             .arcache
-		.axi_dma_orig_block_altera_axi_master_arprot                        (axi_dma_orig_block_altera_axi_master_arprot),     //                                                             .arprot
-		.axi_dma_orig_block_altera_axi_master_arvalid                       (axi_dma_orig_block_altera_axi_master_arvalid),    //                                                             .arvalid
-		.axi_dma_orig_block_altera_axi_master_arready                       (axi_dma_orig_block_altera_axi_master_arready),    //                                                             .arready
-		.axi_dma_orig_block_altera_axi_master_rid                           (axi_dma_orig_block_altera_axi_master_rid),        //                                                             .rid
-		.axi_dma_orig_block_altera_axi_master_rdata                         (axi_dma_orig_block_altera_axi_master_rdata),      //                                                             .rdata
-		.axi_dma_orig_block_altera_axi_master_rresp                         (axi_dma_orig_block_altera_axi_master_rresp),      //                                                             .rresp
-		.axi_dma_orig_block_altera_axi_master_rlast                         (axi_dma_orig_block_altera_axi_master_rlast),      //                                                             .rlast
-		.axi_dma_orig_block_altera_axi_master_rvalid                        (axi_dma_orig_block_altera_axi_master_rvalid),     //                                                             .rvalid
-		.axi_dma_orig_block_altera_axi_master_rready                        (axi_dma_orig_block_altera_axi_master_rready),     //                                                             .rready
-		.axi_dma_unfiltered2_altera_axi_master_awid                         (axi_dma_unfiltered2_altera_axi_master_awid),      //                        axi_dma_unfiltered2_altera_axi_master.awid
-		.axi_dma_unfiltered2_altera_axi_master_awaddr                       (axi_dma_unfiltered2_altera_axi_master_awaddr),    //                                                             .awaddr
-		.axi_dma_unfiltered2_altera_axi_master_awlen                        (axi_dma_unfiltered2_altera_axi_master_awlen),     //                                                             .awlen
-		.axi_dma_unfiltered2_altera_axi_master_awsize                       (axi_dma_unfiltered2_altera_axi_master_awsize),    //                                                             .awsize
-		.axi_dma_unfiltered2_altera_axi_master_awburst                      (axi_dma_unfiltered2_altera_axi_master_awburst),   //                                                             .awburst
-		.axi_dma_unfiltered2_altera_axi_master_awlock                       (axi_dma_unfiltered2_altera_axi_master_awlock),    //                                                             .awlock
-		.axi_dma_unfiltered2_altera_axi_master_awcache                      (axi_dma_unfiltered2_altera_axi_master_awcache),   //                                                             .awcache
-		.axi_dma_unfiltered2_altera_axi_master_awprot                       (axi_dma_unfiltered2_altera_axi_master_awprot),    //                                                             .awprot
-		.axi_dma_unfiltered2_altera_axi_master_awvalid                      (axi_dma_unfiltered2_altera_axi_master_awvalid),   //                                                             .awvalid
-		.axi_dma_unfiltered2_altera_axi_master_awready                      (axi_dma_unfiltered2_altera_axi_master_awready),   //                                                             .awready
-		.axi_dma_unfiltered2_altera_axi_master_wid                          (axi_dma_unfiltered2_altera_axi_master_wid),       //                                                             .wid
-		.axi_dma_unfiltered2_altera_axi_master_wdata                        (axi_dma_unfiltered2_altera_axi_master_wdata),     //                                                             .wdata
-		.axi_dma_unfiltered2_altera_axi_master_wstrb                        (axi_dma_unfiltered2_altera_axi_master_wstrb),     //                                                             .wstrb
-		.axi_dma_unfiltered2_altera_axi_master_wlast                        (axi_dma_unfiltered2_altera_axi_master_wlast),     //                                                             .wlast
-		.axi_dma_unfiltered2_altera_axi_master_wvalid                       (axi_dma_unfiltered2_altera_axi_master_wvalid),    //                                                             .wvalid
-		.axi_dma_unfiltered2_altera_axi_master_wready                       (axi_dma_unfiltered2_altera_axi_master_wready),    //                                                             .wready
-		.axi_dma_unfiltered2_altera_axi_master_bid                          (axi_dma_unfiltered2_altera_axi_master_bid),       //                                                             .bid
-		.axi_dma_unfiltered2_altera_axi_master_bresp                        (axi_dma_unfiltered2_altera_axi_master_bresp),     //                                                             .bresp
-		.axi_dma_unfiltered2_altera_axi_master_bvalid                       (axi_dma_unfiltered2_altera_axi_master_bvalid),    //                                                             .bvalid
-		.axi_dma_unfiltered2_altera_axi_master_bready                       (axi_dma_unfiltered2_altera_axi_master_bready),    //                                                             .bready
-		.axi_dma_unfiltered2_altera_axi_master_arid                         (axi_dma_unfiltered2_altera_axi_master_arid),      //                                                             .arid
-		.axi_dma_unfiltered2_altera_axi_master_araddr                       (axi_dma_unfiltered2_altera_axi_master_araddr),    //                                                             .araddr
-		.axi_dma_unfiltered2_altera_axi_master_arlen                        (axi_dma_unfiltered2_altera_axi_master_arlen),     //                                                             .arlen
-		.axi_dma_unfiltered2_altera_axi_master_arsize                       (axi_dma_unfiltered2_altera_axi_master_arsize),    //                                                             .arsize
-		.axi_dma_unfiltered2_altera_axi_master_arburst                      (axi_dma_unfiltered2_altera_axi_master_arburst),   //                                                             .arburst
-		.axi_dma_unfiltered2_altera_axi_master_arlock                       (axi_dma_unfiltered2_altera_axi_master_arlock),    //                                                             .arlock
-		.axi_dma_unfiltered2_altera_axi_master_arcache                      (axi_dma_unfiltered2_altera_axi_master_arcache),   //                                                             .arcache
-		.axi_dma_unfiltered2_altera_axi_master_arprot                       (axi_dma_unfiltered2_altera_axi_master_arprot),    //                                                             .arprot
-		.axi_dma_unfiltered2_altera_axi_master_arvalid                      (axi_dma_unfiltered2_altera_axi_master_arvalid),   //                                                             .arvalid
-		.axi_dma_unfiltered2_altera_axi_master_arready                      (axi_dma_unfiltered2_altera_axi_master_arready),   //                                                             .arready
-		.axi_dma_unfiltered2_altera_axi_master_rid                          (axi_dma_unfiltered2_altera_axi_master_rid),       //                                                             .rid
-		.axi_dma_unfiltered2_altera_axi_master_rdata                        (axi_dma_unfiltered2_altera_axi_master_rdata),     //                                                             .rdata
-		.axi_dma_unfiltered2_altera_axi_master_rresp                        (axi_dma_unfiltered2_altera_axi_master_rresp),     //                                                             .rresp
-		.axi_dma_unfiltered2_altera_axi_master_rlast                        (axi_dma_unfiltered2_altera_axi_master_rlast),     //                                                             .rlast
-		.axi_dma_unfiltered2_altera_axi_master_rvalid                       (axi_dma_unfiltered2_altera_axi_master_rvalid),    //                                                             .rvalid
-		.axi_dma_unfiltered2_altera_axi_master_rready                       (axi_dma_unfiltered2_altera_axi_master_rready),    //                                                             .rready
-		.hps_0_f2h_sdram1_data_awid                                         (mm_interconnect_1_hps_0_f2h_sdram1_data_awid),    //                                        hps_0_f2h_sdram1_data.awid
-		.hps_0_f2h_sdram1_data_awaddr                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_awaddr),  //                                                             .awaddr
-		.hps_0_f2h_sdram1_data_awlen                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_awlen),   //                                                             .awlen
-		.hps_0_f2h_sdram1_data_awsize                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_awsize),  //                                                             .awsize
-		.hps_0_f2h_sdram1_data_awburst                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_awburst), //                                                             .awburst
-		.hps_0_f2h_sdram1_data_awlock                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_awlock),  //                                                             .awlock
-		.hps_0_f2h_sdram1_data_awcache                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_awcache), //                                                             .awcache
-		.hps_0_f2h_sdram1_data_awprot                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_awprot),  //                                                             .awprot
-		.hps_0_f2h_sdram1_data_awvalid                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_awvalid), //                                                             .awvalid
-		.hps_0_f2h_sdram1_data_awready                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_awready), //                                                             .awready
-		.hps_0_f2h_sdram1_data_wid                                          (mm_interconnect_1_hps_0_f2h_sdram1_data_wid),     //                                                             .wid
-		.hps_0_f2h_sdram1_data_wdata                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_wdata),   //                                                             .wdata
-		.hps_0_f2h_sdram1_data_wstrb                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_wstrb),   //                                                             .wstrb
-		.hps_0_f2h_sdram1_data_wlast                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_wlast),   //                                                             .wlast
-		.hps_0_f2h_sdram1_data_wvalid                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_wvalid),  //                                                             .wvalid
-		.hps_0_f2h_sdram1_data_wready                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_wready),  //                                                             .wready
-		.hps_0_f2h_sdram1_data_bid                                          (mm_interconnect_1_hps_0_f2h_sdram1_data_bid),     //                                                             .bid
-		.hps_0_f2h_sdram1_data_bresp                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_bresp),   //                                                             .bresp
-		.hps_0_f2h_sdram1_data_bvalid                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_bvalid),  //                                                             .bvalid
-		.hps_0_f2h_sdram1_data_bready                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_bready),  //                                                             .bready
-		.hps_0_f2h_sdram1_data_arid                                         (mm_interconnect_1_hps_0_f2h_sdram1_data_arid),    //                                                             .arid
-		.hps_0_f2h_sdram1_data_araddr                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_araddr),  //                                                             .araddr
-		.hps_0_f2h_sdram1_data_arlen                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_arlen),   //                                                             .arlen
-		.hps_0_f2h_sdram1_data_arsize                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_arsize),  //                                                             .arsize
-		.hps_0_f2h_sdram1_data_arburst                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_arburst), //                                                             .arburst
-		.hps_0_f2h_sdram1_data_arlock                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_arlock),  //                                                             .arlock
-		.hps_0_f2h_sdram1_data_arcache                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_arcache), //                                                             .arcache
-		.hps_0_f2h_sdram1_data_arprot                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_arprot),  //                                                             .arprot
-		.hps_0_f2h_sdram1_data_arvalid                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_arvalid), //                                                             .arvalid
-		.hps_0_f2h_sdram1_data_arready                                      (mm_interconnect_1_hps_0_f2h_sdram1_data_arready), //                                                             .arready
-		.hps_0_f2h_sdram1_data_rid                                          (mm_interconnect_1_hps_0_f2h_sdram1_data_rid),     //                                                             .rid
-		.hps_0_f2h_sdram1_data_rdata                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_rdata),   //                                                             .rdata
-		.hps_0_f2h_sdram1_data_rresp                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_rresp),   //                                                             .rresp
-		.hps_0_f2h_sdram1_data_rlast                                        (mm_interconnect_1_hps_0_f2h_sdram1_data_rlast),   //                                                             .rlast
-		.hps_0_f2h_sdram1_data_rvalid                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_rvalid),  //                                                             .rvalid
-		.hps_0_f2h_sdram1_data_rready                                       (mm_interconnect_1_hps_0_f2h_sdram1_data_rready),  //                                                             .rready
-		.clk_0_clk_clk                                                      (clk_clk),                                         //                                                    clk_0_clk.clk
-		.axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset_reset         (rst_controller_reset_out_reset),                  //         axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset.reset
-		.hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset)               // hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset.reset
-	);
-
-	Kvazaar_QSYS_mm_interconnect_2 mm_interconnect_2 (
-		.axi_dma_unfiltered1_altera_axi_master_awid                                         (axi_dma_unfiltered1_altera_axi_master_awid),      //                                        axi_dma_unfiltered1_altera_axi_master.awid
-		.axi_dma_unfiltered1_altera_axi_master_awaddr                                       (axi_dma_unfiltered1_altera_axi_master_awaddr),    //                                                                             .awaddr
-		.axi_dma_unfiltered1_altera_axi_master_awlen                                        (axi_dma_unfiltered1_altera_axi_master_awlen),     //                                                                             .awlen
-		.axi_dma_unfiltered1_altera_axi_master_awsize                                       (axi_dma_unfiltered1_altera_axi_master_awsize),    //                                                                             .awsize
-		.axi_dma_unfiltered1_altera_axi_master_awburst                                      (axi_dma_unfiltered1_altera_axi_master_awburst),   //                                                                             .awburst
-		.axi_dma_unfiltered1_altera_axi_master_awlock                                       (axi_dma_unfiltered1_altera_axi_master_awlock),    //                                                                             .awlock
-		.axi_dma_unfiltered1_altera_axi_master_awcache                                      (axi_dma_unfiltered1_altera_axi_master_awcache),   //                                                                             .awcache
-		.axi_dma_unfiltered1_altera_axi_master_awprot                                       (axi_dma_unfiltered1_altera_axi_master_awprot),    //                                                                             .awprot
-		.axi_dma_unfiltered1_altera_axi_master_awvalid                                      (axi_dma_unfiltered1_altera_axi_master_awvalid),   //                                                                             .awvalid
-		.axi_dma_unfiltered1_altera_axi_master_awready                                      (axi_dma_unfiltered1_altera_axi_master_awready),   //                                                                             .awready
-		.axi_dma_unfiltered1_altera_axi_master_wid                                          (axi_dma_unfiltered1_altera_axi_master_wid),       //                                                                             .wid
-		.axi_dma_unfiltered1_altera_axi_master_wdata                                        (axi_dma_unfiltered1_altera_axi_master_wdata),     //                                                                             .wdata
-		.axi_dma_unfiltered1_altera_axi_master_wstrb                                        (axi_dma_unfiltered1_altera_axi_master_wstrb),     //                                                                             .wstrb
-		.axi_dma_unfiltered1_altera_axi_master_wlast                                        (axi_dma_unfiltered1_altera_axi_master_wlast),     //                                                                             .wlast
-		.axi_dma_unfiltered1_altera_axi_master_wvalid                                       (axi_dma_unfiltered1_altera_axi_master_wvalid),    //                                                                             .wvalid
-		.axi_dma_unfiltered1_altera_axi_master_wready                                       (axi_dma_unfiltered1_altera_axi_master_wready),    //                                                                             .wready
-		.axi_dma_unfiltered1_altera_axi_master_bid                                          (axi_dma_unfiltered1_altera_axi_master_bid),       //                                                                             .bid
-		.axi_dma_unfiltered1_altera_axi_master_bresp                                        (axi_dma_unfiltered1_altera_axi_master_bresp),     //                                                                             .bresp
-		.axi_dma_unfiltered1_altera_axi_master_bvalid                                       (axi_dma_unfiltered1_altera_axi_master_bvalid),    //                                                                             .bvalid
-		.axi_dma_unfiltered1_altera_axi_master_bready                                       (axi_dma_unfiltered1_altera_axi_master_bready),    //                                                                             .bready
-		.axi_dma_unfiltered1_altera_axi_master_arid                                         (axi_dma_unfiltered1_altera_axi_master_arid),      //                                                                             .arid
-		.axi_dma_unfiltered1_altera_axi_master_araddr                                       (axi_dma_unfiltered1_altera_axi_master_araddr),    //                                                                             .araddr
-		.axi_dma_unfiltered1_altera_axi_master_arlen                                        (axi_dma_unfiltered1_altera_axi_master_arlen),     //                                                                             .arlen
-		.axi_dma_unfiltered1_altera_axi_master_arsize                                       (axi_dma_unfiltered1_altera_axi_master_arsize),    //                                                                             .arsize
-		.axi_dma_unfiltered1_altera_axi_master_arburst                                      (axi_dma_unfiltered1_altera_axi_master_arburst),   //                                                                             .arburst
-		.axi_dma_unfiltered1_altera_axi_master_arlock                                       (axi_dma_unfiltered1_altera_axi_master_arlock),    //                                                                             .arlock
-		.axi_dma_unfiltered1_altera_axi_master_arcache                                      (axi_dma_unfiltered1_altera_axi_master_arcache),   //                                                                             .arcache
-		.axi_dma_unfiltered1_altera_axi_master_arprot                                       (axi_dma_unfiltered1_altera_axi_master_arprot),    //                                                                             .arprot
-		.axi_dma_unfiltered1_altera_axi_master_arvalid                                      (axi_dma_unfiltered1_altera_axi_master_arvalid),   //                                                                             .arvalid
-		.axi_dma_unfiltered1_altera_axi_master_arready                                      (axi_dma_unfiltered1_altera_axi_master_arready),   //                                                                             .arready
-		.axi_dma_unfiltered1_altera_axi_master_rid                                          (axi_dma_unfiltered1_altera_axi_master_rid),       //                                                                             .rid
-		.axi_dma_unfiltered1_altera_axi_master_rdata                                        (axi_dma_unfiltered1_altera_axi_master_rdata),     //                                                                             .rdata
-		.axi_dma_unfiltered1_altera_axi_master_rresp                                        (axi_dma_unfiltered1_altera_axi_master_rresp),     //                                                                             .rresp
-		.axi_dma_unfiltered1_altera_axi_master_rlast                                        (axi_dma_unfiltered1_altera_axi_master_rlast),     //                                                                             .rlast
-		.axi_dma_unfiltered1_altera_axi_master_rvalid                                       (axi_dma_unfiltered1_altera_axi_master_rvalid),    //                                                                             .rvalid
-		.axi_dma_unfiltered1_altera_axi_master_rready                                       (axi_dma_unfiltered1_altera_axi_master_rready),    //                                                                             .rready
-		.hps_0_f2h_sdram2_data_awid                                                         (mm_interconnect_2_hps_0_f2h_sdram2_data_awid),    //                                                        hps_0_f2h_sdram2_data.awid
-		.hps_0_f2h_sdram2_data_awaddr                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_awaddr),  //                                                                             .awaddr
-		.hps_0_f2h_sdram2_data_awlen                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_awlen),   //                                                                             .awlen
-		.hps_0_f2h_sdram2_data_awsize                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_awsize),  //                                                                             .awsize
-		.hps_0_f2h_sdram2_data_awburst                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_awburst), //                                                                             .awburst
-		.hps_0_f2h_sdram2_data_awlock                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_awlock),  //                                                                             .awlock
-		.hps_0_f2h_sdram2_data_awcache                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_awcache), //                                                                             .awcache
-		.hps_0_f2h_sdram2_data_awprot                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_awprot),  //                                                                             .awprot
-		.hps_0_f2h_sdram2_data_awvalid                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_awvalid), //                                                                             .awvalid
-		.hps_0_f2h_sdram2_data_awready                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_awready), //                                                                             .awready
-		.hps_0_f2h_sdram2_data_wid                                                          (mm_interconnect_2_hps_0_f2h_sdram2_data_wid),     //                                                                             .wid
-		.hps_0_f2h_sdram2_data_wdata                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_wdata),   //                                                                             .wdata
-		.hps_0_f2h_sdram2_data_wstrb                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_wstrb),   //                                                                             .wstrb
-		.hps_0_f2h_sdram2_data_wlast                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_wlast),   //                                                                             .wlast
-		.hps_0_f2h_sdram2_data_wvalid                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_wvalid),  //                                                                             .wvalid
-		.hps_0_f2h_sdram2_data_wready                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_wready),  //                                                                             .wready
-		.hps_0_f2h_sdram2_data_bid                                                          (mm_interconnect_2_hps_0_f2h_sdram2_data_bid),     //                                                                             .bid
-		.hps_0_f2h_sdram2_data_bresp                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_bresp),   //                                                                             .bresp
-		.hps_0_f2h_sdram2_data_bvalid                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_bvalid),  //                                                                             .bvalid
-		.hps_0_f2h_sdram2_data_bready                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_bready),  //                                                                             .bready
-		.hps_0_f2h_sdram2_data_arid                                                         (mm_interconnect_2_hps_0_f2h_sdram2_data_arid),    //                                                                             .arid
-		.hps_0_f2h_sdram2_data_araddr                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_araddr),  //                                                                             .araddr
-		.hps_0_f2h_sdram2_data_arlen                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_arlen),   //                                                                             .arlen
-		.hps_0_f2h_sdram2_data_arsize                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_arsize),  //                                                                             .arsize
-		.hps_0_f2h_sdram2_data_arburst                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_arburst), //                                                                             .arburst
-		.hps_0_f2h_sdram2_data_arlock                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_arlock),  //                                                                             .arlock
-		.hps_0_f2h_sdram2_data_arcache                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_arcache), //                                                                             .arcache
-		.hps_0_f2h_sdram2_data_arprot                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_arprot),  //                                                                             .arprot
-		.hps_0_f2h_sdram2_data_arvalid                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_arvalid), //                                                                             .arvalid
-		.hps_0_f2h_sdram2_data_arready                                                      (mm_interconnect_2_hps_0_f2h_sdram2_data_arready), //                                                                             .arready
-		.hps_0_f2h_sdram2_data_rid                                                          (mm_interconnect_2_hps_0_f2h_sdram2_data_rid),     //                                                                             .rid
-		.hps_0_f2h_sdram2_data_rdata                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_rdata),   //                                                                             .rdata
-		.hps_0_f2h_sdram2_data_rresp                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_rresp),   //                                                                             .rresp
-		.hps_0_f2h_sdram2_data_rlast                                                        (mm_interconnect_2_hps_0_f2h_sdram2_data_rlast),   //                                                                             .rlast
-		.hps_0_f2h_sdram2_data_rvalid                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_rvalid),  //                                                                             .rvalid
-		.hps_0_f2h_sdram2_data_rready                                                       (mm_interconnect_2_hps_0_f2h_sdram2_data_rready),  //                                                                             .rready
-		.clk_0_clk_clk                                                                      (clk_clk),                                         //                                                                    clk_0_clk.clk
-		.axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),              // axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset.reset
-		.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset                         (rst_controller_reset_out_reset)                   //                         axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset.reset
-	);
-
-	Kvazaar_QSYS_mm_interconnect_3 mm_interconnect_3 (
-		.acc_config_altera_axi_slave_awid                                 (mm_interconnect_3_acc_config_altera_axi_slave_awid),             //                                acc_config_altera_axi_slave.awid
-		.acc_config_altera_axi_slave_awaddr                               (mm_interconnect_3_acc_config_altera_axi_slave_awaddr),           //                                                           .awaddr
-		.acc_config_altera_axi_slave_awlen                                (mm_interconnect_3_acc_config_altera_axi_slave_awlen),            //                                                           .awlen
-		.acc_config_altera_axi_slave_awsize                               (mm_interconnect_3_acc_config_altera_axi_slave_awsize),           //                                                           .awsize
-		.acc_config_altera_axi_slave_awburst                              (mm_interconnect_3_acc_config_altera_axi_slave_awburst),          //                                                           .awburst
-		.acc_config_altera_axi_slave_awlock                               (mm_interconnect_3_acc_config_altera_axi_slave_awlock),           //                                                           .awlock
-		.acc_config_altera_axi_slave_awcache                              (mm_interconnect_3_acc_config_altera_axi_slave_awcache),          //                                                           .awcache
-		.acc_config_altera_axi_slave_awprot                               (mm_interconnect_3_acc_config_altera_axi_slave_awprot),           //                                                           .awprot
-		.acc_config_altera_axi_slave_awvalid                              (mm_interconnect_3_acc_config_altera_axi_slave_awvalid),          //                                                           .awvalid
-		.acc_config_altera_axi_slave_awready                              (mm_interconnect_3_acc_config_altera_axi_slave_awready),          //                                                           .awready
-		.acc_config_altera_axi_slave_wid                                  (mm_interconnect_3_acc_config_altera_axi_slave_wid),              //                                                           .wid
-		.acc_config_altera_axi_slave_wdata                                (mm_interconnect_3_acc_config_altera_axi_slave_wdata),            //                                                           .wdata
-		.acc_config_altera_axi_slave_wstrb                                (mm_interconnect_3_acc_config_altera_axi_slave_wstrb),            //                                                           .wstrb
-		.acc_config_altera_axi_slave_wlast                                (mm_interconnect_3_acc_config_altera_axi_slave_wlast),            //                                                           .wlast
-		.acc_config_altera_axi_slave_wvalid                               (mm_interconnect_3_acc_config_altera_axi_slave_wvalid),           //                                                           .wvalid
-		.acc_config_altera_axi_slave_wready                               (mm_interconnect_3_acc_config_altera_axi_slave_wready),           //                                                           .wready
-		.acc_config_altera_axi_slave_bid                                  (mm_interconnect_3_acc_config_altera_axi_slave_bid),              //                                                           .bid
-		.acc_config_altera_axi_slave_bresp                                (mm_interconnect_3_acc_config_altera_axi_slave_bresp),            //                                                           .bresp
-		.acc_config_altera_axi_slave_bvalid                               (mm_interconnect_3_acc_config_altera_axi_slave_bvalid),           //                                                           .bvalid
-		.acc_config_altera_axi_slave_bready                               (mm_interconnect_3_acc_config_altera_axi_slave_bready),           //                                                           .bready
-		.acc_config_altera_axi_slave_arid                                 (mm_interconnect_3_acc_config_altera_axi_slave_arid),             //                                                           .arid
-		.acc_config_altera_axi_slave_araddr                               (mm_interconnect_3_acc_config_altera_axi_slave_araddr),           //                                                           .araddr
-		.acc_config_altera_axi_slave_arlen                                (mm_interconnect_3_acc_config_altera_axi_slave_arlen),            //                                                           .arlen
-		.acc_config_altera_axi_slave_arsize                               (mm_interconnect_3_acc_config_altera_axi_slave_arsize),           //                                                           .arsize
-		.acc_config_altera_axi_slave_arburst                              (mm_interconnect_3_acc_config_altera_axi_slave_arburst),          //                                                           .arburst
-		.acc_config_altera_axi_slave_arlock                               (mm_interconnect_3_acc_config_altera_axi_slave_arlock),           //                                                           .arlock
-		.acc_config_altera_axi_slave_arcache                              (mm_interconnect_3_acc_config_altera_axi_slave_arcache),          //                                                           .arcache
-		.acc_config_altera_axi_slave_arprot                               (mm_interconnect_3_acc_config_altera_axi_slave_arprot),           //                                                           .arprot
-		.acc_config_altera_axi_slave_arvalid                              (mm_interconnect_3_acc_config_altera_axi_slave_arvalid),          //                                                           .arvalid
-		.acc_config_altera_axi_slave_arready                              (mm_interconnect_3_acc_config_altera_axi_slave_arready),          //                                                           .arready
-		.acc_config_altera_axi_slave_rid                                  (mm_interconnect_3_acc_config_altera_axi_slave_rid),              //                                                           .rid
-		.acc_config_altera_axi_slave_rdata                                (mm_interconnect_3_acc_config_altera_axi_slave_rdata),            //                                                           .rdata
-		.acc_config_altera_axi_slave_rresp                                (mm_interconnect_3_acc_config_altera_axi_slave_rresp),            //                                                           .rresp
-		.acc_config_altera_axi_slave_rlast                                (mm_interconnect_3_acc_config_altera_axi_slave_rlast),            //                                                           .rlast
-		.acc_config_altera_axi_slave_rvalid                               (mm_interconnect_3_acc_config_altera_axi_slave_rvalid),           //                                                           .rvalid
-		.acc_config_altera_axi_slave_rready                               (mm_interconnect_3_acc_config_altera_axi_slave_rready),           //                                                           .rready
-		.axi_dma_orig_block_altera_axi_slave_awid                         (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awid),     //                        axi_dma_orig_block_altera_axi_slave.awid
-		.axi_dma_orig_block_altera_axi_slave_awaddr                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awaddr),   //                                                           .awaddr
-		.axi_dma_orig_block_altera_axi_slave_awlen                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awlen),    //                                                           .awlen
-		.axi_dma_orig_block_altera_axi_slave_awsize                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awsize),   //                                                           .awsize
-		.axi_dma_orig_block_altera_axi_slave_awburst                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awburst),  //                                                           .awburst
-		.axi_dma_orig_block_altera_axi_slave_awlock                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awlock),   //                                                           .awlock
-		.axi_dma_orig_block_altera_axi_slave_awcache                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awcache),  //                                                           .awcache
-		.axi_dma_orig_block_altera_axi_slave_awprot                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awprot),   //                                                           .awprot
-		.axi_dma_orig_block_altera_axi_slave_awvalid                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awvalid),  //                                                           .awvalid
-		.axi_dma_orig_block_altera_axi_slave_awready                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_awready),  //                                                           .awready
-		.axi_dma_orig_block_altera_axi_slave_wid                          (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wid),      //                                                           .wid
-		.axi_dma_orig_block_altera_axi_slave_wdata                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wdata),    //                                                           .wdata
-		.axi_dma_orig_block_altera_axi_slave_wstrb                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wstrb),    //                                                           .wstrb
-		.axi_dma_orig_block_altera_axi_slave_wlast                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wlast),    //                                                           .wlast
-		.axi_dma_orig_block_altera_axi_slave_wvalid                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wvalid),   //                                                           .wvalid
-		.axi_dma_orig_block_altera_axi_slave_wready                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_wready),   //                                                           .wready
-		.axi_dma_orig_block_altera_axi_slave_bid                          (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bid),      //                                                           .bid
-		.axi_dma_orig_block_altera_axi_slave_bresp                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bresp),    //                                                           .bresp
-		.axi_dma_orig_block_altera_axi_slave_bvalid                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bvalid),   //                                                           .bvalid
-		.axi_dma_orig_block_altera_axi_slave_bready                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_bready),   //                                                           .bready
-		.axi_dma_orig_block_altera_axi_slave_arid                         (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arid),     //                                                           .arid
-		.axi_dma_orig_block_altera_axi_slave_araddr                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_araddr),   //                                                           .araddr
-		.axi_dma_orig_block_altera_axi_slave_arlen                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arlen),    //                                                           .arlen
-		.axi_dma_orig_block_altera_axi_slave_arsize                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arsize),   //                                                           .arsize
-		.axi_dma_orig_block_altera_axi_slave_arburst                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arburst),  //                                                           .arburst
-		.axi_dma_orig_block_altera_axi_slave_arlock                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arlock),   //                                                           .arlock
-		.axi_dma_orig_block_altera_axi_slave_arcache                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arcache),  //                                                           .arcache
-		.axi_dma_orig_block_altera_axi_slave_arprot                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arprot),   //                                                           .arprot
-		.axi_dma_orig_block_altera_axi_slave_arvalid                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arvalid),  //                                                           .arvalid
-		.axi_dma_orig_block_altera_axi_slave_arready                      (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_arready),  //                                                           .arready
-		.axi_dma_orig_block_altera_axi_slave_rid                          (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rid),      //                                                           .rid
-		.axi_dma_orig_block_altera_axi_slave_rdata                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rdata),    //                                                           .rdata
-		.axi_dma_orig_block_altera_axi_slave_rresp                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rresp),    //                                                           .rresp
-		.axi_dma_orig_block_altera_axi_slave_rlast                        (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rlast),    //                                                           .rlast
-		.axi_dma_orig_block_altera_axi_slave_rvalid                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rvalid),   //                                                           .rvalid
-		.axi_dma_orig_block_altera_axi_slave_rready                       (mm_interconnect_3_axi_dma_orig_block_altera_axi_slave_rready),   //                                                           .rready
-		.axi_dma_unfiltered1_altera_axi_slave_awid                        (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awid),    //                       axi_dma_unfiltered1_altera_axi_slave.awid
-		.axi_dma_unfiltered1_altera_axi_slave_awaddr                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awaddr),  //                                                           .awaddr
-		.axi_dma_unfiltered1_altera_axi_slave_awlen                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awlen),   //                                                           .awlen
-		.axi_dma_unfiltered1_altera_axi_slave_awsize                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awsize),  //                                                           .awsize
-		.axi_dma_unfiltered1_altera_axi_slave_awburst                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awburst), //                                                           .awburst
-		.axi_dma_unfiltered1_altera_axi_slave_awlock                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awlock),  //                                                           .awlock
-		.axi_dma_unfiltered1_altera_axi_slave_awcache                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awcache), //                                                           .awcache
-		.axi_dma_unfiltered1_altera_axi_slave_awprot                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awprot),  //                                                           .awprot
-		.axi_dma_unfiltered1_altera_axi_slave_awvalid                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awvalid), //                                                           .awvalid
-		.axi_dma_unfiltered1_altera_axi_slave_awready                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_awready), //                                                           .awready
-		.axi_dma_unfiltered1_altera_axi_slave_wid                         (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wid),     //                                                           .wid
-		.axi_dma_unfiltered1_altera_axi_slave_wdata                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wdata),   //                                                           .wdata
-		.axi_dma_unfiltered1_altera_axi_slave_wstrb                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wstrb),   //                                                           .wstrb
-		.axi_dma_unfiltered1_altera_axi_slave_wlast                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wlast),   //                                                           .wlast
-		.axi_dma_unfiltered1_altera_axi_slave_wvalid                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wvalid),  //                                                           .wvalid
-		.axi_dma_unfiltered1_altera_axi_slave_wready                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_wready),  //                                                           .wready
-		.axi_dma_unfiltered1_altera_axi_slave_bid                         (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bid),     //                                                           .bid
-		.axi_dma_unfiltered1_altera_axi_slave_bresp                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bresp),   //                                                           .bresp
-		.axi_dma_unfiltered1_altera_axi_slave_bvalid                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bvalid),  //                                                           .bvalid
-		.axi_dma_unfiltered1_altera_axi_slave_bready                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_bready),  //                                                           .bready
-		.axi_dma_unfiltered1_altera_axi_slave_arid                        (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arid),    //                                                           .arid
-		.axi_dma_unfiltered1_altera_axi_slave_araddr                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_araddr),  //                                                           .araddr
-		.axi_dma_unfiltered1_altera_axi_slave_arlen                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arlen),   //                                                           .arlen
-		.axi_dma_unfiltered1_altera_axi_slave_arsize                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arsize),  //                                                           .arsize
-		.axi_dma_unfiltered1_altera_axi_slave_arburst                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arburst), //                                                           .arburst
-		.axi_dma_unfiltered1_altera_axi_slave_arlock                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arlock),  //                                                           .arlock
-		.axi_dma_unfiltered1_altera_axi_slave_arcache                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arcache), //                                                           .arcache
-		.axi_dma_unfiltered1_altera_axi_slave_arprot                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arprot),  //                                                           .arprot
-		.axi_dma_unfiltered1_altera_axi_slave_arvalid                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arvalid), //                                                           .arvalid
-		.axi_dma_unfiltered1_altera_axi_slave_arready                     (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_arready), //                                                           .arready
-		.axi_dma_unfiltered1_altera_axi_slave_rid                         (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rid),     //                                                           .rid
-		.axi_dma_unfiltered1_altera_axi_slave_rdata                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rdata),   //                                                           .rdata
-		.axi_dma_unfiltered1_altera_axi_slave_rresp                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rresp),   //                                                           .rresp
-		.axi_dma_unfiltered1_altera_axi_slave_rlast                       (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rlast),   //                                                           .rlast
-		.axi_dma_unfiltered1_altera_axi_slave_rvalid                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rvalid),  //                                                           .rvalid
-		.axi_dma_unfiltered1_altera_axi_slave_rready                      (mm_interconnect_3_axi_dma_unfiltered1_altera_axi_slave_rready),  //                                                           .rready
-		.axi_dma_unfiltered2_altera_axi_slave_awid                        (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awid),    //                       axi_dma_unfiltered2_altera_axi_slave.awid
-		.axi_dma_unfiltered2_altera_axi_slave_awaddr                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awaddr),  //                                                           .awaddr
-		.axi_dma_unfiltered2_altera_axi_slave_awlen                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awlen),   //                                                           .awlen
-		.axi_dma_unfiltered2_altera_axi_slave_awsize                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awsize),  //                                                           .awsize
-		.axi_dma_unfiltered2_altera_axi_slave_awburst                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awburst), //                                                           .awburst
-		.axi_dma_unfiltered2_altera_axi_slave_awlock                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awlock),  //                                                           .awlock
-		.axi_dma_unfiltered2_altera_axi_slave_awcache                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awcache), //                                                           .awcache
-		.axi_dma_unfiltered2_altera_axi_slave_awprot                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awprot),  //                                                           .awprot
-		.axi_dma_unfiltered2_altera_axi_slave_awvalid                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awvalid), //                                                           .awvalid
-		.axi_dma_unfiltered2_altera_axi_slave_awready                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_awready), //                                                           .awready
-		.axi_dma_unfiltered2_altera_axi_slave_wid                         (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wid),     //                                                           .wid
-		.axi_dma_unfiltered2_altera_axi_slave_wdata                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wdata),   //                                                           .wdata
-		.axi_dma_unfiltered2_altera_axi_slave_wstrb                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wstrb),   //                                                           .wstrb
-		.axi_dma_unfiltered2_altera_axi_slave_wlast                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wlast),   //                                                           .wlast
-		.axi_dma_unfiltered2_altera_axi_slave_wvalid                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wvalid),  //                                                           .wvalid
-		.axi_dma_unfiltered2_altera_axi_slave_wready                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_wready),  //                                                           .wready
-		.axi_dma_unfiltered2_altera_axi_slave_bid                         (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bid),     //                                                           .bid
-		.axi_dma_unfiltered2_altera_axi_slave_bresp                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bresp),   //                                                           .bresp
-		.axi_dma_unfiltered2_altera_axi_slave_bvalid                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bvalid),  //                                                           .bvalid
-		.axi_dma_unfiltered2_altera_axi_slave_bready                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_bready),  //                                                           .bready
-		.axi_dma_unfiltered2_altera_axi_slave_arid                        (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arid),    //                                                           .arid
-		.axi_dma_unfiltered2_altera_axi_slave_araddr                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_araddr),  //                                                           .araddr
-		.axi_dma_unfiltered2_altera_axi_slave_arlen                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arlen),   //                                                           .arlen
-		.axi_dma_unfiltered2_altera_axi_slave_arsize                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arsize),  //                                                           .arsize
-		.axi_dma_unfiltered2_altera_axi_slave_arburst                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arburst), //                                                           .arburst
-		.axi_dma_unfiltered2_altera_axi_slave_arlock                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arlock),  //                                                           .arlock
-		.axi_dma_unfiltered2_altera_axi_slave_arcache                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arcache), //                                                           .arcache
-		.axi_dma_unfiltered2_altera_axi_slave_arprot                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arprot),  //                                                           .arprot
-		.axi_dma_unfiltered2_altera_axi_slave_arvalid                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arvalid), //                                                           .arvalid
-		.axi_dma_unfiltered2_altera_axi_slave_arready                     (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_arready), //                                                           .arready
-		.axi_dma_unfiltered2_altera_axi_slave_rid                         (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rid),     //                                                           .rid
-		.axi_dma_unfiltered2_altera_axi_slave_rdata                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rdata),   //                                                           .rdata
-		.axi_dma_unfiltered2_altera_axi_slave_rresp                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rresp),   //                                                           .rresp
-		.axi_dma_unfiltered2_altera_axi_slave_rlast                       (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rlast),   //                                                           .rlast
-		.axi_dma_unfiltered2_altera_axi_slave_rvalid                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rvalid),  //                                                           .rvalid
-		.axi_dma_unfiltered2_altera_axi_slave_rready                      (mm_interconnect_3_axi_dma_unfiltered2_altera_axi_slave_rready),  //                                                           .rready
-		.dma_yuv_altera_axi_slave_awid                                    (mm_interconnect_3_dma_yuv_altera_axi_slave_awid),                //                                   dma_yuv_altera_axi_slave.awid
-		.dma_yuv_altera_axi_slave_awaddr                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_awaddr),              //                                                           .awaddr
-		.dma_yuv_altera_axi_slave_awlen                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_awlen),               //                                                           .awlen
-		.dma_yuv_altera_axi_slave_awsize                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_awsize),              //                                                           .awsize
-		.dma_yuv_altera_axi_slave_awburst                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_awburst),             //                                                           .awburst
-		.dma_yuv_altera_axi_slave_awlock                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_awlock),              //                                                           .awlock
-		.dma_yuv_altera_axi_slave_awcache                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_awcache),             //                                                           .awcache
-		.dma_yuv_altera_axi_slave_awprot                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_awprot),              //                                                           .awprot
-		.dma_yuv_altera_axi_slave_awvalid                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_awvalid),             //                                                           .awvalid
-		.dma_yuv_altera_axi_slave_awready                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_awready),             //                                                           .awready
-		.dma_yuv_altera_axi_slave_wid                                     (mm_interconnect_3_dma_yuv_altera_axi_slave_wid),                 //                                                           .wid
-		.dma_yuv_altera_axi_slave_wdata                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_wdata),               //                                                           .wdata
-		.dma_yuv_altera_axi_slave_wstrb                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_wstrb),               //                                                           .wstrb
-		.dma_yuv_altera_axi_slave_wlast                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_wlast),               //                                                           .wlast
-		.dma_yuv_altera_axi_slave_wvalid                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_wvalid),              //                                                           .wvalid
-		.dma_yuv_altera_axi_slave_wready                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_wready),              //                                                           .wready
-		.dma_yuv_altera_axi_slave_bid                                     (mm_interconnect_3_dma_yuv_altera_axi_slave_bid),                 //                                                           .bid
-		.dma_yuv_altera_axi_slave_bresp                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_bresp),               //                                                           .bresp
-		.dma_yuv_altera_axi_slave_bvalid                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_bvalid),              //                                                           .bvalid
-		.dma_yuv_altera_axi_slave_bready                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_bready),              //                                                           .bready
-		.dma_yuv_altera_axi_slave_arid                                    (mm_interconnect_3_dma_yuv_altera_axi_slave_arid),                //                                                           .arid
-		.dma_yuv_altera_axi_slave_araddr                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_araddr),              //                                                           .araddr
-		.dma_yuv_altera_axi_slave_arlen                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_arlen),               //                                                           .arlen
-		.dma_yuv_altera_axi_slave_arsize                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_arsize),              //                                                           .arsize
-		.dma_yuv_altera_axi_slave_arburst                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_arburst),             //                                                           .arburst
-		.dma_yuv_altera_axi_slave_arlock                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_arlock),              //                                                           .arlock
-		.dma_yuv_altera_axi_slave_arcache                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_arcache),             //                                                           .arcache
-		.dma_yuv_altera_axi_slave_arprot                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_arprot),              //                                                           .arprot
-		.dma_yuv_altera_axi_slave_arvalid                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_arvalid),             //                                                           .arvalid
-		.dma_yuv_altera_axi_slave_arready                                 (mm_interconnect_3_dma_yuv_altera_axi_slave_arready),             //                                                           .arready
-		.dma_yuv_altera_axi_slave_rid                                     (mm_interconnect_3_dma_yuv_altera_axi_slave_rid),                 //                                                           .rid
-		.dma_yuv_altera_axi_slave_rdata                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_rdata),               //                                                           .rdata
-		.dma_yuv_altera_axi_slave_rresp                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_rresp),               //                                                           .rresp
-		.dma_yuv_altera_axi_slave_rlast                                   (mm_interconnect_3_dma_yuv_altera_axi_slave_rlast),               //                                                           .rlast
-		.dma_yuv_altera_axi_slave_rvalid                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_rvalid),              //                                                           .rvalid
-		.dma_yuv_altera_axi_slave_rready                                  (mm_interconnect_3_dma_yuv_altera_axi_slave_rready),              //                                                           .rready
+	Kvazaar_QSYS_mm_interconnect_0 mm_interconnect_0 (
+		.acc_config_altera_axi_slave_awid                                 (mm_interconnect_0_acc_config_altera_axi_slave_awid),             //                                acc_config_altera_axi_slave.awid
+		.acc_config_altera_axi_slave_awaddr                               (mm_interconnect_0_acc_config_altera_axi_slave_awaddr),           //                                                           .awaddr
+		.acc_config_altera_axi_slave_awlen                                (mm_interconnect_0_acc_config_altera_axi_slave_awlen),            //                                                           .awlen
+		.acc_config_altera_axi_slave_awsize                               (mm_interconnect_0_acc_config_altera_axi_slave_awsize),           //                                                           .awsize
+		.acc_config_altera_axi_slave_awburst                              (mm_interconnect_0_acc_config_altera_axi_slave_awburst),          //                                                           .awburst
+		.acc_config_altera_axi_slave_awlock                               (mm_interconnect_0_acc_config_altera_axi_slave_awlock),           //                                                           .awlock
+		.acc_config_altera_axi_slave_awcache                              (mm_interconnect_0_acc_config_altera_axi_slave_awcache),          //                                                           .awcache
+		.acc_config_altera_axi_slave_awprot                               (mm_interconnect_0_acc_config_altera_axi_slave_awprot),           //                                                           .awprot
+		.acc_config_altera_axi_slave_awvalid                              (mm_interconnect_0_acc_config_altera_axi_slave_awvalid),          //                                                           .awvalid
+		.acc_config_altera_axi_slave_awready                              (mm_interconnect_0_acc_config_altera_axi_slave_awready),          //                                                           .awready
+		.acc_config_altera_axi_slave_wid                                  (mm_interconnect_0_acc_config_altera_axi_slave_wid),              //                                                           .wid
+		.acc_config_altera_axi_slave_wdata                                (mm_interconnect_0_acc_config_altera_axi_slave_wdata),            //                                                           .wdata
+		.acc_config_altera_axi_slave_wstrb                                (mm_interconnect_0_acc_config_altera_axi_slave_wstrb),            //                                                           .wstrb
+		.acc_config_altera_axi_slave_wlast                                (mm_interconnect_0_acc_config_altera_axi_slave_wlast),            //                                                           .wlast
+		.acc_config_altera_axi_slave_wvalid                               (mm_interconnect_0_acc_config_altera_axi_slave_wvalid),           //                                                           .wvalid
+		.acc_config_altera_axi_slave_wready                               (mm_interconnect_0_acc_config_altera_axi_slave_wready),           //                                                           .wready
+		.acc_config_altera_axi_slave_bid                                  (mm_interconnect_0_acc_config_altera_axi_slave_bid),              //                                                           .bid
+		.acc_config_altera_axi_slave_bresp                                (mm_interconnect_0_acc_config_altera_axi_slave_bresp),            //                                                           .bresp
+		.acc_config_altera_axi_slave_bvalid                               (mm_interconnect_0_acc_config_altera_axi_slave_bvalid),           //                                                           .bvalid
+		.acc_config_altera_axi_slave_bready                               (mm_interconnect_0_acc_config_altera_axi_slave_bready),           //                                                           .bready
+		.acc_config_altera_axi_slave_arid                                 (mm_interconnect_0_acc_config_altera_axi_slave_arid),             //                                                           .arid
+		.acc_config_altera_axi_slave_araddr                               (mm_interconnect_0_acc_config_altera_axi_slave_araddr),           //                                                           .araddr
+		.acc_config_altera_axi_slave_arlen                                (mm_interconnect_0_acc_config_altera_axi_slave_arlen),            //                                                           .arlen
+		.acc_config_altera_axi_slave_arsize                               (mm_interconnect_0_acc_config_altera_axi_slave_arsize),           //                                                           .arsize
+		.acc_config_altera_axi_slave_arburst                              (mm_interconnect_0_acc_config_altera_axi_slave_arburst),          //                                                           .arburst
+		.acc_config_altera_axi_slave_arlock                               (mm_interconnect_0_acc_config_altera_axi_slave_arlock),           //                                                           .arlock
+		.acc_config_altera_axi_slave_arcache                              (mm_interconnect_0_acc_config_altera_axi_slave_arcache),          //                                                           .arcache
+		.acc_config_altera_axi_slave_arprot                               (mm_interconnect_0_acc_config_altera_axi_slave_arprot),           //                                                           .arprot
+		.acc_config_altera_axi_slave_arvalid                              (mm_interconnect_0_acc_config_altera_axi_slave_arvalid),          //                                                           .arvalid
+		.acc_config_altera_axi_slave_arready                              (mm_interconnect_0_acc_config_altera_axi_slave_arready),          //                                                           .arready
+		.acc_config_altera_axi_slave_rid                                  (mm_interconnect_0_acc_config_altera_axi_slave_rid),              //                                                           .rid
+		.acc_config_altera_axi_slave_rdata                                (mm_interconnect_0_acc_config_altera_axi_slave_rdata),            //                                                           .rdata
+		.acc_config_altera_axi_slave_rresp                                (mm_interconnect_0_acc_config_altera_axi_slave_rresp),            //                                                           .rresp
+		.acc_config_altera_axi_slave_rlast                                (mm_interconnect_0_acc_config_altera_axi_slave_rlast),            //                                                           .rlast
+		.acc_config_altera_axi_slave_rvalid                               (mm_interconnect_0_acc_config_altera_axi_slave_rvalid),           //                                                           .rvalid
+		.acc_config_altera_axi_slave_rready                               (mm_interconnect_0_acc_config_altera_axi_slave_rready),           //                                                           .rready
+		.axi_dma_orig_block_altera_axi_slave_awid                         (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awid),     //                        axi_dma_orig_block_altera_axi_slave.awid
+		.axi_dma_orig_block_altera_axi_slave_awaddr                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awaddr),   //                                                           .awaddr
+		.axi_dma_orig_block_altera_axi_slave_awlen                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awlen),    //                                                           .awlen
+		.axi_dma_orig_block_altera_axi_slave_awsize                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awsize),   //                                                           .awsize
+		.axi_dma_orig_block_altera_axi_slave_awburst                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awburst),  //                                                           .awburst
+		.axi_dma_orig_block_altera_axi_slave_awlock                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awlock),   //                                                           .awlock
+		.axi_dma_orig_block_altera_axi_slave_awcache                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awcache),  //                                                           .awcache
+		.axi_dma_orig_block_altera_axi_slave_awprot                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awprot),   //                                                           .awprot
+		.axi_dma_orig_block_altera_axi_slave_awvalid                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awvalid),  //                                                           .awvalid
+		.axi_dma_orig_block_altera_axi_slave_awready                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_awready),  //                                                           .awready
+		.axi_dma_orig_block_altera_axi_slave_wid                          (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wid),      //                                                           .wid
+		.axi_dma_orig_block_altera_axi_slave_wdata                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wdata),    //                                                           .wdata
+		.axi_dma_orig_block_altera_axi_slave_wstrb                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wstrb),    //                                                           .wstrb
+		.axi_dma_orig_block_altera_axi_slave_wlast                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wlast),    //                                                           .wlast
+		.axi_dma_orig_block_altera_axi_slave_wvalid                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wvalid),   //                                                           .wvalid
+		.axi_dma_orig_block_altera_axi_slave_wready                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_wready),   //                                                           .wready
+		.axi_dma_orig_block_altera_axi_slave_bid                          (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bid),      //                                                           .bid
+		.axi_dma_orig_block_altera_axi_slave_bresp                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bresp),    //                                                           .bresp
+		.axi_dma_orig_block_altera_axi_slave_bvalid                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bvalid),   //                                                           .bvalid
+		.axi_dma_orig_block_altera_axi_slave_bready                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_bready),   //                                                           .bready
+		.axi_dma_orig_block_altera_axi_slave_arid                         (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arid),     //                                                           .arid
+		.axi_dma_orig_block_altera_axi_slave_araddr                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_araddr),   //                                                           .araddr
+		.axi_dma_orig_block_altera_axi_slave_arlen                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arlen),    //                                                           .arlen
+		.axi_dma_orig_block_altera_axi_slave_arsize                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arsize),   //                                                           .arsize
+		.axi_dma_orig_block_altera_axi_slave_arburst                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arburst),  //                                                           .arburst
+		.axi_dma_orig_block_altera_axi_slave_arlock                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arlock),   //                                                           .arlock
+		.axi_dma_orig_block_altera_axi_slave_arcache                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arcache),  //                                                           .arcache
+		.axi_dma_orig_block_altera_axi_slave_arprot                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arprot),   //                                                           .arprot
+		.axi_dma_orig_block_altera_axi_slave_arvalid                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arvalid),  //                                                           .arvalid
+		.axi_dma_orig_block_altera_axi_slave_arready                      (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_arready),  //                                                           .arready
+		.axi_dma_orig_block_altera_axi_slave_rid                          (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rid),      //                                                           .rid
+		.axi_dma_orig_block_altera_axi_slave_rdata                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rdata),    //                                                           .rdata
+		.axi_dma_orig_block_altera_axi_slave_rresp                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rresp),    //                                                           .rresp
+		.axi_dma_orig_block_altera_axi_slave_rlast                        (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rlast),    //                                                           .rlast
+		.axi_dma_orig_block_altera_axi_slave_rvalid                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rvalid),   //                                                           .rvalid
+		.axi_dma_orig_block_altera_axi_slave_rready                       (mm_interconnect_0_axi_dma_orig_block_altera_axi_slave_rready),   //                                                           .rready
+		.axi_dma_unfiltered1_altera_axi_slave_awid                        (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awid),    //                       axi_dma_unfiltered1_altera_axi_slave.awid
+		.axi_dma_unfiltered1_altera_axi_slave_awaddr                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awaddr),  //                                                           .awaddr
+		.axi_dma_unfiltered1_altera_axi_slave_awlen                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awlen),   //                                                           .awlen
+		.axi_dma_unfiltered1_altera_axi_slave_awsize                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awsize),  //                                                           .awsize
+		.axi_dma_unfiltered1_altera_axi_slave_awburst                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awburst), //                                                           .awburst
+		.axi_dma_unfiltered1_altera_axi_slave_awlock                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awlock),  //                                                           .awlock
+		.axi_dma_unfiltered1_altera_axi_slave_awcache                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awcache), //                                                           .awcache
+		.axi_dma_unfiltered1_altera_axi_slave_awprot                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awprot),  //                                                           .awprot
+		.axi_dma_unfiltered1_altera_axi_slave_awvalid                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awvalid), //                                                           .awvalid
+		.axi_dma_unfiltered1_altera_axi_slave_awready                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_awready), //                                                           .awready
+		.axi_dma_unfiltered1_altera_axi_slave_wid                         (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wid),     //                                                           .wid
+		.axi_dma_unfiltered1_altera_axi_slave_wdata                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wdata),   //                                                           .wdata
+		.axi_dma_unfiltered1_altera_axi_slave_wstrb                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wstrb),   //                                                           .wstrb
+		.axi_dma_unfiltered1_altera_axi_slave_wlast                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wlast),   //                                                           .wlast
+		.axi_dma_unfiltered1_altera_axi_slave_wvalid                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wvalid),  //                                                           .wvalid
+		.axi_dma_unfiltered1_altera_axi_slave_wready                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_wready),  //                                                           .wready
+		.axi_dma_unfiltered1_altera_axi_slave_bid                         (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bid),     //                                                           .bid
+		.axi_dma_unfiltered1_altera_axi_slave_bresp                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bresp),   //                                                           .bresp
+		.axi_dma_unfiltered1_altera_axi_slave_bvalid                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bvalid),  //                                                           .bvalid
+		.axi_dma_unfiltered1_altera_axi_slave_bready                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_bready),  //                                                           .bready
+		.axi_dma_unfiltered1_altera_axi_slave_arid                        (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arid),    //                                                           .arid
+		.axi_dma_unfiltered1_altera_axi_slave_araddr                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_araddr),  //                                                           .araddr
+		.axi_dma_unfiltered1_altera_axi_slave_arlen                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arlen),   //                                                           .arlen
+		.axi_dma_unfiltered1_altera_axi_slave_arsize                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arsize),  //                                                           .arsize
+		.axi_dma_unfiltered1_altera_axi_slave_arburst                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arburst), //                                                           .arburst
+		.axi_dma_unfiltered1_altera_axi_slave_arlock                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arlock),  //                                                           .arlock
+		.axi_dma_unfiltered1_altera_axi_slave_arcache                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arcache), //                                                           .arcache
+		.axi_dma_unfiltered1_altera_axi_slave_arprot                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arprot),  //                                                           .arprot
+		.axi_dma_unfiltered1_altera_axi_slave_arvalid                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arvalid), //                                                           .arvalid
+		.axi_dma_unfiltered1_altera_axi_slave_arready                     (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_arready), //                                                           .arready
+		.axi_dma_unfiltered1_altera_axi_slave_rid                         (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rid),     //                                                           .rid
+		.axi_dma_unfiltered1_altera_axi_slave_rdata                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rdata),   //                                                           .rdata
+		.axi_dma_unfiltered1_altera_axi_slave_rresp                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rresp),   //                                                           .rresp
+		.axi_dma_unfiltered1_altera_axi_slave_rlast                       (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rlast),   //                                                           .rlast
+		.axi_dma_unfiltered1_altera_axi_slave_rvalid                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rvalid),  //                                                           .rvalid
+		.axi_dma_unfiltered1_altera_axi_slave_rready                      (mm_interconnect_0_axi_dma_unfiltered1_altera_axi_slave_rready),  //                                                           .rready
+		.axi_dma_unfiltered2_altera_axi_slave_awid                        (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awid),    //                       axi_dma_unfiltered2_altera_axi_slave.awid
+		.axi_dma_unfiltered2_altera_axi_slave_awaddr                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awaddr),  //                                                           .awaddr
+		.axi_dma_unfiltered2_altera_axi_slave_awlen                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awlen),   //                                                           .awlen
+		.axi_dma_unfiltered2_altera_axi_slave_awsize                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awsize),  //                                                           .awsize
+		.axi_dma_unfiltered2_altera_axi_slave_awburst                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awburst), //                                                           .awburst
+		.axi_dma_unfiltered2_altera_axi_slave_awlock                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awlock),  //                                                           .awlock
+		.axi_dma_unfiltered2_altera_axi_slave_awcache                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awcache), //                                                           .awcache
+		.axi_dma_unfiltered2_altera_axi_slave_awprot                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awprot),  //                                                           .awprot
+		.axi_dma_unfiltered2_altera_axi_slave_awvalid                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awvalid), //                                                           .awvalid
+		.axi_dma_unfiltered2_altera_axi_slave_awready                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_awready), //                                                           .awready
+		.axi_dma_unfiltered2_altera_axi_slave_wid                         (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wid),     //                                                           .wid
+		.axi_dma_unfiltered2_altera_axi_slave_wdata                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wdata),   //                                                           .wdata
+		.axi_dma_unfiltered2_altera_axi_slave_wstrb                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wstrb),   //                                                           .wstrb
+		.axi_dma_unfiltered2_altera_axi_slave_wlast                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wlast),   //                                                           .wlast
+		.axi_dma_unfiltered2_altera_axi_slave_wvalid                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wvalid),  //                                                           .wvalid
+		.axi_dma_unfiltered2_altera_axi_slave_wready                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_wready),  //                                                           .wready
+		.axi_dma_unfiltered2_altera_axi_slave_bid                         (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bid),     //                                                           .bid
+		.axi_dma_unfiltered2_altera_axi_slave_bresp                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bresp),   //                                                           .bresp
+		.axi_dma_unfiltered2_altera_axi_slave_bvalid                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bvalid),  //                                                           .bvalid
+		.axi_dma_unfiltered2_altera_axi_slave_bready                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_bready),  //                                                           .bready
+		.axi_dma_unfiltered2_altera_axi_slave_arid                        (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arid),    //                                                           .arid
+		.axi_dma_unfiltered2_altera_axi_slave_araddr                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_araddr),  //                                                           .araddr
+		.axi_dma_unfiltered2_altera_axi_slave_arlen                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arlen),   //                                                           .arlen
+		.axi_dma_unfiltered2_altera_axi_slave_arsize                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arsize),  //                                                           .arsize
+		.axi_dma_unfiltered2_altera_axi_slave_arburst                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arburst), //                                                           .arburst
+		.axi_dma_unfiltered2_altera_axi_slave_arlock                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arlock),  //                                                           .arlock
+		.axi_dma_unfiltered2_altera_axi_slave_arcache                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arcache), //                                                           .arcache
+		.axi_dma_unfiltered2_altera_axi_slave_arprot                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arprot),  //                                                           .arprot
+		.axi_dma_unfiltered2_altera_axi_slave_arvalid                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arvalid), //                                                           .arvalid
+		.axi_dma_unfiltered2_altera_axi_slave_arready                     (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_arready), //                                                           .arready
+		.axi_dma_unfiltered2_altera_axi_slave_rid                         (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rid),     //                                                           .rid
+		.axi_dma_unfiltered2_altera_axi_slave_rdata                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rdata),   //                                                           .rdata
+		.axi_dma_unfiltered2_altera_axi_slave_rresp                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rresp),   //                                                           .rresp
+		.axi_dma_unfiltered2_altera_axi_slave_rlast                       (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rlast),   //                                                           .rlast
+		.axi_dma_unfiltered2_altera_axi_slave_rvalid                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rvalid),  //                                                           .rvalid
+		.axi_dma_unfiltered2_altera_axi_slave_rready                      (mm_interconnect_0_axi_dma_unfiltered2_altera_axi_slave_rready),  //                                                           .rready
+		.dma_yuv_altera_axi_slave_awid                                    (mm_interconnect_0_dma_yuv_altera_axi_slave_awid),                //                                   dma_yuv_altera_axi_slave.awid
+		.dma_yuv_altera_axi_slave_awaddr                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_awaddr),              //                                                           .awaddr
+		.dma_yuv_altera_axi_slave_awlen                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_awlen),               //                                                           .awlen
+		.dma_yuv_altera_axi_slave_awsize                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_awsize),              //                                                           .awsize
+		.dma_yuv_altera_axi_slave_awburst                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_awburst),             //                                                           .awburst
+		.dma_yuv_altera_axi_slave_awlock                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_awlock),              //                                                           .awlock
+		.dma_yuv_altera_axi_slave_awcache                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_awcache),             //                                                           .awcache
+		.dma_yuv_altera_axi_slave_awprot                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_awprot),              //                                                           .awprot
+		.dma_yuv_altera_axi_slave_awvalid                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_awvalid),             //                                                           .awvalid
+		.dma_yuv_altera_axi_slave_awready                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_awready),             //                                                           .awready
+		.dma_yuv_altera_axi_slave_wid                                     (mm_interconnect_0_dma_yuv_altera_axi_slave_wid),                 //                                                           .wid
+		.dma_yuv_altera_axi_slave_wdata                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_wdata),               //                                                           .wdata
+		.dma_yuv_altera_axi_slave_wstrb                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_wstrb),               //                                                           .wstrb
+		.dma_yuv_altera_axi_slave_wlast                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_wlast),               //                                                           .wlast
+		.dma_yuv_altera_axi_slave_wvalid                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_wvalid),              //                                                           .wvalid
+		.dma_yuv_altera_axi_slave_wready                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_wready),              //                                                           .wready
+		.dma_yuv_altera_axi_slave_bid                                     (mm_interconnect_0_dma_yuv_altera_axi_slave_bid),                 //                                                           .bid
+		.dma_yuv_altera_axi_slave_bresp                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_bresp),               //                                                           .bresp
+		.dma_yuv_altera_axi_slave_bvalid                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_bvalid),              //                                                           .bvalid
+		.dma_yuv_altera_axi_slave_bready                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_bready),              //                                                           .bready
+		.dma_yuv_altera_axi_slave_arid                                    (mm_interconnect_0_dma_yuv_altera_axi_slave_arid),                //                                                           .arid
+		.dma_yuv_altera_axi_slave_araddr                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_araddr),              //                                                           .araddr
+		.dma_yuv_altera_axi_slave_arlen                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_arlen),               //                                                           .arlen
+		.dma_yuv_altera_axi_slave_arsize                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_arsize),              //                                                           .arsize
+		.dma_yuv_altera_axi_slave_arburst                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_arburst),             //                                                           .arburst
+		.dma_yuv_altera_axi_slave_arlock                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_arlock),              //                                                           .arlock
+		.dma_yuv_altera_axi_slave_arcache                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_arcache),             //                                                           .arcache
+		.dma_yuv_altera_axi_slave_arprot                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_arprot),              //                                                           .arprot
+		.dma_yuv_altera_axi_slave_arvalid                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_arvalid),             //                                                           .arvalid
+		.dma_yuv_altera_axi_slave_arready                                 (mm_interconnect_0_dma_yuv_altera_axi_slave_arready),             //                                                           .arready
+		.dma_yuv_altera_axi_slave_rid                                     (mm_interconnect_0_dma_yuv_altera_axi_slave_rid),                 //                                                           .rid
+		.dma_yuv_altera_axi_slave_rdata                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_rdata),               //                                                           .rdata
+		.dma_yuv_altera_axi_slave_rresp                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_rresp),               //                                                           .rresp
+		.dma_yuv_altera_axi_slave_rlast                                   (mm_interconnect_0_dma_yuv_altera_axi_slave_rlast),               //                                                           .rlast
+		.dma_yuv_altera_axi_slave_rvalid                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_rvalid),              //                                                           .rvalid
+		.dma_yuv_altera_axi_slave_rready                                  (mm_interconnect_0_dma_yuv_altera_axi_slave_rready),              //                                                           .rready
 		.hps_0_h2f_axi_master_awid                                        (hps_0_h2f_axi_master_awid),                                      //                                       hps_0_h2f_axi_master.awid
 		.hps_0_h2f_axi_master_awaddr                                      (hps_0_h2f_axi_master_awaddr),                                    //                                                           .awaddr
 		.hps_0_h2f_axi_master_awlen                                       (hps_0_h2f_axi_master_awlen),                                     //                                                           .awlen
@@ -1886,53 +1586,53 @@ module Kvazaar_QSYS (
 		.clk_0_clk_clk                                                    (clk_clk),                                                        //                                                  clk_0_clk.clk
 		.axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset       (rst_controller_reset_out_reset),                                 //       axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset.reset
 		.hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),                             // hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
-		.camera_control_oc_s1_address                                     (mm_interconnect_3_camera_control_oc_s1_address),                 //                                       camera_control_oc_s1.address
-		.camera_control_oc_s1_write                                       (mm_interconnect_3_camera_control_oc_s1_write),                   //                                                           .write
-		.camera_control_oc_s1_readdata                                    (mm_interconnect_3_camera_control_oc_s1_readdata),                //                                                           .readdata
-		.camera_control_oc_s1_writedata                                   (mm_interconnect_3_camera_control_oc_s1_writedata),               //                                                           .writedata
-		.camera_control_oc_s1_byteenable                                  (mm_interconnect_3_camera_control_oc_s1_byteenable),              //                                                           .byteenable
-		.camera_control_oc_s1_chipselect                                  (mm_interconnect_3_camera_control_oc_s1_chipselect),              //                                                           .chipselect
-		.camera_control_oc_s1_clken                                       (mm_interconnect_3_camera_control_oc_s1_clken),                   //                                                           .clken
-		.configure_camera_s1_address                                      (mm_interconnect_3_configure_camera_s1_address),                  //                                        configure_camera_s1.address
-		.configure_camera_s1_write                                        (mm_interconnect_3_configure_camera_s1_write),                    //                                                           .write
-		.configure_camera_s1_readdata                                     (mm_interconnect_3_configure_camera_s1_readdata),                 //                                                           .readdata
-		.configure_camera_s1_writedata                                    (mm_interconnect_3_configure_camera_s1_writedata),                //                                                           .writedata
-		.configure_camera_s1_chipselect                                   (mm_interconnect_3_configure_camera_s1_chipselect),               //                                                           .chipselect
-		.lambda_loaded_s1_address                                         (mm_interconnect_3_lambda_loaded_s1_address),                     //                                           lambda_loaded_s1.address
-		.lambda_loaded_s1_write                                           (mm_interconnect_3_lambda_loaded_s1_write),                       //                                                           .write
-		.lambda_loaded_s1_readdata                                        (mm_interconnect_3_lambda_loaded_s1_readdata),                    //                                                           .readdata
-		.lambda_loaded_s1_writedata                                       (mm_interconnect_3_lambda_loaded_s1_writedata),                   //                                                           .writedata
-		.lambda_loaded_s1_chipselect                                      (mm_interconnect_3_lambda_loaded_s1_chipselect),                  //                                                           .chipselect
-		.lcu_loaded_s1_address                                            (mm_interconnect_3_lcu_loaded_s1_address),                        //                                              lcu_loaded_s1.address
-		.lcu_loaded_s1_write                                              (mm_interconnect_3_lcu_loaded_s1_write),                          //                                                           .write
-		.lcu_loaded_s1_readdata                                           (mm_interconnect_3_lcu_loaded_s1_readdata),                       //                                                           .readdata
-		.lcu_loaded_s1_writedata                                          (mm_interconnect_3_lcu_loaded_s1_writedata),                      //                                                           .writedata
-		.lcu_loaded_s1_chipselect                                         (mm_interconnect_3_lcu_loaded_s1_chipselect),                     //                                                           .chipselect
-		.result_ready_s1_address                                          (mm_interconnect_3_result_ready_s1_address),                      //                                            result_ready_s1.address
-		.result_ready_s1_write                                            (mm_interconnect_3_result_ready_s1_write),                        //                                                           .write
-		.result_ready_s1_readdata                                         (mm_interconnect_3_result_ready_s1_readdata),                     //                                                           .readdata
-		.result_ready_s1_writedata                                        (mm_interconnect_3_result_ready_s1_writedata),                    //                                                           .writedata
-		.result_ready_s1_chipselect                                       (mm_interconnect_3_result_ready_s1_chipselect),                   //                                                           .chipselect
-		.sad_result_high_s1_address                                       (mm_interconnect_3_sad_result_high_s1_address),                   //                                         sad_result_high_s1.address
-		.sad_result_high_s1_write                                         (mm_interconnect_3_sad_result_high_s1_write),                     //                                                           .write
-		.sad_result_high_s1_readdata                                      (mm_interconnect_3_sad_result_high_s1_readdata),                  //                                                           .readdata
-		.sad_result_high_s1_writedata                                     (mm_interconnect_3_sad_result_high_s1_writedata),                 //                                                           .writedata
-		.sad_result_high_s1_chipselect                                    (mm_interconnect_3_sad_result_high_s1_chipselect),                //                                                           .chipselect
-		.sad_result_low_s1_address                                        (mm_interconnect_3_sad_result_low_s1_address),                    //                                          sad_result_low_s1.address
-		.sad_result_low_s1_write                                          (mm_interconnect_3_sad_result_low_s1_write),                      //                                                           .write
-		.sad_result_low_s1_readdata                                       (mm_interconnect_3_sad_result_low_s1_readdata),                   //                                                           .readdata
-		.sad_result_low_s1_writedata                                      (mm_interconnect_3_sad_result_low_s1_writedata),                  //                                                           .writedata
-		.sad_result_low_s1_chipselect                                     (mm_interconnect_3_sad_result_low_s1_chipselect),                 //                                                           .chipselect
-		.yuv_ctrl_s1_address                                              (mm_interconnect_3_yuv_ctrl_s1_address),                          //                                                yuv_ctrl_s1.address
-		.yuv_ctrl_s1_write                                                (mm_interconnect_3_yuv_ctrl_s1_write),                            //                                                           .write
-		.yuv_ctrl_s1_readdata                                             (mm_interconnect_3_yuv_ctrl_s1_readdata),                         //                                                           .readdata
-		.yuv_ctrl_s1_writedata                                            (mm_interconnect_3_yuv_ctrl_s1_writedata),                        //                                                           .writedata
-		.yuv_ctrl_s1_chipselect                                           (mm_interconnect_3_yuv_ctrl_s1_chipselect),                       //                                                           .chipselect
-		.yuv_status_s1_address                                            (mm_interconnect_3_yuv_status_s1_address),                        //                                              yuv_status_s1.address
-		.yuv_status_s1_write                                              (mm_interconnect_3_yuv_status_s1_write),                          //                                                           .write
-		.yuv_status_s1_readdata                                           (mm_interconnect_3_yuv_status_s1_readdata),                       //                                                           .readdata
-		.yuv_status_s1_writedata                                          (mm_interconnect_3_yuv_status_s1_writedata),                      //                                                           .writedata
-		.yuv_status_s1_chipselect                                         (mm_interconnect_3_yuv_status_s1_chipselect)                      //                                                           .chipselect
+		.camera_control_oc_s1_address                                     (mm_interconnect_0_camera_control_oc_s1_address),                 //                                       camera_control_oc_s1.address
+		.camera_control_oc_s1_write                                       (mm_interconnect_0_camera_control_oc_s1_write),                   //                                                           .write
+		.camera_control_oc_s1_readdata                                    (mm_interconnect_0_camera_control_oc_s1_readdata),                //                                                           .readdata
+		.camera_control_oc_s1_writedata                                   (mm_interconnect_0_camera_control_oc_s1_writedata),               //                                                           .writedata
+		.camera_control_oc_s1_byteenable                                  (mm_interconnect_0_camera_control_oc_s1_byteenable),              //                                                           .byteenable
+		.camera_control_oc_s1_chipselect                                  (mm_interconnect_0_camera_control_oc_s1_chipselect),              //                                                           .chipselect
+		.camera_control_oc_s1_clken                                       (mm_interconnect_0_camera_control_oc_s1_clken),                   //                                                           .clken
+		.configure_camera_s1_address                                      (mm_interconnect_0_configure_camera_s1_address),                  //                                        configure_camera_s1.address
+		.configure_camera_s1_write                                        (mm_interconnect_0_configure_camera_s1_write),                    //                                                           .write
+		.configure_camera_s1_readdata                                     (mm_interconnect_0_configure_camera_s1_readdata),                 //                                                           .readdata
+		.configure_camera_s1_writedata                                    (mm_interconnect_0_configure_camera_s1_writedata),                //                                                           .writedata
+		.configure_camera_s1_chipselect                                   (mm_interconnect_0_configure_camera_s1_chipselect),               //                                                           .chipselect
+		.lambda_loaded_s1_address                                         (mm_interconnect_0_lambda_loaded_s1_address),                     //                                           lambda_loaded_s1.address
+		.lambda_loaded_s1_write                                           (mm_interconnect_0_lambda_loaded_s1_write),                       //                                                           .write
+		.lambda_loaded_s1_readdata                                        (mm_interconnect_0_lambda_loaded_s1_readdata),                    //                                                           .readdata
+		.lambda_loaded_s1_writedata                                       (mm_interconnect_0_lambda_loaded_s1_writedata),                   //                                                           .writedata
+		.lambda_loaded_s1_chipselect                                      (mm_interconnect_0_lambda_loaded_s1_chipselect),                  //                                                           .chipselect
+		.lcu_loaded_s1_address                                            (mm_interconnect_0_lcu_loaded_s1_address),                        //                                              lcu_loaded_s1.address
+		.lcu_loaded_s1_write                                              (mm_interconnect_0_lcu_loaded_s1_write),                          //                                                           .write
+		.lcu_loaded_s1_readdata                                           (mm_interconnect_0_lcu_loaded_s1_readdata),                       //                                                           .readdata
+		.lcu_loaded_s1_writedata                                          (mm_interconnect_0_lcu_loaded_s1_writedata),                      //                                                           .writedata
+		.lcu_loaded_s1_chipselect                                         (mm_interconnect_0_lcu_loaded_s1_chipselect),                     //                                                           .chipselect
+		.result_ready_s1_address                                          (mm_interconnect_0_result_ready_s1_address),                      //                                            result_ready_s1.address
+		.result_ready_s1_write                                            (mm_interconnect_0_result_ready_s1_write),                        //                                                           .write
+		.result_ready_s1_readdata                                         (mm_interconnect_0_result_ready_s1_readdata),                     //                                                           .readdata
+		.result_ready_s1_writedata                                        (mm_interconnect_0_result_ready_s1_writedata),                    //                                                           .writedata
+		.result_ready_s1_chipselect                                       (mm_interconnect_0_result_ready_s1_chipselect),                   //                                                           .chipselect
+		.sad_result_high_s1_address                                       (mm_interconnect_0_sad_result_high_s1_address),                   //                                         sad_result_high_s1.address
+		.sad_result_high_s1_write                                         (mm_interconnect_0_sad_result_high_s1_write),                     //                                                           .write
+		.sad_result_high_s1_readdata                                      (mm_interconnect_0_sad_result_high_s1_readdata),                  //                                                           .readdata
+		.sad_result_high_s1_writedata                                     (mm_interconnect_0_sad_result_high_s1_writedata),                 //                                                           .writedata
+		.sad_result_high_s1_chipselect                                    (mm_interconnect_0_sad_result_high_s1_chipselect),                //                                                           .chipselect
+		.sad_result_low_s1_address                                        (mm_interconnect_0_sad_result_low_s1_address),                    //                                          sad_result_low_s1.address
+		.sad_result_low_s1_write                                          (mm_interconnect_0_sad_result_low_s1_write),                      //                                                           .write
+		.sad_result_low_s1_readdata                                       (mm_interconnect_0_sad_result_low_s1_readdata),                   //                                                           .readdata
+		.sad_result_low_s1_writedata                                      (mm_interconnect_0_sad_result_low_s1_writedata),                  //                                                           .writedata
+		.sad_result_low_s1_chipselect                                     (mm_interconnect_0_sad_result_low_s1_chipselect),                 //                                                           .chipselect
+		.yuv_ctrl_s1_address                                              (mm_interconnect_0_yuv_ctrl_s1_address),                          //                                                yuv_ctrl_s1.address
+		.yuv_ctrl_s1_write                                                (mm_interconnect_0_yuv_ctrl_s1_write),                            //                                                           .write
+		.yuv_ctrl_s1_readdata                                             (mm_interconnect_0_yuv_ctrl_s1_readdata),                         //                                                           .readdata
+		.yuv_ctrl_s1_writedata                                            (mm_interconnect_0_yuv_ctrl_s1_writedata),                        //                                                           .writedata
+		.yuv_ctrl_s1_chipselect                                           (mm_interconnect_0_yuv_ctrl_s1_chipselect),                       //                                                           .chipselect
+		.yuv_status_s1_address                                            (mm_interconnect_0_yuv_status_s1_address),                        //                                              yuv_status_s1.address
+		.yuv_status_s1_write                                              (mm_interconnect_0_yuv_status_s1_write),                          //                                                           .write
+		.yuv_status_s1_readdata                                           (mm_interconnect_0_yuv_status_s1_readdata),                       //                                                           .readdata
+		.yuv_status_s1_writedata                                          (mm_interconnect_0_yuv_status_s1_writedata),                      //                                                           .writedata
+		.yuv_status_s1_chipselect                                         (mm_interconnect_0_yuv_status_s1_chipselect)                      //                                                           .chipselect
 	);
 
 	Kvazaar_QSYS_irq_mapper irq_mapper (

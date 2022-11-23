@@ -5,6 +5,7 @@
   <columns>
    <connections preferredWidth="207" />
    <irq preferredWidth="47" />
+   <inputclock preferredWidth="30" />
   </columns>
  </systemtable>
  <clocktable>
@@ -14,9 +15,8 @@
    <frequency preferredWidth="163" />
   </columns>
  </clocktable>
- <window width="1294" height="1407" x="1273" y="0" />
- <library
-   expandedCategories="Library/Processors and Peripherals,Library/Interface Protocols/PCI Express/QSYS Example Designs,Library/Interface Protocols/PCI Express,Library,Library/Interface Protocols,Library/Processors and Peripherals/Peripherals,Project" />
+ <window width="1100" height="800" x="386" y="526" />
+ <library expandedCategories="Library,Project" />
  <generation
    path="P:/18/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/_PROJECT_NAME_"
    simulation="NONE"

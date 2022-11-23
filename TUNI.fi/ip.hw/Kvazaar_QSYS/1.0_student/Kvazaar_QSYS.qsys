@@ -435,6 +435,21 @@
    type="reset"
    dir="end" />
  <interface
+   name="hps_0_f2h_sdram0_data"
+   internal="hps_0.f2h_sdram0_data"
+   type="axi"
+   dir="end" />
+ <interface
+   name="hps_0_f2h_sdram1_data"
+   internal="hps_0.f2h_sdram1_data"
+   type="axi"
+   dir="end" />
+ <interface
+   name="hps_0_f2h_sdram2_data"
+   internal="hps_0.f2h_sdram2_data"
+   type="axi"
+   dir="end" />
+ <interface
    name="hps_0_f2h_stm_hw_events"
    internal="hps_0.f2h_stm_hw_events"
    type="conduit"
@@ -1251,42 +1266,6 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
  </module>
- <connection
-   kind="avalon"
-   version="16.0"
-   start="dma_yuv.altera_axi_master"
-   end="hps_0.f2h_sdram0_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="16.0"
-   start="axi_dma_unfiltered2.altera_axi_master"
-   end="hps_0.f2h_sdram1_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="16.0"
-   start="axi_dma_orig_block.altera_axi_master"
-   end="hps_0.f2h_sdram1_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="16.0"
-   start="axi_dma_unfiltered1.altera_axi_master"
-   end="hps_0.f2h_sdram2_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
  <connection
    kind="avalon"
    version="16.0"

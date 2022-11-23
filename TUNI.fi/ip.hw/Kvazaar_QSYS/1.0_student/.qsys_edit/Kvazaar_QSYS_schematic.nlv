@@ -1,67 +1,111 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst Kvazaar_QSYS.hps_0.dcan1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.qspi -pg 1
-preplace inst Kvazaar_QSYS.hps_0.timer0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.clkmgr -pg 1
-preplace inst Kvazaar_QSYS.hps_0.dma -pg 1
-preplace inst Kvazaar_QSYS.hps_0.L2 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.clk_0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.axi_ocram -pg 1
-preplace inst Kvazaar_QSYS.hps_0.usb0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.spim0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.timer1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.fpgamgr -pg 1
-preplace inst Kvazaar_QSYS.hps_0.sysmgr -pg 1
-preplace inst Kvazaar_QSYS.hps_0.hps_io.border -pg 1
-preplace inst Kvazaar_QSYS.hps_0.hps_io -pg 1
-preplace inst Kvazaar_QSYS.hps_0.usb1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.spim1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.timer2 -pg 1
 preplace inst Kvazaar_QSYS.hps_0.timer3 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.sdrctl -pg 1
-preplace inst Kvazaar_QSYS.hps_0.gpio0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.arm_a9_0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.f2s_periph_ref_clk -pg 1
-preplace inst Kvazaar_QSYS.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst Kvazaar_QSYS.hps_0.gpio1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.rstmgr -pg 1
-preplace inst Kvazaar_QSYS.hps_0.arm_a9_1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.gpio2 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.arm_gic_0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.fpga_interfaces -pg 1
-preplace inst Kvazaar_QSYS.hps_0.i2c0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.scu -pg 1
-preplace inst Kvazaar_QSYS.hps_0.i2c1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.wd_timer0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.f2s_sdram_ref_clk -pg 1
-preplace inst Kvazaar_QSYS.hps_0.bridges -pg 1
-preplace inst Kvazaar_QSYS -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst Kvazaar_QSYS.hps_0.i2c2 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.wd_timer1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.uart0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.eosc1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0 -pg 1 -lvl 2 -y 50
-preplace inst Kvazaar_QSYS.hps_0.timer -pg 1
+preplace inst Kvazaar_QSYS.hps_0.axi_ocram -pg 1
 preplace inst Kvazaar_QSYS.hps_0.gmac0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.sdmmc -pg 1
-preplace inst Kvazaar_QSYS.hps_0.nand0 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.i2c3 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.uart1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.eosc2 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.axi_sdram -pg 1
-preplace inst Kvazaar_QSYS.hps_0.gmac1 -pg 1
-preplace inst Kvazaar_QSYS.hps_0.l3regs -pg 1
+preplace inst Kvazaar_QSYS.hps_0.clk_0 -pg 1
 preplace inst Kvazaar_QSYS.hps_0.dcan0 -pg 1
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(MASTER)Kvazaar_QSYS.hps_0_h2f_reset,(MASTER)hps_0.h2f_reset) 1 2 1 N
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.memory,(SLAVE)hps_0.memory) 1 0 2 NJ 360 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.hps_0_f2h_debug_reset_req,(SLAVE)hps_0.f2h_debug_reset_req) 1 0 2 NJ 120 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.hps_0_f2h_stm_hw_events,(SLAVE)hps_0.f2h_stm_hw_events) 1 0 2 NJ 260 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.hps_0_hps_io,(SLAVE)hps_0.hps_io) 1 0 2 NJ 300 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)hps_0.f2h_warm_reset_req,(SLAVE)Kvazaar_QSYS.hps_0_f2h_warm_reset_req) 1 0 2 NJ 280 NJ
-preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)hps_0.f2h_cold_reset_req,(SLAVE)Kvazaar_QSYS.hps_0_f2h_cold_reset_req) 1 0 2 NJ 100 NJ
-preplace netloc FAN_OUT<net_container>Kvazaar_QSYS</net_container>(SLAVE)hps_0.f2h_axi_clock,(SLAVE)hps_0.f2h_sdram2_clock,(SLAVE)hps_0.f2h_sdram1_clock,(MASTER)clk_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)hps_0.f2h_sdram0_clock) 1 1 1 380
-levelinfo -pg 1 0 170 840
-levelinfo -hier Kvazaar_QSYS 180 210 520 710
+preplace inst Kvazaar_QSYS.hps_0.gmac1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.uart0 -pg 1
+preplace inst Kvazaar_QSYS.camera_control_oc -pg 1 -lvl 3 -y 780
+preplace inst Kvazaar_QSYS.hps_0.arm_a9_0 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.uart1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.arm_a9_1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.dcan1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.fpga_interfaces -pg 1
+preplace inst Kvazaar_QSYS.hps_0.nand0 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.dma -pg 1
+preplace inst Kvazaar_QSYS.hps_0.f2s_sdram_ref_clk -pg 1
+preplace inst Kvazaar_QSYS.configure_camera -pg 1 -lvl 3 -y 920
+preplace inst Kvazaar_QSYS.hps_0.spim0 -pg 1
+preplace inst Kvazaar_QSYS.clk_0 -pg 1 -lvl 1 -y 90
+preplace inst Kvazaar_QSYS.hps_0.spim1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.usb0 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.usb1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.hps_io -pg 1
+preplace inst Kvazaar_QSYS.hps_0.hps_io.border -pg 1
+preplace inst Kvazaar_QSYS.hps_0.clkmgr -pg 1
+preplace inst Kvazaar_QSYS.hps_0 -pg 1 -lvl 4 -y 130
+preplace inst Kvazaar_QSYS.hps_0.sdmmc -pg 1
+preplace inst Kvazaar_QSYS.axi_dma_orig_block -pg 1 -lvl 3 -y 110
+preplace inst Kvazaar_QSYS.hps_0.axi_sdram -pg 1
+preplace inst Kvazaar_QSYS.hps_0.sdrctl -pg 1
+preplace inst Kvazaar_QSYS.hps_0.rstmgr -pg 1
+preplace inst Kvazaar_QSYS.hps_0.l3regs -pg 1
+preplace inst Kvazaar_QSYS.hps_0.bridges -pg 1
+preplace inst Kvazaar_QSYS.hps_0.timer -pg 1
+preplace inst Kvazaar_QSYS.hps_0.fpgamgr -pg 1
+preplace inst Kvazaar_QSYS.hps_0.gpio0 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.qspi -pg 1
+preplace inst Kvazaar_QSYS.hps_0.gpio1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.L2 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.gpio2 -pg 1
+preplace inst Kvazaar_QSYS.lcu_loaded -pg 1 -lvl 3 -y 1260
+preplace inst Kvazaar_QSYS.hps_0.sysmgr -pg 1
+preplace inst Kvazaar_QSYS.dma_yuv -pg 1 -lvl 3 -y 1020
+preplace inst Kvazaar_QSYS.result_ready -pg 1 -lvl 3 -y 1380
+preplace inst Kvazaar_QSYS.lambda_loaded -pg 1 -lvl 3 -y 1140
+preplace inst Kvazaar_QSYS.hps_0.wd_timer0 -pg 1
+preplace inst Kvazaar_QSYS.sad_result_low -pg 1 -lvl 3 -y 1740
+preplace inst Kvazaar_QSYS.hps_0.wd_timer1 -pg 1
+preplace inst Kvazaar_QSYS.sad_result_high -pg 1 -lvl 3 -y 1640
+preplace inst Kvazaar_QSYS.yuv_status -pg 1 -lvl 3 -y 1500
+preplace inst Kvazaar_QSYS.hps_0.scu -pg 1
+preplace inst Kvazaar_QSYS.hps_0.f2s_periph_ref_clk -pg 1
+preplace inst Kvazaar_QSYS.yuv_ctrl -pg 1 -lvl 3 -y 1840
+preplace inst Kvazaar_QSYS.axi_dma_unfiltered1 -pg 1 -lvl 3 -y 520
+preplace inst Kvazaar_QSYS.hps_0.eosc1 -pg 1
+preplace inst Kvazaar_QSYS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Kvazaar_QSYS.hps_0.arm_gic_0 -pg 1
+preplace inst Kvazaar_QSYS.axi_dma_unfiltered2 -pg 1 -lvl 3 -y 1940
+preplace inst Kvazaar_QSYS.hps_0.eosc2 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.i2c0 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.i2c1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.timer0 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.i2c2 -pg 1
+preplace inst Kvazaar_QSYS.acc_config -pg 1 -lvl 3 -y 680
+preplace inst Kvazaar_QSYS.hps_0.timer1 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.i2c3 -pg 1
+preplace inst Kvazaar_QSYS.hps_0.timer2 -pg 1
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.hps_0_hps_io,(SLAVE)hps_0.hps_io) 1 0 4 NJ 380 NJ 380 NJ 380 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)Kvazaar_QSYS.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.yuv_ctrl_external_connection,(SLAVE)yuv_ctrl.external_connection) 1 0 3 NJ 1870 NJ 1870 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.lcu_loaded_external_connection,(SLAVE)lcu_loaded.external_connection) 1 0 3 NJ 1290 NJ 1290 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.acc_config_channel,(SLAVE)acc_config.channel) 1 0 3 NJ 710 NJ 710 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)sad_result_high.external_connection,(SLAVE)Kvazaar_QSYS.sad_result_high_external_connection) 1 0 3 NJ 1670 NJ 1670 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.memory,(SLAVE)hps_0.memory) 1 0 4 NJ 440 NJ 440 NJ 440 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.dma_yuv_fifo_clk,(SLAVE)dma_yuv.fifo_clk) 1 0 3 NJ 1070 NJ 1070 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)axi_dma_unfiltered1.channel_lz,(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered1_channel_lz) 1 0 3 NJ 570 NJ 570 NJ
+preplace netloc POINT_TO_POINT<net_container>Kvazaar_QSYS</net_container>(SLAVE)hps_0.f2h_sdram0_data,(MASTER)dma_yuv.altera_axi_master) 1 3 1 1140
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)axi_dma_unfiltered1.channel_vz,(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered1_channel_vz) 1 0 3 NJ 590 NJ 590 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_orig_block_channel_vz,(SLAVE)axi_dma_orig_block.channel_vz) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc FAN_OUT<net_container>Kvazaar_QSYS</net_container>(SLAVE)sad_result_low.reset,(SLAVE)result_ready.reset,(SLAVE)camera_control_oc.reset2,(SLAVE)dma_yuv.reset_sink,(MASTER)clk_0.clk_reset,(SLAVE)axi_dma_unfiltered2.reset_sink,(SLAVE)yuv_ctrl.reset,(SLAVE)sad_result_high.reset,(SLAVE)axi_dma_orig_block.reset_sink,(SLAVE)acc_config.reset_sink,(SLAVE)configure_camera.reset,(SLAVE)camera_control_oc.reset1,(SLAVE)lcu_loaded.reset,(SLAVE)lambda_loaded.reset,(SLAVE)yuv_status.reset,(SLAVE)axi_dma_unfiltered1.reset_sink) 1 1 2 410 240 690
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.hps_0_f2h_cold_reset_req,(SLAVE)hps_0.f2h_cold_reset_req) 1 0 4 NJ 260 NJ 260 NJ 300 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)axi_dma_unfiltered2.channel_lz,(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered2_channel_lz) 1 0 3 NJ 1990 NJ 1990 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_orig_block_channel_lz,(SLAVE)axi_dma_orig_block.channel_lz) 1 0 3 NJ 60 NJ 120 NJ
+preplace netloc FAN_OUT<net_container>Kvazaar_QSYS</net_container>(MASTER)clk_0.clk,(SLAVE)camera_control_oc.clk2,(SLAVE)dma_yuv.clock_sink,(SLAVE)axi_dma_unfiltered1.clock_sink,(SLAVE)sad_result_low.clk,(SLAVE)sad_result_high.clk,(SLAVE)result_ready.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)hps_0.f2h_sdram1_clock,(SLAVE)configure_camera.clk,(SLAVE)yuv_ctrl.clk,(SLAVE)lcu_loaded.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)axi_dma_unfiltered2.clock_sink,(SLAVE)yuv_status.clk,(SLAVE)acc_config.clock,(SLAVE)hps_0.f2h_sdram2_clock,(SLAVE)lambda_loaded.clk,(SLAVE)axi_dma_orig_block.clock_sink,(SLAVE)hps_0.f2h_axi_clock,(SLAVE)camera_control_oc.clk1) 1 1 3 430 220 730 460 1100
+preplace netloc FAN_OUT<net_container>Kvazaar_QSYS</net_container>(SLAVE)lcu_loaded.irq,(SLAVE)result_ready.irq,(SLAVE)lambda_loaded.irq,(SLAVE)yuv_status.irq,(MASTER)hps_0.f2h_irq1) 1 2 3 770 1630 NJ 1630 1510
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_orig_block_clear_fifo,(SLAVE)axi_dma_orig_block.clear_fifo) 1 0 3 NJ 80 NJ 200 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered1_clear_fifo,(SLAVE)axi_dma_unfiltered1.clear_fifo) 1 0 3 NJ 610 NJ 610 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered1_channel_data,(SLAVE)axi_dma_unfiltered1.channel_data) 1 0 3 NJ 550 NJ 550 NJ
+preplace netloc FAN_OUT<net_container>Kvazaar_QSYS</net_container>(SLAVE)result_ready.s1,(SLAVE)lambda_loaded.s1,(SLAVE)axi_dma_orig_block.altera_axi_slave,(MASTER)hps_0.h2f_axi_master,(SLAVE)yuv_ctrl.s1,(SLAVE)dma_yuv.altera_axi_slave,(SLAVE)camera_control_oc.s1,(SLAVE)axi_dma_unfiltered2.altera_axi_slave,(SLAVE)configure_camera.s1,(SLAVE)yuv_status.s1,(SLAVE)acc_config.altera_axi_slave,(SLAVE)axi_dma_unfiltered1.altera_axi_slave,(SLAVE)sad_result_high.s1,(SLAVE)sad_result_low.s1,(SLAVE)lcu_loaded.s1) 1 2 3 750 280 NJ 90 1530
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)lambda_loaded.external_connection,(SLAVE)Kvazaar_QSYS.lambda_loaded_external_connection) 1 0 3 NJ 1170 NJ 1170 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)axi_dma_unfiltered2.channel_vz,(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered2_channel_vz) 1 0 3 NJ 2010 NJ 2010 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.hps_0_f2h_warm_reset_req,(SLAVE)hps_0.f2h_warm_reset_req) 1 0 4 NJ 360 NJ 360 NJ 360 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.dma_yuv_yuv_input,(SLAVE)dma_yuv.yuv_input) 1 0 3 NJ 1110 NJ 1110 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.sad_result_low_external_connection,(SLAVE)sad_result_low.external_connection) 1 0 3 NJ 1770 NJ 1770 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered2_clear_fifo,(SLAVE)axi_dma_unfiltered2.clear_fifo) 1 0 3 NJ 2030 NJ 2030 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_unfiltered2_channel_data,(SLAVE)axi_dma_unfiltered2.channel_data) 1 0 3 NJ 1970 NJ 1970 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.axi_dma_orig_block_channel_data,(SLAVE)axi_dma_orig_block.channel_data) 1 0 3 NJ 40 NJ 140 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.result_ready_external_connection,(SLAVE)result_ready.external_connection) 1 0 3 NJ 1410 NJ 1410 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(MASTER)hps_0.h2f_reset,(MASTER)Kvazaar_QSYS.hps_0_h2f_reset) 1 4 1 N
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)yuv_status.external_connection,(SLAVE)Kvazaar_QSYS.yuv_status_external_connection) 1 0 3 NJ 1530 NJ 1530 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.configure_camera_external_connection,(SLAVE)configure_camera.external_connection) 1 0 3 NJ 950 NJ 950 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)clk_0.clk_in,(SLAVE)Kvazaar_QSYS.clk) 1 0 1 NJ
+preplace netloc FAN_IN<net_container>Kvazaar_QSYS</net_container>(MASTER)axi_dma_unfiltered2.altera_axi_master,(MASTER)axi_dma_orig_block.altera_axi_master,(SLAVE)hps_0.f2h_sdram1_data) 1 3 1 1060
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)Kvazaar_QSYS.camera_control_oc_s2,(SLAVE)camera_control_oc.s2) 1 0 3 NJ 890 NJ 890 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)hps_0.f2h_stm_hw_events,(SLAVE)Kvazaar_QSYS.hps_0_f2h_stm_hw_events) 1 0 4 NJ 300 NJ 340 NJ 340 NJ
+preplace netloc EXPORT<net_container>Kvazaar_QSYS</net_container>(SLAVE)hps_0.f2h_debug_reset_req,(SLAVE)Kvazaar_QSYS.hps_0_f2h_debug_reset_req) 1 0 4 NJ 280 NJ 280 NJ 320 NJ
+preplace netloc POINT_TO_POINT<net_container>Kvazaar_QSYS</net_container>(MASTER)axi_dma_unfiltered1.altera_axi_master,(SLAVE)hps_0.f2h_sdram2_data) 1 3 1 1160
+levelinfo -pg 1 0 200 1680
+levelinfo -hier Kvazaar_QSYS 210 240 650 830 1320 1550

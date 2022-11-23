@@ -1,0 +1,20 @@
+Fitter Status : Failed - Wed Nov 23 11:52:30 2022
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : Kvazaar_IP_acc_Camera
+Top-level Entity Name : Kvazaar_IP_acc_Camera
+Family : Cyclone V
+Device : 5CSXFC6D6F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 425 / 41,910 ( 1 % )
+Total registers : 578
+Total pins : 206 / 499 ( 41 % )
+Total virtual pins : 0
+Total block memory bits : 412,368 / 5,662,720 ( 7 % )
+Total RAM Blocks : 0 / 553 ( 0 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 1 / 15 ( 7 % )
+Total DLLs : 0 / 4 ( 0 % )

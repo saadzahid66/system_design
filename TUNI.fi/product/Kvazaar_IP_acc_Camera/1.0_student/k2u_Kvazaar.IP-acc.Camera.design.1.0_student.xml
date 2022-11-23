@@ -408,6 +408,13 @@
 				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="result_ready"/>
 			</ipxact:portReferences>
 		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>CAMERA_TRIGGER_to_tiedValue</ipxact:name>
+			<ipxact:tiedValue>1</ipxact:tiedValue>
+			<ipxact:portReferences>
+				<ipxact:externalPortReference portRef="CAMERA_TRIGGER"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
 	</ipxact:adHocConnections>
 	<ipxact:vendorExtensions>
 		<kactus2:version>2,8,49,0</kactus2:version>
@@ -479,12 +486,30 @@
 				<kactus2:position x="1500" y="540"/>
 				<kactus2:position x="1350" y="540"/>
 			</kactus2:route>
-			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt1_fifo" kactus2:offPage="false"/>
-			<kactus2:route kactus2:connRef="IP_SAD_Accelerator_0_clear_unfilt2_fifo_to_Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export" kactus2:offPage="false"/>
-			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_orig_fifo" kactus2:offPage="false"/>
-			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_lambda_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lambda_loaded" kactus2:offPage="false"/>
-			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_lcu_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lcu_loaded" kactus2:offPage="false"/>
-			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_result_ready_external_connection_export_to_IP_SAD_Accelerator_0_result_ready" kactus2:offPage="false"/>
+			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt1_fifo" kactus2:offPage="false">
+				<kactus2:position x="710" y="290"/>
+				<kactus2:position x="810" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="IP_SAD_Accelerator_0_clear_unfilt2_fifo_to_Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export" kactus2:offPage="false">
+				<kactus2:position x="810" y="320"/>
+				<kactus2:position x="710" y="320"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_orig_fifo" kactus2:offPage="false">
+				<kactus2:position x="710" y="350"/>
+				<kactus2:position x="810" y="350"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_lambda_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lambda_loaded" kactus2:offPage="false">
+				<kactus2:position x="710" y="380"/>
+				<kactus2:position x="810" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_lcu_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lcu_loaded" kactus2:offPage="false">
+				<kactus2:position x="710" y="410"/>
+				<kactus2:position x="810" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Kvazaar_QSYS_0_result_ready_external_connection_export_to_IP_SAD_Accelerator_0_result_ready" kactus2:offPage="false">
+				<kactus2:position x="710" y="440"/>
+				<kactus2:position x="810" y="440"/>
+			</kactus2:route>
 			<kactus2:route kactus2:connRef="CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_config" kactus2:offPage="false">
 				<kactus2:position x="1130" y="270"/>
 				<kactus2:position x="1110" y="270"/>
@@ -629,7 +654,7 @@
 		<kactus2:interfaceGraphics>
 			<kactus2:name>CCD_data</kactus2:name>
 			<kactus2:position x="1460" y="570"/>
-			<kactus2:direction x="-1" y="0"/>
+			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>i2c_data</kactus2:name>

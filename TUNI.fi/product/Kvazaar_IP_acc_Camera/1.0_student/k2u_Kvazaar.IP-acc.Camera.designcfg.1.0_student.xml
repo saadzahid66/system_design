@@ -37,6 +37,10 @@
 		<ipxact:instanceName>LTP_Controller_0</ipxact:instanceName>
 		<ipxact:view viewRef="flat"/>
 	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Kvazaar_QSYS_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
 	<ipxact:vendorExtensions>
 		<kactus2:configurableElementValues>
 			<kactus2:componentInstance>
