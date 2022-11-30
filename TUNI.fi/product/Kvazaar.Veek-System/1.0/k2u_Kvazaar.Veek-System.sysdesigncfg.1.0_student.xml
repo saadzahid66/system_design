@@ -7,11 +7,11 @@
 	<ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-System.sysdesign" version="1.0_student"/>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
-		<ipxact:view viewRef="default"/>
+		<ipxact:view viewRef="hw_accelerated_plus_camera"/>
 	</ipxact:viewConfiguration>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>Kvazaar_acc_support_0</ipxact:instanceName>
-		<ipxact:view viewRef="null"/>
+		<ipxact:view viewRef="camera"/>
 	</ipxact:viewConfiguration>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>arm_cortex_a9_0</ipxact:instanceName>
