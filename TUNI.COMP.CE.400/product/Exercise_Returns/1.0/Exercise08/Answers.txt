@@ -2,6 +2,8 @@ INCLUDE ANSWERS IN HERE
 
 1. What is the most significant change in the profiling picture compared to the previous exercises?
 
+   The most significant change in the profiling picture is for the kvz_intra_predict. It was at ~45% in exercice 5 but now the percentage is only ~6%.
+
 2. Fill the below table with performance measurements, using the parameters of the corresponding row.
 
 # RESOLUTION   THREADS   QP   LATENCY (ms)   FPS
