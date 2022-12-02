@@ -2,15 +2,51 @@ INCLUDE ANSWERS IN HERE
 
 1. What was your frame rate when running Kvazaar with the IP accelerator? 
 
+   ENCODING STARTED AT: Mon Nov 11 11:29:17 UTC 2013
+   --owf=auto value set to 0.
+   Input: ./mJockey_1920x1080_120fps_420_8bit_YUV.yuv, output: ./acc_output_QP32.265
+   Video size: 1920x1080 (input=1920x1080)
+   POC    0 QP 32 (I-frame)     245640 bits PSNR: 39.8634 41.6389 42.2446
+   POC    1 QP 32 (I-frame)     243456 bits PSNR: 39.8702 41.6339 42.2588
+   POC    0 QP 32 (I-frame)     244368 bits PSNR: 39.8854 41.5812 42.2330
+   POC    1 QP 32 (I-frame)     243552 bits PSNR: 39.8969 41.6120 42.2411
+   POC    0 QP 32 (I-frame)     244456 bits PSNR: 39.9005 41.6019 42.2440
+   POC    1 QP 32 (I-frame)     245032 bits PSNR: 39.9152 41.6286 42.2219
+   POC    0 QP 32 (I-frame)     245392 bits PSNR: 39.8776 41.5988 42.2604
+   POC    1 QP 32 (I-frame)     243784 bits PSNR: 39.8776 41.5728 42.2066
+   POC    0 QP 32 (I-frame)     245096 bits PSNR: 39.9098 41.5894 42.2687
+   POC    1 QP 32 (I-frame)     245824 bits PSNR: 39.9148 41.5860 42.2479
+   Processed 10 frames,    2446600 bits AVG PSNR: 39.8911 41.6043 42.2427
+   Total CPU time: 61.060 s.
+   Encoding time: 61.030 s.
+   Encoding wall time: 51.552 s.
+   Encoding CPU usage: 118.38%
+   FPS: 0.19
+   ENCODING FINISHED AT: Mon Nov 11 11:30:09 UTC 2013
+   USED QP 32
+
+   When running Kvazaar with the IP accelerator we had a frame rate of 0.19 FPS
+
 2. In exercise 5, you made some prediction about accelerated frame rate. It probably did not match the results of this exercise. Why?
 
+   In exercise 5, we predicted am accelerated frame rate of 21.93 FPS. Indeed we were using the MIPS measurements that did not take into account the fact that the operation are made on register not memory.
+
 3. On the other hand, the estimation done in exercise 6 was probably much closer. Why?
+
+   The estimation in exercise 6 was 1.33.  The reason is that in exercise 6 the measurement precision used was more accurate and also we use the profile to compute the result.
 
 4. What problem does running the camera user application in continuous mode seem to cause in the captured video?
 HINT: The watermark is not caused by the continuous mode.
 
+   Running the camera user application in continuous mode made the image loading in multiple step, kind of line by line instead of just one.
+
 5. What was hard? What was easy?
 
+   The exercise was very long, especially the first part. Also when we try to synthesize hardware for the board, we had an error even if when we genrate QSYS design again. We had to use the image provided in exercise 8 for the last part.
+
 6. How many hours did the exercise take per person, including answering questions and any downtime?
-   GROUP MEMBER 1:
-   GROUP MEMBER 2:
+
+   GROUP MEMBER 1: 6 hours
+   GROUP MEMBER 2: 0 hours
+   GROUP MEMBER 3: 0 hours
+
